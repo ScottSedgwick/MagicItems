@@ -66,11 +66,11 @@ viewFilter model =
   HE.article_ 
   [ HE.div [ HA.class' "grid" ]
     [ HE.div [ HA.class' "s12"] [ HE.h6_ [ HE.text "Filters:" ] ]
-    , HE.div [ HA.class' "s3" ] [ HE.label [ HA.for "title-filter"  ] [ HE.text "Title:"  ], HE.input [ HA.id "title-filter", HA.type' "text", HA.value model.fltTitle, HV.onInput ChangeTitle ] ] 
-    , HE.div [ HA.class' "s2" ] [ HE.label [ HA.for "rarity-filter" ] [ HE.text "Rarity:" ], mkSelect "rarity-filter" ChangeRarity allRarities model.fltRarity ]
-    , HE.div [ HA.class' "s2" ] [ HE.label [ HA.for "type-filter"   ] [ HE.text "Type:"   ], mkSelect "type-filter"   ChangeType   allTypes    model.fltType   ] 
-    , HE.div [ HA.class' "s2" ] [ HE.label [ HA.for "attune-filter" ] [ HE.text "Attune:" ], mkSelect "attune-filter" ChangeAttune allAttunes  model.fltAttunement ] 
-    , HE.div [ HA.class' "s3" ] [ HE.label [ HA.for "source-filter" ] [ HE.text "Source:" ], mkSelect "source-filter" ChangeSource allSources  model.fltSource ]
+    , HE.div [ HA.class' "s3" ] [ HE.label [ HA.for "title-filter" , HA.class' "bold medium-text" ] [ HE.text "Title: "  ], HE.input [ HA.id "title-filter", HA.type' "text", HA.value model.fltTitle, HV.onInput ChangeTitle ] ] 
+    , HE.div [ HA.class' "s2" ] [ HE.label [ HA.for "rarity-filter", HA.class' "bold medium-text" ] [ HE.text "Rarity: " ], mkSelect "rarity-filter" ChangeRarity allRarities model.fltRarity ]
+    , HE.div [ HA.class' "s2" ] [ HE.label [ HA.for "type-filter"  , HA.class' "bold medium-text" ] [ HE.text "Type: "   ], mkSelect "type-filter"   ChangeType   allTypes    model.fltType   ] 
+    , HE.div [ HA.class' "s2" ] [ HE.label [ HA.for "attune-filter", HA.class' "bold medium-text" ] [ HE.text "Attune: " ], mkSelect "attune-filter" ChangeAttune allAttunes  model.fltAttunement ] 
+    , HE.div [ HA.class' "s3" ] [ HE.label [ HA.for "source-filter", HA.class' "bold medium-text" ] [ HE.text "Source: " ], mkSelect "source-filter" ChangeSource allSources  model.fltSource ]
     ]
   ]
 
@@ -80,7 +80,7 @@ mkSelect id msg opts value =
     nullOption = HE.option [ HA.value "All",   HA.selected (value == Nothing) ] "All"
     mkOption x = HE.option [ HA.value (show x), HA.selected (value == Just x ) ] (show x)
   in
-    HE.select [ HA.id id, HV.onInput msg, HA.width "90%" ] ([nullOption] <> map mkOption opts)
+    HE.select [ HA.id id, HV.onInput msg, HA.style1 "width" "50%" ] ([nullOption] <> map mkOption opts)
 
 viewItems :: Model -> Html Message
 viewItems model =
@@ -121,8 +121,7 @@ viewItem item =
       ] 
     , HE.div [ HA.class' "grid" ]
       ( [ HE.div [ HA.class' "s12"] [ HE.hr_ [ HE.text "" ] ]
-        , HE.div [ HA.class' "s8" ] [ HE.em_ (showCaption item) ]
-        , HE.div [ HA.class' "s4" ] [ HE.text (show item.source) ]
+        , HE.div [ HA.class' "s12" ] [ HE.em_ (showCaption item) ]
         ] <> (map (\s -> HE.div [ HA.class' "s12" ] [ HE.text s ]) item.description)
       )
     ]

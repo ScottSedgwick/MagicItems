@@ -1319,166 +1319,357 @@ uncommonItems =
       , "Curse. This item is cursed. Attuning to it curses you until you are targeted by a remove curse spell or similar magic. As long as you remain cursed, you cannot discard the stone, which immediately teleports back into your pocket or pack. After you use the stone's magic, your next two ability checks are made with disadvantage."
       ]
     }
-  , { title: ""
+  , { title: "Decanter of Endless Water"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
     , source: SourceDMG
-    , description: [ "" ]
+    , description: 
+      [ "This stoppered flask sloshes when shaken, as if it contains water. The decanter weighs 2 pounds."
+      , "You can use an action to remove the stopper and speak one of three command words, whereupon an amount of fresh water or salt water (your choice) pours out of the flask. The water stops pouring out at the start of your next turn. Choose from the following options:"
+      , "* 'Stream' produces 1 gallon of water."
+      , "* 'Fountain' produces 5 gallons of water."
+      , "* 'Geyser' produces 30 gallons of water that gushes forth in a geyser 30 feet long and 1 foot wide. As a bonus action while holding the decanter, you can aim the geyser at a creature you can see within 30 feet of you. The target must succeed on a DC 13 Strength saving throw or take 1d4 bludgeoning damage and fall prone. Instead of a creature, you can target an object that isn't being worn or carried and that weighs no more than 200 pounds. The object is either knocked over or pushed up to 15 feet away from you."
+      ]
     }
-  , { title: ""
+  , { title: "Deck of Illusions"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
     , source: SourceDMG
-    , description: [ "" ]
+    , description: 
+    [ "This box contains a set of parchment cards. A full deck has 34 cards. A deck found as treasure is usually missing 1d20 - 1 cards."
+    , "The magic of the deck functions only if cards are drawn at random (you can use an altered deck of playing cards to simulate the deck). You can use an action to draw a card at random from the deck and throw it to the ground at a point within 30 feet of you."
+    , "An illusion of one or more creatures forms over the thrown card and remains until dispelled. An illusory creature appears real, of the appropriate size, and behaves as if it were a real creature (as presented in the Monster Manual), except that it can do no harm. While you are within 120 feet of the illusory creature and can see it, you can use an action to move it magically anywhere within 30 feet of its card. Any physical interaction with the illusory creature reveals it to be an illusion, because objects pass through it. Someone who uses an action to visually inspect the creature identifies it as illusory with a successful DC 15 Intelligence (Investigation) check. The creature then appears translucent."
+    , "The illusion lasts until its card is moved or the illusion is dispelled. When the illusion ends, the image on its card disappears, and that card can't be used again."
+    , "Ace of hearts: Red dragon"
+    , "King of hearts: Knight and four guards"
+    , "Queen of hearts: Succubus or incubus"
+    , "Jack of hearts: Druid"
+    , "Ten of hearts: Cloud giant"
+    , "Nine of hearts: Ettin"
+    , "Eight of hearts: Bugbear"
+    , "Two of hearts: Goblin"
+    , "Ace of diamonds: Beholder"
+    , "King of diamonds: Archmage and mage apprentice"
+    , "Queen of diamonds: Night hag"
+    , "Jack of diamonds: Assassin"
+    , "Ten of diamonds: Fire giant"
+    , "Nine of diamonds: Ogre mage"
+    , "Eight of diamonds: Gnoll"
+    , "Two of diamonds: Kobold"
+    , "Ace of spades: Lich"
+    , "King of spades: Priest and two acolytes"
+    , "Queen of spades: Medusa"
+    , "Jack of spades: Veteran"
+    , "Ten of spades: Frost giant"
+    , "Nine of spades: Troll"
+    , "Eight of spades: Hobgoblin"
+    , "Two of spades: Goblin"
+    , "Ace of clubs: Iron golem"
+    , "King of clubs: Bandit captain and three bandits"
+    , "Queen of clubs: Erinyes"
+    , "Jack of clubs: Berserker"
+    , "Ten of clubs: Hill giant"
+    , "Nine of clubs: Ogre"
+    , "Eight of clubs: Orc"
+    , "Two of clubs: Kobold"
+    , "Jokers (2): You (the deck's owner)"
+    ]
     }
-  , { title: ""
+  , { title: "Deck Of Miscellany"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: SourceDMG
-    , description: [ "" ]
+    , source: SourceBookOfManyThings
+    , description: 
+    [ "This wooden box contains a set of thirty-two parchment cards."
+    , "The face of each card bears an illustration of a different item or set of items. As an action, you can draw a card of your choice from the deck and throw it to the ground in an unoccupied space within 5 feet of yourself. When the card hits the ground, the card permanently transforms into the item or set of items depicted on its face. An altered deck of real-world playing cards can simulate the deck, as shown on the Deck of Miscellany table."
+    , "3 ♦️ - Wooden abacus"
+    , "4 ♦️ - Four vials of perfume"
+    , "5 ♦️ - 5 days' worth of rations"
+    , "6 ♦️ - Iron pot"
+    , "7 ♦️ - Disguise kit"
+    , "8 ♦️ - Window (up to 5 feet wide and 5 feet high), which you can place on a vertical surface up to 5 feet thick and which allows you to look through the surface"
+    , "9 ♦️ - Manacles"
+    , "10 ♦️ - Ten sheets of parchment"
+    , "3 ♥️ - Three daggers"
+    , "4 ♥️ - Four flasks of oil"
+    , "5 ♥️ - Five silk robes"
+    , "6 ♥️ - Forgery kit"
+    , "7 ♥️ - Quarterstaff"
+    , "8 ♥️ - Fishing tackle"
+    , "9 ♥️ - Leather pouch containing 18 gp"
+    , "10 ♥️ - 10 crossbow bolts"
+    , "3 ♣️ - Three books, written in Common, about random historical events"
+    , "4 ♣️ - Canvas tent"
+    , "5 ♣️ - 50 feet of coiled silk rope"
+    , "6 ♣️ - Two crowbars"
+    , "7 ♣️ - Healer's kit"
+    , "8 ♣️ - Eight gems worth 5 gp each"
+    , "9 ♣️ - Lamp"
+    , "10 ♣️ - 10 feet of iron chain"
+    , "3 ♠️ - Three spears"
+    , "4 ♠️ - Steel mirror"
+    , "5 ♠️ - 15-foot wooden pole"
+    , "6 ♠️ - Burlap sack"
+    , "7 ♠️ - Two sets of fine clothes"
+    , "8 ♠️ - Shovel"
+    , "9 ♠️ - Light hammer"
+    , "10 ♠️ - Ten arrows"
+    ]
     }
-  , { title: ""
+  , { title: "Deck Of Wonder"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: SourceDMG
-    , description: [ "" ]
+    , source: SourceBookOfManyThings
+    , description: 
+      [ "Created in the image of the Deck of Many Things, this deck of ivory or vellum cards bestows an assortment of minor benefits and penalties on those who draw from it. Most (75 percent) of these decks have only thirteen cards, but the rest have twenty-two."
+      , "Before you draw a card, you must declare how many cards you intend to draw, then draw them randomly. Any additional cards drawn have no effect. Unless a card states otherwise, as soon as you draw a card from the deck, its magic takes effect. You must draw each card you declared no more than 1 hour after the previous draw. If you fail to draw the chosen number, the remaining number of cards fly from the deck and take effect simultaneously."
+      , "Unless it is the Mystery card, a drawn card immediately takes effect, fades from existence, and reappears in the deck, making it possible to draw the same card multiple times."
+      , "You can use an altered deck of playing cards to simulate the deck, as shown in the Deck of Wonder table."
+      , "A ♦ - Chancellor*"
+      , "K ♦ - Day"
+      , "Q ♦ - Night"
+      , "J ♦ - Dawn"
+      , "2 ♦ - Dusk*"
+      , "A ♥ - Destiny*"
+      , "K ♥ - Crown"
+      , "Q ♥ - Lock"
+      , "J ♥ - Champion"
+      , "2 ♥ - Coin*"
+      , "A ♣ - Vulture*"
+      , "K ♣ - Chaos"
+      , "Q ♣ - Order"
+      , "J ♣ - Beginning"
+      , "2 ♣ - Mystery*"
+      , "A ♠ - Isolation*"
+      , "K ♠ - End"
+      , "Q ♠ - Monster"
+      , "J ♠ - Knife"
+      , "2 ♠ - Justice*"
+      , "Joker (with ™) - Student*"
+      , "Joker (without ™) - Mischief"
+      , "*Found only in a deck with twenty-two cards."
+      , "Beginning. Your hit point maximum and current hit points increase by 2d10. Your hit point maximum remains increased in this way for the next 8 hours."
+      , "Champion. You gain a +1 bonus to weapon attack and damage rolls. This bonus lasts for 8 hours."
+      , "Chancellor*. Within 8 hours of drawing this card, you can cast Augury once as an action, requiring no material components. Use your Intelligence, Wisdom, or Charisma as the spellcasting ability (your choice)."
+      , "Chaos. You gain resistance to one of the following damage types (chosen by the DM): acid, cold, fire, lightning, or thunder. This resistance lasts for 1d12 days."
+      , "Coin*. Five pieces of jewelry, each worth 100 gp, or ten gemstones, each worth 50 gp, appear at your feet."
+      , "Crown. You learn the Friends cantrip. Use your Intelligence, Wisdom, or Charisma as the spellcasting ability (your choice). If you already know this cantrip, the card has no effect."
+      , "Dawn. This card invigorates you. For the next 8 hours, you can add your proficiency bonus to your initiative rolls."
+      , "Day. You gain a +1 bonus to saving throws. This benefit lasts until you finish a long rest."
+      , "Destiny*. This card protects you against an untimely demise. The first time after drawing this card that you would drop to 0 hit points from taking damage, you instead drop to 1 hit point."
+      , "Dusk*. This card supernaturally saps your energy. You have disadvantage on initiative rolls. This effect lasts until you finish a long rest, but it can be ended early by a Remove Curse spell or similar magic."
+      , "End. This card is an omen of death. You take 2d10 necrotic damage, and your hit point maximum is reduced by an amount equal to the damage taken. This effect can't reduce your hit point maximum below 10 hit points. This reduction lasts until you finish a long rest, but it can be ended early by a Remove Curse spell or similar magic."
+      , "Isolation*. You disappear, along with anything you are wearing or carrying, and become trapped in a harmless extradimensional space for 1d4 minutes. You draw no more cards. You then reappear in the space you left or the nearest unoccupied space. When you reappear, you must succeed on a DC 11 Constitution saving throw or have the poisoned condition for 1 hour as your body reels from the extradimensional travel."
+      , "Justice*. You momentarily gain the ability to balance the scales of fate. For the next 8 hours, whenever you or a creature within 60 feet of you is about to roll a d20 with advantage or disadvantage, you can use your reaction to prevent the roll from being affected by advantage or disadvantage."
+      , "Knife. An uncommon magic weapon you're proficient with appears in your hands. The DM chooses the weapon."
+      , "Lock. You gain the ability to cast Knock 1d3 times. Use your Intelligence, Wisdom, or Charisma as the spellcasting ability (your choice)."
+      , "Mischief. You receive an uncommon wondrous item (chosen by the DM), or you can draw two additional cards beyond your declared draws."
+      , "Monster. This card's monstrous visage curses you. While cursed in this way, whenever you make a saving throw, you must roll 1d4 and subtract the number rolled from the total. The curse lasts until you finish a long rest, but it can be ended early with a Remove Curse spell or similar magic."
+      , "Mystery*. You have disadvantage on Intelligence saving throws for 1 hour. Discard this card and draw from the deck again; together, the two draws count as one of your declared draws."
+      , "Night. You gain darkvision within a range of 300 feet. This darkvision lasts for 8 hours."
+      , "Order. You gain resistance to one of the following damage types (chosen by the DM): force, necrotic, poison, psychic, or radiant. This resistance lasts for 1d12 days."
+      , "Student*. You gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice)."
+      , "Vulture*. One nonmagical item or piece of equipment in your possession (chosen by the DM) disappears. The item remains nearby but concealed for a short time, so it can be found with a successful DC 15 Wisdom (Perception) check. If the item isn't recovered within 1 hour, it disappears forever."
+      ]
     }
-  , { title: ""
+  , { title: "Dragon Vessel"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
-    , description: [ "" ]
+    , attune: Attune Nothing
+    , source: SourceFizbansTreasuryOfDragons
+    , description: 
+      [ "This vessel can be a potion bottle, drinking horn, or other container meant to hold a liquid."
+      , "Slumbering (Uncommon). As a bonus action, if the vessel is empty, you can speak the command word to fill the vessel with one of the following (your choice): Ale, Olive Oil, a Potion of Healing, or a Potion of Climbing. Once this property is used, it can't be used until the next dawn. A potion you create in this way loses its magical properties if it isn't imbibed within 24 hours."
+      , "Stirring (Rare). In addition to the options for a Slumbering vessel, you can fill a Stirring vessel with Mead, a Potion of Fire Breath, or a Greater Potion of Healing."
+      , "Wakened (Very Rare). In addition to the options for a Slumbering or Stirring vessel, you can fill a Wakened vessel with Wine, a Potion of Flying, or a Superior Potion of Healing."
+      , "Ascendant (Legendary). In addition to the options for other states, you can fill an Ascendant vessel with Whiskey, a Supreme Potion of Healing, or a Potion of Dragon's Majesty."
+      ]
     }
-  , { title: ""
+  , { title: "Dragonhide Belt"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
-    , description: [ "" ]
+    , attune: Attune (Just "monk")
+    , source: SourceFizbansTreasuryOfDragons
+    , description: 
+      [ "Wondrous Item, uncommon (+1), rare (+2), or very rare (+3) (Requires Attunement by a Monk)"
+      , "This finely detailed belt is made of dragonhide. While wearing it, you gain a bonus to the saving throw DCs of your ki features. The bonus is determined by the belt's rarity. In addition, you can use an action to regain ki points equal to a roll of your Martial Arts die. You can't use this action again until the next dawn."
+      ]
     }
-  , { title: ""
+  , { title: "Dragon's Wrath Weapon"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
-    , description: [ "" ]
+    , type: TypeWeapon (Just "any")
+    , attune: Attune Nothing
+    , source: SourceFizbansTreasuryOfDragons
+    , description: 
+      [ "This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon's hoard, it absorbs the energy of the dragon's breath weapon and deals damage of that type with its special properties."
+      , "Slumbering (Uncommon). Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon's breath weapon."
+      , "Stirring (Rare). The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon's breath weapon."
+      , "Wakened (Very Rare). The Wakened weapon has the Slumbering property, and it improves on the Stirring property. The bonus to attack and damage rolls increases to +2, and the extra damage dealt by the weapon increases to 2d6."
+      , "As an action, you can unleash a 30-foot cone of destructive energy from the weapon. Each creature in that area must make a DC 16 Dexterity saving throw, taking 8d6 damage of the type dealt by the dragon's breath weapon on a failed save, or half as much damage on a successful one. Once this action is used, it can't be used again until the next dawn."
+      , "Ascendant (Legendary). The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6."
+      , "The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6."
+      ]
     }
-  , { title: ""
+  , { title: "Dragon-Touched Focus"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
-    , description: [ "" ]
+    , attune: Attune (Just "spellcaster")
+    , source: SourceFizbansTreasuryOfDragons
+    , description: 
+      [ "This wondrous item can be a scepter, an orb, an amulet, a crystal, or another finely crafted object. It typically incorporates imagery of dragons' wings, claws, teeth, or scales."
+      , "Slumbering (Uncommon). You have advantage on initiative rolls. While you are holding the focus, it can function as a spellcasting focus for all your spells."
+      , "Stirring (Rare). The Stirring focus has the Slumbering property, and it gains an additional property determined by the family of the dragon in whose hoard it became Stirring:"
+      , "Chromatic. Whenever you use a spell slot to cast a spell that deals acid, cold, fire, lightning, or poison damage, roll a d6, and you gain a bonus equal to the number rolled to one of the spell's damage rolls."
+      , "Gem. Whenever you use a spell slot to cast a spell, you can immediately teleport to an unoccupied space you can see within 15 feet of you."
+      , "Metallic. When a creature you can see within 30 feet of you makes a saving throw, you can use your reaction to give that creature advantage on the saving throw."
+      , "Wakened (Very Rare). The Wakened focus has the Slumbering and Stirring properties, and while you are holding a Wakened focus, you can use it to cast certain spells. Once the item is used to cast a given spell, it can't be used to cast that spell again until the next dawn. The spells are determined by the family of the dragon in whose hoard it became Wakened."
+      , "Chromatic. Hold Monster, Rime's Binding Ice"
+      , "Gem. Rary's Telepathic Bond, Raulothim's Psychic Lance"
+      , "Metallic. Fizban's Platinum Shield, Legend Lore"
+      , "Ascendant (Legendary). The Ascendant focus has the Slumbering, Stirring, and Wakened properties. In addition, when you cast a spell of 1st level or higher while holding this focus, you can treat the spell as if it were cast using a 9th-level spell slot. Once this property is used, it can't be used again until the next dawn."
+      ]
     }
-  , { title: ""
+  , { title: "Dried Leech"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
+    , type: TypeWeapon (Just "any ammunition")
     , attune: AttuneNone
-    , source: SourceDMG
-    , description: [ "" ]
+    , source: SourceBookOfManyThings
+    , description: [ "This leech has been dried and imbued with a mote of animating magic. If you hit a creature with a ranged attack roll using this ammunition, the leech springs to life and sinks its teeth into the target, dealing 1d4 piercing damage at the start of each of the target's turns. If the leech deals at least 10 damage or the target dies, the leech falls off. A creature, including the target, can use its action to detach the leech. Once a leech is no longer attached to its target, the leech dies and is no longer magical." ]
     }
-  , { title: ""
+  , { title: "Driftglobe"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
     , source: SourceDMG
-    , description: [ "" ]
+    , description: 
+      [ "This small sphere of thick glass weighs 1 pound. If you are within 60 feet of it, you can speak its command word and cause it to emanate the Light or Daylight spell. Once used, the Daylight effect can't be used again until the next dawn."
+      , "You can speak another command word as an action to make the illuminated globe rise into the air and float no more than 5 feet off the ground. The globe hovers in this way until you or another creature grasps it. If you move more than 60 feet from the hovering globe, it follows you until it is within 60 feet of you. It takes the shortest route to do so. If prevented from moving, the globe sinks gently to the ground and becomes inactive, and its light winks out."
+      ]
     }
-  , { title: ""
+  , { title: "Dust of Corrosion"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: SourceDMG
-    , description: [ "" ]
+    , source: SourceTheWildBeyondTheWitchlight
+    , description: 
+      [ "As an action, you can throw this dust into the air, filling a 10-foot cube that extends out from you. Surfaces and objects made of nonmagical ferrous metal in the area instantly corrode and turn to dust, becoming useless and unsalvageable. Any creature in the area that is made wholly or partly out of ferrous metal must make a DC 13 Constitution saving throw, taking 4d8 necrotic damage on a failed save, or half as much damage on a successful one."
+      , "Found in a small packet, this dust is made from finely ground rust monster antennae. There is enough dust in each packet for one use."
+      ]
     }
-  , { title: ""
+  , { title: "Dust of Deliciousness"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: SourceDMG
-    , description: [ "" ]
+    , source: SourceExplorersGuideToWildemount
+    , description: [ "This reddish brown dust can be sprinkled over any edible substance to greatly improve the flavor. The dust also dulls the eater's senses: anyone eating food treated with this dust has disadvantage on Wisdom ability checks and Wisdom saving throws for 1 hour. There is enough dust to flavor six servings." ]
     }
-  , { title: ""
+  , { title: "Dust of Disappearance"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
     , source: SourceDMG
-    , description: [ "" ]
+    , description: [ "Found in a small packet, this powder resembles very fine sand. There is enough of it for one use. When you use an action to throw the dust into the air, you and each creature and object within 10 feet of you become invisible for 2d4 minutes. The duration is the same for all subjects, and the dust is consumed when its magic takes effect. If a creature affected by the dust attacks or casts a spell, the invisibility ends for that creature." ]
     }
-  , { title: ""
+  , { title: "Dust of Dryness"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
     , source: SourceDMG
-    , description: [ "" ]
+    , description: 
+      [ "This small packet contains 1d6 + 4 pinches of dust. You can use an action to sprinkle a pinch of it over water. The dust turns a cube of water 15 feet on a side into one marble-sized pellet, which floats or rests near where the dust was sprinkled. The pellet's weight is negligible."
+      , "Someone can use an action to smash the pellet against a hard surface, causing the pellet to shatter and release the water the dust absorbed. Doing so ends that pellet's magic."
+      , "An elemental composed mostly of water that is exposed to a pinch of the dust must make a DC 13 Constitution saving throw, taking 10d6 necrotic damage on a failed save, or half as much damage on a successful one."
+      ]
     }
-  , { title: ""
+  , { title: "Dust of Sneezing and Choking"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
     , source: SourceDMG
-    , description: [ "" ]
+    , description: 
+      [ "Found in a small container, this powder resembles very fine sand. It appears to be Dust of Disappearance, and an Identify spell reveals it to be such. There is enough of it for one use."
+      , "When you use an action to throw a handful of the dust into the air, you and each creature that needs to breathe within 30 feet of you must succeed on a DC 15 Constitution saving throw or become unable to breathe, while sneezing uncontrollably. A creature affected in this way is incapacitated and suffocating. As long as it is conscious, a creature can repeat the saving throw at the end of each of its turns, ending the effect on it on a success. The Lesser Restoration spell can also end the effect on a creature."
+      ]
     }
-  , { title: ""
+  , { title: "Earworm"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
-    , description: [ "" ]
+    , attune: Attune Nothing
+    , source: SourceEberronRisingFromTheLastWar
+    , description: 
+      [ "To attune to this symbiont, you must hold it against the skin behind your ear for the entire attunement period, whereupon it burrows into your head and bonds to your skull. While the earworm is inside you, you can speak, read, and write Deep Speech."
+      , "Spells. The earworm has 4 charges. You can cast the following spells from it, expending the necessary number of charges (spell save DC 15): Detect Thoughts (2 charges) or Dissonant Whispers (1 charge). Each time you use the earworm to cast the Detect Thought spell, it sends the information gleaned to the nearest daelkyr, or to the next nearest earworm until it reaches a daelkyr."
+      , "The earworm regains 1d4 expended charges daily at dawn."
+      , "Symbiotic Nature. The earworm can't be removed from you while you're attuned to it, and you can't voluntarily end your attunement to it. If you're targeted by a spell that ends a curse, your attunement to the earworm ends, and it exits your body."
+      ]
     }
-  , { title: ""
+  , { title: "Eldritch Claw Tattoo"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
-    , description: [ "" ]
+    , type: TypeItem (Just "tattoo")
+    , attune: Attune Nothing
+    , source: SourceTashasCauldronOfEverything
+    , description: 
+      [ "Produced by a special needle, this magic tattoo depicts clawlike forms and other jagged shapes."
+      , "Tattoo Attunement. To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin."
+      , "If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
+      , "Magical Strikes. While the tattoo is on your skin, your unarmed strikes are considered magical for the purpose of overcoming immunity and resistance to nonmagical attacks, and you gain a +1 bonus to attack and damage rolls with unarmed strikes."
+      , "Eldritch Maul. As a bonus action, you can empower the tattoo for 1 minute. For the duration, each of your melee attacks with a weapon or an unarmed strike can reach a target up to 15 feet away from you, as inky tendrils launch toward the target. In addition, your melee attacks deal an extra 1d6 force damage on a hit. Once used, this bonus action can't be used again until the next dawn."
+      ]
     }
-  , { title: ""
+  , { title: "Elemental Gem"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
     , source: SourceDMG
-    , description: [ "" ]
+    , description: 
+      [ "This gem contains a mote of elemental energy. When you use an action to break the gem, an elemental is summoned as if you had cast the Conjure Elemental spell, and the gem's magic is lost. The type of gem determines the elemental summoned by the spell."
+      , "Blue sapphire: Air elemental"
+      , "Yellow diamond: Earth elemental"
+      , "Red corundum: Fire elemental"
+      , "Emerald: Water elemental"
+      ]
     }
-  , { title: ""
+  , { title: "Emerald Pen"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: SourceDMG
-    , description: [ "" ]
+    , source: SourceFizbansTreasuryOfDragons
+    , description: [ "This pen is tipped with an emerald nib and requires no ink to write. While holding this pen, you can cast Illusory Script at will, requiring no material components." ]
     }
-  , { title: ""
+  , { title: "Eversmoking Bottle"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
     , source: SourceDMG
-    , description: [ "" ]
+    , description: 
+      [ "Smoke leaks from the lead-stoppered mouth of this brass bottle, which weighs 1 pound. When you use an action to remove the stopper, a cloud of thick smoke pours out in a 60-foot radius from the bottle. The cloud's area is heavily obscured. Each minute the bottle remains open and within the cloud, the radius increases by 10 feet until it reaches its maximum radius of 120 feet."
+      , "The cloud persists as long as the bottle is open. Closing the bottle requires you to speak its command word as an action. Once the bottle is closed, the cloud disperses after 10 minutes. A moderate wind (11 to 20 miles per hour) can also disperse the smoke after 1 minute, and a strong wind (21 or more miles per hour) can do so after 1 round."
+      ]
     }
-  , { title: ""
+  , { title: "Eyes of Charming"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
+    , attune: Attune Nothing
     , source: SourceDMG
-    , description: [ "" ]
+    , description: [ "These crystal lenses fit over the eyes. They have 3 charges. While wearing them, you can expend 1 charge as an action to cast the Charm Person spell (save DC 13) on a humanoid within 30 feet of you, provided that you and the target can see each other. The lenses regain all expended charges daily at dawn." ]
     }
-  , { title: ""
+  , { title: "Eyes of Minute Seeing"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
     , source: SourceDMG
-    , description: [ "" ]
+    , description: [ "These crystal lenses fit over the eyes. While wearing them, you can see much better than normal out to a range of 1 foot. You have advantage on Intelligence (Investigation) checks that rely on sight while searching an area or studying an object within that range." ]
     }
-  , { title: ""
+  , { title: "Eyes of the Eagle"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
+    , attune: Attune Nothing
     , source: SourceDMG
-    , description: [ "" ]
+    , description: [ "These crystal lenses fit over the eyes. While wearing them, you have advantage on Wisdom (Perception) checks that rely on sight. In conditions of clear visibility, you can make out details of even extremely distant creatures and objects as small as 2 feet across." ]
     }
   , { title: ""
     , rarity: RarityUncommon
