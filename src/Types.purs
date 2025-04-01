@@ -3,105 +3,255 @@ module Types where
 import Prelude
 import Data.Maybe (Maybe(..))
 
+class Unshow a where
+  unshow :: String -> Maybe a
+
+class ShowShort a where
+  showShort :: a -> String
+
 data ItemSource
-  = SourceBigbyPresents
-  | SourceCallOfNetherdeep
+  = SourceAcquisitionsIncorporated
+  | SourceBaldursGateDescentIntoAvernus
+  | SourceBookOfManyThings
+  | SourceBigbyPresentsGloryOfTheGiants
+  | SourceCandleDeepMysteries
+  | SourceCurseOfStrahd
+  | SourceCriticalRoleCallOfNetherdeep
+  | SourceDivineContention
   | SourceDMG
-  | SourceEberron
-  | SourceEberronRising
-  | SourceExplorersGuide
+  | SourceDragonlanceShadowOfTheDragonQueen
+  | SourceEberronRisingFromTheLastWar
+  | SourceExplorersGuideToWildemount
+  | SourceFizbansTreasuryOfDragons
+  | SourceGuildmastersGuideToRavnica
   | SourceGhostsOfSaltmarsh
-  | SourceGuideToRavnica
-  | SourceMadMage
-  | SourcePHB
-  | SourcePhandelver
-  | SourceRimeOfFrostmaiden
-  | SourceRiseOfTiamat
-  | SourceStrixhaven
-  | SourceTashas
-  | SourceTyrranyOfDragonQueen
-  | SourceXanathars
-
-allSources :: Array ItemSource
-allSources = [ SourceBigbyPresents, SourceCallOfNetherdeep, SourceDMG, SourceEberron, SourceEberronRising, SourceExplorersGuide, SourceGhostsOfSaltmarsh, SourceGuideToRavnica, SourceMadMage, SourcePHB, SourcePhandelver, SourceRimeOfFrostmaiden, SourceRiseOfTiamat, SourceStrixhaven, SourceTashas, SourceTyrranyOfDragonQueen, SourceXanathars ]
-
-sourceBrief :: ItemSource -> String
-sourceBrief SourceBigbyPresents        = "BP:GOG"
-sourceBrief SourceCallOfNetherdeep     = "CR:CN"
-sourceBrief SourceDMG                  = "DMG"
-sourceBrief SourceEberron              = "WGTE"
-sourceBrief SourceEberronRising        = "E:RLW"
-sourceBrief SourceExplorersGuide       = "EGW"
-sourceBrief SourceGhostsOfSaltmarsh    = "GoS"
-sourceBrief SourceGuideToRavnica       = "GGR"
-sourceBrief SourceMadMage              = "WDMM"
-sourceBrief SourcePHB                  = "PHB"
-sourceBrief SourcePhandelver           = "PBTSO"
-sourceBrief SourceRimeOfFrostmaiden    = "ID:RF"
-sourceBrief SourceRiseOfTiamat         = "RoT"
-sourceBrief SourceStrixhaven           = "SCC"
-sourceBrief SourceTashas               = "TCE"
-sourceBrief SourceTyrranyOfDragonQueen = "ToD"
-sourceBrief SourceXanathars            = "XGE"
+  | SourceDungeonsAndDragonsHonorAmongThieves
+  | SourceIcewindDaleRimeOfTheFrostmaiden
+  | SourceInfernalMachineRebuild
+  | SourceJourneysThroughTheRadiantCitadel
+  | SourceKeysFromTheGoldenVault
+  | SourceLostLaboratoryOfKwalish
+  | SourceLostMineOfPhandelver
+  | SourceMonstrousCompendium2
+  | SourceMythicOdysseysOfTheros
+  | SourceOutOfTheAbyss
+  | SourcePhandelverAndBelowTheShatteredObelisk
+  | SourcePlanescapeAdventuresInTheMultiverse
+  | SourceQuestsFromTheInfiniteStaircase
+  | SourcePrincesOfTheApocalypse
+  | SourceTheRiseOfTiamat
+  | SourceSpelljammerAdventuresInSpace
+  | SourceStrixhaveCurriculumOfChaos
+  | SourceSourceSleepingDragonsWake
+  | SourceStormKingsThunder
+  | SourceTashasCauldronOfEverything
+  | SourceTombOfAnnihilation
+  | SourceTyrannyOfDragons
+  | SourceTalesFromTheYawningPortal
+  | SourceVanRichtensGuideToRavenloft
+  | SourceVecnaEyeOfRuin
+  | SourceVolosGuideToMonsters
+  | SourceWaterdeepDragonHeist
+  | SourceWaterdeepDungeonOfTheMadMage
+  | SourceWayfarersGuideToEberron
+  | SourceTheWildBeyondTheWitchlight
+  | SourceXanatharsGuideToEverything
 
 instance Show ItemSource where
-  show SourceBigbyPresents        = "Bigby Presents - Glory of the Giants"
-  show SourceCallOfNetherdeep     = "Critical Role - Call of the Netherdeep"
-  show SourceDMG                  = "Dungeon Masters Guide"
-  show SourceEberron              = "Wayfarer's Guide to Eberron"
-  show SourceEberronRising        = "Eberron - Rising from the Last War"
-  show SourceExplorersGuide       = "Explorer's Guide to Wildemount"
-  show SourceGhostsOfSaltmarsh    = "Ghosts of Saltmarsh"
-  show SourceGuideToRavnica       = "Guildmaster's Guide to Ravnica"
-  show SourceMadMage              = "Waterdeep: Dungeon of the Mad Mage"
-  show SourcePHB                  = "Players Handbook"
-  show SourcePhandelver           = "Phandelver and Below - The Shattered Obelisk"
-  show SourceRimeOfFrostmaiden    = "Icewind Dale - Rime of the Frostmaiden"
-  show SourceRiseOfTiamat         = "The Rise of Tiamat"
-  show SourceStrixhaven           = "Strixhaven: A Curriculum of Chaos"
-  show SourceTashas               = "Tasha's Cauldron of Everything"
-  show SourceTyrranyOfDragonQueen = "Tyranny of the Dragonqueen"
-  show SourceXanathars            = "Xanathar's Guide to Everything"
+  show SourceAcquisitionsIncorporated = "Acquisitions Incorporated"
+  show SourceBaldursGateDescentIntoAvernus = "Baldur's Gate: Descent into Avernus"
+  show SourceBookOfManyThings = "The Book of Many Things"
+  show SourceBigbyPresentsGloryOfTheGiants = "Bigby Presents: Glory of the Giants"
+  show SourceCandleDeepMysteries = "Candlekeep Mysteries"
+  show SourceCurseOfStrahd = "Curse of Strahd"
+  show SourceCriticalRoleCallOfNetherdeep = "Critical Role: Call of the Netherdeep"
+  show SourceDivineContention = "Divine Contention"
+  show SourceDMG = "Dungeon Master's Guide"
+  show SourceDragonlanceShadowOfTheDragonQueen = "Dragonlance: Shadow of the Dragon Queen"
+  show SourceEberronRisingFromTheLastWar = "Eberron: Rising from the Last War"
+  show SourceExplorersGuideToWildemount = "Explorer's Guide to Wildemount"
+  show SourceFizbansTreasuryOfDragons = "Fizban's Treasury of Dragons"
+  show SourceGuildmastersGuideToRavnica = "Guildmaster's Guide to Ravnica"
+  show SourceGhostsOfSaltmarsh = "Ghosts of Saltmarsh"
+  show SourceDungeonsAndDragonsHonorAmongThieves = "Dungeons and Dragons: Honor Among Thieves"
+  show SourceIcewindDaleRimeOfTheFrostmaiden = "Icewind Dale: Rime of the Frostmaiden"
+  show SourceInfernalMachineRebuild = "Infernal Machine Rebuild"
+  show SourceJourneysThroughTheRadiantCitadel = "Journeys through the Radiant Citadel"
+  show SourceKeysFromTheGoldenVault = "Keys from the Golden Vault"
+  show SourceLostLaboratoryOfKwalish = "Lost Laboratory of Kwalish"
+  show SourceLostMineOfPhandelver = "Lost Mine of Phandelver"
+  show SourceMonstrousCompendium2 = "Monstrous Compendium Volume 2 - Dragonlance Creatures"
+  show SourceMythicOdysseysOfTheros = "Mythic Odysseys of Theros"
+  show SourceOutOfTheAbyss = "Out of the Abyss"
+  show SourcePhandelverAndBelowTheShatteredObelisk = "Phandelver and Below: The Shattered Obelisk"
+  show SourcePlanescapeAdventuresInTheMultiverse = "Planescape: Adventures in the Multiverse"
+  show SourceQuestsFromTheInfiniteStaircase = "Quests from the Infinite Staircase"
+  show SourcePrincesOfTheApocalypse = "Princes of the Apocalypse"
+  show SourceTheRiseOfTiamat = "The Rise of Tiamat"
+  show SourceSpelljammerAdventuresInSpace = "Spelljammer: Adventures in Space"
+  show SourceStrixhaveCurriculumOfChaos = "Strixhaven: A Curriculum of Chaos"
+  show SourceSourceSleepingDragonsWake = "Sleeping Dragon's Wake"
+  show SourceStormKingsThunder = "Storm King's Thunder"
+  show SourceTashasCauldronOfEverything = "Tasha's Cauldron of Everything"
+  show SourceTombOfAnnihilation = "Tomb of Annihilation"
+  show SourceTyrannyOfDragons = "Tyranny of Dragons"
+  show SourceTalesFromTheYawningPortal = "Tales from the Yawning Portal"
+  show SourceVanRichtensGuideToRavenloft = "Van Richten's Guide to Ravenloft"
+  show SourceVecnaEyeOfRuin = "Vecna: Eve of Ruin"
+  show SourceVolosGuideToMonsters = "Volo's Guide to Monsters"
+  show SourceWaterdeepDragonHeist = "Waterdeep: Dragon Heist"
+  show SourceWaterdeepDungeonOfTheMadMage = "Waterdeep: Dungeon of the Mad Mage"
+  show SourceWayfarersGuideToEberron = "Wayfarer's Guide to Eberron"
+  show SourceTheWildBeyondTheWitchlight = "The Wild Beyond the Witchlight"
+  show SourceXanatharsGuideToEverything = "Xanathar's Guide to Everything"
 
 instance Eq ItemSource where
-  eq SourceBigbyPresents SourceBigbyPresents = true
-  eq SourceCallOfNetherdeep SourceCallOfNetherdeep = true
+  eq SourceAcquisitionsIncorporated SourceAcquisitionsIncorporated = true
+  eq SourceBaldursGateDescentIntoAvernus SourceBaldursGateDescentIntoAvernus = true
+  eq SourceBookOfManyThings SourceBookOfManyThings = true
+  eq SourceBigbyPresentsGloryOfTheGiants SourceBigbyPresentsGloryOfTheGiants = true
+  eq SourceCandleDeepMysteries SourceCandleDeepMysteries = true
+  eq SourceCurseOfStrahd SourceCurseOfStrahd = true
+  eq SourceCriticalRoleCallOfNetherdeep SourceCriticalRoleCallOfNetherdeep = true
+  eq SourceDivineContention SourceDivineContention = true
   eq SourceDMG SourceDMG = true
-  eq SourceEberron SourceEberron = true
-  eq SourceEberronRising SourceEberronRising = true
-  eq SourceExplorersGuide SourceExplorersGuide = true
+  eq SourceDragonlanceShadowOfTheDragonQueen SourceDragonlanceShadowOfTheDragonQueen = true
+  eq SourceEberronRisingFromTheLastWar SourceEberronRisingFromTheLastWar = true
+  eq SourceExplorersGuideToWildemount SourceExplorersGuideToWildemount = true
+  eq SourceFizbansTreasuryOfDragons SourceFizbansTreasuryOfDragons = true
+  eq SourceGuildmastersGuideToRavnica SourceGuildmastersGuideToRavnica = true
   eq SourceGhostsOfSaltmarsh SourceGhostsOfSaltmarsh = true
-  eq SourceGuideToRavnica SourceGuideToRavnica = true
-  eq SourceMadMage SourceMadMage = true
-  eq SourcePHB SourcePHB = true
-  eq SourcePhandelver SourcePhandelver = true
-  eq SourceRimeOfFrostmaiden SourceRimeOfFrostmaiden = true
-  eq SourceRiseOfTiamat SourceRiseOfTiamat = true
-  eq SourceStrixhaven SourceStrixhaven = true
-  eq SourceTashas SourceTashas = true
-  eq SourceTyrranyOfDragonQueen SourceTyrranyOfDragonQueen = true
-  eq SourceXanathars SourceXanathars = true
+  eq SourceDungeonsAndDragonsHonorAmongThieves SourceDungeonsAndDragonsHonorAmongThieves = true
+  eq SourceIcewindDaleRimeOfTheFrostmaiden SourceIcewindDaleRimeOfTheFrostmaiden = true
+  eq SourceInfernalMachineRebuild SourceInfernalMachineRebuild = true
+  eq SourceJourneysThroughTheRadiantCitadel SourceJourneysThroughTheRadiantCitadel = true
+  eq SourceKeysFromTheGoldenVault SourceKeysFromTheGoldenVault = true
+  eq SourceLostLaboratoryOfKwalish SourceLostLaboratoryOfKwalish = true
+  eq SourceLostMineOfPhandelver SourceLostMineOfPhandelver = true
+  eq SourceMonstrousCompendium2 SourceMonstrousCompendium2 = true
+  eq SourceMythicOdysseysOfTheros SourceMythicOdysseysOfTheros = true
+  eq SourceOutOfTheAbyss SourceOutOfTheAbyss = true
+  eq SourcePhandelverAndBelowTheShatteredObelisk SourcePhandelverAndBelowTheShatteredObelisk = true
+  eq SourcePlanescapeAdventuresInTheMultiverse SourcePlanescapeAdventuresInTheMultiverse = true
+  eq SourceQuestsFromTheInfiniteStaircase SourceQuestsFromTheInfiniteStaircase = true
+  eq SourcePrincesOfTheApocalypse SourcePrincesOfTheApocalypse = true
+  eq SourceTheRiseOfTiamat SourceTheRiseOfTiamat = true
+  eq SourceSpelljammerAdventuresInSpace SourceSpelljammerAdventuresInSpace = true
+  eq SourceStrixhaveCurriculumOfChaos SourceStrixhaveCurriculumOfChaos = true
+  eq SourceSourceSleepingDragonsWake SourceSourceSleepingDragonsWake = true
+  eq SourceStormKingsThunder SourceStormKingsThunder = true
+  eq SourceTashasCauldronOfEverything SourceTashasCauldronOfEverything = true
+  eq SourceTombOfAnnihilation SourceTombOfAnnihilation = true
+  eq SourceTyrannyOfDragons SourceTyrannyOfDragons = true
+  eq SourceTalesFromTheYawningPortal SourceTalesFromTheYawningPortal = true
+  eq SourceVanRichtensGuideToRavenloft SourceVanRichtensGuideToRavenloft = true
+  eq SourceVecnaEyeOfRuin SourceVecnaEyeOfRuin = true
+  eq SourceVolosGuideToMonsters SourceVolosGuideToMonsters = true
+  eq SourceWaterdeepDragonHeist SourceWaterdeepDragonHeist = true
+  eq SourceWaterdeepDungeonOfTheMadMage SourceWaterdeepDungeonOfTheMadMage = true
+  eq SourceWayfarersGuideToEberron SourceWayfarersGuideToEberron = true
+  eq SourceTheWildBeyondTheWitchlight SourceTheWildBeyondTheWitchlight = true
+  eq SourceXanatharsGuideToEverything SourceXanatharsGuideToEverything = true
   eq _ _ = false
 
-toSource :: String -> Maybe ItemSource
-toSource "Bigby Presents - Glory of the Giants"         = Just SourceBigbyPresents       
-toSource "Critical Role - Call of the Netherdeep"       = Just SourceCallOfNetherdeep    
-toSource "Dungeon Masters Guide"                        = Just SourceDMG                 
-toSource "Wayfarer's Guide to Eberron"                  = Just SourceEberron             
-toSource "Eberron - Rising from the Last War"           = Just SourceEberronRising       
-toSource "Explorer's Guide to Wildemount"               = Just SourceExplorersGuide      
-toSource "Ghosts of Saltmarsh"                          = Just SourceGhostsOfSaltmarsh   
-toSource "Guildmaster's Guide to Ravnica"               = Just SourceGuideToRavnica      
-toSource "Waterdeep: Dungeon of the Mad Mage"           = Just SourceMadMage             
-toSource "Players Handbook"                             = Just SourcePHB                 
-toSource "Phandelver and Below - The Shattered Obelisk" = Just SourcePhandelver          
-toSource "Icewind Dale - Rime of the Frostmaiden"       = Just SourceRimeOfFrostmaiden   
-toSource "The Rise of Tiamat"                           = Just SourceRiseOfTiamat        
-toSource "Strixhaven: A Curriculum of Chaos"            = Just SourceStrixhaven          
-toSource "Tasha's Cauldron of Everything"               = Just SourceTashas              
-toSource "Tyranny of the Dragonqueen"                   = Just SourceTyrranyOfDragonQueen
-toSource "Xanathar's Guide to Everything"               = Just SourceXanathars    
-toSource _                                              = Nothing       
+allSources :: Array ItemSource
+allSources =
+  [ SourceAcquisitionsIncorporated
+  , SourceBaldursGateDescentIntoAvernus
+  , SourceBookOfManyThings
+  , SourceBigbyPresentsGloryOfTheGiants
+  , SourceCandleDeepMysteries
+  , SourceCurseOfStrahd
+  , SourceCriticalRoleCallOfNetherdeep
+  , SourceDivineContention
+  , SourceDMG
+  , SourceDragonlanceShadowOfTheDragonQueen
+  , SourceEberronRisingFromTheLastWar
+  , SourceExplorersGuideToWildemount
+  , SourceFizbansTreasuryOfDragons
+  , SourceGuildmastersGuideToRavnica
+  , SourceGhostsOfSaltmarsh
+  , SourceDungeonsAndDragonsHonorAmongThieves
+  , SourceIcewindDaleRimeOfTheFrostmaiden
+  , SourceInfernalMachineRebuild
+  , SourceJourneysThroughTheRadiantCitadel
+  , SourceKeysFromTheGoldenVault
+  , SourceLostLaboratoryOfKwalish
+  , SourceLostMineOfPhandelver
+  , SourceMonstrousCompendium2
+  , SourceMythicOdysseysOfTheros
+  , SourceOutOfTheAbyss
+  , SourcePhandelverAndBelowTheShatteredObelisk
+  , SourcePlanescapeAdventuresInTheMultiverse
+  , SourceQuestsFromTheInfiniteStaircase
+  , SourcePrincesOfTheApocalypse
+  , SourceTheRiseOfTiamat
+  , SourceSpelljammerAdventuresInSpace
+  , SourceStrixhaveCurriculumOfChaos
+  , SourceSourceSleepingDragonsWake
+  , SourceStormKingsThunder
+  , SourceTashasCauldronOfEverything
+  , SourceTombOfAnnihilation
+  , SourceTyrannyOfDragons
+  , SourceTalesFromTheYawningPortal
+  , SourceVanRichtensGuideToRavenloft
+  , SourceVecnaEyeOfRuin
+  , SourceVolosGuideToMonsters
+  , SourceWaterdeepDragonHeist
+  , SourceWaterdeepDungeonOfTheMadMage
+  , SourceWayfarersGuideToEberron
+  , SourceTheWildBeyondTheWitchlight
+  , SourceXanatharsGuideToEverything
+  ]
+
+instance Unshow ItemSource where
+  unshow "Acquisitions Incorporated" = Just SourceAcquisitionsIncorporated
+  unshow "Baldur's Gate: Descent into Avernus" = Just SourceBaldursGateDescentIntoAvernus
+  unshow "The Book of Many Things" = Just SourceBookOfManyThings
+  unshow "Bigby Presents: Glory of the Giants" = Just SourceBigbyPresentsGloryOfTheGiants
+  unshow "Candlekeep Mysteries" = Just SourceCandleDeepMysteries
+  unshow "Curse of Strahd" = Just SourceCurseOfStrahd
+  unshow "Critical Role: Call of the Netherdeep" = Just SourceCriticalRoleCallOfNetherdeep
+  unshow "Divine Contention" = Just SourceDivineContention
+  unshow "Dungeon Master's Guide" = Just SourceDMG
+  unshow "Dragonlance: Shadow of the Dragon Queen" = Just SourceDragonlanceShadowOfTheDragonQueen
+  unshow "Eberron: Rising from the Last War" = Just SourceEberronRisingFromTheLastWar
+  unshow "Explorer's Guide to Wildemount" = Just SourceExplorersGuideToWildemount
+  unshow "Fizban's Treasury of Dragons" = Just SourceFizbansTreasuryOfDragons
+  unshow "Guildmaster's Guide to Ravnica" = Just SourceGuildmastersGuideToRavnica
+  unshow "Ghosts of Saltmarsh" = Just SourceGhostsOfSaltmarsh
+  unshow "Dungeons and Dragons: Honor Among Thieves" = Just SourceDungeonsAndDragonsHonorAmongThieves
+  unshow "Icewind Dale: Rime of the Frostmaiden" = Just SourceIcewindDaleRimeOfTheFrostmaiden
+  unshow "Infernal Machine Rebuild" = Just SourceInfernalMachineRebuild
+  unshow "Journeys through the Radiant Citadel" = Just SourceJourneysThroughTheRadiantCitadel
+  unshow "Keys from the Golden Vault" = Just SourceKeysFromTheGoldenVault
+  unshow "Lost Laboratory of Kwalish" = Just SourceLostLaboratoryOfKwalish
+  unshow "Lost Mine of Phandelver" = Just SourceLostMineOfPhandelver
+  unshow "Monstrous Compendium Volume 2 - Dragonlance Creatures" = Just SourceMonstrousCompendium2
+  unshow "Mythic Odysseys of Theros" = Just SourceMythicOdysseysOfTheros
+  unshow "Out of the Abyss" = Just SourceOutOfTheAbyss
+  unshow "Phandelver and Below: The Shattered Obelisk" = Just SourcePhandelverAndBelowTheShatteredObelisk
+  unshow "Planescape: Adventures in the Multiverse" = Just SourcePlanescapeAdventuresInTheMultiverse
+  unshow "Quests from the Infinite Staircase" = Just SourceQuestsFromTheInfiniteStaircase
+  unshow "Princes of the Apocalypse" = Just SourcePrincesOfTheApocalypse
+  unshow "The Rise of Tiamat" = Just SourceTheRiseOfTiamat
+  unshow "Spelljammer: Adventures in Space" = Just SourceSpelljammerAdventuresInSpace
+  unshow "Strixhaven: A Curriculum of Chaos" = Just SourceStrixhaveCurriculumOfChaos
+  unshow "Sleeping Dragon's Wake" = Just SourceSourceSleepingDragonsWake
+  unshow "Storm King's Thunder" = Just SourceStormKingsThunder
+  unshow "Tasha's Cauldron of Everything" = Just SourceTashasCauldronOfEverything
+  unshow "Tomb of Annihilation" = Just SourceTombOfAnnihilation
+  unshow "Tyranny of Dragons" = Just SourceTyrannyOfDragons
+  unshow "Tales from the Yawning Portal" = Just SourceTalesFromTheYawningPortal
+  unshow "Van Richten's Guide to Ravenloft" = Just SourceVanRichtensGuideToRavenloft
+  unshow "Vecna: Eve of Ruin" = Just SourceVecnaEyeOfRuin
+  unshow "Volo's Guide to Monsters" = Just SourceVolosGuideToMonsters
+  unshow "Waterdeep: Dragon Heist" = Just SourceWaterdeepDragonHeist
+  unshow "Waterdeep: Dungeon of the Mad Mage" = Just SourceWaterdeepDungeonOfTheMadMage
+  unshow "Wayfarer's Guide to Eberron" = Just SourceWayfarersGuideToEberron
+  unshow "The Wild Beyond the Witchlight" = Just SourceTheWildBeyondTheWitchlight
+  unshow "Xanathar's Guide to Everything" = Just SourceXanatharsGuideToEverything
+  unshow _ = Nothing
 
 data ItemType
   = TypeArmor (Maybe String)
@@ -140,26 +290,26 @@ instance Eq ItemType where
   eq (TypeWeapon _) (TypeWeapon _) = true
   eq _              _              = false
 
-showShortType :: ItemType -> String
-showShortType (TypeArmor _)   = "Armor"
-showShortType (TypeItem _)    = "Wondrous Item"
-showShortType TypePotion      = "Potion"
-showShortType TypeRing        = "Ring"
-showShortType TypeScroll      = "Scroll"
-showShortType TypeStaff       = "Staff"
-showShortType TypeWand        = "Wand"
-showShortType (TypeWeapon _)  = "Weapon"
+instance Unshow ItemType where
+  unshow "Armor"          = Just (TypeArmor Nothing) 
+  unshow "Wondrous Item"  = Just (TypeItem Nothing)  
+  unshow "Potion"         = Just TypePotion    
+  unshow "Ring"           = Just TypeRing      
+  unshow "Scroll"         = Just TypeScroll    
+  unshow "Staff"          = Just TypeStaff     
+  unshow "Wand"           = Just TypeWand      
+  unshow "Weapon"         = Just (TypeWeapon Nothing)
+  unshow _                = Nothing
 
-toType :: String -> Maybe ItemType
-toType "Armor"          = Just (TypeArmor Nothing) 
-toType "Wondrous Item"  = Just (TypeItem Nothing)  
-toType "Potion"         = Just TypePotion    
-toType "Ring"           = Just TypeRing      
-toType "Scroll"         = Just TypeScroll    
-toType "Staff"          = Just TypeStaff     
-toType "Wand"           = Just TypeWand      
-toType "Weapon"         = Just (TypeWeapon Nothing)
-toType _                = Nothing
+instance ShowShort ItemType where
+  showShort (TypeArmor _)   = "Armor"
+  showShort (TypeItem _)    = "Wondrous Item"
+  showShort TypePotion      = "Potion"
+  showShort TypeRing        = "Ring"
+  showShort TypeScroll      = "Scroll"
+  showShort TypeStaff       = "Staff"
+  showShort TypeWand        = "Wand"
+  showShort (TypeWeapon _)  = "Weapon"
 
 data Rarity
   = RarityCommon
@@ -179,15 +329,15 @@ instance Show Rarity where
   show RarityArtifact  = "Artifact"
   show RarityUnique    = "Unique"
 
-toRarity :: String -> Maybe Rarity
-toRarity "Common"    = Just RarityCommon
-toRarity "Uncommon"  = Just RarityUncommon
-toRarity "Rare"      = Just RarityRare
-toRarity "Very Rare" = Just RarityVeryRare
-toRarity "Legendary" = Just RarityLegendary
-toRarity "Artifact"  = Just RarityArtifact
-toRarity "Unique"    = Just RarityUnique
-toRarity _           = Nothing
+instance Unshow Rarity where
+  unshow "Common"    = Just RarityCommon
+  unshow "Uncommon"  = Just RarityUncommon
+  unshow "Rare"      = Just RarityRare
+  unshow "Very Rare" = Just RarityVeryRare
+  unshow "Legendary" = Just RarityLegendary
+  unshow "Artifact"  = Just RarityArtifact
+  unshow "Unique"    = Just RarityUnique
+  unshow _           = Nothing
 
 instance Eq Rarity where
   eq RarityCommon RarityCommon = true

@@ -21,7 +21,7 @@ import Flame.Html.Element as HE
 import Flame.Html.Event as HV
 
 import MagicItems (magicItems)
-import Types (MagicItem, ItemAttunement, ItemType, ItemSource, Rarity, allAttunes, allRarities, allSources, allTypes, showFullAttune, showShortType, toAttune, toRarity, toSource, toType)
+import Types (MagicItem, ItemAttunement, ItemType, ItemSource, Rarity, allAttunes, allRarities, allSources, allTypes, showFullAttune, showShort, toAttune, unshow)
 
 type Model =
   { fltTitle :: String
@@ -48,10 +48,10 @@ init = { fltTitle: ""
 
 update :: Model → Message → Tuple Model (Array (Aff (Maybe Message)))
 update model (ChangeTitle  x) = model { fltTitle      = x } :> []
-update model (ChangeRarity x) = model { fltRarity     = toRarity x } :> []
-update model (ChangeType   x) = model { fltType       = toType   x } :> []
+update model (ChangeRarity x) = model { fltRarity     = unshow x } :> []
+update model (ChangeType   x) = model { fltType       = unshow   x } :> []
 update model (ChangeAttune x) = model { fltAttunement = toAttune x } :> []
-update model (ChangeSource x) = model { fltSource     = toSource x } :> []
+update model (ChangeSource x) = model { fltSource     = unshow x } :> []
 
 view :: Model -> Html Message
 view model =
@@ -91,7 +91,8 @@ viewItems model =
 
 filterItem :: Model -> MagicItem -> Boolean
 filterItem model item 
-  =  filterTitle model.fltTitle item.title
+  =  item.title /= ""
+  && filterTitle model.fltTitle item.title
   && filterMaybe model.fltRarity item.rarity
   && filterMaybe model.fltType item.type
   && filterMaybe model.fltAttunement item.attune
@@ -113,7 +114,7 @@ viewItem item =
       [ HE.div [ HA.class' "grid" ]
         [ HE.div [ HA.class' "s3" ] [ HE.strong_ [HE.text item.title] ]
         , HE.div [ HA.class' "s2" ] [ HE.text (show item.rarity) ]
-        , HE.div [ HA.class' "s2" ] [ HE.text (showShortType item.type) ]
+        , HE.div [ HA.class' "s2" ] [ HE.text (showShort item.type) ]
         , HE.div [ HA.class' "s2" ] [ HE.text (show item.attune) ]
         , HE.div [ HA.class' "s3" ] [ HE.text (show item.source) ]
         ]
