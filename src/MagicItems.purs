@@ -847,7 +847,7 @@ magicItems =
       ]
     }
 
-  -- Uncommon Items
+  -- Uncommon Items (200)
   , { title: "Adamantine Armor"
     , rarity: RarityUncommon
     , type: TypeArmor (Just "medium or heavy, but not hide")
@@ -855,6 +855,13 @@ magicItems =
     , source: SourceDMG
     , description: [ "This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you're wearing it, any critical hit against you becomes a normal hit." ]
     }
+--   , { title: ""
+--     , rarity: RarityUncommon
+--     , type: TypeItem Nothing
+--     , attune: AttuneNone
+--     , source: SourcePHB
+--     , description: [ "" ]
+--     }
 
   -- Rare Items
   , { title: "Acheron Blade"
@@ -868,6 +875,13 @@ magicItems =
       , "Disheartening Strike. When you hit a creature with an attack using this weapon, you can fill the target with unsettling dread: the target has disadvantage on the next saving throw it makes before the end of your next turn. The creature ignores this effect if it's immune to the frightened condition. Once you use this property, you can't do so again until the next dusk."
       ]
     }
+--   , { title: ""
+--     , rarity: RarityRare
+--     , type: TypeItem Nothing
+--     , attune: AttuneNone
+--     , source: SourcePHB
+--     , description: [ "" ]
+--     }
 
   -- Very Rare Items
   , { title: "Abracadabrus"
@@ -881,6 +895,13 @@ magicItems =
       , "The chest regains 1d20 expended charges daily at dawn. If the item's last charge is expended, roll a d20. On a 1, the chest loses its magic (becoming an ordinary chest), and its gemstones turn to dust."
       ]
     }
+--   , { title: ""
+--     , rarity: RarityVeryRare
+--     , type: TypeItem Nothing
+--     , attune: AttuneNone
+--     , source: SourcePHB
+--     , description: [ "" ]
+--     }
 
   -- Legendary Items
   , { title: "Apparatus of Kwalish"
@@ -920,6 +941,13 @@ magicItems =
       , "Lever 10 Down: The rear hatch closes and seals."
       ]
     }
+--   , { title: ""
+--     , rarity: RarityLegendary
+--     , type: TypeItem Nothing
+--     , attune: AttuneNone
+--     , source: SourcePHB
+--     , description: [ "" ]
+--     }
 
   -- Artifacts
   , { title: "Adze of Annam"
@@ -937,6 +965,13 @@ magicItems =
       , "Divine Mattock. As an action, you can call upon the might of the All-Father and use the adze to cast Move Earth or Fabricate. Once this property is used, it can't be used again until the next dawn." 
       ]
     }
+--   , { title: ""
+--     , rarity: RarityArtifact
+--     , type: TypeItem Nothing
+--     , attune: AttuneNone
+--     , source: SourcePHB
+--     , description: [ "" ]
+--     }
 
   -- Unique Items
   , { title: "Draakhorn"
@@ -951,12 +986,11 @@ magicItems =
       , "While the horn is sounding, a creature must make a DC 15 Constitution saving throw the first time on a turn the creature enters a 150-foot cone in front of the horn or starts its turn there. On a failed save, the creature takes 27 (6d8) thunder damage and is knocked prone. On a successful save, the creature takes half damage and isn't knocked prone. The horn can't be turned or aimed at a specific target." 
       ]
     }
-  ]
-
 --   , { title: ""
---     , rarity: RarityCommon
+--     , rarity: RarityUnique
 --     , type: TypeItem Nothing
 --     , attune: AttuneNone
 --     , source: SourcePHB
 --     , description: [ "" ]
 --     }
+  ]
