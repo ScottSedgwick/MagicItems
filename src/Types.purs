@@ -1,6 +1,7 @@
 module Types where
 
 import Prelude
+import Data.Array (intercalate)
 import Data.Maybe (Maybe(..))
 
 class Unshow a where
@@ -320,6 +321,9 @@ instance Show Rarity where
   show RarityArtifact  = "Artifact"
   show RarityUnique    = "Unique"
 
+showR :: Array Rarity -> String
+showR xs = intercalate ", " (map show xs)
+
 instance Unshow Rarity where
   unshow "Common"    = Just RarityCommon
   unshow "Uncommon"  = Just RarityUncommon
@@ -369,11 +373,22 @@ showFullAttune AttuneNone        = ""
 showFullAttune (Attune Nothing)  = " (requires attunement)"
 showFullAttune (Attune (Just s)) = " (requires attunement by a " <> s <> ")"
 
+data Description
+  = P (Array Description)
+  | T String
+  | B String
+  | I String
+  | UL (Array Description)
+  | LI (Array Description)
+  | TB (Array Description)
+  | TH (Array Description)
+  | TR (Array Description)
+
 type MagicItem =
   { title :: String
-  , rarity :: Rarity
+  , rarity :: Array Rarity
   , type :: ItemType
   , attune :: ItemAttunement
   , source :: ItemSource
-  , description :: Array String
+  , description :: Array Description
   }

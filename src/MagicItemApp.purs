@@ -9,9 +9,8 @@ module MagicItemApp
 
 import Prelude
 
-import Data.Array (filter, sortBy)
+import Data.Array (elem, filter, sortBy)
 import Data.Maybe (Maybe(..))
-
 import Data.String (Pattern(..), contains, toLower)
 import Data.Tuple (Tuple)
 import Effect.Aff (Aff)
@@ -19,9 +18,8 @@ import Flame (Html, (:>))
 import Flame.Html.Attribute as HA
 import Flame.Html.Element as HE
 import Flame.Html.Event as HV
-
 import MagicItems (magicItems)
-import Types (MagicItem, ItemAttunement, ItemType, ItemSource, Rarity, allAttunes, allRarities, allSources, allTypes, showFullAttune, toAttune, unshow)
+import Types (Description(..), MagicItem, ItemAttunement, ItemType, ItemSource, Rarity, allAttunes, allRarities, allSources, allTypes, showFullAttune, showR, toAttune, unshow)
 
 type Model =
   { fltTitle :: String
@@ -65,14 +63,16 @@ viewFilter :: Model -> Html Message
 viewFilter model =
   HE.article_ 
   [ HE.div [ HA.class' "grid" ]
-    [ HE.div [ HA.class' "s12"] [ HE.h6_ [ HE.text "Filters:" ] ]
-    , HE.div [ HA.class' "s3" ] [ HE.label [ HA.for "title-filter" , HA.class' "bold medium-text" ] [ HE.text "Title: "  ], HE.input [ HA.id "title-filter", HA.type' "text", HA.value model.fltTitle, HV.onInput ChangeTitle ] ] 
-    , HE.div [ HA.class' "s2" ] [ HE.label [ HA.for "rarity-filter", HA.class' "bold medium-text" ] [ HE.text "Rarity: " ], mkSelect "rarity-filter" ChangeRarity allRarities model.fltRarity ]
-    , HE.div [ HA.class' "s2" ] [ HE.label [ HA.for "type-filter"  , HA.class' "bold medium-text" ] [ HE.text "Type: "   ], mkSelect "type-filter"   ChangeType   allTypes    model.fltType   ] 
-    , HE.div [ HA.class' "s2" ] [ HE.label [ HA.for "attune-filter", HA.class' "bold medium-text" ] [ HE.text "Attune: " ], mkSelect "attune-filter" ChangeAttune allAttunes  model.fltAttunement ] 
-    , HE.div [ HA.class' "s3" ] [ HE.label [ HA.for "source-filter", HA.class' "bold medium-text" ] [ HE.text "Source: " ], mkSelect "source-filter" ChangeSource allSources  model.fltSource ]
+    [ HE.div [ HA.class' "s3" ] [ mkLabel "title-filter"  "Title: " , HE.div [ HA.class' "field border" ] [HE.input [ HA.id "title-filter", HA.type' "text", HA.value model.fltTitle, HV.onInput ChangeTitle ] ] ]
+    , HE.div [ HA.class' "s2" ] [ mkLabel "rarity-filter" "Rarity: ", mkSelect "rarity-filter" ChangeRarity allRarities model.fltRarity ]
+    , HE.div [ HA.class' "s2" ] [ mkLabel "type-filter"   "Type: "  , mkSelect "type-filter"   ChangeType   allTypes    model.fltType   ] 
+    , HE.div [ HA.class' "s2" ] [ mkLabel "attune-filter" "Attune: ", mkSelect "attune-filter" ChangeAttune allAttunes  model.fltAttunement ] 
+    , HE.div [ HA.class' "s3" ] [ mkLabel "source-filter" "Source: ", mkSelect "source-filter" ChangeSource allSources  model.fltSource ]
     ]
   ]
+
+mkLabel :: String -> String -> Html Message
+mkLabel id caption = HE.label [ HA.for id, HA.class' "bold medium-text" ] [ HE.text caption ]
 
 mkSelect :: forall a b. Show a => Eq a => String -> (String -> b) -> Array a -> Maybe a -> Html b
 mkSelect id msg opts value = 
@@ -80,7 +80,7 @@ mkSelect id msg opts value =
     nullOption = HE.option [ HA.value "All",   HA.selected (value == Nothing) ] "All"
     mkOption x = HE.option [ HA.value (show x), HA.selected (value == Just x ) ] (show x)
   in
-    HE.select [ HA.id id, HV.onInput msg, HA.style1 "width" "50%" ] ([nullOption] <> map mkOption opts)
+    HE.div [ HA.class' "field border" ] [ HE.select [ HA.id id, HV.onInput msg ] ([nullOption] <> map mkOption opts) ]
 
 viewItems :: Model -> Html Message
 viewItems model =
@@ -93,7 +93,7 @@ filterItem :: Model -> MagicItem -> Boolean
 filterItem model item 
   =  item.title /= ""
   && filterTitle model.fltTitle item.title
-  && filterMaybe model.fltRarity item.rarity
+  && filterMaybeIn model.fltRarity item.rarity
   && filterMaybe model.fltType item.type
   && filterMaybe model.fltAttunement item.attune
   && filterMaybe model.fltSource item.source
@@ -106,6 +106,10 @@ filterMaybe :: forall a. Eq a => Maybe a -> a -> Boolean
 filterMaybe Nothing  _ = true
 filterMaybe (Just a) b = a == b
 
+filterMaybeIn :: forall a. Eq a => Maybe a -> Array a -> Boolean
+filterMaybeIn Nothing  _ = true
+filterMaybeIn (Just a) b = elem a b
+
 viewItem :: MagicItem -> Html Message
 viewItem item =
   HE.article_
@@ -113,22 +117,34 @@ viewItem item =
     [ HE.summary_ 
       [ HE.div [ HA.class' "grid" ]
         [ HE.div [ HA.class' "s3" ] [ HE.strong_ [HE.text item.title] ]
-        , HE.div [ HA.class' "s2" ] [ HE.text (show item.rarity) ]
+        , HE.div [ HA.class' "s2" ] [ HE.text (showR item.rarity) ]
         , HE.div [ HA.class' "s2" ] [ HE.text (show item.type) ]
         , HE.div [ HA.class' "s2" ] [ HE.text (show item.attune) ]
         , HE.div [ HA.class' "s3" ] [ HE.text (show item.source) ]
         ]
       ] 
-    , HE.div [ HA.class' "grid" ]
-      ( [ HE.div [ HA.class' "s12"] [ HE.hr_ [ HE.text "" ] ]
-        , HE.div [ HA.class' "s12" ] [ HE.em_ (showCaption item) ]
-        ] <> (map (\s -> HE.div [ HA.class' "s12" ] [ HE.text s ]) item.description)
-      )
+    , HE.article_ 
+      [ HE.div [ HA.class' "grid" ]
+        ( [ HE.div [ HA.class' "s12" ] [ HE.em_ (showCaption item) ]
+          ] <> (map mkDescription item.description)
+        )
+      ]
     ]
   ]
+
+mkDescription :: Description -> Html Message
+mkDescription (P s) = HE.div [ HA.class' "s12" ] (map mkDescription s )
+mkDescription (T s) = HE.text s
+mkDescription (B s) = HE.strong_ [ HE.text s ]
+mkDescription (I s) = HE.em_ [ HE.text s ]
+mkDescription (UL s) = HE.ul_ (map mkDescription s)
+mkDescription (LI s) = HE.li_ (map mkDescription s)
+mkDescription (TB s) = HE.table [ HA.class' "stripes" ] (map mkDescription s)
+mkDescription (TH s) = HE.tr_ (map (\x -> HE.th_ (mkDescription x)) s)
+mkDescription (TR s) = HE.tr_ (map (\x -> HE.td_ (mkDescription x)) s)
 
 showCaption :: MagicItem -> String
 showCaption item
   =  show item.type <> ", " 
-  <> show item.rarity
+  <> showR item.rarity
   <> showFullAttune item.attune
