@@ -2562,7 +2562,7 @@ uncommonItems =
     , attune: Attune Nothing
     , source: SourcePhandelverAndBelowTheShatteredObelisk
     , description: 
-      [ "This ring has 6 charges. While you wear it, you can expend 1 of its charges to project your voice to be heard clearly by all creatures within 1 mile of yourself, regardless of intervening noise, for 1 minute. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks this projection. If you project your voice while speaking a language the listening creatures don’t understand, you can make the creatures understand what you’re saying. You must be able to see the creatures to make them understand. The ring regains 1d6 expended charges daily at dawn."
+      [ "This ring has 6 charges. While you wear it, you can expend 1 of its charges to project your voice to be heard clearly by all creatures within 1 mile of yourself, regardless of intervening noise, for 1 minute. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks this projection. If you project your voice while speaking a language the listening creatures don't understand, you can make the creatures understand what you're saying. You must be able to see the creatures to make them understand. The ring regains 1d6 expended charges daily at dawn."
       ]
     }
   , { title: "Ring of Truth Telling"
@@ -2674,409 +2674,490 @@ uncommonItems =
       , "The rope has AC 20 and 20 hit points. It regains 1 hit point every 5 minutes as long as it has at least 1 hit point. If the rope drops to 0 hit points, it is destroyed."
       ]
     }
-  , { title: ""
+  , { title: "Saddle of the Cavalier"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "While in this saddle on a mount, you can't be dismounted against your will if you're conscious, and attack rolls against the mount have disadvantage."
       ]
     }
-  , { title: ""
+  , { title: "Scaled Ornament"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune Nothing
+    , source: SourceFizbansTreasuryOfDragons
     , description: 
-      [ ""
+      [ "This ornament can be jewelry, a cloak, or another wearable accessory. It appears to be fashioned from a dragon's scale, tooth, or claw, or it incorporates images in those shapes."
+      , "Slumbering (Uncommon). You have advantage on saving throws you make to avoid being charmed or frightened or to end those conditions on you."
+      , "Stirring (Rare). You gain a +1 bonus to AC, and you can't be charmed or frightened. Moreover, each creature of your choice within 30 feet of you has advantage on saving throws it makes to avoid being charmed or frightened or to end those conditions on itself."
+      , "Wakened (Very Rare). The Wakened ornament has the Stirring property. In addition, when you would take damage of the type dealt by the breath of the dragon in whose hoard the ornament became Wakened, you can use your reaction to take no damage instead, and you regain hit points equal to the damage you would have taken. Once this property is used, it can't be used again until the next dawn."
+      , "Ascendant (Legendary). The Ascendant ornament has the Stirring and Wakened properties. In addition, while you are wearing the ornament, you gain a flying speed equal to your walking speed and can hover. While you are flying using this speed, spectral dragon wings appear on your back."
       ]
     }
-  , { title: ""
+  , { title: "Seeker Dart"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
+    , type: TypeWeapon (Just "dart")
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourcePrincesOfTheApocalypse
     , description: 
-      [ ""
+      [ "This small dart is decorated with designs like windy spirals that span the length of its shaft."
+      , "When you whisper the word “seek” and hurl this dart, it seeks out a target of your choice within 120 feet of you. You must have seen the target before, but you don't need to see it now. If the target isn't within range or if there is no clear path to it, the dart falls to the ground, its magic spent and wasted. Otherwise, elemental winds guide the dart instantly through the air to the target. The dart can pass though openings as narrow as 1 inch wide and can change direction to fly around corners."
+      , "When the dart reaches its target, the target must succeed on a DC 16 Dexterity saving throw or take 1d4 piercing damage and 3d4 lightning damage. The dart's magic is then spent, and it becomes an ordinary dart."
       ]
     }
-  , { title: ""
+  , { title: "Sending Stones"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "Sending stones come in pairs, with each smooth stone carved to match the other so the pairing is easily recognized. While you touch one stone, you can use an action to cast the sending spell from it. The target is the bearer of the other stone. If no creature bears the other stone, you know that fact as soon as you use the stone and don't cast the spell."
+      , "Once sending is cast through the stones, they can't be used again until the next dawn. If one of the stones in a pair is destroyed, the other one becomes nonmagical."
       ]
     }
-  , { title: ""
+  , { title: "Sensory Stone"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourcePlanescapeAdventuresInTheMultiverse
     , description: 
-      [ ""
+      [ "This small, smooth stone contains the essence of a single experience."
+      , "As an action, you or a willing creature you designate can touch the stone and experience the sensation as if it happened to the designated creature. The illusory experience is fleeting and harmless, however real it might feel in the moment."
+      , "Record Sensation. You can use your reaction to record a short sensation lasting no longer than 6 seconds experienced by a creature of your choice within 30 feet of yourself, infusing the essence of the experience into the stone. This replaces any sensation already stored within the stone."
+      , "Siphon Sensation. As a bonus action, you can draw on the stone's magic to end the charmed or frightened condition on yourself, destroying the stone in the process."
       ]
     }
-  , { title: ""
+  , { title: "Sentinel Shield"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
+    , type: TypeArmor (Just "shield")
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "While holding this shield, you have advantage on initiative rolls and Wisdom (Perception) checks. The shield is emblazoned with the symbol of an eye."
       ]
     }
-  , { title: ""
+  , { title: "Serpent Scale Armor"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
+    , type: TypeArmor (Just "scale mail")
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourceCandleDeepMysteries
     , description: 
-      [ ""
+      [ "This suit of magic armor is made from shimmering scales. While wearing it, you can apply your full Dexterity modifier (instead of a maximum of +2) when determining your Armor Class. In addition, this armor does not impose disadvantage on your Dexterity (Stealth) checks."
       ]
     }
-  , { title: ""
+  , { title: "Shatterspike"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , type: TypeWeapon (Just "longsword")
+    , attune: Attune Nothing
+    , source: SourceTalesFromTheYawningPortal
     , description: 
-      [ ""
+      [ "You have a +1 bonus to attack and damage rolls you make with this magic weapon. If it hits an object, the hit is automatically a critical hit, and it can deal bludgeoning or slashing damage to the object (your choice). Further, damage from nonmagical sources can't harm the weapon."
       ]
     }
-  , { title: ""
+  , { title: "Shield, +1, +2, +3"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
+    , type: TypeArmor (Just "shield")
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "uncommon (+1), rare (+2), or very rare (+3)"
+      , "While holding this shield, you have a bonus to AC determined by the shield's rarity. This bonus is in addition to the shield's normal bonus to AC."
       ]
     }
-  , { title: ""
+  , { title: "Shield Of The Tortoise"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , type: TypeArmor (Just "shield")
+    , attune: Attune Nothing
+    , source: SourceBookOfManyThings
     , description: 
-      [ ""
+      [ "While you are wielding this shield, you gain a +1 bonus to AC. This bonus is in addition to the shield's normal bonus to AC."
+      , "Curse. This item is cursed. Attuning to it extends the curse to you until you are targeted by a Remove Curse spell or similar magic. You cannot discard the shield, and remain attuned to it, as long as you are cursed. As long as you are cursed, you are sluggish. Your speed is halved. When you roll initiative, treat the roll on your d20 as a 1. You can't change your initiative by any means."
       ]
     }
-  , { title: ""
+  , { title: "Silverquill Primer"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
+    , attune: Attune (Just "spellcaster")
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "The Silverquill Primer is a magic textbook created at Strixhaven's Silverquill College. The primer has 3 charges, and it regains 1d3 expended charges daily at dawn. If you make a Charisma (Intimidation) or a Charisma (Persuasion) check while holding the primer, you can expend 1 charge to give yourself a 1d4 bonus to the check, immediately after you roll the d20."
+      , "In addition, if you study the primer at the end of a long rest, you can choose one 1st-level spell from the Bard or Cleric spell list. Before you finish your next long rest, you can cast the chosen spell once without a spell slot if you are holding the primer. Your spellcasting ability for this spell is your choice of Intelligence, Wisdom, or Charisma."
       ]
     }
-  , { title: ""
+  , { title: "Skyblinder Staff"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , type: TypeStaff
+    , attune: Attune Nothing
+    , source: SourceGuildmastersGuideToRavnica
     , description: 
-      [ ""
+      [ "You gain a +1 bonus to attack and damage rolls made with this magic quarterstaff. While holding it, you gain a +1 bonus to spell attack rolls."
+      , "If a flying creature you can see within 30 feet of you makes an attack roll against you, you can use your reaction to hold the staff aloft and cause it to flare with light. The attacker has disadvantage on the attack roll, and it must succeed on a DC 15 Constitution saving throw or be blinded until the start of its next turn."
       ]
     }
-  , { title: ""
+  , { title: "Sling Of Giant Felling"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
+    , type: TypeWeapon (Just "sling")
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "When you hit a Giant creature with a ranged attack roll using this magic sling, the creature must succeed on a DC 18 Constitution saving throw or have the prone condition."
       ]
     }
-  , { title: ""
+  , { title: "Slippers of Spider Climbing"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
+    , attune: Attune Nothing
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "While you wear these light shoes, you can move up, down , and across vertical surfaces and upside down along ceilings, while leaving your hands free. You have a climbing speed equal to your walking speed. However, the slippers don't allow you to move this way on a slippery surface, such as one covered by ice or oil."
       ]
     }
-  , { title: ""
+  , { title: "Smokepowder"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourceWaterdeepDragonHeist
     , description: 
-      [ ""
+      [ "Smokepowder is a magical explosive chiefly used to propel a bullet out of the barrel of a firearm. It is stored in airtight wooden kegs or tiny, waterproof leather packets. A packet contains enough Smokepowder for five shots, and a keg holds enough Smokepowder for five hundred shots."
+      , "If Smokepowder is set on fire, dropped, or otherwise handled roughly, it explodes and deals fire damage to each creature or object within 20 feet of it: 1d6 for a packet, 9d6 for a keg. A successful DC 12 Dexterity saving throw halves the damage."
+      , "Casting Dispel Magic on Smokepowder renders it permanently inert."
       ]
     }
-  , { title: ""
+  , { title: "Soul Coin"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourceBaldursGateDescentIntoAvernus
     , description: 
-      [ ""
+      [ "Soul coins are about 5 inches across and about an inch thick, minted from infernal iron. Each coin weighs one-third of a pound, and is inscribed with Infernal writing and a spell that magically binds a single soul to the coin. Because each soul coin has a unique soul trapped within it, each has a story. A creature might have been imprisoned as a result of defaulting on a deal, while another might be the victim of a night hag's curse."
+      , "Carrying Soul Coins. To hold a soul coin is to feel the soul bound within it — overcome with rage or fraught with despair."
+      , "An evil creature can carry as many soul coins as it wishes (up to its maximum weight allowance). A nonevil creature can carry a number of soul coins equal to or less than its Constitution modifier without penalty. A non-evil creature carrying a number of soul coins greater than its Constitution modifier has disadvantage on its attack rolls, ability checks, and saving throws."
+      , "Using a Soul Coin. A soul coin has 3 charges. A creature carrying the coin can use its action to expend 1 charge from a soul coin and use it to do one of the following:"
+      , "* Drain Life. You siphon away some of the soul's essence and gain 1d10 temporary hit points."
+      , "* Query. You telepathically ask the soul a question and receive a brief telepathic response. which you can understand. The soul knows only what it knew in life, but it must answer you truthfully and to the best of its ability. The answer is no more than a sentence or two and might be cryptic."
+      , "Freeing a Soul. Casting a spell that removes a curse on a soul coin frees the soul trapped within it, as does expending all of the coin's charges. The coin itself rusts from within and is destroyed once the soul is released. A freed soul travels to the realm of the god it served or the outer plane most closely tied to its alignment (DM's choice). The souls of lawful evil creatures released from soul coins typically emerge from the River Styx as lemure devils."
+      , "A soul can also be freed by destroying the coin that contains it. A soul coin has AC 19, 1 hit point for each charge it has remaining, and immunity to all damage except that which is dealt by a hellfire weapon (BG:DA, page 223) or an infernal war machine's furnace (BG:DA, page 217)."
+      , "Freeing a soul from a soul coin is considered a good act, even if the soul belongs to an evil creature."
+      , "Hellish Currency. Soul coins are a currency of the Nine Hells and are highly valued by devils. The coins are used among the infernal hierarchy to barter for favors, bribe the unwilling. and reward the faithful for services rendered."
+      , "Soul coins are created by Mammon and his greater devils on Minauros, the third layer of the Nine Hells, in a vast chamber where the captured souls of evil mortals are bound into the coins. These coins are then distributed throughout the Nine Hells to be used for goods and services, infernal deals, dark bargains, and bribes."
       ]
     }
-  , { title: ""
+  , { title: "Spell Gem"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune (Just "optional")
+    , source: SourceOutOfTheAbyss
     , description: 
-      [ ""
+      [ "A spell gem can contain one spell from any class's spell list. You become aware of the spell when you learn the gems properties. While holding the gem. you can cast the spell from it as an action if you know the spell or if the spell is on your class spell list. Doing so doesn‘t require any components and doesn't require attunement. The spell then disappears from the gem."
+      , "If the spell is of a higher level than you can normally cast. you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC equals 10 + the spell's level. On a failed check. the spell disappears from the gem with no other effect."
+      , "Each spell gem has a maximum level for the spell it can store. The spell level determines the gems rarity and the stored spell's saving throw DC and attack bonus. as shown in the Spell Gem table."
+      , "You can imbue the gem with a spell if you're attuned to it and it's empty. To do so, you cast the spell while holding the gem. The spell is stored in the gem instead of having any effect. Casting the spell must require either 1 action or 1 minute or longer, and the spell's level must be no higher than the gem's maximum. If the spell belongs to the school of abjuration and requires material components that are consumed. you must provide them. but they can be worth half as much as normal."
+      , "Once imbued with a spell. the gem can't be imbued again until the next dawn."
+      , "Deep gnomes created these magic gemstones and keep the creation process a secret."
+      , "Spell Gem"
+      , "Max. Spell Level	Gemstone	Rarity	Save DC	Attack Bonus"
+      , "Cantrip	Obsidian	Uncommon	13	+5"
+      , "1st	Lapis lazuli	Uncommon	13	+5"
+      , "2nd	Quartz	Rare	13	+5"
+      , "3rd	Bloodstone	Rare	15	+7"
+      , "4th	Amber	Very rare	15	+9"
+      , "5th	Jade	Very rare	17	+9"
+      , "6th	Topaz	Very rare	17	+10"
+      , "7th	Star ruby	Legendary	18	+10"
+      , "8th	Ruby	Legendary	18	+10"
+      , "9th	Diamond	Legendary	19	+11"
       ]
     }
-  , { title: ""
+  , { title: "Spell Scroll"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
+    , type: TypeScroll
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost."
+      , "If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC equals 10 + the spell's level. On a failed check, the spell disappears from the scroll with no other effect."
+      , "Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust."
+      , "The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity, as shown in the Spell Scroll table."
+      , "Spell Scroll			"
+      , "Spell Level	Rarity	Save DC	Attack Bonus"
+      , "Cantrip	Common	13	+5"
+      , "1st	Common	13	+5"
+      , "2nd	Uncommon	13	+5"
+      , "3rd	Uncommon	15	+7"
+      , "4th	Rare	15	+7"
+      , "5th	Rare	17	+9"
+      , "6th	Very rare	17	+9"
+      , "7th	Very rare	18	+10"
+      , "8th	Very rare	18	+10"
+      , "9th	Legendary	19	+11"
+      , "A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed."
       ]
     }
-  , { title: ""
+  , { title: "Spellwrought Tattoo"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
+    , type: TypeItem (Just "tattoo")
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourceTashasCauldronOfEverything
     , description: 
-      [ ""
+      [ "Produced by a special needle, this magic tattoo contains a single spell of up to 5th level, wrought on your skin by a magic needle. To use the tattoo, you must hold the needle against your skin and speak the command word. The needle turns into ink that becomes the tattoo, which appears on the skin in whatever design you like. Once the tattoo is there, you can cast its spell, requiring no material components. The tattoo glows faintly while you cast the spell and for the spell's duration. Once the spell ends, the tattoo vanishes from your skin."
+      , "The level of the spell in the tattoo determines the spell's saving throw DC, attack bonus, spellcasting ability modifier, and the tattoo's rarity, as shown in the Spellwrought Tattoo table."
+      , "Spellwrought Tattoo"
+      , "Spell Level	Rarity	Spellcasting Ability Modifier	Save DC	Attack Bonus"
+      , "Cantrip	Common	+3	13	+5"
+      , "1st	Common	+3	13	+5"
+      , "2nd	Uncommon	+3	13	+5"
+      , "3rd	Uncommon	+4	15	+7"
+      , "4th	Rare	+4	15	+7"
+      , "5th	Rare	+5	17	+9"
       ]
     }
-  , { title: ""
+  , { title: "Spies' Murmur"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune Nothing
+    , source: SourceGuildmastersGuideToRavnica
     , description: 
-      [ ""
+      [ "This headpiece, crafted from dark metal, is worn curved around the ear. If you know a creature wearing another spies' murmur and that creature is within 1 mile of you, you can communicate telepathically with each other. As a bonus action, you can allow that creature to hear everything you hear for 1 hour. You can end this effect as a bonus action, and it ends if you're incapacitated."
       ]
     }
-  , { title: ""
+  , { title: "Staff of the Adder"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
-    , attune: AttuneNone
+    , type: TypeStaff
+    , attune: Attune (Just "cleric, druid, or warlock")
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "You can use a bonus action to speak this staff's command word and make the head of the staff become that of an animate poisonous snake for 1 minute. By using another bonus action to speak the command word again, you return the staff to its normal inanimate form."
+      , "You can make a melee attack using the snake head, which has a reach of 5 feet. Your proficiency bonus applies to the attack roll. On a hit, the target takes 1d6 piercing damage and must succeed on a DC 15 Constitution saving throw or take 3d6 poison damage."
+      , "The snake head can be attacked while it is animate. It has an Armor Class of 15 and 20 hit points. If the head drops to 0 hit points, the staff is destroyed. As long as it's not destroyed, the staff regains all lost hit points when it reverts to its inanimate form."
       ]
     }
-  , { title: ""
+  , { title: "Staff of the Python"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
-    , attune: AttuneNone
+    , type: TypeStaff
+    , attune: Attune (Just "cleric, druid, or warlock")
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "You can use an action to speak this staff's command word and throw the staff on the ground within 10 feet of you. The staff becomes a giant constrictor snake (see the Monster Manual for statistics) under your control and acts on its own initiative count. By using a bonus action to speak the command word again, you return the staff to its normal form in a space formerly occupied by the snake."
+      , "On your turn, you can mentally command the snake if it is within 60 feet of you and you aren't incapacitated. You decide what action the snake takes and where it moves during its next turn, or you can issue it a general command, such as to attack your enemies or guard a location."
+      , "If the snake is reduced to 0 hit points, it dies and reverts to its staff form. The staff then shatters and is destroyed. If the snake reverts to staff form before losing all its hit points, it regains all of them."
       ]
     }
-  , { title: ""
+  , { title: "Stone of Good Luck (Luckstone)"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
+    , attune: Attune Nothing
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "While this polished agate is on your person, you gain a + 1 bonus to ability checks and saving throws."
       ]
     }
-  , { title: ""
+  , { title: "Stone of Ill Luck"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune Nothing
+    , source: SourceTalesFromTheYawningPortal
     , description: 
-      [ ""
+      [ "This polished agate appears to be a Stone of Good Luck to anyone who tries to identify it, and it confers that item's property while on your person."
+      , "Curse. This item is cursed. While it is on your person, you take a -2 penalty to ability checks and saving throws. Until the curse is discovered, the DM secretly applies this penalty, assuming you are adding the item's bonus. You are unwilling to part with the stone until the curse is broken with remove curse or similar magic."
       ]
     }
-  , { title: ""
+  , { title: "Storm Boomerang"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
+    , type: TypeWeapon Nothing
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourcePrincesOfTheApocalypse
     , description: 
-      [ ""
+      [ "This boomerang is a ranged weapon carved from griffon bone and etched with the symbol of elemental air. When thrown, it has a range of 60/120 feet, and any creature that is proficient with the javelin is also proficient with this weapon. On a hit, the boomerang deals 1d4 bludgeoning damage and 3d4 thunder damage, and the target must succeed on a DC 10 Constitution saving throw or be stunned until the end of its next turn. On a miss, the boomerang returns to the thrower's hand."
+      , "Once the boomerang deals thunder damage to a target, the weapon loses its ability to deal thunder damage and its ability to stun a target. These properties return after the boomerang spends at least 1 hour inside an elemental air node."
       ]
     }
-  , { title: ""
+  , { title: "Sword of Vengeance"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
-    , attune: AttuneNone
+    , type: TypeWeapon (Just "any sword")
+    , attune: Attune Nothing
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "You gain a +1 bonus to attack and damage rolls made with this magic weapon."
+      , "Curse. This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons other than this one."
+      , "In addition, while the sword is on your person, you must succeed on a DC 15 Wisdom saving throw whenever you take damage in combat. On a failed save, you must attack the creature that damaged you until you drop to 0 hit points or it does, or until you can't reach the creature to make a melee attack against it."
+      , "You can break the curse in the usual ways. Alternatively, casting Banishment on the sword forces the vengeful spirit to leave it. The sword then becomes a +1 weapon with no other properties."
       ]
     }
-  , { title: ""
+  , { title: "Thessaltoxin Antidote"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
+    , type: TypePotion
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourceInfernalMachineRebuild
     , description: 
-      [ ""
+      [ "This potion appears to change color and texture each time you look at it. When you drink the potion, it ends the Polymorph effect imposed by thessaltoxin."
       ]
     }
-  , { title: ""
+  , { title: "Trident of Fish Command"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
-    , attune: AttuneNone
+    , type: TypeWeapon (Just "trident")
+    , attune: Attune Nothing
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "This trident is a magic weapon. It has 3 charges. While you carry it, you can use an action and expend 1 charge to cast Dominate Beast (save DC 15) from it on a beast that has an innate swimming speed. The trident regains 1d3 expended charges daily at dawn."
       ]
     }
-  , { title: ""
+  , { title: "Wand of Entangle"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , type: TypeWand
+    , attune: Attune (Just "spellcaster")
+    , source: SourceTalesFromTheYawningPortal
     , description: 
-      [ ""
+      [ "This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cast the Entangle spell (save DC 13) from it."
+      , "The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed."
       ]
     }
-  , { title: ""
+  , { title: "Wand of Magic Detection"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
+    , type: TypeWand
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "This wand has 3 charges. While holding it, you can expend 1 charge as an action to cast the Detect Magic spell from it. The wand regains 1d3 expended charges daily at dawn."
       ]
     }
-  , { title: ""
+  , { title: "Wand of Magic Missiles"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
+    , type: TypeWand
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the Magic Missile from it. For 1 charge, you cast the 1st-level version of the spell. You can increases the spell slot level by one for each additional charge you expend."
+      , "The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed."
       ]
     }
-  , { title: ""
+  , { title: "Wand of Secrets"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
+    , type: TypeWand
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "The wand has 3 charges. While holding it, you can use an action to expend 1 of its charges, and if a secret door or trap is within 30 feet of you, the wand pulses and points at the one nearest to you. The wand regains 1d3 expended charges daily at dawn."
       ]
     }
-  , { title: ""
+  , { title: "Wand of the War Mage"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
-    , attune: AttuneNone
+    , type: TypeWand
+    , attune: Attune (Just "spellcaster")
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "uncommon (+1), rare (+2), or very rare (+3)"
+      , "While holding this wand, you gain a bonus to spell attack rolls determined by the wand's rarity. In addition, you ignore half cover when making a spell attack."
       ]
     }
-  , { title: ""
+  , { title: "Wand of Web"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
-    , attune: AttuneNone
+    , type: TypeWand
+    , attune: Attune (Just "spellcaster")
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cast the Web spell (save DC 15) from it."
+      , "The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed."
       ]
     }
-  , { title: ""
+  , { title: "Weapon, +1, +2, or +3"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
+    , type: TypeWeapon (Just "any")
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "uncommon (+1), rare (+2), or very rare (+3)"
+      , "You have a bonus to attack and damage rolls made with this magic weapon. The bonus is determined by the weapon's rarity."
       ]
     }
-  , { title: ""
+  , { title: "Weapon of Warning"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
-    , attune: AttuneNone
+    , type: TypeWeapon (Just "any")
+    , attune: Attune Nothing
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can't be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins."
       ]
     }
-  , { title: ""
+  , { title: "Wheel of Wind and Water"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourceEberronRisingFromTheLastWar
     , description: 
-      [ ""
+      [ "When mounted at the helm of an elemental galleon or airship, this wheel allows a creature that possesses the Mark of Storm to telepathically control the elemental bound inside the vessel."
+      , "If a wheel of wind and water is mounted on a mundane sailing ship, a creature with the Mark of Storm who is using the wheel can create an area of ideal conditions around the vessel, increasing its speed by 5 miles per hour."
       ]
     }
-  , { title: ""
+  , { title: "Wildspace Orrery"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourceSpelljammerAdventuresInSpace
     , description: 
-      [ ""
+      [ "Inside a Wildspace system, this portable arcane device automatically tracks the positions and movements of all suns, planets, moons, and comets within that system, projecting a display of all these bodies in the space above its current location. In that display, a white, pulsating pinprick of light marks the orrery's location."
       ]
     }
-  , { title: ""
+  , { title: "Wind Fan"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "While holding this fan, you can use an action to cast the Gust of Wind spell (save DC 13) from it. Once used, the fan shouldn't be used again until the next dawn. Each time it is used again before then, it has a cumulative 20 percent chance of not working and tearing into useless, nonmagical tatters."
       ]
     }
-  , { title: ""
+  , { title: "Winged Ammunition"
     , rarity: RarityUncommon
-    , type: TypeItem Nothing
+    , type: TypeWeapon (Just "any ammunition")
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourceBookOfManyThings
     , description: 
-      [ ""
+      [ "Ranged weapon attack rolls made with this ammunition ignore half and three-quarters cover. In addition, attacking at long range doesn't impose disadvantage on ranged weapon attack rolls made with this ammunition."
       ]
     }
-  , { title: ""
+  , { title: "Winged Boots"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
+    , attune: Attune Nothing
     , source: SourceDMG
     , description: 
-      [ ""
+      [ "While you wear these boots, you have a flying speed equal to your walking speed. You can use the boots to fly for up to 4 hours, all at once or in several shorter flights, each one using a minimum of 1 minute from the duration. If you are flying when the duration expires, you descend at a rate of 30 feet per round until you land."
+      , "The boots regain 2 hours of flying capability for every 12 hours they aren't in use."
       ]
     }
-  , { title: ""
+  , { title: "Wingwear"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune Nothing
+    , source: SourcePrincesOfTheApocalypse
     , description: 
-      [ ""
+      [ "This snug uniform has symbols of air stitched into it and leathery flaps that stretch along the arms, waist, and legs to create wings for gliding. A suit of Wingwear has 3 charges. While you wear the suit, you can use a bonus action and expend 1 charge to gain a flying speed of 30 feet until you land. At the end of each of your turns, your altitude drops by 5 feet. Your altitude drops instantly to 0 feet at the end of your turn if you didn't fly at least 30 feet horizontally on that turn. When your altitude drops to 0 feet, you land (or fall), and you must expend another charge to use the suit again."
+      , "The suit regains all of its expended charges after spending at least 1 hour in an elemental air node."
       ]
     }
-  , { title: ""
+  , { title: "Witherbloom Primer"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune (Just "spellcaster")
+    , source: SourceStrixhaveCurriculumOfChaos
     , description: 
-      [ ""
+      [ "The Witherbloom Primer is a magic textbook created at Strixhaven's Witherbloom College. The primer has 3 charges, and it regains 1d3 expended charges daily at dawn. If you make an Intelligence (Nature) or Wisdom (Survival) check while holding the primer, you can expend 1 charge to give yourself a 1d4 bonus to the check, immediately after you roll the d20."
+      , "In addition, if you study the primer at the end of a long rest, you can choose one 1st-level spell from the Druid or Wizard spell list. Before you finish your next long rest, you can cast the chosen spell once without a spell slot if you are holding the primer. Your spellcasting ability for this spell is your choice of Intelligence, Wisdom, or Charisma."
       ]
     }
-  , { title: ""
+  , { title: "Wraps Of Unarmed Prowess"
     , rarity: RarityUncommon
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourceBookOfManyThings
     , description: 
-      [ ""
-      ]
-    }
-  , { title: ""
-    , rarity: RarityUncommon
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
-    , description: 
-      [ ""
+      [ "While you're wearing these cloth wraps, your unarmed strikes are considered magical for the purpose of overcoming immunity and resistance to nonmagical attacks and damage, and you gain a bonus to the attack and damage rolls of your unarmed strikes, determined by the wraps' rarity."
+      , "Rarity	Bonus"
+      , "Uncommon	+1"
+      , "Rare	+2"
+      , "Very Rare"
       ]
     }
   ]
