@@ -21,7 +21,7 @@ import Flame.Html.Element as HE
 import Flame.Html.Event as HV
 
 import MagicItems (magicItems)
-import Types (MagicItem, ItemAttunement, ItemType, ItemSource, Rarity, allAttunes, allRarities, allSources, allTypes, showFullAttune, showShort, toAttune, unshow)
+import Types (MagicItem, ItemAttunement, ItemType, ItemSource, Rarity, allAttunes, allRarities, allSources, allTypes, showFullAttune, toAttune, unshow)
 
 type Model =
   { fltTitle :: String
@@ -114,7 +114,7 @@ viewItem item =
       [ HE.div [ HA.class' "grid" ]
         [ HE.div [ HA.class' "s3" ] [ HE.strong_ [HE.text item.title] ]
         , HE.div [ HA.class' "s2" ] [ HE.text (show item.rarity) ]
-        , HE.div [ HA.class' "s2" ] [ HE.text (showShort item.type) ]
+        , HE.div [ HA.class' "s2" ] [ HE.text (show item.type) ]
         , HE.div [ HA.class' "s2" ] [ HE.text (show item.attune) ]
         , HE.div [ HA.class' "s3" ] [ HE.text (show item.source) ]
         ]

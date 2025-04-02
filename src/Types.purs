@@ -6,9 +6,6 @@ import Data.Maybe (Maybe(..))
 class Unshow a where
   unshow :: String -> Maybe a
 
-class ShowShort a where
-  showShort :: a -> String
-
 data ItemSource
   = SourceAcquisitionsIncorporated
   | SourceBaldursGateDescentIntoAvernus
@@ -258,13 +255,14 @@ data ItemType
   | TypeItem (Maybe String)
   | TypePotion
   | TypeRing
+  | TypeRod
   | TypeScroll
   | TypeStaff
   | TypeWand
   | TypeWeapon (Maybe String)
 
 allTypes :: Array ItemType
-allTypes = [ TypeArmor Nothing, TypeItem Nothing, TypePotion, TypeRing, TypeScroll, TypeStaff, TypeWand, TypeWeapon Nothing ]
+allTypes = [ TypeArmor Nothing, TypeItem Nothing, TypePotion, TypeRod, TypeRing, TypeScroll, TypeStaff, TypeWand, TypeWeapon Nothing ]
 
 instance Show ItemType where
   show (TypeArmor Nothing)   = "Armor"
@@ -273,6 +271,7 @@ instance Show ItemType where
   show (TypeItem (Just s))   = "Wondrous Item (" <> s <> ")"
   show TypePotion            = "Potion"
   show TypeRing              = "Ring"
+  show TypeRod               = "Rod"
   show TypeScroll            = "Scroll"
   show TypeStaff             = "Staff"
   show TypeWand              = "Wand"
@@ -284,6 +283,7 @@ instance Eq ItemType where
   eq (TypeItem _)   (TypeItem _)   = true
   eq (TypePotion)   (TypePotion)   = true
   eq (TypeRing)     (TypeRing)     = true
+  eq (TypeRod)      (TypeRod)      = true
   eq (TypeScroll)   (TypeScroll)   = true
   eq (TypeStaff)    (TypeStaff)    = true
   eq (TypeWand)     (TypeWand)     = true
@@ -294,22 +294,13 @@ instance Unshow ItemType where
   unshow "Armor"          = Just (TypeArmor Nothing) 
   unshow "Wondrous Item"  = Just (TypeItem Nothing)  
   unshow "Potion"         = Just TypePotion    
-  unshow "Ring"           = Just TypeRing      
+  unshow "Ring"           = Just TypeRing     
+  unshow "Rod"            = Just TypeRod      
   unshow "Scroll"         = Just TypeScroll    
   unshow "Staff"          = Just TypeStaff     
   unshow "Wand"           = Just TypeWand      
   unshow "Weapon"         = Just (TypeWeapon Nothing)
   unshow _                = Nothing
-
-instance ShowShort ItemType where
-  showShort (TypeArmor _)   = "Armor"
-  showShort (TypeItem _)    = "Wondrous Item"
-  showShort TypePotion      = "Potion"
-  showShort TypeRing        = "Ring"
-  showShort TypeScroll      = "Scroll"
-  showShort TypeStaff       = "Staff"
-  showShort TypeWand        = "Wand"
-  showShort (TypeWeapon _)  = "Weapon"
 
 data Rarity
   = RarityCommon
