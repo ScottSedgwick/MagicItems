@@ -136,7 +136,7 @@ viewItem item =
         , HE.div [ HA.class' "s3" ] [ HE.text (show item.source) ]
         ]
       ] 
-    , HE.article_ 
+    , HE.article [ HA.class' "white" ]
       ( (HE.p_ [ HE.em_ (showCaption item) ]) : (map mkDescription item.description)
       )
       

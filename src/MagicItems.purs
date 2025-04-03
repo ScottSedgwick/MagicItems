@@ -1045,11 +1045,13 @@ uncommonItems =
     , source: SourceWayfarersGuideToEberron
     , description: 
       [ P [ T "This is a sturdy leather sack with tiny Siberys shards embedded into the lining. If you have the Mark of Hospitality you can use an action to cast Create Food and Water, drawing a feast from within the bag. You shape this meal with your thoughts. You can create the standard bland fare without requiring any sort of check, but you can attempt to create finer food by making a Charisma check; if you're proficient with cook's utensils, add your bonus to this check. A failed check results in a sour and squalid meal." ]
-      , P [ T "Food Quality: Poor - No roll required" ]
-      , P [ T "Food Quality: Modest - 10" ]
-      , P [ T "Food Quality: Comfortable - 13" ]
-      , P [ T "Food Quality: Wealthy - 15" ]
-      , P [ T "Food Quality: Aristocratic - 18" ]
+      , TB [ T "Food Quality", T "Roll Needed" ]
+        [ TR [ T "Poor", T "No roll required" ]
+        , TR [ T "Modest", T "10" ]
+        , TR [ T "Comfortable", T "13" ]
+        , TR [ T "Wealthy", T "15" ]
+        , TR [ T "Aristocratic", T "18" ]
+        ]
       , P [ T "A bag of bounty can be used up to three times over the course of a day. After that, the bag can't be used again until the next dawn." ]
       ]
     }
@@ -1074,35 +1076,39 @@ uncommonItems =
       , P [ T "You can use an action to pull the fuzzy object from the bag and throw it up to 20 feet. When the object lands, it transforms into a creature you determine by rolling a d8 and consulting the table that corresponds to the bag's color. See the Monster Manual for the creature's statistics. The creature vanishes at the next dawn or when it is reduced to 0 hit points." ]
       , P [ T "The creature is friendly to you and your companions, and it acts on your turn. You can use a bonus action to command how the creature moves and what action it takes on its next turn, or to give it general orders, such as to attack your enemies. In the absence of such orders, the creature acts in a fashion appropriate to its nature." ]
       , P [ T "Once three fuzzy objects have been pulled from the bag, the bag can't be used again until the next dawn." ]
-      , P [ T "Grey Bag of Tricks:" ]
-      , P [ T "1: Weasel" ]
-      , P [ T "2: Giant rat" ]
-      , P [ T "3: Badger" ]
-      , P [ T "4: Boar" ]
-      , P [ T "5: Panther" ]
-      , P [ T "6: Giant badger" ]
-      , P [ T "7: Dire wolf" ]
-      , P [ T "8: Giant elk" ]
-      , P [ T "" ]
-      , P [ T "Rust Bag of Tricks:" ]
-      , P [ T "1: Rat" ]
-      , P [ T "2: Owl" ]
-      , P [ T "3: Mastiff" ]
-      , P [ T "4: Goat" ]
-      , P [ T "5: Giant goat" ]
-      , P [ T "6: Giant boar" ]
-      , P [ T "7: Lion" ]
-      , P [ T "8: Brown bear" ]
-      , P [ T "" ]
-      , P [ T "Tan Bag of Tricks:" ]
-      , P [ T "1: Jackal" ]
-      , P [ T "2: Ape" ]
-      , P [ T "3: Baboon" ]
-      , P [ T "4: Axe beak" ]
-      , P [ T "5: Black bear" ]
-      , P [ T "6: Giant weasel" ]
-      , P [ T "7: Giant hyena" ]
-      , P [ T "8: Tiger" ]
+      , P [ B "Grey Bag of Tricks:" ]
+      , TB [ T "Roll (d8)", T "Creature" ]
+        [ TR [ T "1", T "Weasel" ]
+        , TR [ T "2", T "Giant rat" ]
+        , TR [ T "3", T "Badger" ]
+        , TR [ T "4", T "Boar" ]
+        , TR [ T "5", T "Panther" ]
+        , TR [ T "6", T "Giant badger" ]
+        , TR [ T "7", T "Dire wolf" ]
+        , TR [ T "8", T "Giant elk" ]
+        ]
+      , P [ B "Rust Bag of Tricks:" ]
+      , TB [ T "Roll (d8)", T "Creature" ]
+        [ TR [ T "1", T"Rat" ]
+        , TR [ T "2", T"Owl" ]
+        , TR [ T "3", T"Mastiff" ]
+        , TR [ T "4", T"Goat" ]
+        , TR [ T "5", T"Giant goat" ]
+        , TR [ T "6", T"Giant boar" ]
+        , TR [ T "7", T"Lion" ]
+        , TR [ T "8", T"Brown bear" ]
+        ]
+      , P [ B "Tan Bag of Tricks:" ]
+      , TB [ T "Roll (d8)", T "Creature" ]
+        [ TR [ T "1", T"Jackal" ]
+        , TR [ T "2", T"Ape" ]
+        , TR [ T "3", T"Baboon" ]
+        , TR [ T "4", T"Axe beak" ]
+        , TR [ T "5", T"Black bear" ]
+        , TR [ T "6", T"Giant weasel" ]
+        , TR [ T "7", T"Giant hyena" ]
+        , TR [ T "8", T"Tiger" ]
+        ]
       ]
     }
   , { title: "Balance of Harmony"
@@ -1132,9 +1138,11 @@ uncommonItems =
       [ P [ T "Tattoo Attunement. To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin." ]
       , P [ T "If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space." ]
       , P [ T "Protection. While you aren't wearing armor, the tattoo grants you an Armor Class depending on the tattoo's rarity, as shown below. You can use a shield and still gain this benefit." ]
-      , P [ T "Uncommon: 12 + your Dexterity modifier" ]
-      , P [ T "Rare: 15 + your Dexterity modifier (maximum of +2)" ]
-      , P [ T "Very Rare: 18" ]
+      , TB [ T "Rarity", T "Armor Class" ]
+        [ TR [ T "Uncommon", T "12 + your Dexterity modifier" ]
+        , TR [ T "Rare", T "15 + your Dexterity modifier (maximum of +2)" ]
+        , TR [ T "Very Rare", T "18" ]
+        ]
       ]
     }
   , { title: "Blasted Goggles"
@@ -1144,7 +1152,7 @@ uncommonItems =
     , source: SourceBookOfManyThings
     , description: 
       [ P [ T "These tinker's goggles have 3 charges. As an action, you can expend 1 charge to shoot a beam of fiery light from the goggles at a creature you can see within 120 feet of yourself. The target must succeed on a DC 15 Dexterity saving throw or take 3d6 fire damage. The goggles regain 1d3 expended charges daily at dawn." ]
-      , P [ T "Cursed. The goggles are cursed, and becoming attuned to them extends the curse to you. You can't remove the goggles or end your attunement to them until you are targeted by a Remove Curse spell or similar magic." ]
+      , P [ B "Cursed.", T "The goggles are cursed, and becoming attuned to them extends the curse to you. You can't remove the goggles or end your attunement to them until you are targeted by a Remove Curse spell or similar magic." ]
       , P [ T "Whenever you use the goggles' fiery beam and the target rolls a 20 on the d20 for the saving throw, the goggles expose you to a flash of violent bright light. As a result, you have the blinded condition for 24 hours." ]
       ]
     }
@@ -1178,7 +1186,7 @@ uncommonItems =
     , attune: Attune (Just "sorceror")
     , source: SourceTashasCauldronOfEverything
     , description: 
-      [ P [ T "uncommon (+1), rare (+2), very rare (+3)" ]
+      [ P [ I "Uncommon (+1), Rare (+2), Very Rare (+3)" ]
       , P [ T "To attune to this vial, you must place a few drops of your blood into it. The vial can't be opened while your attunement to it lasts. If your attunement to the vial ends, the contained blood turns to ash. You can use the vial as a spellcasting focus for your spells while wearing or holding it, and you gain a bonus to spell attack rolls and to the saving throw DCs of your sorcerer spells. The bonus is determined by the vial's rarity." ]
       , P [ T "In addition, when you roll any Hit Dice to recover hit points while you are carrying the vial, you can regain 5 sorcery points. This property of the vial can't be used again until the next dawn." ]
       ]
@@ -1214,9 +1222,10 @@ uncommonItems =
     , source: SourceDMG
     , description: 
       [ P [ T "These furred boots are snug and feel quite warm. While you wear them, you gain the following benefits:" ]
-      , P [ T "* You have resistance to cold damage." ]
-      , P [ T "* You ignore difficult terrain created by ice or snow." ]
-      , P [ T "* You can tolerate temperatures as low as -50 degrees Fahrenheit without any additional protection. If you wear heavy clothes, you can tolerate temperatures as low as -100 degrees Fahrenheit."  ]
+      , UL [ LI [ T "You have resistance to cold damage." ]
+           , LI [ T "You ignore difficult terrain created by ice or snow." ]
+           , LI [ T "You can tolerate temperatures as low as -50 degrees Fahrenheit without any additional protection. If you wear heavy clothes, you can tolerate temperatures as low as -100 degrees Fahrenheit."  ]
+           ]
       ]
     }
   , { title: "Bottled Breath"
@@ -1274,8 +1283,8 @@ uncommonItems =
     , source: SourceBookOfManyThings
     , description: 
       [ P [ T "The cards of this deck shimmer around the edges. While holding this deck, you can use the following properties:" ]
-      , P [ T "Deadly Deal. As an action, you can use this deck to make a ranged spell attack by throwing a spectral card and using Dexterity for the attack roll. The card has a range of 120 feet and deals 1d8 force damage on a hit." ]
-      , P [ T "Spray of Cards. As an action, you can shuffle the deck and cast the Spray of Cards spell at 3rd level from the deck (spell save DC 15). Once the deck has cast the spell, it can't cast the spell again until the next dawn." ]
+      , P [ B "Deadly Deal. ", T "As an action, you can use this deck to make a ranged spell attack by throwing a spectral card and using Dexterity for the attack roll. The card has a range of 120 feet and deals 1d8 force damage on a hit." ]
+      , P [ B "Spray of Cards. ", T "As an action, you can shuffle the deck and cast the Spray of Cards spell at 3rd level from the deck (spell save DC 15). Once the deck has cast the spell, it can't cast the spell again until the next dawn." ]
       ]
     }
   , { title: "Circlet of Blasting"
@@ -1325,7 +1334,7 @@ uncommonItems =
       [ P [ T "Produced by a special needle, this magic tattoo has long intertwining designs." ]
       , P [ T "Tattoo Attunement. To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin." ]
       , P [ T "If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space." ]
-      , P [ T "Grasping Tendrils. While the tattoo is on your skin, you can, as an action, cause the tattoo to extrude into inky tendrils, which reach for a creature you can see within 15 feet of you. The creature must succeed on a DC 14 Strength saving throw or take 3d6 force damage and be grappled by you. As an action, the creature can escape the grapple by succeeding on a DC 14 Strength (Athletics) or Dexterity (Acrobatics) check. The grapple also ends if you halt it (no action required), if the creature is ever more than 15 feet away from you, or if you use this tattoo on a different creature." ]
+      , P [ B "Grasping Tendrils. ", T "While the tattoo is on your skin, you can, as an action, cause the tattoo to extrude into inky tendrils, which reach for a creature you can see within 15 feet of you. The creature must succeed on a DC 14 Strength saving throw or take 3d6 force damage and be grappled by you. As an action, the creature can escape the grapple by succeeding on a DC 14 Strength (Athletics) or Dexterity (Acrobatics) check. The grapple also ends if you halt it (no action required), if the creature is ever more than 15 feet away from you, or if you use this tattoo on a different creature." ]
       ]
     }
   , { title: "Cracked Driftglobe"
@@ -1342,7 +1351,7 @@ uncommonItems =
     , source: SourceGhostsOfSaltmarsh
     , description: 
       [ P [ T "This flat, gray-and-black river stone is inscribed with an unknown arcane symbol and feels cool to the touch. While carrying the stone, you can gain advantage on one ability check of your choice. The stone can't be used this way again until the next dawn." ]
-      , P [ T "Curse. This item is cursed. Attuning to it curses you until you are targeted by a remove curse spell or similar magic. As long as you remain cursed, you cannot discard the stone, which immediately teleports back into your pocket or pack. After you use the stone's magic, your next two ability checks are made with disadvantage." ]
+      , P [ B "Curse. ", T "This item is cursed. Attuning to it curses you until you are targeted by a remove curse spell or similar magic. As long as you remain cursed, you cannot discard the stone, which immediately teleports back into your pocket or pack. After you use the stone's magic, your next two ability checks are made with disadvantage." ]
       ]
     }
   , { title: "Decanter of Endless Water"
@@ -1353,9 +1362,10 @@ uncommonItems =
     , description: 
       [ P [ T "This stoppered flask sloshes when shaken, as if it contains water. The decanter weighs 2 pounds." ]
       , P [ T "You can use an action to remove the stopper and speak one of three command words, whereupon an amount of fresh water or salt water (your choice) pours out of the flask. The water stops pouring out at the start of your next turn. Choose from the following options:" ]
-      , P [ T "* 'Stream' produces 1 gallon of water." ]
-      , P [ T "* 'Fountain' produces 5 gallons of water." ]
-      , P [ T "* 'Geyser' produces 30 gallons of water that gushes forth in a geyser 30 feet long and 1 foot wide. As a bonus action while holding the decanter, you can aim the geyser at a creature you can see within 30 feet of you. The target must succeed on a DC 13 Strength saving throw or take 1d4 bludgeoning damage and fall prone. Instead of a creature, you can target an object that isn't being worn or carried and that weighs no more than 200 pounds. The object is either knocked over or pushed up to 15 feet away from you." ]
+      , UL [ LI [ B "Stream", T " produces 1 gallon of water." ]
+           , LI [ B "Fountain", T " produces 5 gallons of water." ]
+           , LI [ B "Geyser", T " produces 30 gallons of water that gushes forth in a geyser 30 feet long and 1 foot wide. As a bonus action while holding the decanter, you can aim the geyser at a creature you can see within 30 feet of you. The target must succeed on a DC 13 Strength saving throw or take 1d4 bludgeoning damage and fall prone. Instead of a creature, you can target an object that isn't being worn or carried and that weighs no more than 200 pounds. The object is either knocked over or pushed up to 15 feet away from you." ]
+           ]
       ]
     }
   , { title: "Deck of Illusions"
