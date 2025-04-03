@@ -163,6 +163,7 @@ mkDescription (LI xs)  = HE.li_ (map mkDescription xs)
 mkDescription (TB h b) = HE.table [ HA.class' "stripes" ] [ mkTableHeader h, mkTableBody b ]
 mkDescription (TR xs)  = HE.tr_ (map (\x -> HE.td_ (mkDescription x)) xs)
 mkDescription (H5 s)   = HE.h5_ [ HE.text s ]
+mkDescription (H6 s)   = HE.h6_ [ HE.text s ]
 
 mkTableHeader :: Array Description -> Html Message
 mkTableHeader [] = HE.thead_ ([] :: Array (Html Message))

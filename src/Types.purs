@@ -383,6 +383,7 @@ data Description
   | TB (Array Description) (Array Description)
   | TR (Array Description)
   | H5 String
+  | H6 String
 
 type MagicItem =
   { title :: String
