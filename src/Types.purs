@@ -411,8 +411,7 @@ data Description
   | I String
   | UL (Array Description)
   | LI (Array Description)
-  | TB (Array Description)
-  | TH (Array Description)
+  | TB (Array Description) (Array Description)
   | TR (Array Description)
 
 type MagicItem =

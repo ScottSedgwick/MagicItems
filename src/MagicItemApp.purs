@@ -9,8 +9,7 @@ module MagicItemApp
 
 import Prelude
 
-import Data.Array (elem, filter, sortBy)
-import Data.Foldable (maximum)
+import Data.Array ((:), elem, filter, sortBy)
 import Data.Maybe (Maybe(..))
 import Data.String (Pattern(..), contains, toLower)
 import Data.Tuple (Tuple)
@@ -138,11 +137,9 @@ viewItem item =
         ]
       ] 
     , HE.article_ 
-      [ HE.div [ HA.class' "grid" ]
-        ( [ HE.div [ HA.class' "s12" ] [ HE.em_ (showCaption item) ]
-          ] <> (map mkDescription item.description)
-        )
-      ]
+      ( (HE.p_ [ HE.em_ (showCaption item) ]) : (map mkDescription item.description)
+      )
+      
     ]
   ]
 
@@ -157,15 +154,20 @@ rarityColor xs =
   else                                 "grey3"
 
 mkDescription :: Description -> Html Message
-mkDescription (P s) = HE.div [ HA.class' "s12" ] (map mkDescription s )
+mkDescription (P s) = HE.p_ (map mkDescription s )
 mkDescription (T s) = HE.text s
 mkDescription (B s) = HE.strong_ [ HE.text s ]
 mkDescription (I s) = HE.em_ [ HE.text s ]
 mkDescription (UL s) = HE.ul_ (map mkDescription s)
 mkDescription (LI s) = HE.li_ (map mkDescription s)
-mkDescription (TB s) = HE.table [ HA.class' "stripes" ] (map mkDescription s)
-mkDescription (TH s) = HE.tr_ (map (\x -> HE.th_ (mkDescription x)) s)
+mkDescription (TB h s) = HE.table [ HA.class' "stripes" ] 
+                         [ HE.thead_ (mkTableHeader h)
+                         , HE.tbody_ (map mkDescription s)
+                         ]
 mkDescription (TR s) = HE.tr_ (map (\x -> HE.td_ (mkDescription x)) s)
+
+mkTableHeader :: Array Description -> Html Message
+mkTableHeader s = HE.tr_ (map (\h -> HE.th_ (mkDescription h)) s)
 
 showCaption :: MagicItem -> String
 showCaption item
