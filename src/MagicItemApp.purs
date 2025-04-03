@@ -61,7 +61,7 @@ view model =
 
 viewFilter :: Model -> Html Message
 viewFilter model =
-  HE.nav [ HA.class' "top" ] 
+  HE.nav [ HA.class' "top white" ] 
   [ HE.div [ HA.class' "grid" ]
     [ HE.div [ HA.class' "s3" ] [ mkInput           ChangeTitle              model.fltTitle ]
     , HE.div [ HA.class' "s2" ] [ mkSelect "Rarity" ChangeRarity allRarities model.fltRarity ]
@@ -146,28 +146,31 @@ viewItem item =
 rarityColor :: Array Rarity -> String
 rarityColor xs = 
   if      elem RarityUnique    xs then "indigo1"
-  else if elem RarityArtifact  xs then "purple1"
-  else if elem RarityLegendary xs then "blue1"
-  else if elem RarityVeryRare  xs then "green1"
-  else if elem RarityRare      xs then "yellow1"
-  else if elem RarityUncommon  xs then "orange1"
+  else if elem RarityArtifact  xs then "orange1"
+  else if elem RarityLegendary xs then "yellow1"
+  else if elem RarityVeryRare  xs then "purple1"
+  else if elem RarityRare      xs then "blue1"
+  else if elem RarityUncommon  xs then "green1"
   else                                 "grey3"
 
 mkDescription :: Description -> Html Message
-mkDescription (P s) = HE.p_ (map mkDescription s )
-mkDescription (T s) = HE.text s
-mkDescription (B s) = HE.strong_ [ HE.text s ]
-mkDescription (I s) = HE.em_ [ HE.text s ]
-mkDescription (UL s) = HE.ul_ (map mkDescription s)
-mkDescription (LI s) = HE.li_ (map mkDescription s)
-mkDescription (TB h s) = HE.table [ HA.class' "stripes" ] 
-                         [ HE.thead_ (mkTableHeader h)
-                         , HE.tbody_ (map mkDescription s)
-                         ]
-mkDescription (TR s) = HE.tr_ (map (\x -> HE.td_ (mkDescription x)) s)
+mkDescription (P xs)   = HE.p_ (map mkDescription xs )
+mkDescription (T s)    = HE.text s
+mkDescription (B s)    = HE.strong_ [ HE.text s ]
+mkDescription (I s)    = HE.em_ [ HE.text s ]
+mkDescription (UL xs)  = HE.ul_ (map mkDescription xs)
+mkDescription (LI xs)  = HE.li_ (map mkDescription xs)
+mkDescription (TB h b) = HE.table [ HA.class' "stripes" ] [ mkTableHeader h, mkTableBody b ]
+mkDescription (TR xs)  = HE.tr_ (map (\x -> HE.td_ (mkDescription x)) xs)
+mkDescription (H5 s)   = HE.h5_ [ HE.text s ]
 
 mkTableHeader :: Array Description -> Html Message
-mkTableHeader s = HE.tr_ (map (\h -> HE.th_ (mkDescription h)) s)
+mkTableHeader [] = HE.thead_ ([] :: Array (Html Message))
+mkTableHeader hs = HE.thead_ [ HE.tr_ (map (\h -> HE.th_ (mkDescription h)) hs) ]
+
+mkTableBody :: Array Description -> Html Message
+mkTableBody [] = HE.thead_ ([] :: Array (Html Message))
+mkTableBody bs = HE.tbody_ (map mkDescription bs)
 
 showCaption :: MagicItem -> String
 showCaption item
