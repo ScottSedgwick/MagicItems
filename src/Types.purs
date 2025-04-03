@@ -344,6 +344,37 @@ instance Eq Rarity where
   eq RarityUnique RarityUnique = true
   eq _ _ = false
 
+instance Ord Rarity where
+  compare RarityCommon    RarityCommon    = EQ
+  compare RarityCommon    _               = GT
+
+  compare RarityUncommon  RarityUncommon  = EQ
+  compare RarityUncommon  RarityCommon    = LT
+  compare RarityUncommon  _               = GT
+  
+  compare RarityRare      RarityRare      = EQ
+  compare RarityRare      RarityCommon    = GT
+  compare RarityRare      RarityUncommon  = GT
+  compare RarityRare      _               = LT
+  
+  compare RarityVeryRare  RarityVeryRare  = EQ
+  compare RarityVeryRare  RarityCommon    = GT
+  compare RarityVeryRare  RarityUncommon  = GT
+  compare RarityVeryRare  RarityRare      = GT
+  compare RarityVeryRare  _               = LT
+  
+  compare RarityLegendary RarityLegendary = EQ
+  compare RarityLegendary RarityArtifact  = LT
+  compare RarityLegendary RarityUnique    = LT
+  compare RarityLegendary _               = GT
+  
+  compare RarityArtifact  RarityArtifact  = EQ
+  compare RarityArtifact  RarityUnique    = LT
+  compare RarityArtifact  _               = GT
+  
+  compare RarityUnique    RarityUnique    = EQ
+  compare RarityUnique    _               = GT
+
 allRarities :: Array Rarity
 allRarities = [RarityCommon, RarityUncommon, RarityRare, RarityVeryRare, RarityLegendary, RarityArtifact, RarityUnique]
 

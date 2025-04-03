@@ -10,6 +10,7 @@ module MagicItemApp
 import Prelude
 
 import Data.Array (elem, filter, sortBy)
+import Data.Foldable (maximum)
 import Data.Maybe (Maybe(..))
 import Data.String (Pattern(..), contains, toLower)
 import Data.Tuple (Tuple)
@@ -19,7 +20,7 @@ import Flame.Html.Attribute as HA
 import Flame.Html.Element as HE
 import Flame.Html.Event as HV
 import MagicItems (magicItems)
-import Types (Description(..), MagicItem, ItemAttunement, ItemType, ItemSource, Rarity, allAttunes, allRarities, allSources, allTypes, showFullAttune, showR, toAttune, unshow)
+import Types (Description(..), ItemAttunement, ItemSource, ItemType, MagicItem, Rarity(..), allAttunes, allRarities, allSources, allTypes, showFullAttune, showR, toAttune, unshow)
 
 type Model =
   { fltTitle :: String
@@ -61,26 +62,39 @@ view model =
 
 viewFilter :: Model -> Html Message
 viewFilter model =
-  HE.article_ 
+  HE.nav [ HA.class' "top" ] 
   [ HE.div [ HA.class' "grid" ]
-    [ HE.div [ HA.class' "s3" ] [ mkLabel "title-filter"  "Title: " , HE.div [ HA.class' "field border" ] [HE.input [ HA.id "title-filter", HA.type' "text", HA.value model.fltTitle, HV.onInput ChangeTitle ] ] ]
-    , HE.div [ HA.class' "s2" ] [ mkLabel "rarity-filter" "Rarity: ", mkSelect "rarity-filter" ChangeRarity allRarities model.fltRarity ]
-    , HE.div [ HA.class' "s2" ] [ mkLabel "type-filter"   "Type: "  , mkSelect "type-filter"   ChangeType   allTypes    model.fltType   ] 
-    , HE.div [ HA.class' "s2" ] [ mkLabel "attune-filter" "Attune: ", mkSelect "attune-filter" ChangeAttune allAttunes  model.fltAttunement ] 
-    , HE.div [ HA.class' "s3" ] [ mkLabel "source-filter" "Source: ", mkSelect "source-filter" ChangeSource allSources  model.fltSource ]
+    [ HE.div [ HA.class' "s3" ] [ mkInput           ChangeTitle              model.fltTitle ]
+    , HE.div [ HA.class' "s2" ] [ mkSelect "Rarity" ChangeRarity allRarities model.fltRarity ]
+    , HE.div [ HA.class' "s2" ] [ mkSelect "Type"   ChangeType   allTypes    model.fltType   ] 
+    , HE.div [ HA.class' "s2" ] [ mkSelect "Attune" ChangeAttune allAttunes  model.fltAttunement ] 
+    , HE.div [ HA.class' "s3" ] [ mkSelect "Source" ChangeSource allSources  model.fltSource ]
     ]
   ]
 
-mkLabel :: String -> String -> Html Message
-mkLabel id caption = HE.label [ HA.for id, HA.class' "bold medium-text" ] [ HE.text caption ]
+mkInput :: (String -> Message) -> String -> Html Message
+mkInput onInput value =
+  HE.div [ HA.class' "field label prefix border" ] 
+  [ HE.i_ [ HE.text "search" ]
+  , HE.input 
+    [ HA.type' "text"
+    , HA.value value
+    , HV.onInput onInput
+    ]
+    , HE.label_ [ HE.text "" ]
+  ]
 
 mkSelect :: forall a b. Show a => Eq a => String -> (String -> b) -> Array a -> Maybe a -> Html b
-mkSelect id msg opts value = 
+mkSelect caption msg opts value = 
   let
     nullOption = HE.option [ HA.value "All",   HA.selected (value == Nothing) ] "All"
     mkOption x = HE.option [ HA.value (show x), HA.selected (value == Just x ) ] (show x)
   in
-    HE.div [ HA.class' "field border" ] [ HE.select [ HA.id id, HV.onInput msg ] ([nullOption] <> map mkOption opts) ]
+    HE.div [ HA.class' "field label prefix border" ] 
+    [ HE.i_ [ HE.text "search" ]
+    , HE.select [ HV.onInput msg ] ([nullOption] <> map mkOption opts)
+    , HE.label_ [ HE.text caption ]
+    ]
 
 viewItems :: Model -> Html Message
 viewItems model =
@@ -112,7 +126,7 @@ filterMaybeIn (Just a) b = elem a b
 
 viewItem :: MagicItem -> Html Message
 viewItem item =
-  HE.article_
+  HE.article [ HA.class' (rarityColor item.rarity) ]
   [ HE.details_
     [ HE.summary_ 
       [ HE.div [ HA.class' "grid" ]
@@ -131,6 +145,16 @@ viewItem item =
       ]
     ]
   ]
+
+rarityColor :: Array Rarity -> String
+rarityColor xs = 
+  if      elem RarityUnique    xs then "indigo1"
+  else if elem RarityArtifact  xs then "purple1"
+  else if elem RarityLegendary xs then "blue1"
+  else if elem RarityVeryRare  xs then "green1"
+  else if elem RarityRare      xs then "yellow1"
+  else if elem RarityUncommon  xs then "orange1"
+  else                                 "grey3"
 
 mkDescription :: Description -> Html Message
 mkDescription (P s) = HE.div [ HA.class' "s12" ] (map mkDescription s )

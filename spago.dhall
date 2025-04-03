@@ -17,6 +17,7 @@ to generate this file without the comments in this block.
   , "console"
   , "effect"
   , "flame"
+  , "foldable-traversable"
   , "maybe"
   , "prelude"
   , "strings"
