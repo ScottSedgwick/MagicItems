@@ -956,12 +956,13 @@ uncommonItems =
       ]
     }
   , { title: "All-Purpose Tool"
-    , rarity: [ RarityUncommon ]
+    , rarity: [ RarityUncommon, RarityRare, RarityVeryRare ]
     , type: TypeItem Nothing
     , attune: Attune (Just "artificer")
     , source: SourceTashasCauldronOfEverything
     , description: 
-      [ P [ T "This simple screwdriver can transform into a variety of tools; as an action, you can touch the item and transform it into any type of artisan's tool of your choice (see the 'Equipment' chapter in the Player's Handbook for a list of artisan's tools). Whatever form the tool takes, you are proficient with it. While holding this tool, you gain a bonus to the spell attack rolls and the saving throw DCs of your artificer spells. The bonus is determined by the tool's rarity." ]
+      [ P [ I "Uncommon (+1), Rare (+2), Very Rare (+3)" ]
+      , P [ T "This simple screwdriver can transform into a variety of tools; as an action, you can touch the item and transform it into any type of artisan's tool of your choice (see the 'Equipment' chapter in the Player's Handbook for a list of artisan's tools). Whatever form the tool takes, you are proficient with it. While holding this tool, you gain a bonus to the spell attack rolls and the saving throw DCs of your artificer spells. The bonus is determined by the tool's rarity." ]
       , P [ T "As an action, you can focus on the tool to channel your creative forces. Choose a cantrip that you don't know from any class list. For 8 hours, you can cast that cantrip, and it counts as an artificer cantrip for you. Once this property is used, it can't be used again until the next dawn." ]
       ]
     }
@@ -3139,15 +3140,2386 @@ rareItems =
       , P [ B "Disheartening Strike. ", T "When you hit a creature with an attack using this weapon, you can fill the target with unsettling dread: the target has disadvantage on the next saving throw it makes before the end of your next turn. The creature ignores this effect if it's immune to the frightened condition. Once you use this property, you can't do so again until the next dusk." ]
       ]
     }
---   , { title: ""
---     , rarity: [ RarityRare ]
---     , type: TypeItem Nothing
---     , attune: AttuneNone
---     , source: SourceDMG
---     , description: 
---       [ P [ T "" ]
---       ]
---     }
+  , { title: "Alchemical Compendium"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune (Just "wizard")
+    , source: SourceTashasCauldronOfEverything
+    , description: 
+      [ P [ T "Acrid odors cling to this stained, heavy volume. The book's metal fittings are copper, iron, lead, silver, and gold, some frozen mid-transition from one metal to another. When found, the book contains the following spells: Enlarge/Reduce, Feather Fall, Flesh to Stone, Gaseous Form, Magic Weapon, and Polymorph. It functions as a spellbook for you." ]
+      , P [ T "While you are holding the book, you can use it as a spellcasting focus for your wizard spells." ]
+      , P [ T "The book has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
+      , UL [ LI [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the transmutation school." ]
+           , LI [ T "As an action, you can touch a nonmagical object that isn't being worn or carried and spend a number of charges to transform the target into another object. For 1 charge, the object can be no larger than 1 foot on a side. You can spend additional charges to increase the maximum dimensions by 2 feet per charge. The new object must have a gold value equal to or less than the original." ]
+           ]
+      ]
+    }
+  , { title: "Amulet of Health"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceDMG
+    , description: 
+      [ P [ T "Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is 19 or higher without it." ]
+      ]
+    }
+  , { title: "Amulet of Protection from Turning"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceTalesFromTheYawningPortal
+    , description: 
+      [ P [ T "While you wear this amulet of silver and turquoise, you have advantage on saving throws against effects that turn undead." ]
+      , P [ T "If you fail a saving throw against such an effect, you can choose to succeed instead. You can do so three times, and expe recharge daily at dawn." ]
+      , P [ T "Each time an effect that turns undead is used against you, the amulet glows with silvery blue light for a few seconds." ]
+      ]
+    }
+  , { title: "Armor, +1, +2, or +3"
+    , rarity: [ RarityRare, RarityVeryRare, RarityLegendary ]
+    , type: TypeArmor (Just "light, medium or heavy")
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "You have a bonus to AC while wearing this armor. The bonus is determined by its rarity." ]
+      ]
+    }
+  , { title: "Armor of Resistance"
+    , rarity: [ RarityRare ]
+    , type: TypeArmor (Just "light, medium or heavy")
+    , attune: Attune Nothing
+    , source: SourceDMG
+    , description: 
+      [ P [ T "You have resistance to one type of damage while you wear this armor. The DM chooses the type or determines it randomly from the options below." ]
+      , TB [ T "d10", T "Damage Type" ]
+        [ TR [ T "1", T "Acid" ]
+        , TR [ T "2", T "Cold" ]
+        , TR [ T "3", T "Fire" ]
+        , TR [ T "4", T "Force" ]
+        , TR [ T "5", T "Lightning" ]
+        , TR [ T "6", T "Necrotic" ]
+        , TR [ T "7", T "Poison" ]
+        , TR [ T "8", T "Psychic" ]
+        , TR [ T "9", T "Radiant" ]
+        , TR [ T "10", T "Thunder" ]
+        ]
+      ]
+    }
+  , { title: "Armor of Vulnerability"
+    , rarity: [ RarityRare ]
+    , type: TypeArmor (Just "plate")
+    , attune: Attune Nothing
+    , source: SourceDMG
+    , description: 
+      [ P [ T "While wearing this armor, you have resistance to one of the following damage types: bludgeoning, piercing, or slashing. The DM chooses the type or determines it randomly." ]
+      , P [ B "Curse. ", T "This armor is cursed, a fact that is revealed only when an Identify spell is cast on the armor or you attune to it. Attuning to the armor curses you until you are target by the Remove Curse spell or similar magic; removing the armor fails to end the curse. While cursed, you have vulnerability to two of the three damage types associated with the armor (not the one to which it grants resistance)." ]
+      ]
+    }
+  , { title: "Arrow-Catching Shield"
+    , rarity: [ RarityRare ]
+    , type: TypeArmor (Just "shield")
+    , attune: Attune Nothing
+    , source: SourceDMG
+    , description: 
+      [ P [ T "You gain a +2 bonus to AC against ranged attacks while you wield this shield. This bonus is in addition to the shield's normal bonus to AC. In addition, whenever an attacker makes a ranged attack against a target within 5 feet of you, you can use your reaction to become the target of the attack instead." ]
+      ]
+    }
+  , { title: "Astral Shard"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune (Just "sorceror")
+    , source: SourceTashasCauldronOfEverything
+    , description: 
+      [ P [ T "This crystal is a solidified shard of the Astral Plane, swirling with silver mist. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it." ]
+      , P [ T "When you use a Metamagic option on a spell while you are holding or wearing the shard, immediately after casting the spell you can teleport to an unoccupied space you can see within 30 feet of you." ]
+      ]
+    }
+  , { title: "Astromancy Archive"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune (Just "wizard")
+    , source: SourceTashasCauldronOfEverything
+    , description: 
+      [ P [ T "This brass disc of articulated, concentric rings unfolds into an armillary sphere. As a bonus action, you can unfold it into the sphere or back into a disc. When found, it contains the following spells, which are wizard spells for you while you are attuned to it: Augury, Divination, Find the Path, Foresight, Locate Creature, and Locate Object. It functions as a spellbook for you, with spells encoded on the rings." ]
+      , P [ T "While you are holding the archive, you can use it as a spellcasting focus for your wizard spells." ]
+      , P [ T "The archive has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
+      , UL
+        [ LI [ T "If you spend 1 minute studying the archive, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the archive. The new spell must be of the divination school." ]
+        , LI [ T "When a creature you can see within 30 feet of you makes an attack roll, an ability check, or a saving throw, you can use your reaction to expend 1 charge and force the creature to roll a d4 and apply the number rolled as a bonus or penalty (your choice) to the original roll. You can do this after you see the roll but before its effects are applied." ]
+        ]
+      ]
+    }
+  , { title: "Atlas of Endless Horizons"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune (Just "wizard")
+    , source: SourceTashasCauldronOfEverything
+    , description: 
+      [ P [ T "This thick book is bound in dark leather, crisscrossed with inlaid silver lines suggesting a map or chart. When found, the book contains the following spells, which are wizard spells for you while you are attuned to the book: Arcane Gate, Dimension Door, Gate, Misty Step, Plane Shift, Teleportation Circle, and Word of Recall. It functions as a spell book for you." ]
+      , P [ T "While you are holding the book, you can use it as a spellcasting focus for your wizard spells." ]
+      , P [ T "The book has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
+      , UL
+        [ LI [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the conjuration school." ]
+        , LI [ T "When you are hit by an attack, you can use your reaction to expend 1 charge to teleport up to 10 feet to an unoccupied space you can see. If your new position is out of range of the attack, it misses you." ]
+        ]
+      ]
+    }
+  , { title: "Badge of the Watch"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune (Just "someone designated by the Open Lord of Waterdeep")
+    , source: SourceWaterdeepDragonHeist
+    , description: 
+      [ P [ T "A ", I "Badge of the Watch", T " is given only to those who have earned the trust of the Open Lord of Waterdeep. The badge, signifying the rank of captain in Waterdeep's City Watch, bears the emblem of Waterdeep and is meant to be worn or carried." ]
+      , P [ T "While wearing the badge, you gain a +2 bonus to AC if you aren't using a shield." ]
+      , P [ T "If the badge is more than 5 feet away from you for more than 1 minute, it vanishes and harmlessly reappears on a surface within 5 feet of the Open Lord. While holding the badge, the Open Lord knows your location, provided the two of you are on the same plane of existence and your attunement to the badge hasn't ended." ]
+      , P [ T "As an action, the Open Lord can touch the badge and end your attunement to it." ]
+      ]
+    }
+  , { title: "Bag of Beans"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "Inside this heavy cloth bag are 3d4 dry beans. The bag weighs 1/2 pound plus 1/4 pound for each bean it contains." ]
+      , P [ T "If you dump the bag's contents out on the ground, they explode in a 10-foot radius, extending from the beans. Each creature in the area, including you, must make a DC 15 Dexterity saving throw, taking 5d4 fire damage on a failed save, or half as much damage on a successful one. The fire ignites flammable objects in the area that aren't being worn or carried." ]
+      , P [ T "If you remove a bean from the bag, plant it in the dirt or sand, and then water it, the bean produces an effect 1 minute later from the ground where it was planted. The DM can choose an effect from the following table, determine it randomly, or create an effect." ]
+      , TB [ T "d100", T "Effect" ]
+        [ TR [ T "01", T "5d4 toadstools sprout. If a creature eats a toadstool, roll any die. On an odd roll, the eater must succeed on a DC 15 Constitution saving throw or take 5d6 poison damage and become poisoned for 1 hour. On an even roll, the eater gains 5d6 temporary hit points for 1 hour." ]
+        , TR [ T "02-10", T "A geyser erupts and sprouts water, beer, berry juice, tea, vinegar, wine, or oil (DM's choice) 30 feet into the air for 1d12 rounds." ]
+        , TR [ T "11-20", T "A treant sprouts (see the Monster Manual for statistics). There's a 50 percent chance that the treant is chaotic evil and attacks." ]
+        , TR [ T "21-30", T "An animate, immobile stone statue in your likeness rises. It makes verbal threats against you. If you leave it and others come near, it describes you as the most heinous of villains and directs the newcomers to find and attack you. If you are on the same plane of existence as the statue, it knows where you are. The statue becomes inanimate after 24 hours." ]
+        , TR [ T "31-40", T "A campfire with blue flames springs forth and burns for 24 hours (or until it is extinguished)." ]
+        , TR [ T "41-50", T "1d6 + 6 shriekers sprout (see the Monster Manual for statistics)." ]
+        , TR [ T "51-60", T "1d4 + 8 bright pink toads crawl forth. Whenever a toad is touched, it transforms into a Large or smaller monster of the DM's choice. The monster remains for 1 minute, then disappears in a puff of bright pink smoke." ]
+        , TR [ T "61-70", T "A hungry bulette (see the Monster Manual for statistics) burrows up and attacks." ]
+        , TR [ T "71-80", T "A fruit tree grows. It has 1d10 + 20 fruit, 1d8 of which act as randomly determined magic potions, while one acts as an ingested poison of the DM's choice. The tree vanishes after 1 hour. Picked fruit remains, retaining any magic for 30 days." ]
+        , TR [ T "81-90", T "A nest of 1d4 + 3 eggs springs up. Any creature that eats an egg must make a DC 20 Constitution saving throw. On a successful save, a creature permanently increases its lowest ability score by 1, randomly choosing among equally low scores. On a failed save, the creature takes 10d6 force damage from an internal magical explosion." ]
+        , TR [ T "91-99", T "A pyramid with a 60-foot-square base bursts upward. Inside is a sarcophagus containing a mummy lord (see the Monster Manual for statistics). The pyramid is treated as the mummy lord's lair, and its sarcophagus contains treasure of the DM 's choice." ]
+        , TR [ T "00", T "A giant beanstalk sprouts, growing to a height of the DM's choice. The top leads where the DM chooses, such as to a great view, a cloud giant's castle, or a different plane of existence." ]
+        ]
+      ]
+    }
+  , { title: "Banner of the Krig Rune"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceStormKingsThunder
+    , description: 
+      [ P [ T "Crafted from a thick, red fabric, this banner measures 5 feet high and 3 feet wide. The krig (war) rune is displayed on the fabric with round, metal plates sewn into it. It can be attached to a 10-foot pole to serve as a standard. Furling or unfurling the banner requires an action. The banner has the following properties." ]
+      , P [ B "Mark of Courage. ", T "As a bonus action, you can touch the unfurled banner and cause it to emanate courage. You and your allies are immune to the frightened condition while within 20 feet of it. This benefit lasts for 10 minutes or until the banner is furled. Once you use this property, you can't use it again until you finish a short or long rest." ]
+      , P [ B "Sentinel Standard. ", T "You can see invisible creatures while they are within 20 feet of the unfurled banner and within your line of sight." ]
+      , P [ B "Standard's Shield. ", T "As a bonus action, you can touch the unfurled banner and invoke this power. Any ranged attack roll that targets you or an ally of yours has disadvantage if the target is within 20 feet of the unfurled banner. This benefit lasts for 1 minute or until the banner is furled. Once you use this property, you can't use it again until you finish a short or long rest." ]
+      , P [ B "Gift of Battle. ", T "You can transfer the banner's magic to a place by tracing the krig rune on the ground with your finger. The point where you trace it becomes the center of a spherical area of magic that has a 500-foot radius and that is fixed to the place. The transfer takes 8 hours of work that requires the banner to be within 5 feet of you and during which you choose creatures, creature types, or both that will benefit from the magic. At the end, the banner is destroyed, and the area gains the following property:" ]
+      , UL [ LI [ T "While in the 500-foot-radius sphere, the creatures you chose during the transfer process are immune to the frightened condition and gain a +1 bonus to attack rolls and AC." ] ]
+      ]
+    }
+  , { title: "Battering Shield"
+    , rarity: [ RarityRare ]
+    , type: TypeArmor (Just "shield")
+    , attune: Attune Nothing
+    , source: SourceExplorersGuideToWildemount
+    , description: 
+      [ P [ T "While holding this iron tower shield, you gain a +1 bonus to AC. This bonus is in addition to the shield's normal bonus to AC." ]
+      , P [ T "Additionally, the shield has 3 charges, and it regains 1d3 expended charges daily at dawn. If you are holding the shield and push a creature within your reach at least 5 feet away, you can expend 1 charge to push that creature an additional 10 feet, knock it prone, or both." ]
+      ]
+    }
+  , { title: "Bead of Force"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "This small black sphere measures 3/4 of an inch in diameter and weighs an ounce. Typically, 1d4 + 4 beads of force are found together." ]
+      , P [ T "You can use an action to throw the bead up to 60 feet. The bead explodes on impact and is destroyed. Each creature within a 10-foot radius of where the bead landed must succeed on a DC 15 Dexterity saving throw or take 5d4 force damage. A sphere of transparent force then encloses the area for 1 minute. Any creature that failed the save and is completely within the area is trapped inside this sphere. Creatures that succeeded on the save, or are partially within the area, are pushed away from the center of the sphere until they are no longer inside it. Only breathable air can pass through the sphere's wall. No attack or other effect can." ]
+      , P [ T "An enclosed creature can use its action to push against the sphere's wall, moving the sphere up to half the creature's walking speed. The sphere can be picked up, and its magic causes it to weigh only 1 pound, regardless of the weight of creatures inside." ]
+      ]
+    }
+  , { title: "Bell Branch"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune (Just "druid or warlock")
+    , source: SourceTashasCauldronOfEverything
+    , description: 
+      [ P [ T "This silver implement is shaped like a tree branch and is strung with small golden bells. The branch is a spellcasting focus for your spells while you hold it." ]
+      , P [ T "The branch has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
+      , UL
+        [ LI [ T "As a bonus action, you can expend 1 charge to detect the presence of aberrations, celestials, constructs, elementals, fey, fiends, or undead within 60 feet of you. If such creatures are present and don't have total cover from you, the bells ring softly, their tone indicating the creature types present." ]
+        , LI [ T "As an action, you can expend 1 charge to cast Protection from Evil and Good." ]
+        ]
+      ]
+    }
+  , { title: "Belt of Dwarvenkind"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "While wearing this belt, you gain the following benefits:" ]
+      , UL
+        [ LI [ T "Your Constitution score increases by 2, to a maximum of 20." ]
+        , LI [ T "You have advantage on Charisma (Persuasion) checks made to interact with dwarves." ]
+        ]
+      , P [ T "In addition, while attuned to the belt, you have a 50 percent chance each day at dawn of growing a full beard if you're capable of growing one, or a visibly thicker beard if you already have one." ]
+      , P [ T "If you aren't a dwarf, you gain the following additional benefits while wearing the belt:" ]
+      , UL
+        [ LI [ T "You have advantage on saving throws against poison, and you have resistance against poison damage." ]
+        , LI [ T "You have darkvision out to a range of 60 feet." ]
+        , LI [ T "You can speak, read, and write Dwarvish." ]
+        ]
+      ]
+    }
+  , { title: "Belt of Giant Strength"
+    , rarity: [ RarityRare, RarityVeryRare, RarityLegendary ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceDMG
+    , description: 
+      [ P [ T "While wearing this belt, your Strength score changes to a score granted by the belt. If your Strength is already equal to or greater than the belt's score, the item has no effect on you." ]
+      , P [ T "Six varieties of this belt exist, corresponding with and having rarity according to the six kinds of true giants. The ", I "Belt of Stone Giant Strength", T " and the ", I "Belt of Frost Giant Strength", T " look different, but they have the same effect." ]
+      , TB   [ T "Type",              T "Strength", T "Rarity" ]
+        [ TR [ T "Hill Giant",        T "21",       T "Rare" ]
+        , TR [ T "Stone/Frost Giant", T "23",       T "Very Rare" ]
+        , TR [ T "Fire Giant",        T "25",       T "Very Rare" ]
+        , TR [ T "Cloud Giant",       T "27",       T "Legendary" ]
+        , TR [ T "Storm Giant",       T "29",       T "Legendary" ]
+        ]
+      ]
+    }
+  , { title: "Berserker Axe"
+    , rarity: [ RarityRare ]
+    , type: TypeWeapon (Just "any axe")
+    , attune: Attune Nothing
+    , source: SourceDMG
+    , description: 
+      [ P [ T "You gain a +1 bonus to attack and damage rolls made with this magic weapon. In addition, while you are attuned to this weapon, your hit point maximum increases by 1 for each level you have attained." ]
+      , P [ B "Curse. ", T "This axe is cursed, and becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the axe, keeping it within reach at all times. You also have disadvantage on attack rolls with weapons other than this one, unless no foe is within 60 feet of you that you can see or hear." ]
+      , P [ T "Whenever a hostile creature damages you while the axe is in your possession, you must succeed on a DC 15 Wisdom saving throw or go berserk. While berserk, you must use your action each round to attack the creature nearest to you with the axe. If you can make extra attacks as part of the Attack action, you use those extra attacks, moving to attack the next nearest creature after you fell your current target. If you have multiple possible targets, you attack one at random. You are berserk until you start your turn with no creatures within 60 feet of you that you can see or hear." ]
+      ]
+    }
+  , { title: "Blod Stone"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceStormKingsThunder
+    , description: 
+      [ P [ T "This diamond contains the blood of a creature — blood that appears in the form of the blod (blood) rune. While the item is on your person, you can use your action to divine the location of the creature nearest to you that is related to the blood in the item and that isn't undead. You sense the distance and direction of the creature relative to your location. The creature is either the one whose blood is in the item or a blood relative." ]
+      , P [ T "This item is made from a large diamond worth at least 5,000 gp. When the blood of a creature is poured onto it during the creation process, the blood seeps into the heart of the gem. If the gem is destroyed, the blood evaporates and is gone forever. A vengeful being might use a Blod Stone to hunt down an entire bloodline. Such stones are sometimes given as gifts to siblings or handed down from parent to child." ]
+      ]
+    }
+  , { title: "Bonecounter"
+    , rarity: [ RarityRare ]
+    , type: TypeWeapon (Just "mace")
+    , attune: AttuneNone
+    , source: SourceSleepingDragonsWake
+    , description: 
+      [ P [ T "This weapon is a magical +2 mace called Bonecounter. Whenever this weapon is used to destroy an undead creature, a single silver piece appears in the wielder's pocket." ]
+      ]
+    }
+  , { title: "Boots of Levitation"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceDMG
+    , description: 
+      [ P [ T "While you wear these boots, you can use an action to cast the Levitate spell on yourself at will." ]
+      ]
+    }
+  , { title: "Boots of Speed"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceDMG
+    , description: 
+      [ P [ T "While you wear these boots, you can use a bonus action and click the boots' heels together. If you do, the boots double your walking speed, and any creature that makes an opportunity attack against you has disadvantage on the attack roll. If you click your heels together again, you end the effect." ]
+      , P [ T "When the boots' property has been used for a total of 10 minutes, the magic ceases to function until you finish a long rest." ]
+      ]
+    }
+  , { title: "Bow Of Conflagration"
+    , rarity: [ RarityRare ]
+    , type: TypeWeapon (Just "any bow")
+    , attune: Attune Nothing
+    , source: SourceBookOfManyThings
+    , description: 
+      [ P [ T "Ammunition fired from this bow blazes brightly. When you hit with an attack roll using this bow, the target takes an extra 1d6 fire damage. If the target is a flammable, nonmagical object, it catches fire, taking 1d6 fire damage at the start of each of your turns until a creature uses an action to extinguish the flames." ]
+      ]
+    }
+  , { title: "Bowl of Commanding Water Elementals"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "While this bowl is filled with water, you can use an action to speak the bowl's command word and summon a water elemental, as if you had cast the Conjure Elemental spell. The bowl can't be used this way again until the next dawn." ]
+      , P [ T "The bowl is about 1 foot in diameter and half as deep. It weighs 3 pounds and holds about 3 gallons" ]
+      ]
+    }
+  , { title: "Bracer of Flying Daggers"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceWaterdeepDragonHeist
+    , description: 
+      [ P [ T "This armband appears to have thin daggers strapped to it. As an action, you can pull up to two magic daggers from the bracer and immediately hurl them, making a ranged attack with each dagger. A dagger vanishes if you don't hurl it right away, and the daggers disappear right after they hit or miss. The bracer never runs out of daggers." ]
+      ]
+    }
+  , { title: "Bracers of Celerity"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourcePhandelverAndBelowTheShatteredObelisk
+    , description: 
+      [ P [ T "This pair of lightweight bronze bracers is lined with soft, purple velvet and engraved with swirling designs." ]
+      , P [ T "While you're wearing these bracers, all your speeds increase by 10 feet, and you have advantage on saving throws you make to avoid or end the paralyzed or restrained condition on yourself." ]
+      ]
+    }
+  , { title: "Bracers of Defense"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceDMG
+    , description: 
+      [ P [ T "While wearing these bracers, you gain a +2 bonus to AC if you are wearing no armor and using no shield." ]
+      ]
+    }
+  , { title: "Brazier of Commanding Fire Elementals"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "While a fire burns in this brass brazier, you can use an action to speak the brazier's command word and summon a fire elemental, as if you had cast the Conjure Elemental spell. The brazier can't be used this way again until the next dawn." ]
+      , P [ T "The brazier weighs 5 pounds." ]
+      ]
+    }
+  , { title: "Breastplate Of Balance"
+    , rarity: [ RarityRare ]
+    , type: TypeArmor (Just "breastplate")
+    , attune: Attune Nothing
+    , source: SourceBookOfManyThings
+    , description: 
+      [ P [ T "This burnished copper breastplate looks as if it were made of interlocking gears. Merchant's scales are emblazoned across the chest." ]
+      , P [ T "The armor has 4 charges. You can use the charges in the following ways while wearing the armor:" ]
+      , P [ B "Equalize. ", T "When you or a creature you can see within 60 feet of yourself is about to roll a d20 with advantage or disadvantage, you can expend 1 charge and take a reaction to prevent the roll from being affected by advantage or disadvantage." ]
+      , P [ B "Expunge Imbalance. ", T "As a bonus action, you can expend 2 charges to cast the Lesser Restoration spell from the armor." ]
+      , P [ T "The armor regains 1d4 expended charges daily at dawn." ]
+      ]
+    }
+  , { title: "Bridle of Capturing"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceInfernalMachineRebuild
+    , description: 
+      [ P [ T "This fine leather bridle tugs at the hand when first held, as though it longs to reach out for a beast nearby. When you hold one end of the bridle, you can use an action to speak its command word, causing the other end to lash out at a beast you can see within 20 feet of you. The target must succeed on a DC 17 Charisma saving throw or have the bridle tie itself around its neck, then fall under your command as if subjected to the Dominate Beast spell. Once the targeted is affected, you do not need to hold the other end of the bridle to command it. With a successful saving throw, the target becomes immune to the bridle's power until the next dawn." ]
+      , P [ T "A creature controlled by the bridle can be released by the creature that bound it as a bonus action. A creature controlled by the bridle can make a DC 17 Charisma check each day at dawn. On a success, the creature is no longer affected by the bridle." ]
+      ]
+    }
+  , { title: "Butcher's Bib"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceExplorersGuideToWildemount
+    , description: 
+      [ P [ T "This black leather apron is perpetually covered by blood, even after being washed off. You gain the following benefits while wearing the apron:" ]
+      , UL
+        [ LI [ T "Once per turn when you roll damage for a melee attack with a weapon, you can reroll the weapon's damage dice. If you do so, you must use the second total." ]
+        , LI [ T "Your weapon attacks that deal slashing damage score a critical hit on a roll of 19 or 20 on the d20." ]
+        ]
+      ]
+    }
+  , { title: "Cape of the Mountebank"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "This cape smells faintly of brimstone. While wearing it, you can use it to cast the Dimension Door spell as an action. This property of the cape can't be used again until the next dawn." ]
+      , P [ T "When you disappear, you leave behind a cloud of smoke, and you appear in a similar cloud of smoke at your destination. The smoke lightly obscures the space you left and the space you appear in, and it dissipates at the end of your next turn. A light or stronger wind disperses the smoke." ]
+      ]
+    }
+  , { title: "Cauldron of Plenty"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceIcewindDaleRimeOfTheFrostmaiden
+    , description: 
+      [ P [ T "This cauldron is made of thick copper that has turned green with age. It is 4 feet wide, has a mouth 3 1/2 feet in diameter, weighs 50 pounds, and can hold up to 30 gallons of liquid. Embossed on its bulging sides are images of satyrs and nymphs in repose, holding ladles. The cauldron comes with a lid and has side handles. It sits on five little clawed feet that keep it from tipping." ]
+      , P [ T "If water is poured into the cauldron and stirred for 1 minute, it transforms into a hearty, hot stew, which can provide one nourishing meal for up to four people per gallon. The stew remains hot while in the cauldron, then cools naturally after it is removed. The outside of the cauldron remains safe to touch despite the heat of the stew." ]
+      , P [ T "The cauldron can create stew three times. It then ceases to function until the next dawn, when it regains all its uses." ]
+      ]
+    }
+  , { title: "Censer of Controlling Air Elementals"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "While incense is burning in this censer, you can use an action to speak the censer's command word and summon an air elemental, as if you had cast the Conjure Elemental spell. The censer can't be used this way again until the next dawn." ]
+      , P [ T "This 6-inch wide, 1-foot-high vessel resembles a chalice with a decorated lid. It weighs 1 pound." ]
+      ]
+    }
+  , { title: "Charm of Plant Command"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceGhostsOfSaltmarsh
+    , description: 
+      [ P [ T "This fist-sized charm is made from a bundle of dried plant stems wrapped in silver thread. Hung on a leather thong, it is typically worn around the neck or attached to a belt." ]
+      , P [ T "This charm has 3 charges. While you bear the charm, you can expend 1 charge as an action to cast the Speak with Plants spell. For the duration of the spell, you also have advantage on Charisma checks made to influence the behavior, demeanor. and attitude of plants. The charm regains all expended charges at dawn each day." ]
+      ]
+    }
+  , { title: "Chime of Opening"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "This hollow metal tube measures about 1 foot long and weighs 1 pound. You can strike it as an action, pointing it at an object within 120 feet of you that can be opened, such as a door, lid, or lock. The chime issues a clear tone, and one lock or latch on the object opens unless the sound can't reach the object. If no locks or latches remain, the object itself opens." ]
+      , P [ T "The chime can be used ten times. After the tenth time, it cracks and becomes useless." ]
+      ]
+    }
+  , { title: "Chromatic Rose"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceTheWildBeyondTheWitchlight
+    , description: 
+      [ P [ T "This magic rose comes in one of five colors, as noted in the Chromatic Roses table. While a rose is held, it gains a harmless visual effect as indicated on the table." ]
+      , P [ T "While holding the rose by its stem, you gain resistance to damage of the type associated with the rose's color. If you would take more than 10 damage of this type from a single source (after applying the resistance), the rose disintegrates, and you take no damage instead." ]
+      , P [ T "As an action, you can blow the petals from the rose to produce a 20-foot cone of acid, lightning, poisonous gas, fire, or cold, as dictated by the rose's damage type. Each creature in the cone must make a DC 15 Constitution saving throw, taking 3d10 damage of the appropriate type on a failed save, or half as much damage on a successful one. Using this property destroys the rose." ]
+      , TB   [ T "Color", T "Visual Effect",           T "Damage Type" ]
+        [ TR [ T "Black", T "Drips acid",              T "Acid" ]
+        , TR [ T "Blue",  T "Crackles with lightning", T "Lightning" ]
+        , TR [ T "Green", T "Issues green gas",        T "Poison" ]
+        , TR [ T "Red",   T "Wreathed in fire",        T "Fire" ]
+        , TR [ T "White", T "Covered with frost",      T "Cold" ]
+        ]
+      ]
+    }
+  , { title: "Claw of the Wyrm Rune"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceStormKingsThunder
+    , description: 
+      [ P [ T "This dragon's claw has been covered with a coat of molten silver, upon which has been inscribed the wyrm (dragon) rune. The claw has the following properties." ]
+      , P [ B "Wyrmslayer. ", T "As an action, you can point the claw at a dragon within 30 feet of you. The dragon must then succeed on a DC 15 Constitution saving throw or gain vulnerability to all damage types until the end of your next turn. This property can be used three times. The claw regains all expended uses at the next dawn." ]
+      , P [ B "Wyrm Shield. ", T "While the claw is displayed on your person, you have resistance to the damage caused by any dragon's breath weapon." ]
+      , P [ B "Wyrm Ward. ", T "You can transfer the claw's magic to a place by tracing the wyrm rune on the ground with your finger. The point where you trace it becomes the center of a spherical area of magic that has a 100-foot radius and that is fixed to the place. The transfer takes 8 hours of work that requires the claw to be within 5 feet of you. At the end, the claw is destroyed, and the area gains the following property:" ]
+      , UL
+        [ LI [ T "While in the 100-foot-radius sphere, any dragon has disadvantage on saving throws and can have a flying speed no higher than 10 feet." ]
+        ]
+      ]
+    }
+  , { title: "Claws of the Umber Hulk"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourcePrincesOfTheApocalypse
+    , description: 
+      [ P [ T "These heavy gauntlets of brown iron are forged in the shape of an umber hulk's claws, and they fit the wearer's hands and forearms all the way up to the elbow. While wearing both claws, you gain a burrowing speed of 20 feet, and you can tunnel through solid rock at a rate of 1 foot per round." ]
+      , P [ T "You can use a claw as a melee weapon while wearing it. You have proficiency with it, and it deals 1d8 slashing damage on a hit (your Strength modifier applies to the attack and damage rolls, as normal)." ]
+      , P [ T "While wearing the claws, you can't manipulate objects or cast spells with somatic components." ]
+      ]
+    }
+  , { title: "Cloak of Displacement"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceDMG
+    , description: 
+      [ P [ T "While you wear this cloak, it projects an illusion that makes you appear to be standing in a place near your actual location, causing any creature to have disadvantage on attack rolls against you. If you take damage, the property ceases to function until the start of your next turn. This property is suppressed while you are incapacitated, restrained, or otherwise unable to move." ]
+      ]
+    }
+  , { title: "Cloak of the Bat"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceDMG
+    , description: 
+      [ P [ T "While wearing this cloak, you have advantage on Dexterity (Stealth) checks. In an area of dim light or darkness, you can grip the edges of the cloak with both hands and use it to fly at a speed of 40 feet. If you ever fail to grip the cloak's edges while flying in this way, or if you are no longer in dim light or darkness, you lose this flying speed." ]
+      , P [ T "While wearing the cloak in an area of dim light or darkness, you can use your action to cast Polymorph on yourself, transforming into a bat. While you are in the form of the bat, you retain your Intelligence, Wisdom, and Charisma scores. The cloak can't be used this way again until the next dawn." ]
+      ]
+    }
+  , { title: "Corpse Slayer"
+    , rarity: [ RarityRare ]
+    , type: TypeWeapon (Just "any")
+    , attune: Attune Nothing
+    , source: SourceExplorersGuideToWildemount
+    , description: 
+      [ P [ T "You gain a +1 bonus to attack and damage rolls made with this magic weapon." ]
+      , P [ T "When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon's type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn." ]
+      ]
+    }
+  , { title: "Crown of the Wrath Bringer"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceBigbyPresentsGloryOfTheGiants
+    , description: 
+      [ P [ T "This jagged iron circlet bears ornaments in the shape of the enemy rune. When worn, the crown glows with pale light as it draws upon the wearer's fury to strike opponents with vicious terror." ]
+      , P [ T "When you make an attack roll against a creature and hit it while wearing this crown, you can spend and roll one of your unspent Hit Dice. The creature takes extra psychic damage equal to the number rolled." ]
+      , P [ B "Invoking the Rune. ", T "As an action, you can invoke the crown's rune to cast the Fear spell (save DC 15) with it; the spell has a duration of 1 minute and doesn't require concentration. Once the rune has been invoked, it can't be invoked again until the next dawn." ]
+      ]
+    }
+  , { title: "Crystal Blade"
+    , rarity: [ RarityRare ]
+    , type: TypeWeapon (Just "any sword")
+    , attune: Attune Nothing
+    , source: SourceFizbansTreasuryOfDragons
+    , description: 
+      [ P [ T "This magic sword's blade is fashioned from a horn or spine from a crystal dragon. When you hit with an attack roll using this sword, the target takes an extra 1d8 radiant damage." ]
+      , P [ T "The sword has 3 charges and regains 1d3 expended charges daily at dawn. When you hit a creature with an attack roll using the sword, you can expend 1 charge to regain a number of hit points equal to the extra radiant damage the sword dealt." ]
+      , P [ T "While you're holding the sword, you can use a bonus action to cause it to shed bright light in a 30-foot radius and dim light for an additional 30 feet, to cause it to shed dim light in a 10-foot radius, or to douse the light." ]
+      ]
+    }
+  , { title: "Cube of Force"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: SourceDMG
+    , description: 
+      [ P [ T "This cube is about an inch across. Each face has a distinct marking on it that can be pressed. The cube starts with 36 charges, and it regains 1d20 expended charges daily at dawn." ]
+      , P [ T "You can use an action to press one of the cube's faces, expending a number of charges based on the chosen face, as shown in the Cube of Force Faces table. Each face has a different effect. If the cube has insufficient charges remaining, nothing happens. Otherwise, a barrier of invisible force springs into existence, forming a cube 15 feet on a side. The barrier is centered on you, moves with you, and lasts for 1 minute, until you use an action to press the cube's sixth face, or the cube runs out of charges. You can change the barrier's effect by pressing a different face of the cube and expending the requisite number of charges, resetting the duration." ]
+      , P [ T "If your movement causes the barrier to come into contact with a solid object that can't pass through the cube, you can't move any closer to that object as long as the barrier remains." ]
+      , P [ B "Cube of Force Faces" ]
+      , TB [ T "Face", T "Charges", T "Effect" ]
+        [ TR [ T "1", T "1", T "Gases, wind, and fog can't pass through the barrier." ]
+        , TR [ T "2", T "2", T "Nonliving matter can't pass through the barrier. Walls, floors, and ceilings can pass through at your discretion." ]
+        , TR [ T "3", T "3", T "Living matter can't pass through the barrier." ]
+        , TR [ T "4", T "4", T "Spell effects can't pass through the barrier." ]
+        , TR [ T "5", T "5", T "Nothing can pass through the barrier. Walls, floors, and ceilings can pass through at your discretion." ]
+        , TR [ T "6", T "0", T "The barrier deactivates." ]
+        ]
+      , P [ T "The cube loses charges when the barrier is targeted by certain spells or comes into contact with certain spell or magic item effects, as shown in the table below." ]
+      , TB [ T " Spell or Item", T "Charges Lost" ]
+        [ TR [ T "Disintegrate", T "1d12"]
+        , TR [ T "Horn of Blasting", T "1d10"]
+        , TR [ T "Passwall", T "1d6"]
+        , TR [ T "Prismatic Spray", T "1d20"]
+        , TR [ T "Wall of Fire", T "1d4"]
+        ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description: 
+      [ P [ T "" ]
+      ]
+    }
   ]
 
 -- Very Rare Items (181)
@@ -3164,15 +5536,15 @@ veryRareItems =
       , P [ T "The chest regains 1d20 expended charges daily at dawn. If the item's last charge is expended, roll a d20. On a 1, the chest loses its magic (becoming an ordinary chest), and its gemstones turn to dust." ]
       ]
     }
---   , { title: ""
---     , rarity: [ RarityVeryRare ]
---     , type: TypeItem Nothing
---     , attune: AttuneNone
---     , source: SourceDMG
---     , description:
---       [ P [ T "" ]
---       ]
---     }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: SourceDMG
+    , description:
+      [ P [ T "" ]
+      ]
+    }
   ]
 
 -- Legendary Items (135)

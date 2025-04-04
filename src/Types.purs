@@ -40,7 +40,7 @@ data ItemSource
   | SourceTheRiseOfTiamat
   | SourceSpelljammerAdventuresInSpace
   | SourceStrixhaveCurriculumOfChaos
-  | SourceSourceSleepingDragonsWake
+  | SourceSleepingDragonsWake
   | SourceStormKingsThunder
   | SourceTashasCauldronOfEverything
   | SourceTombOfAnnihilation
@@ -88,7 +88,7 @@ instance Show ItemSource where
   show SourceTheRiseOfTiamat = "The Rise of Tiamat"
   show SourceSpelljammerAdventuresInSpace = "Spelljammer: Adventures in Space"
   show SourceStrixhaveCurriculumOfChaos = "Strixhaven: A Curriculum of Chaos"
-  show SourceSourceSleepingDragonsWake = "Sleeping Dragon's Wake"
+  show SourceSleepingDragonsWake = "Sleeping Dragon's Wake"
   show SourceStormKingsThunder = "Storm King's Thunder"
   show SourceTashasCauldronOfEverything = "Tasha's Cauldron of Everything"
   show SourceTombOfAnnihilation = "Tomb of Annihilation"
@@ -136,7 +136,7 @@ instance Eq ItemSource where
   eq SourceTheRiseOfTiamat SourceTheRiseOfTiamat = true
   eq SourceSpelljammerAdventuresInSpace SourceSpelljammerAdventuresInSpace = true
   eq SourceStrixhaveCurriculumOfChaos SourceStrixhaveCurriculumOfChaos = true
-  eq SourceSourceSleepingDragonsWake SourceSourceSleepingDragonsWake = true
+  eq SourceSleepingDragonsWake SourceSleepingDragonsWake = true
   eq SourceStormKingsThunder SourceStormKingsThunder = true
   eq SourceTashasCauldronOfEverything SourceTashasCauldronOfEverything = true
   eq SourceTombOfAnnihilation SourceTombOfAnnihilation = true
@@ -186,7 +186,7 @@ allSources =
   , SourceTheRiseOfTiamat
   , SourceSpelljammerAdventuresInSpace
   , SourceStrixhaveCurriculumOfChaos
-  , SourceSourceSleepingDragonsWake
+  , SourceSleepingDragonsWake
   , SourceStormKingsThunder
   , SourceTashasCauldronOfEverything
   , SourceTombOfAnnihilation
@@ -235,7 +235,7 @@ instance Unshow ItemSource where
   unshow "The Rise of Tiamat" = Just SourceTheRiseOfTiamat
   unshow "Spelljammer: Adventures in Space" = Just SourceSpelljammerAdventuresInSpace
   unshow "Strixhaven: A Curriculum of Chaos" = Just SourceStrixhaveCurriculumOfChaos
-  unshow "Sleeping Dragon's Wake" = Just SourceSourceSleepingDragonsWake
+  unshow "Sleeping Dragon's Wake" = Just SourceSleepingDragonsWake
   unshow "Storm King's Thunder" = Just SourceStormKingsThunder
   unshow "Tasha's Cauldron of Everything" = Just SourceTashasCauldronOfEverything
   unshow "Tomb of Annihilation" = Just SourceTombOfAnnihilation
