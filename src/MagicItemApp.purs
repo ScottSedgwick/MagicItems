@@ -63,16 +63,16 @@ viewFilter :: Model -> Html Message
 viewFilter model =
   HE.nav [ HA.class' "top white" ] 
   [ HE.div [ HA.class' "grid" ]
-    [ HE.div [ HA.class' "s3" ] [ mkInput           ChangeTitle              model.fltTitle ]
-    , HE.div [ HA.class' "s2" ] [ mkSelect "Rarity" ChangeRarity allRarities model.fltRarity ]
-    , HE.div [ HA.class' "s2" ] [ mkSelect "Type"   ChangeType   allTypes    model.fltType   ] 
-    , HE.div [ HA.class' "s2" ] [ mkSelect "Attune" ChangeAttune allAttunes  model.fltAttunement ] 
-    , HE.div [ HA.class' "s3" ] [ mkSelect "Source" ChangeSource allSources  model.fltSource ]
+    [ HE.div [ HA.class' "s3" ] [ mkInput  "Item Name" ChangeTitle              model.fltTitle ]
+    , HE.div [ HA.class' "s2" ] [ mkSelect "Rarity"    ChangeRarity allRarities model.fltRarity ]
+    , HE.div [ HA.class' "s2" ] [ mkSelect "Type"      ChangeType   allTypes    model.fltType   ] 
+    , HE.div [ HA.class' "s2" ] [ mkSelect "Attune"    ChangeAttune allAttunes  model.fltAttunement ] 
+    , HE.div [ HA.class' "s3" ] [ mkSelect "Source"    ChangeSource allSources  model.fltSource ]
     ]
   ]
 
-mkInput :: (String -> Message) -> String -> Html Message
-mkInput onInput value =
+mkInput :: String -> (String -> Message) -> String -> Html Message
+mkInput caption onInput value =
   HE.div [ HA.class' "field label prefix border" ] 
   [ HE.i_ [ HE.text "search" ]
   , HE.input 
@@ -80,7 +80,7 @@ mkInput onInput value =
     , HA.value value
     , HV.onInput onInput
     ]
-    , HE.label_ [ HE.text "" ]
+    , HE.label_ [ HE.text caption ]
   ]
 
 mkSelect :: forall a b. Show a => Eq a => String -> (String -> b) -> Array a -> Maybe a -> Html b

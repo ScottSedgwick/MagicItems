@@ -4036,130 +4036,153 @@ rareItems =
         ]
       ]
     }
-  , { title: ""
+  , { title: "Galder's Bubble Pipe"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune Nothing
+    , source: SourceLostLaboratoryOfKwalish
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This finely carved pipe blows odorless bubbles instead of smoke when used. The pipe has 3 charges, and it regains all spent charges daily at dawn. While you hold the pipe, you can expend charges to gain access to the following properties:" ]
+      , UL
+        [ LI [ T "You can cast Fog Cloud as an action (1 charge)." ]
+        , LI [ T "You can cast Misty Step as a bonus action (2 charges)." ]
+        , LI [ T "You can summon a steam mephit as an action (3 charges). The mephit is friendly to you, obeys your verbal commands, and acts on its own turn in the initiative order. It disappears in a harmless puff of steam after 1 minute or if it ends its turn more than 60 feet from the pipe." ]
+        ]
       ]
     }
-  , { title: ""
+  , { title: "Gambler's Blade"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , type: TypeWeapon (Just "any sword")
+    , attune: Attune Nothing
+    , source: SourceLostLaboratoryOfKwalish
     , description: 
-      [ P [ T "" ]
+      [ P [ T "Choose a magical bonus of +1 to +3. This sword gains that bonus to its attack and damage rolls. For each point of bonus you choose for the sword, you take a corresponding penalty (-1 to -3) to your death saving throws. You can change this magical bonus each day at dawn." ]
+      , P [ B "Curse. ", T "This weapon is cursed, and becoming attuned to it extends the curse to you. Until the curse is broken with a Remove Curse spell or similar magic, you are unwilling to part with the weapon." ]
       ]
     }
-  , { title: ""
+  , { title: "Gauntlets of Flaming Fury"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune Nothing
+    , source: SourceBaldursGateDescentIntoAvernus
     , description: 
-      [ P [ T "" ]
+      [ P [ T "While you wear both of these steel gauntlets, any nonmagical weapon you grasp with either gauntlet is treated as a magic weapon. As a bonus action, you can use the gauntlets to cause magical flames to envelop one or two melee weapons in your grasp. Each flaming weapon deals an extra 1d6 fire damage on a hit. The flames last until you sheath or let go of either weapon. Once used, this property can't be used again until the next dawn." ]
       ]
     }
-  , { title: ""
+  , { title: "Gavel of the Venn Rune"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune Nothing
+    , source: SourceStormKingsThunder
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This wooden gavel is small by giant reckoning but nearly the size of a warhammer in human hands. The venn (friend) rune is inscribed in mithral in the base of the haft. Among giants, this item is used as part of rituals to resolve disputes. The gavel has the following properties." ]
+      , P [ B "Arbiter's Shield. ", T "At the start of every combat, attack rolls against you have disadvantage before the start of your first turn, provided that the gavel is on your person." ]
+      , P [ B "Bond of Amity. ", T "As an action, you can use the gavel to strike a point on a hard surface. The first time in the next minute that a creature within 60 feet of that point deals damage to another creature with an attack that hits, the attacker takes psychic damage equal to half the damage it dealt to the target. Once you use this property, you can't use it again until you finish a long rest." ]
+      , P [ B "Gift of Truth. ", T "You can transfer the gavel's magic to a place by tracing the venn rune on the ground with your finger. The point where you trace it becomes the center of a spherical area of magic that has a 30-foot radius and that is fixed to the place. The transfer takes 8 hours of work that requires the gavel to be within 5 feet of you. At the end, the gavel is destroyed, and the area gains the following property:" ]
+      , UL
+        [ LI [ T "Whenever a creature utters a lie while within the 30-foot-radius sphere, that creature takes 5 psychic damage and flinches visibly." ] 
+        ]
       ]
     }
-  , { title: ""
+  , { title: "Gem of Seeing"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
+    , attune: Attune Nothing
     , source: SourceDMG
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This gem has 3 charges. As an action, you can speak the gem's command word and expend 1 charge. For the next 10 minutes, you have truesight out to 120 feet when you peer through the gem." ]
+      , P [ T "The gem regains 1d3 expended charges daily at dawn." ]
       ]
     }
-  , { title: ""
+  , { title: "Ghost Lantern"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune Nothing
+    , source: SourceTombOfAnnihilation
     , description: 
-      [ P [ T "" ]
+      [ P [ T "A restless spirit is trapped inside this lantern. While holding the lantern, you can command the spirit as a bonus action to shed bright light in a 30-foot radius and dim light for an additional 30 feet." ]
+      , P [ T "While holding the lantern, you can use an action to order the spirit to leave the lantern and duplicate the effect of the Mage Hand spell. The spirit returns to the lantern when the spell ends." ]
+      , P [ T "If you fall unconscious within 10 feet of the lantern, the spirit emerges from it, magically stabilizes you with a touch, and then quickly returns to the lantern." ]
+      , P [ T "The spirit is bound to the lantern and can't be harmed, turned, or raised from the dead. Casting a Dispel Evil and Good spell on the lantern releases the spirit to the afterlife and renders the lantern nonmagical." ]
       ]
     }
-  , { title: ""
+  , { title: "Giant Slayer"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
+    , type: TypeWeapon (Just "any axe or sword")
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ P [ T "" ]
+      [ P [ T "You gain a +1 bonus to attack and damage rolls made with this magic weapon." ]
+      , P [ T "When you hit a giant with it, the giant takes an extra 2d6 damage of the weapon's type and must succeed on a DC 15 Strength saving throw or fall prone. For the purpose of this weapon, 'giant' refers to any creature with the giant type, including ettins and trolls." ]
       ]
     }
-  , { title: ""
+  , { title: "Glamoured Studded Leather"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
+    , type: TypeArmor (Just "studded leather")
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ P [ T "" ]
+      [ P [ T "While wearing this armor, you gain a +1 bonus to AC. You can also use a bonus action to speak the armor's command word and cause the armor to assume the appearance of a normal set of clothing or some other kind of armor. You decide what it looks like, including color, style, and accessories, but the armor retains its normal bulk and weight. The illusory appearance last until you use this property again or remove the armor." ]
       ]
     }
-  , { title: ""
+  , { title: "Glimmering Moonbow"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , type: TypeWeapon (Just "any bow")
+    , attune: Attune Nothing
+    , source: SourceBookOfManyThings
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This silver-and-black bow is engraved with the phases of the moon. You gain a +1 bonus to attack and damage rolls made with this magic weapon." ]
+      , P [ T "When you hit with a ranged attack roll using this magic bow, the target takes an extra 1d6 radiant damage. If you load no ammunition in the weapon, it produces its own, automatically creating one piece of magic ammunition when you make a ranged attack with it. The ammunition created by the bow vanishes the instant after it hits or misses a target." ]
+      , P [ T "While wielding this magic bow, you can use a bonus action to enter a semi-incorporeal state until the start of your next turn. While semi-incorporeal, you have resistance to bludgeoning, piercing, and slashing damage. Once this bonus action is used, it can't be used again until the next dawn." ]
       ]
     }
-  , { title: ""
+  , { title: "Gloomwrought Armor"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , type: TypeArmor (Just "light, medium or heavy")
+    , attune: Attune Nothing
+    , source: SourceBookOfManyThings
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This intricate grayscale armor was forged in the Shadowfell and is infused with that plane's gloom." ]
+      , P [ T "While you're wearing this armor, you have advantage on saving throws you make to avoid or end the frightened condition on yourself." ]
+      , P [ T "This armor has 3 charges. You can expend a charge to cast the Calm Emotions spell (save DC 15) from the armor. This armor regains 1d3 expended charges daily at dawn." ]
       ]
     }
-  , { title: ""
+  , { title: "Glowrune Pigment"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourceBigbyPresentsGloryOfTheGiants
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This set of 1d4 + 2 small paint pots contains pigments mixed from crushed luminescent gemstones. This magical paint bestows temporary magical gifts on creatures with runes drawn on their skin with this paint." ]
+      , P [ T "One paint pot contains enough pigment to paint one rune. A creature can spend 10 minutes to paint one of the following runes onto itself or another creature:" ]
+      , P [ B "Journey Rune. ", T "Difficult terrain doesn't cost the painted creature extra movement." ]
+      , P [ B "Life Rune. ", T "The painted creature gains 10 temporary hit points and has advantage on death saving throws." ]
+      , P [ B "Light Rune. ", T "The painted creature gains darkvision to a range of 30 feet. If the painted creature already has darkvision from another source, the range of its darkvision increases by 30 feet." ]
+      , P [ B "Mountain Rune. ", T "The painted creature is immune to being knocked prone and has advantage on Strength and Constitution saving throws." ]
+      , P [ B "Shield Rune. ", T "The painted creature has advantage on Dexterity saving throws against effects that deal damage." ]
+      , P [ T "A creature can benefit from only one painted rune at a time, so a new rune painted on a creature has no effect unless the old one is removed first. The rune's benefits last for 8 hours or until the painted creature uses its action to wipe away the rune." ]
       ]
     }
-  , { title: ""
+  , { title: "Grasping Whip"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
+    , type: TypeWeapon (Just "whip")
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourceBookOfManyThings
     , description: 
-      [ P [ T "" ]
+      [ P [ T "You gain a +1 bonus to attack and damage rolls made with this magic whip. When you hit a creature or object that is Large or smaller with this whip, you can pull that creature or object 5 feet toward you instead of dealing damage." ]
+      , P [ T "Proficiency with a whip allows you to add your proficiency bonus to the attack roll for any attack you make with it." ]
       ]
     }
-  , { title: ""
+  , { title: "Gulthias Staff"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , type: TypeStaff
+    , attune: Attune Nothing
+    , source: SourceCurseOfStrahd
     , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
-    , description: 
-      [ P [ T "" ]
+      [ P [ T "Made from the branch of a Gulthias tree (see the blights entry in the Monster Manual), a Gulthias staff is a spongy, black length of wood. Its evil makes beasts visibly uncomfortable while within 30 feet of it. The staff has 10 charges and regains 1d6 + 4 of its expended charges daily at dusk." ]
+      , P [ T "If the staff is broken or burned to ashes, its wood releases a terrible, inhuman scream that can be heard out to a range of 300 feet. All blights that can hear the scream immediately wither and die." ]
+      , P [ B "Vampiric Strike. ", T "The staff can be wielded as a magic quarterstaff. On a hit, it deals damage as a normal quarterstaff, and you can expend 1 charge to regain a number of hit points equal to the damage dealt by the weapon. Each time a charge is spent, red blood oozes from the staff's pores, and you must succeed on a DC 12 Wisdom saving throw or be afflicted with short-term madness (see 'Madness' in chapter 8 of the Dungeon Master's Guide)." ]
+      , P [ B "Blight Bane. ", T "While you are attuned to the staff, blights and other evil plant creatures don't regard you as hostile unless you harm them." ]
       ]
     }
   , { title: ""
