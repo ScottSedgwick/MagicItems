@@ -3702,85 +3702,105 @@ rareItems =
         ]
       ]
     }
-  , { title: ""
+  , { title: "Daern's Instant Fortress"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ P [ T "" ]
+      [ P [ T "You can use an action to place this 1-inch metal cube on the ground and speak its command word. The cube rapidly grows into a fortress that remains until you use an action to speak the command word that dismisses it, which works only if the fortress is empty." ]
+      , P [ T "The fortress is a square tower, 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided into two floors, with a ladder running along one wall to connect them. The ladder ends at a trapdoor leading to the roof. When activated, the tower has a small door on the side facing you. The door opens only at your command, which you can speak as a bonus action. It is immune to the Knock spell and similar magic, such as that of a Chime of Opening." ]
+      , P [ T "Each creature in the area where the fortress appears must make a DC 15 Dexterity saving throw, taking 10d10 bludgeoning damage on a failed save, or half as much damage on a successful one. In either case, the creature is pushed to an unoccupied space outside but next to the fortress. Objects in the area that aren't being worn or carried take this damage and are pushed automatically." ]
+      , P [ T "The tower is made of adamantine, and its magic prevents it from being tipped over. The roof, the door, and the walls each have 100 hit points, immunity to damage from nonmagical weapons excluding siege weapons, and resistance to all other damage. Only a Wish spell can repair the fortress (this use of the spell counts as replicating a spell of 8th level or lower). Each casting of wish causes the roof, the door, or one wall to regain 50 hit points." ]
       ]
     }
-  , { title: ""
+  , { title: "Dagger of Blindsight"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , type: TypeWeapon (Just "dagger")
+    , attune: Attune Nothing
+    , source: SourceWaterdeepDungeonOfTheMadMage
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This rare magic item requires attunement. A creature attuned to it gains blindsight out to a range of 30 feet. The dagger has a saw-toothed edge and a black pearl nested in its pommel." ]
       ]
     }
-  , { title: ""
+  , { title: "Dagger of Venom"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
+    , type: TypeWeapon (Just "dagger")
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ P [ T "" ]
+      [ P [ T "You gain a +1 bonus to attack and damage rolls made with this magic weapon." ]
+      , P [ T "You can use an action to cause thick, black poison to coat the blade. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 15 Constitution saving throw or take 2d10 poison damage and become poisoned for 1 minute. The dagger can't be used this way again until the next dawn." ]
       ]
     }
-  , { title: ""
+  , { title: "Deck Of Oracles"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune Nothing
+    , source: SourceBookOfManyThings
     , description: 
-      [ P [ T "" ]
+      [ P [ T "The illustrations on this deck of oracle cards move or change subtly when viewed indirectly. When you finish a long rest, you can spend 10 minutes consulting the cards for an omen of the coming day. Roll a d20 and record the number rolled. Once in the next 8 hours, immediately after a creature within 60 feet of you makes an ability check, an attack roll, or a saving throw, you can use your reaction to discard the d20 roll; the creature must use the number you rolled in place of its roll." ]
+      , P [ T "Additionally, while holding the cards, you can cast Divination from them. Once this property is used, it can't be used again until the next dawn." ]
       ]
     }
-  , { title: ""
+  , { title: "Delver's Claws"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
+    , attune: Attune Nothing
     , source: SourceDMG
     , description: 
-      [ P [ T "" ]
+      [ P [ T "The back of this weatherworn leather glove is adorned with three large metal hooks shaped like a mole's claws. Stitched into the glove's palm is the mountain rune." ]
+      , P [ T "The glove is considered a simple melee weapon with the finesse and light properties, and it deals 1d4 slashing damage on a hit. While attuned to the glove, you gain a burrowing speed equal to your walking speed and blindsight to 15 feet." ]
+      , P [ B "Invoking the Rune. ", T "As an action, you can invoke the glove's rune to bolster yourself with the sturdiness of the earth. Spend and roll a number of your unspent Hit Dice up to a maximum equal to your proficiency bonus. You then regain a number of hit points equal to the total roll plus your Constitution modifier." ]
+      , P [ T "Once the rune has been invoked, it can't be invoked again until the next dawn." ]
       ]
     }
-  , { title: ""
+  , { title: "Demon Skin"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , type: TypeArmor (Just "Any heavy armor")
+    , attune: Attune Nothing
+    , source: SourceQuestsFromTheInfiniteStaircase
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This magic armor appears as a pot of bubbling black ichor. When you attune to it, the ichor adheres to and contours to your skin, and the pot disappears. The armor can be worn under normal clothes, and it doesn't impede bodily functions. Once you put it on, it can't be removed unless you choose to do so or you die, at which point the pot reappears and the ichor flows back into it." ]
+      , P [ T "While wearing the armor, you have resistance to poison damage. The armor also doesn't impose disadvantage on Dexterity (Stealth) checks." ]
       ]
     }
-  , { title: ""
+  , { title: "Devotee's Censer"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , type: TypeWeapon (Just "flail")
+    , attune: Attune (Just "cleric or paladin")
+    , source: SourceTashasCauldronOfEverything
     , description: 
-      [ P [ T "" ]
+      [ P [ T "The rounded head of this flail is perforated with tiny holes, arranged in symbols and patterns. The flail counts as a holy symbol for you. When you hit with an attack using this magic flail, the target takes an extra 1d8 radiant damage." ]
+      , P [ T "As a bonus action, you can speak the command word to cause the flail to emanate a thin cloud of incense out to 10 feet for 1 minute. At the start of each of your turns, you and any other creatures in the incense each regain 1d4 hit points. This property can't be used again until the next dawn." ]
       ]
     }
-  , { title: ""
+  , { title: "Dimensional Shackles"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ P [ T "" ]
+      [ P [ T "You can use an action to place these shackles on an incapacitated creature. The shackles adjust to fit a creature of Small to Large size. In addition to serving as mundane manacles, the shackles prevent a creature bound by them from using any method of extradimensional movement, including teleportation or travel to a different plane of existence. They don't prevent the creature from passing-through an interdimensional portal." ]
+      , P [ T "You and any creature you designate when you use the shackles can use an action to remove them. Once every 30 days, the bound creature can make a DC 30 Strength (Athletics) check. On a success, the creature breaks free and destroys the shackles." ]
       ]
     }
-  , { title: ""
+  , { title: "Docent"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune (Just "warforged")
+    , source: SourceEberronRisingFromTheLastWar
     , description: 
-      [ P [ T "" ]
+      [ P [ T "A ", I "docent", T " is a small metal sphere, about 2 inches across, studded with dragonshards. To attune to a ", I "docent", T ", you must embed the item somewhere on your body, such as your chest or your eye socket." ]
+      , P [ B "Sentience. ", T "A docent is a sentient item of any alignment with an Intelligence of 16, a Wisdom of 14, and a Charisma of 14. It perceives the world through your senses. It communicates telepathically with you and can speak, read, and understand any language it knows (see "Random Properties" below)." ]
+      , P [ B "Life Support. ", T "Whenever you end your turn with 0 hit points, the docent can make a Wisdom (Medicine) check with a +6 bonus. If this check succeeds, the docent stabilizes you." ]
+      , P [ B "Random Properties. ", T "A docent has the following properties:" ]
+      , UL 
+        [ LI [ B "Languages. ", T "The docent knows Common, Giant, and 1d4 additional languages chosen by the DM. If a docent knows fewer than six languages, it can learn a new language after it hears or reads the language through your senses." ]
+        , LI [ B "Skills. ", T "The docent has a +7 bonus to one of the following skills (roll a d4): (1) Arcana, (2) History, (3) Investigation, or (4) Nature." ]
+        , LI [ B "Spells. ", T "The docent knows one of the following spells and can cast it at will, requiring no components (roll a d6): (1-2) Detect Evil and Good or (3-6) Detect Magic. The docent decides when to cast the spell." ]
+        ]
+      , P [ B "Personality. ", T "A docent is designed to advise and assist the warforged it's attached to. One of the simple functions of a docent is to serve as a translator. The docent's properties are under its control, and if you have a bad relationship with your docent, it might refuse to assist you." ]
       ]
     }
   , { title: ""
