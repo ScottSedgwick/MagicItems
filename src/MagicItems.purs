@@ -2662,7 +2662,7 @@ uncommonItems =
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ P [ T "uncommon (+1), rare (+2), or very rare (+3)" ]
+      [ P [ I "Uncommon (+1), Rare (+2), or Very Rare (+3)" ]
       , P [ T "While holding this rod, you gain a bonus to spell attack rolls and to the saving throw DCs of your warlock spells. This bonus is determined by the rod's rarity." ]
       , P [ T "In addition, you can regain one warlock spell slot as an action while holding the rod. You can't use this property again until you finish a long rest." ]
       ]
@@ -2694,10 +2694,10 @@ uncommonItems =
     , source: SourceFizbansTreasuryOfDragons
     , description: 
       [ P [ T "This ornament can be jewelry, a cloak, or another wearable accessory. It appears to be fashioned from a dragon's scale, tooth, or claw, or it incorporates images in those shapes." ]
-      , P [ T "Slumbering (Uncommon). You have advantage on saving throws you make to avoid being charmed or frightened or to end those conditions on you." ]
-      , P [ T "Stirring (Rare). You gain a +1 bonus to AC, and you can't be charmed or frightened. Moreover, each creature of your choice within 30 feet of you has advantage on saving throws it makes to avoid being charmed or frightened or to end those conditions on itself." ]
-      , P [ T "Wakened (Very Rare). The Wakened ornament has the Stirring property. In addition, when you would take damage of the type dealt by the breath of the dragon in whose hoard the ornament became Wakened, you can use your reaction to take no damage instead, and you regain hit points equal to the damage you would have taken. Once this property is used, it can't be used again until the next dawn." ]
-      , P [ T "Ascendant (Legendary). The Ascendant ornament has the Stirring and Wakened properties. In addition, while you are wearing the ornament, you gain a flying speed equal to your walking speed and can hover. While you are flying using this speed, spectral dragon wings appear on your back." ]
+      , P [ B "Slumbering ", I "(Uncommon). ", T "You have advantage on saving throws you make to avoid being charmed or frightened or to end those conditions on you." ]
+      , P [ B "Stirring ", I "(Rare). ", T "You gain a +1 bonus to AC, and you can't be charmed or frightened. Moreover, each creature of your choice within 30 feet of you has advantage on saving throws it makes to avoid being charmed or frightened or to end those conditions on itself." ]
+      , P [ B "Wakened ", I "(Very Rare). ", T "The Wakened ornament has the Stirring property. In addition, when you would take damage of the type dealt by the breath of the dragon in whose hoard the ornament became Wakened, you can use your reaction to take no damage instead, and you regain hit points equal to the damage you would have taken. Once this property is used, it can't be used again until the next dawn." ]
+      , P [ B "Ascendant ", I "(Legendary). ", T "The Ascendant ornament has the Stirring and Wakened properties. In addition, while you are wearing the ornament, you gain a flying speed equal to your walking speed and can hover. While you are flying using this speed, spectral dragon wings appear on your back." ]
       ]
     }
   , { title: "Seeker Dart"
@@ -2766,7 +2766,7 @@ uncommonItems =
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ P [ T "uncommon (+1), rare (+2), or very rare (+3)" ]
+      [ P [ I "Uncommon (+1), Rare (+2), or Very Rare (+3)" ]
       , P [ T "While holding this shield, you have a bonus to AC determined by the shield's rarity. This bonus is in addition to the shield's normal bonus to AC." ]
       ]
     }
@@ -2777,7 +2777,7 @@ uncommonItems =
     , source: SourceBookOfManyThings
     , description: 
       [ P [ T "While you are wielding this shield, you gain a +1 bonus to AC. This bonus is in addition to the shield's normal bonus to AC." ]
-      , P [ T "Curse. This item is cursed. Attuning to it extends the curse to you until you are targeted by a Remove Curse spell or similar magic. You cannot discard the shield, and remain attuned to it, as long as you are cursed. As long as you are cursed, you are sluggish. Your speed is halved. When you roll initiative, treat the roll on your d20 as a 1. You can't change your initiative by any means." ]
+      , P [ B "Curse. ", T "This item is cursed. Attuning to it extends the curse to you until you are targeted by a Remove Curse spell or similar magic. You cannot discard the shield, and remain attuned to it, as long as you are cursed. As long as you are cursed, you are sluggish. Your speed is halved. When you roll initiative, treat the roll on your d20 as a 1. You can't change your initiative by any means." ]
       ]
     }
   , { title: "Silverquill Primer"
@@ -2839,12 +2839,13 @@ uncommonItems =
       , P [ T "Carrying Soul Coins. To hold a soul coin is to feel the soul bound within it — overcome with rage or fraught with despair." ]
       , P [ T "An evil creature can carry as many soul coins as it wishes (up to its maximum weight allowance). A nonevil creature can carry a number of soul coins equal to or less than its Constitution modifier without penalty. A non-evil creature carrying a number of soul coins greater than its Constitution modifier has disadvantage on its attack rolls, ability checks, and saving throws." ]
       , P [ T "Using a Soul Coin. A soul coin has 3 charges. A creature carrying the coin can use its action to expend 1 charge from a soul coin and use it to do one of the following:" ]
-      , P [ T "* Drain Life. You siphon away some of the soul's essence and gain 1d10 temporary hit points." ]
-      , P [ T "* Query. You telepathically ask the soul a question and receive a brief telepathic response. which you can understand. The soul knows only what it knew in life, but it must answer you truthfully and to the best of its ability. The answer is no more than a sentence or two and might be cryptic." ]
-      , P [ T "Freeing a Soul. Casting a spell that removes a curse on a soul coin frees the soul trapped within it, as does expending all of the coin's charges. The coin itself rusts from within and is destroyed once the soul is released. A freed soul travels to the realm of the god it served or the outer plane most closely tied to its alignment (DM's choice). The souls of lawful evil creatures released from soul coins typically emerge from the River Styx as lemure devils." ]
-      , P [ T "A soul can also be freed by destroying the coin that contains it. A soul coin has AC 19, 1 hit point for each charge it has remaining, and immunity to all damage except that which is dealt by a hellfire weapon (BG:DA, page 223) or an infernal war machine's furnace (BG:DA, page 217)." ]
+      , UL [ LI [ B "Drain Life. ", T "You siphon away some of the soul's essence and gain 1d10 temporary hit points." ]
+           , LI [ B "Query. ", T "You telepathically ask the soul a question and receive a brief telepathic response. which you can understand. The soul knows only what it knew in life, but it must answer you truthfully and to the best of its ability. The answer is no more than a sentence or two and might be cryptic." ]
+           , LI [ B "Freeing a Soul. ", T "Casting a spell that removes a curse on a soul coin frees the soul trapped within it, as does expending all of the coin's charges. The coin itself rusts from within and is destroyed once the soul is released. A freed soul travels to the realm of the god it served or the outer plane most closely tied to its alignment (DM's choice). The souls of lawful evil creatures released from soul coins typically emerge from the River Styx as lemure devils." ]
+           ]
+      , P [ T "A soul can also be freed by destroying the coin that contains it. A soul coin has AC 19, 1 hit point for each charge it has remaining, and immunity to all damage except that which is dealt by a hellfire weapon (Baldur's Gate: Descent into Avernus, page 223) or an infernal war machine's furnace (Baldur's Gate: Descent into Avernus, page 217)." ]
       , P [ T "Freeing a soul from a soul coin is considered a good act, even if the soul belongs to an evil creature." ]
-      , P [ T "Hellish Currency. Soul coins are a currency of the Nine Hells and are highly valued by devils. The coins are used among the infernal hierarchy to barter for favors, bribe the unwilling. and reward the faithful for services rendered." ]
+      , P [ B "Hellish Currency. ", T "Soul coins are a currency of the Nine Hells and are highly valued by devils. The coins are used among the infernal hierarchy to barter for favors, bribe the unwilling. and reward the faithful for services rendered." ]
       , P [ T "Soul coins are created by Mammon and his greater devils on Minauros, the third layer of the Nine Hells, in a vast chamber where the captured souls of evil mortals are bound into the coins. These coins are then distributed throughout the Nine Hells to be used for goods and services, infernal deals, dark bargains, and bribes." ]
       ]
     }
@@ -2860,18 +2861,18 @@ uncommonItems =
       , P [ T "You can imbue the gem with a spell if you're attuned to it and it's empty. To do so, you cast the spell while holding the gem. The spell is stored in the gem instead of having any effect. Casting the spell must require either 1 action or 1 minute or longer, and the spell's level must be no higher than the gem's maximum. If the spell belongs to the school of abjuration and requires material components that are consumed. you must provide them. but they can be worth half as much as normal." ]
       , P [ T "Once imbued with a spell. the gem can't be imbued again until the next dawn." ]
       , P [ T "Deep gnomes created these magic gemstones and keep the creation process a secret." ]
-      , P [ T "Spell Gem" ]
-      , P [ T "Max. Spell Level	Gemstone	Rarity	Save DC	Attack Bonus" ]
-      , P [ T "Cantrip	Obsidian	Uncommon	13	+5" ]
-      , P [ T "1st	Lapis lazuli	Uncommon	13	+5" ]
-      , P [ T "2nd	Quartz	Rare	13	+5" ]
-      , P [ T "3rd	Bloodstone	Rare	15	+7" ]
-      , P [ T "4th	Amber	Very rare	15	+9" ]
-      , P [ T "5th	Jade	Very rare	17	+9" ]
-      , P [ T "6th	Topaz	Very rare	17	+10" ]
-      , P [ T "7th	Star ruby	Legendary	18	+10" ]
-      , P [ T "8th	Ruby	Legendary	18	+10" ]
-      , P [ T "9th	Diamond	Legendary	19	+11" ]
+      , TB   [ T "Max. Spell Level", T "Gemstone",     T "Rarity",    T "Save DC", T "Attack Bonus" ]
+        [ TR [ T "Cantrip",          T "Obsidian",     T "Uncommon",  T "13",      T "+5" ]
+        , TR [ T "1st",              T "Lapis lazuli", T "Uncommon",  T "13",      T "+5" ]
+        , TR [ T "2nd",              T "Quartz",       T "Rare",      T "13",      T "+5" ]
+        , TR [ T "3rd",              T "Bloodstone",   T "Rare",      T "15",      T "+7" ]
+        , TR [ T "4th",              T "Amber",        T "Very rare", T "15",      T "+9" ]
+        , TR [ T "5th",              T "Jade",         T "Very rare", T "17",      T "+9" ]
+        , TR [ T "6th",              T "Topaz",        T "Very rare", T "17",      T "+10" ]
+        , TR [ T "7th",              T "Star ruby",    T "Legendary", T "18",      T "+10" ]
+        , TR [ T "8th",              T "Ruby",         T "Legendary", T "18",      T "+10" ]
+        , TR [ T "9th",              T "Diamond",      T "Legendary", T "19",      T "+11" ]
+        ]
       ]
     }
   , { title: "Spies' Murmur"
@@ -2921,7 +2922,7 @@ uncommonItems =
     , source: SourceTalesFromTheYawningPortal
     , description: 
       [ P [ T "This polished agate appears to be a Stone of Good Luck to anyone who tries to identify it, and it confers that item's property while on your person." ]
-      , P [ T "Curse. This item is cursed. While it is on your person, you take a -2 penalty to ability checks and saving throws. Until the curse is discovered, the DM secretly applies this penalty, assuming you are adding the item's bonus. You are unwilling to part with the stone until the curse is broken with remove curse or similar magic." ]
+      , P [ B "Curse. ", T "This item is cursed. While it is on your person, you take a -2 penalty to ability checks and saving throws. Until the curse is discovered, the DM secretly applies this penalty, assuming you are adding the item's bonus. You are unwilling to part with the stone until the curse is broken with remove curse or similar magic." ]
       ]
     }
   , { title: "Storm Boomerang"
@@ -2941,7 +2942,7 @@ uncommonItems =
     , source: SourceDMG
     , description: 
       [ P [ T "You gain a +1 bonus to attack and damage rolls made with this magic weapon." ]
-      , P [ T "Curse. This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons other than this one." ]
+      , P [ B "Curse. ", T "This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons other than this one." ]
       , P [ T "In addition, while the sword is on your person, you must succeed on a DC 15 Wisdom saving throw whenever you take damage in combat. On a failed save, you must attack the creature that damaged you until you drop to 0 hit points or it does, or until you can't reach the creature to make a melee attack against it." ]
       , P [ T "You can break the curse in the usual ways. Alternatively, casting Banishment on the sword forces the vengeful spirit to leave it. The sword then becomes a +1 weapon with no other properties." ]
       ]
@@ -3008,7 +3009,7 @@ uncommonItems =
     , attune: Attune (Just "spellcaster")
     , source: SourceDMG
     , description: 
-      [ P [ T "uncommon (+1), rare (+2), or very rare (+3)" ]
+      [ P [ I "Uncommon (+1), Rare (+2), or Very Rare (+3)" ]
       , P [ T "While holding this wand, you gain a bonus to spell attack rolls determined by the wand's rarity. In addition, you ignore half cover when making a spell attack." ]
       ]
     }
@@ -3028,7 +3029,7 @@ uncommonItems =
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ P [ T "uncommon (+1), rare (+2), or very rare (+3)" ]
+      [ P [ T "Uncommon (+1), Rare (+2), or Very Rare (+3)" ]
       , P [ T "You have a bonus to attack and damage rolls made with this magic weapon. The bonus is determined by the weapon's rarity." ]
       ]
     }
@@ -3115,10 +3116,11 @@ uncommonItems =
     , source: SourceBookOfManyThings
     , description: 
       [ P [ T "While you're wearing these cloth wraps, your unarmed strikes are considered magical for the purpose of overcoming immunity and resistance to nonmagical attacks and damage, and you gain a bonus to the attack and damage rolls of your unarmed strikes, determined by the wraps' rarity." ]
-      , P [ T "Rarity	Bonus" ]
-      , P [ T "Uncommon	+1" ]
-      , P [ T "Rare	+2" ]
-      , P [ T "Very Rare" ]
+      , TB   [ T "Rarity",    T "Bonus" ]
+        [ TR [ T "Uncommon",  T "+1" ]
+        , TR [ T "Rare",      T "+2" ]
+        , TR [ T "Very Rare", T "+3" ]
+        ]
       ]
     }
   ]
@@ -3133,8 +3135,8 @@ rareItems =
     , source: SourceExplorersGuideToWildemount
     , description: 
       [ P [ T "The black blade of this sword is crafted from a mysterious arcane alloy. You gain a +1 bonus to attack and damage rolls made with this magic weapon. While the sword is on your person, you are immune to effects that turn undead."  ]
-      , P [ T "Dark Blessing. While holding the sword, you can use an action to give yourself 1d4 + 4 temporary hit points. This property can't be used again until the next dusk." ]
-      , P [ T "Disheartening Strike. When you hit a creature with an attack using this weapon, you can fill the target with unsettling dread: the target has disadvantage on the next saving throw it makes before the end of your next turn. The creature ignores this effect if it's immune to the frightened condition. Once you use this property, you can't do so again until the next dusk." ]
+      , P [ B "Dark Blessing. ", T "While holding the sword, you can use an action to give yourself 1d4 + 4 temporary hit points. This property can't be used again until the next dusk." ]
+      , P [ B "Disheartening Strike. ", T "When you hit a creature with an attack using this weapon, you can fill the target with unsettling dread: the target has disadvantage on the next saving throw it makes before the end of your next turn. The creature ignores this effect if it's immune to the frightened condition. Once you use this property, you can't do so again until the next dusk." ]
       ]
     }
 --   , { title: ""
@@ -3184,33 +3186,27 @@ legendaryItems =
     , description: 
       [ P [ T "This item first appears to be a Large sealed iron barrel weighing 500 pounds. The barrel has a hidden catch, which can be found with a successful DC 20 Intelligence (Investigation) check. Releasing the catch unlocks a hatch at one end of the barrel, allowing two Medium or smaller creatures to crawl inside. Ten levers are set in a row at the far end, each in a neutral position, able to move either up or down. When certain levers are used, the apparatus transforms to resemble a giant lobster." ]
       , P [ T "The apparatus of Kwalish is a Large object with the following statistics:" ]
-      , P [ T "Armor Class: 20" ]
-      , P [ T "Hit Points: 200" ]
-      , P [ T "Speed: 30 ft., swim 30 ft., (or 0ft, for both if the legs and tail aren't extended)" ]
+      , TB []
+        [ TR [ B "Armor Class: ", T "20" ]
+        , TR [ B "Hit Points: ", T "200" ]
+        , TR [ B "Speed: ", T "30 ft., swim 30 ft., (or 0ft, for both if the legs and tail aren't extended)" ]
+        ]
       , P [ T "To be used as a vehicle, the apparatus requires one pilot. While the apparatus's hatch is closed, the compartment is airtight and watertight. The compartment holds enough air for 10 hours of breathing, divided by the number of breathing creatures inside." ]
       , P [ T "The apparatus floats on water. It can also go underwater to a depth of 900 feet. Below that, the vehicle takes 2d6 bludgeoning damage per minute from pressure." ]
       , P [ T "A creature in the compartment can use an action to move as many as two of the apparatus's levers up or down. After each use, a lever goes back to its neutral position. Each lever, from left to right, functions as shown in the Apparatus of Kwalish Levers table." ]
-      , P [ T "Apparatus of Kwalish Levers:" ]
-      , P [ T "Lever 1 Up:    Legs and tail extend, allowing the apparatus to walk and swim." ]
-      , P [ T "Lever 1 Down:  Legs and tail retract, reducing the apparatus's speed to 0 and making it unable to benefit from bonuses to speed." ]
-      , P [ T "Lever 2 Up:    Forward window shutter opens." ]
-      , P [ T "Lever 2 Down:  Forward window shutter closes." ]
-      , P [ T "Lever 3 Up:    Side window shutters open (two per side)." ]
-      , P [ T "Lever 3 Down:  Side window shutters close (two per side)." ]
-      , P [ T "Lever 4 Up:    Two claws extend from the front sides of the apparatus." ]
-      , P [ T "Lever 4 Down:  The claws retract." ]
-      , P [ T "Lever 5 Up:    Each extended claw makes the following melee weapon attack: +8 to hit, reach 5 ft., one target. Hit: 7 (2d6) bludgeoning damage." ]
-      , P [ T "Lever 5 Down:  Each extended claw makes the following melee weapon attack: +8 to hit, reach 5 ft., one target. Hit: The target is grappled (escape DC 15)." ]
-      , P [ T "Lever 6 Up:    The apparatus walks or swims forward." ]
-      , P [ T "Lever 6 Down:  The apparatus walks or swims backward." ]
-      , P [ T "Lever 7 Up:    The apparatus turns 90 degrees left." ]
-      , P [ T "Lever 7 Down:  The apparatus turns 90 degrees right." ]
-      , P [ T "Lever 8 Up:    Eyelike fixtures emit bright light in a 30-foot radius and dim light for an additional 30 feet." ]
-      , P [ T "Lever 8 Down:  The light turns off." ]
-      , P [ T "Lever 9 Up:    The apparatus sinks as much as 20 feet in liquid." ]
-      , P [ T "Lever 9 Down:  The apparatus rises up to 20 feet in liquid." ]
-      , P [ T "Lever 10 Up: 	The rear hatch unseals and opens." ]
-      , P [ T "Lever 10 Down: The rear hatch closes and seals." ]
+      , P [ B "Apparatus of Kwalish Levers:" ]
+      , TB   [ T "Level",    T "Up", T "Down" ]
+        [ TR [ T "Lever 1",  T "Legs and tail extend, allowing the apparatus to walk and swim.", T "Legs and tail retract, reducing the apparatus's speed to 0 and making it unable to benefit from bonuses to speed." ]
+        , TR [ T "Lever 2",  T "Forward window shutter opens.", T "Forward window shutter closes." ]
+        , TR [ T "Lever 3",  T "Side window shutters open (two per side).", T "Side window shutters close (two per side)." ]
+        , TR [ T "Lever 4",  T "Two claws extend from the front sides of the apparatus.", T "The claws retract." ]
+        , TR [ T "Lever 5",  T "Each extended claw makes the following melee weapon attack: +8 to hit, reach 5 ft., one target. Hit: 7 (2d6) bludgeoning damage.", T "Each extended claw makes the following melee weapon attack: +8 to hit, reach 5 ft., one target. Hit: The target is grappled (escape DC 15)." ]
+        , TR [ T "Lever 6",  T "The apparatus walks or swims forward.", T "The apparatus walks or swims backward." ]
+        , TR [ T "Lever 7",  T "The apparatus turns 90 degrees left.", T "The apparatus turns 90 degrees right." ]
+        , TR [ T "Lever 8",  T "Eyelike fixtures emit bright light in a 30-foot radius and dim light for an additional 30 feet.", T "The light turns off." ]
+        , TR [ T "Lever 9",  T "The apparatus sinks as much as 20 feet in liquid.", T "The apparatus rises up to 20 feet in liquid." ]
+        , TR [ T "Lever 10", T "The rear hatch unseals and opens." , T "The rear hatch closes and seals." ]
+        ]
       ]
     }
 --   , { title: ""
@@ -3235,11 +3231,12 @@ artifactItems =
     , description: 
       [ P [ T "This massive adze is said to have been wielded by All-Father Annam, not as a weapon but as the tool he used to shape the various worlds of the Material Plane eons ago." ]
       , P [ T "Random Properties. The adze has the following random properties, determined by rolling on the appropriate table in the Dungeon Master's Guide:" ]
-      , P [ T "* 2 minor beneficial propties" ]
-      , P [ T "* 1 major beneficial property" ]
-      , P [ T "* 2 minor detrimental properties" ]
-      , P [ T "Magic Weapon. When a creature attunes to the adze, the artifact magically adjusts its size so that creature can wield it as a greataxe. The adze is a magic weapon that grants a +3 bonus to attack and damage rolls made with it. On a hit, the adze deals an additional 3d12 force damage. It also deals double damage to objects and structures." ]
-      , P [ T "Divine Mattock. As an action, you can call upon the might of the All-Father and use the adze to cast Move Earth or Fabricate. Once this property is used, it can't be used again until the next dawn."  ]
+      , UL [ LI [ T "2 minor beneficial propties" ]
+           , LI [ T "1 major beneficial property" ]
+           , LI [ T "2 minor detrimental properties" ]
+           ]
+      , P [ B "Magic Weapon. ", T "When a creature attunes to the adze, the artifact magically adjusts its size so that creature can wield it as a greataxe. The adze is a magic weapon that grants a +3 bonus to attack and damage rolls made with it. On a hit, the adze deals an additional 3d12 force damage. It also deals double damage to objects and structures." ]
+      , P [ B "Divine Mattock. ", T "As an action, you can call upon the might of the All-Father and use the adze to cast Move Earth or Fabricate. Once this property is used, it can't be used again until the next dawn."  ]
       ]
     }
 --   , { title: ""
