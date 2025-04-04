@@ -3792,7 +3792,7 @@ rareItems =
     , source: SourceEberronRisingFromTheLastWar
     , description: 
       [ P [ T "A ", I "docent", T " is a small metal sphere, about 2 inches across, studded with dragonshards. To attune to a ", I "docent", T ", you must embed the item somewhere on your body, such as your chest or your eye socket." ]
-      , P [ B "Sentience. ", T "A docent is a sentient item of any alignment with an Intelligence of 16, a Wisdom of 14, and a Charisma of 14. It perceives the world through your senses. It communicates telepathically with you and can speak, read, and understand any language it knows (see "Random Properties" below)." ]
+      , P [ B "Sentience. ", T "A docent is a sentient item of any alignment with an Intelligence of 16, a Wisdom of 14, and a Charisma of 14. It perceives the world through your senses. It communicates telepathically with you and can speak, read, and understand any language it knows (see 'Random Properties' below)." ]
       , P [ B "Life Support. ", T "Whenever you end your turn with 0 hit points, the docent can make a Wisdom (Medicine) check with a +6 bonus. If this check succeeds, the docent stabilizes you." ]
       , P [ B "Random Properties. ", T "A docent has the following properties:" ]
       , UL 
@@ -3803,211 +3803,237 @@ rareItems =
       , P [ B "Personality. ", T "A docent is designed to advise and assist the warforged it's attached to. One of the simple functions of a docent is to serve as a translator. The docent's properties are under its control, and if you have a bad relationship with your docent, it might refuse to assist you." ]
       ]
     }
-  , { title: ""
+  , { title: "Dodecahedron of Doom"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourceWaterdeepDungeonOfTheMadMage
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This twelve-sided metal die is 12 inches across and bears the numbers 1 through 12 engraved on its pentagonal sides. The dodecahedron contains arcane clockwork mechanisms that whir and click whenever the die is cast." ]
+      , P [ T "The dodecahedron can be hurled up to 60 feet as an action: A random magical effect occurs when the die comes to a rest after rolling across the ground for at least 10 feet. If an effect requires a target and no eligible target is within range, nothing happens. Spells cast by the dodecahedron require no components. Roll a d12 and consult the following table to determine the effect:" ]
+      , TB   [ T "d12",   T "Effect" ]
+        [ TR [ T "1-2",   T "The dodecahedron explodes and is destroyed. Each creature within 20 feet of the exploding die must make a DC 13 Dexterity saving throw, taking 40 (9d8) force damage on a failed save, or half as much damage on a successful one" ]
+        , TR [ T "3-4",   T "The dodecahedron casts light on itself. The effect lasts until a creature touches the die" ]
+        , TR [ T "5-6",   T "The dodecahedron casts Ray of Frost (+5 to hit) targeting a random creature within 60 feet that doesn't have total cover against the attack." ]
+        , TR [ T "7-8",   T "The dodecahedron casts Shocking Grasp (+5 to hit) on the next creature that touches it." ]
+        , TR [ T "9-10",  T "The dodecahedron casts Darkness on itself. The effect has a duration of 10 minutes." ]
+        , TR [ T "11-12", T "The next creature to touch the dodecahedron gains 1d10 temporary hit points that last for 1 hour." ]
+        ]
       ]
     }
-  , { title: ""
+  , { title: "Donjon's Sundering Sphere"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune Nothing
+    , source: SourceBookOfManyThings
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This marble-size crystal sphere glows with extraplanar energy." ]
+      , P [ T "As part of attuning to this item, you press the crystal sphere to the hilt of a nonmagical melee weapon of your choice, magically attaching the sphere to the weapon. The weapon becomes a magic weapon with a +1 bonus to attack and damage rolls. While wielding this weapon, you gain the following benefits:" ]
+      , P [ B "Dimensional Anchor. ", T "You have advantage on saving throws against spells or effects that would send you to an extradimensional space, a demiplane, or another plane of existence against your will." ]
+      , P [ B "Isolating Smite. ", T "When you hit a creature with this weapon, you can force the creature to make a DC 16 Charisma saving throw. On a failed save, the creature is banished to a harmless demiplane until the end of its next turn. When the banished creature returns, it reappears in the space it left or the nearest unoccupied space if that space is occupied. Once this property is used, it can't be used again until the next dawn." ]
+      , P [ T "When you end your attunement to the sphere, the sphere harmlessly detaches from the weapon, and the weapon reverts to a nonmagical piece of equipment." ]
       ]
     }
-  , { title: ""
+  , { title: "Dragon Slayer"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
+    , type: TypeWeapon (Just "any sword")
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ P [ T "" ]
+      [ P [ T "You gain a +1 bonus to attack and damage rolls made with this magic weapon." ]
+      , P [ T "When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, 'dragon' refers to any creature with the dragon type, including dragon turtles and wyverns." ]
       ]
     }
-  , { title: ""
+  , { title: "Dragon Wing Bow"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , type: TypeWeapon (Just "any bow")
+    , attune: Attune Nothing
+    , source: SourceFizbansTreasuryOfDragons
     , description: 
-      [ P [ T "" ]
+      [ P [ T "The limb tips of this magic bow are shaped like a dragon's wings, and the weapon is infused with the essence of a chromatic, gem, or metallic dragon's breath. When you hit with an attack roll using this magic bow, the target takes an extra 1d6 damage of the same type as the breath infused in the bow—acid, cold, fire, force, lightning, necrotic, poison, psychic, radiant, or thunder." ]
+      , P [ T "If you load no ammunition in the weapon, it produces its own, automatically creating one piece of magic ammunition when you pull back the string. The ammunition created by the bow vanishes the instant after it hits or misses a target." ]
       ]
     }
-  , { title: ""
+  , { title: "Dragontooth Dagger"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
+    , type: TypeWeapon Nothing
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourceTyrannyOfDragons
     , description: 
-      [ P [ T "" ]
+      [ P [ T "A dagger fashioned from the tooth of a dragon. While the blade is obviously a fang or predator's tooth, the handle is leather wrapped around the root of the tooth, and there is no cross-guard." ]
+      , P [ T "You gain a +1 bonus to attack rolls and damage rolls you make with this weapon. On a hit with this weapon, the target takes an extra 1d6 acid damage." ]
+      , P [ B "Draconic Potency. ", T "Against enemies of the Cult of the Dragon, the dagger's bonus to attack rolls and damage rolls increases to +2, and the extra acid damage increases to 2d6." ]
       ]
     }
-  , { title: ""
+  , { title: "Duplicitous Manuscript"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune (Just "wizard")
+    , source: SourceTashasCauldronOfEverything
     , description: 
-      [ P [ T "" ]
+      [ P [ T "To you, this book is a magical spellbook. To anyone else, the book appears to be a volume of verbose romance fiction. As an action, you can change the book's appearance and alter the plot of the romance." ]
+      , P [ T "When found, the book contains the following spells: Hallucinatory Terrain, Major Image, Mirror Image, Mislead, Nystul's Magic Aura, Phantasmal Force, and Silent Image. It functions as a spellbook for you." ]
+      , P [ T "While you are holding the book, you can use it as a spellcasting focus for your wizard spells." ]
+      , P [ T "The book has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
+      , UL
+        [ LI [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the illusion school." ]
+        , LI [ T "When a creature you can see makes an Intelligence (Investigation) check to discern the true nature of an illusion spell you cast, or makes a saving throw against an illusion spell you cast, you can use your reaction and expend 1 charge to impose disadvantage on the roll." ]
+        ]
       ]
     }
-  , { title: ""
+  , { title: "Eagle Whistle"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourceTalesFromTheYawningPortal
     , description: 
-      [ P [ T "" ]
+      [ P [ T "While you blow an Eagle Whistle continuously, you can fly twice as fast as your walking speed. You can blow the whistle continuously for a number of rounds equal to 5 + five times your Constitution modifier (minimum of 1 round) or until you talk, hold your breath, or start suffocating. A use of the whistle also ends if you land. If you are aloft when you stop blowing the whistle, you fall. The whistle has three uses. It regains expended uses daily at dawn." ]
       ]
     }
-  , { title: ""
+  , { title: "Elemental Essence Shard"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
+    , attune: Attune (Just "sorceror")
     , source: SourceDMG
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This crackling crystal contains the essence of an elemental plane. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it." ]
+      , P [ T "Roll a d4 and consult the Elemental Essence Shards table to determine the shard's essence and property. When you use a Metamagic option on a spell while you are holding or wearing the shard, you can use that property." ]
+      , P [ B "Elemental Essence Shards" ]
+      , TB [ T "d4", T "Element", T "Property" ]
+        [ TR [ T "1", B "Air.", T "You can immediately fly up to 60 feet without provoking opportunity attacks." ]
+        , TR [ T "2", B "Earth", T " You gain resistance to a damage type of your choice until the start of your next turn." ]
+        , TR [ T "3", B "Fire", T " One target of the spell that you can see catches fire. The burning target takes 2d10 fire damage at the start of its next turn, and then the flames go out." ]
+        , TR [ T "4", B "Water", T " You create a wave of water that bursts out from you in a 10-foot radius. Each creature of your choice that you can see in that area takes 2d6 cold damage and must succeed on a Strength saving throw against your spell save DC or be pushed 10 feet away from you and fall prone." ]
+        ]
       ]
     }
-  , { title: ""
+  , { title: "Elixir of Health"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
+    , type: TypePotion
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ P [ T "" ]
+      [ P [ T "When you drink this potion, it cures any disease afflicting you, and it removes the blinded, deafened, paralyzed, and poisoned conditions. The clear red liquid has tiny bubbles of light in it." ]
       ]
     }
-  , { title: ""
+  , { title: "Elven Chain"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
+    , type: TypeArmor (Just "chain shirt")
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ P [ T "" ]
+      [ P [ T "You gain a +1 bonus to AC while you wear this armor. You are considered proficient with this armor even if you lack proficiency with medium armor." ]
       ]
     }
-  , { title: ""
+  , { title: "Far Realm Shard"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune (Just "sorcerer")
+    , source: SourceTashasCauldronOfEverything
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This writhing crystal is steeped in the warped essence of the Far Realm. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it." ]
+      , P [ T "When you use a Metamagic option on a spell while you are holding or wearing the shard, you can cause a slimy tentacle to rip through the fabric of reality and strike one creature you can see within 30 feet of you. The creature must succeed on a Charisma saving throw against your spell save DC or take 3d6 psychic damage and become frightened of you until the start of your next turn." ]
       ]
     }
-  , { title: ""
-    , rarity: [ RarityRare ]
+  , { title: "Fate Dealer's Deck"
+    , rarity: [ RarityRare, RarityVeryRare, RarityLegendary ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune (Just "cleric or paladin")
+    , source: SourceBookOfManyThings
     , description: 
-      [ P [ T "" ]
+      [ P [ T "The backs of these cards are inscribed with glyphs representing the Inner Planes, the Outer Planes, or the holy symbols of various deities. While holding this deck, you can use it as a spellcasting focus, and you gain a bonus to spell attack rolls and to your spell save DC. The bonus is determined by the deck's rarity." ]
+      , P [ T "In addition, while you're holding the deck, you can draw a card as an action to expend and roll one of your Hit Dice and add the deck's bonus to the number rolled. One creature you can see within 30 feet of you either takes radiant damage or regains hit points (your choice) equal to the total." ]
+      , TB [ T "Rarity", T "Bonus" ]
+        [ TR [ T "Rare", T "+1" ]
+        , TR [ T "Very Rare", T "+2" ]
+        , TR [ T "Legendary", T "+3" ]
+        ]
       ]
     }
-  , { title: ""
+  , { title: "Feather of Diatryma Summoning"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune Nothing
+    , source: SourceWaterdeepDragonHeist
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This bright plume is made from the feather of a diatryma (pronounced dee-ah-TRY-mah), a Large, colorful, flightless bird native to the Underdark. If you use an action to speak the command word and throw the feather into a Large unoccupied space on the ground within 5 feet of you, the feather becomes a living diatryma for up to 6 hours, after which it reverts to its feather form. It reverts to feather form early if it drops to 0 hit points or if you use an action to speak the command word again while touching the bird." ]
+      , P [ T "When the diatryma reverts to its feather form, the magic of the feather can't be used again until 7 days have passed." ]
+      , P [ T "The diatryma uses the statistics of an ", B "axe beak", T ", except that its beak deals piercing damage instead of slashing damage. The creature is friendly to you and your companions, and it can be used as a mount. It understands your languages and obeys your spoken commands. If you issue no commands, the diatryma defends itself but takes no other actions." ]
       ]
     }
-  , { title: ""
+  , { title: "Feywrought Armor"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , type: TypeArmor (Just "light, medium or heavy")
+    , attune: Attune Nothing
+    , source: SourceBookOfManyThings
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This colorful, flowery armor was forged in the Feywild and is infused with that plane's captivating magic." ]
+      , P [ T "While wearing this armor, you have advantage on saving throws you make to avoid or end the charmed condition on yourself." ]
+      , P [ T "This armor has 3 charges. You can use an action to expend a charge to cast the Compulsion spell (save DC 15) from this armor. The armor regains 1d3 expended charges daily at dawn." ]
       ]
     }
-  , { title: ""
+  , { title: "Flame Tongue"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
+    , type: TypeWeapon (Just "any sword")
+    , attune: Attune Nothing
     , source: SourceDMG
     , description: 
-      [ P [ T "" ]
+      [ P [ T "You can use a bonus action to speak this magic sword's command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword." ]
       ]
     }
-  , { title: ""
+  , { title: "Flayer Slayer"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , type: TypeWeapon (Just "Greataxe")
+    , attune: Attune Nothing
+    , source: SourcePhandelverAndBelowTheShatteredObelisk
     , description: 
-      [ P [ T "" ]
+      [ P [ T "An Aberration hit with this greataxe takes an extra 1d12 slashing damage. If the Aberration is currently grappling a creature, the Aberration must succeed on a DC 15 Strength saving throw or release each creature it is grappling." ]
       ]
     }
-  , { title: ""
+  , { title: "Flying Chariot"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: SourceDMG
+    , source: SourceMythicOdysseysOfTheros
     , description: 
-      [ P [ T "" ]
+      [ P [ T "The chariot's riders and creatures pulling the chariot gain a +1 bonus to their AC." ]
+      , P [ T "If this magic chariot is pulled by one or more flying creatures, it too can fly." ]
+      , P [ B "Chariots" ]
+      , P [ T "Chariots and the creatures pulling them work like controlled mounts, as described in the mounted combat rules in the Player's Handbook, but with the following differences:" ]
+      , UL
+        [ LI [ T "Mounting or dismounting a chariot costs you 5 feet of movement, rather than a number of feet equal to half your speed." ]
+        , LI [ T "Being mounted on a chariot grants you half cover." ]
+        , LI [ T "A chariot's speed is equal to the speed of the slowest creature pulling it." ]
+        , LI [ T "If multiple creatures are pulling the chariot, they all act on the same initiative, and they must take the same action on their turn." ]
+        ]
       ]
     }
-  , { title: ""
+  , { title: "Folding Boat"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
     , attune: AttuneNone
     , source: SourceDMG
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This object appears as a wooden box that measures 12 inches long, 6 inches wide, and 6 inches deep. It weighs 4 pounds and floats. It can be opened to store items inside. This item also has three command words, each requiring you to use an action to speak it." ]
+      , P [ T "One command word causes the box to unfold into a boat 10 feet long, 4 feet wide, and 2 feet deep. The boat has one pair of oars, an anchor, a mast, and a lateen sail. The boat can hold up to four Medium creatures comfortably." ]
+      , P [ T "The second command word causes the box to unfold into a ship 24 feet long, 8 feet wide; and 6 feet deep. The ship has a deck, rowing seats, five sets of oars, a steering oar, an anchor, a deck cabin, and a mast with a square sail. The ship can hold fifteen Medium creatures comfortably." ]
+      , P [ T "When the box becomes a vessel, its weight becomes that of a normal vessel its size, and anything that was stored in the box remains in the boat." ]
+      , P [ T "The third command word causes the folding boat to fold back into a box, provided that no creatures are aboard. Any objects in the vessel that can't fit inside the box remain outside the box as it folds. Any objects in the vessel that can fit inside the box do so." ]
       ]
     }
-  , { title: ""
+  , { title: "Fulminating Treatise"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
+    , attune: Attune (Just "wizard")
+    , source: SourceTashasCauldronOfEverything
     , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: SourceDMG
-    , description: 
-      [ P [ T "" ]
+      [ P [ T "This thick, scorched spellbook reeks of smoke and ozone, and sparks of energy crackles along the edges of its pages. When found, the book contains the following spells: Contingency, Fireball, Gust of Wind, Leomund's Tiny Hut, Magic Missile, Thunderwave, and Wall of Force. It functions as a spellbook for you." ]
+      , P [ T "While you are holding the book, you can use it as a spellcasting focus for your wizard spells." ]
+      , P [ T "The book has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
+      , UL
+        [ LI [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the evocation school." ]
+        , LI [ T "When one creature you can see takes damage from an evocation spell you cast, you can use your reaction and expend 1 charge to deal an extra 2d6 force damage to the creature and knock the creature prone if it is Large or smaller." ]
+        ]
       ]
     }
   , { title: ""
