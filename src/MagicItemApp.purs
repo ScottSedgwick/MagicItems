@@ -61,7 +61,7 @@ view model =
 
 viewFilter :: Model -> Html Message
 viewFilter model =
-  HE.nav [ HA.class' "bottom white" ] 
+  HE.nav [ HA.class' "top white" ] 
   [ HE.div [ HA.class' "grid" ]
     [ HE.div [ HA.class' "s3" ] [ mkInput  "Item Name" ChangeTitle              model.fltTitle ]
     , HE.div [ HA.class' "s2" ] [ mkSelect "Rarity"    ChangeRarity allRarities model.fltRarity ]
@@ -136,8 +136,10 @@ viewItem item =
         , HE.div [ HA.class' "s3" ] [ HE.text (intercalate ", " (map show item.source)) ]
         ]
       ] 
-    , HE.article [ HA.id item.title, HA.class' "white" ]
-      ( (HE.p [ HA.class' "item-description" ] [ HE.em_ (showCaption item) ]) : (map mkDescription item.description)
+    , HE.article [ HA.class' "white" ]
+      ( [ HE.p_ [ HE.em_ (showCaption item) ]
+        , HE.div [ HA.id item.title, HA.class' "article-anchor" ] [ HE.text "" ]
+        ] <> (map mkDescription item.description)
       )
       
     ]
