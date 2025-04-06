@@ -378,10 +378,8 @@ data Description
   | T String
   | B String
   | I String
-  | UL (Array Description)
-  | LI (Array Description)
-  | TB (Array Description) (Array Description)
-  | TR (Array Description)
+  | UL (Array (Array Description))
+  | TB (Array Description) (Array (Array Description))
   | H5 String
   | H6 String
 

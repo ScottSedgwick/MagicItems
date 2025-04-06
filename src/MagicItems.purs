@@ -169,8 +169,8 @@ commonItems =
     , source: [ SourceXanatharsGuideToEverything ]
     , description: 
     [ P [ T "This amulet is fashioned from a single shard of resilient extraplanar material originating from the realm of your warlock patron. While you are wearing it, you gain the following benefits:"  ]
-    , P [ UL [ LI [ T "You can use the amulet as a spellcasting focus for your warlock spells." ]
-             , LI [ T "You can try to cast a cantrip that you don't know. The cantrip must be on the Warlock spell list, and you must make a DC 10 Intelligence (Arcana) check. If the check succeeds, you cast the spell. If the check fails, so does the spell, and the action used to cast the spell is wasted. In either case, you can't use this property again until you finish a long rest." ]
+    , P [ UL [ [ T "You can use the amulet as a spellcasting focus for your warlock spells." ]
+             , [ T "You can try to cast a cantrip that you don't know. The cantrip must be on the Warlock spell list, and you must make a DC 10 Intelligence (Arcana) check. If the check succeeds, you cast the spell. If the check fails, so does the spell, and the action used to cast the spell is wasted. In either case, you can't use this property again until you finish a long rest." ]
              ]
         ]
     ]
@@ -249,8 +249,8 @@ commonItems =
     , source: [ SourceXanatharsGuideToEverything ]
     , description: 
       [ P [ T "This antiquated, cone-shaped hat is adorned with gold crescent moons and stars. While you are wearing it, you gain the following benefits:" ]
-      , P [ UL [ LI [ T "You can use the hat as a spellcasting focus for your wizard spells." ]
-               , LI [ T "You can try to cast a cantrip that you don't know. The cantrip must be on the Wizard spell list, and you must make a DC 10 Intelligence (Arcana) check. If the check succeeds, you cast the spell. If the check fails, so does the spell, and the action used to cast the spell is wasted. In either case, you can't use this property again until you finish a long rest."  ]
+      , P [ UL [ [ T "You can use the hat as a spellcasting focus for your wizard spells." ]
+               , [ T "You can try to cast a cantrip that you don't know. The cantrip must be on the Wizard spell list, and you must make a DC 10 Intelligence (Arcana) check. If the check succeeds, you cast the spell. If the check fails, so does the spell, and the action used to cast the spell is wasted. In either case, you can't use this property again until you finish a long rest."  ]
                ]
           ]
       ]
@@ -291,14 +291,14 @@ commonItems =
       [ P [ T "An imbued wood focus is a rod, staff, or wand cut from a tree infused with extraplanar energy. If you're a spellcaster, you can use this orb as a spellcasting focus." ]
       , P [ T "When you cast a damage-dealing spell using this item as your spellcasting focus, you gain a +1 bonus to one damage roll of the spell, provided the damage is of the type associated with the item's wood. The types of wood and their associated damage types are listed in the Imbued Wood Focus table." ]
       , TB [ T "Wood", T "Damage Type" ]
-        [ TR [ T "Fernian Ash", T "Fire" ]
-        , TR [ T "Irian Rosewood", T "Radiant" ]
-        , TR [ T "Kythrian Manchineel", T "Acid or poison" ]
-        , TR [ T "Lamannian Oak", T "Lightning or thunder" ]
-        , TR [ T "Mabaran Ebony", T "Necrotic" ]
-        , TR [ T "Risian Pine", T "Cold" ]
-        , TR [ T "Shavarran Birch", T "Force" ]
-        , TR [ T "Xorian Wenge", T "Psychic " ]
+        [ [ T "Fernian Ash", T "Fire" ]
+        , [ T "Irian Rosewood", T "Radiant" ]
+        , [ T "Kythrian Manchineel", T "Acid or poison" ]
+        , [ T "Lamannian Oak", T "Lightning or thunder" ]
+        , [ T "Mabaran Ebony", T "Necrotic" ]
+        , [ T "Risian Pine", T "Cold" ]
+        , [ T "Shavarran Birch", T "Force" ]
+        , [ T "Xorian Wenge", T "Psychic " ]
         ]
       ]
     }
@@ -335,16 +335,16 @@ commonItems =
     [ P [ T "This hooded lantern burns for 6 hours on 1 pint of oil, shedding bright light in a 30-foot-radius and dim light for an additional 30 feet." ]
     , P [ T "Each Lantern of Tracking is designed to track down a certain type of creature, which is determined by rolling this creature type on the Lantern of Tracking table. Once determined, this creature type can't be changed. While the lantern is within 300 feet of any creature of that type, its flame turns bright green. The lantern doesn't pinpoint the creature's exact location, however." ]
     , TB [ T "Roll (d10)", T "Creature Type" ]
-      [ TR [ T "1", T "Aberrations" ]
-      , TR [ T "2", T "Celestials" ]
-      , TR [ T "3", T "Constructs" ]
-      , TR [ T "4", T "Dragons" ]
-      , TR [ T "5", T "Elementals" ]
-      , TR [ T "6", T "Fey" ]
-      , TR [ T "7", T "Fiends" ]
-      , TR [ T "8", T "Giants" ]
-      , TR [ T "9", T "Monstrosities" ]
-      , TR [ T "10", T " Undead" ]
+      [ [ T "1", T "Aberrations" ]
+      , [ T "2", T "Celestials" ]
+      , [ T "3", T "Constructs" ]
+      , [ T "4", T "Dragons" ]
+      , [ T "5", T "Elementals" ]
+      , [ T "6", T "Fey" ]
+      , [ T "7", T "Fiends" ]
+      , [ T "8", T "Giants" ]
+      , [ T "9", T "Monstrosities" ]
+      , [ T "10", T " Undead" ]
       ]
     ]
     }
@@ -491,14 +491,14 @@ commonItems =
       [ P [ T "An orb of shielding is a polished, spherical chunk of crystal or stone aligned to one of the planes of existence. If you're a spellcaster, you can use this orb as a spellcasting focus." ]
       , P [ T "If you're holding the orb when you take damage of the type associated with the orb's material, you can use your reaction to reduce the damage by 1d4 (to a minimum of 0). The materials and their associated damage types are listed in the Orb of Shielding table." ]
       , TB [ T "Material",         T "Damage Type" ]
-        [ TR [ T "Fernian basalt",   T " Fire" ]
-        , TR [ T "Irian quartz",     T " Radiant" ]
-        , TR [ T "Kythrian skarn",   T " Acid and poison" ]
-        , TR [ T "Lamannian flint",  T " Lightning and thunder" ]
-        , TR [ T "Mabaran obsidian", T " Necrotic" ]
-        , TR [ T "Risian shale",     T " Cold" ]
-        , TR [ T "Shavarran chert",  T " Force" ]
-        , TR [ T "Xorian marble",    T " Psychic" ]
+        [ [ T "Fernian basalt",   T " Fire" ]
+        , [ T "Irian quartz",     T " Radiant" ]
+        , [ T "Kythrian skarn",   T " Acid and poison" ]
+        , [ T "Lamannian flint",  T " Lightning and thunder" ]
+        , [ T "Mabaran obsidian", T " Necrotic" ]
+        , [ T "Risian shale",     T " Cold" ]
+        , [ T "Shavarran chert",  T " Force" ]
+        , [ T "Xorian marble",    T " Psychic" ]
         ]
       ] 
     }
@@ -569,10 +569,10 @@ commonItems =
     , description: 
     [ P [ T "You regain hit points when you drink this potion. The number of hit points depends on the potion's rarity, as shown in the Potions of Healing table. Whatever its potency, the potion's red liquid glimmers when agitated." ]
     , TB [ T "Potion Type",      T "Rarity",    T "Amount Healed" ] 
-      [ TR [ T "Healing",          T "Common",    T "2d4 + 2" ]
-      , TR [ T "Greater healing",  T "Uncommon",  T "4d4 + 4" ]
-      , TR [ T "Superior healing", T "Rare",      T "8d4 + 8" ]
-      , TR [ T "Supreme healing",  T "Very rare", T "10d4 + 20" ]
+      [ [ T "Healing",          T "Common",    T "2d4 + 2" ]
+      , [ T "Greater healing",  T "Uncommon",  T "4d4 + 4" ]
+      , [ T "Superior healing", T "Rare",      T "8d4 + 8" ]
+      , [ T "Supreme healing",  T "Very rare", T "10d4 + 20" ]
       ]
     ]
     }
@@ -664,16 +664,16 @@ commonItems =
       , P [ T "Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust." ]
       , P [ T "The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity, as shown in the Spell Scroll table." ]
       , TB [ T "Level", T "Rarity", T "Spell Save DC", T "Attack Bonus" ]
-        [ TR [ T "Cantrip", T "Common",    T "13", T "+5" ]
-        , TR [ T "1st",     T "Common",    T "13", T "+5" ]
-        , TR [ T "2nd",     T "Uncommon",  T "13", T "+5" ]
-        , TR [ T "3rd",     T "Uncommon",  T "15", T "+7" ]
-        , TR [ T "4th",     T "Rare",      T "15", T "+7" ]
-        , TR [ T "5th",     T "Rare",      T "17", T "+9" ]
-        , TR [ T "6th",     T "Very rare", T "17", T "+9" ]
-        , TR [ T "7th",     T "Very rare", T "18", T "+10" ]
-        , TR [ T "8th",     T "Very rare", T "18", T "+10" ]
-        , TR [ T "9th",     T "Legendary", T "19", T "+11" ]
+        [ [ T "Cantrip", T "Common",    T "13", T "+5" ]
+        , [ T "1st",     T "Common",    T "13", T "+5" ]
+        , [ T "2nd",     T "Uncommon",  T "13", T "+5" ]
+        , [ T "3rd",     T "Uncommon",  T "15", T "+7" ]
+        , [ T "4th",     T "Rare",      T "15", T "+7" ]
+        , [ T "5th",     T "Rare",      T "17", T "+9" ]
+        , [ T "6th",     T "Very rare", T "17", T "+9" ]
+        , [ T "7th",     T "Very rare", T "18", T "+10" ]
+        , [ T "8th",     T "Very rare", T "18", T "+10" ]
+        , [ T "9th",     T "Legendary", T "19", T "+11" ]
         ]
       , P [ T "A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed." ]
       ]
@@ -698,12 +698,12 @@ commonItems =
       [ P [ T "Produced by a special needle, this magic tattoo contains a single spell of up to 5th level, wrought on your skin by a magic needle. To use the tattoo, you must hold the needle against your skin and speak the command word. The needle turns into ink that becomes the tattoo, which appears on the skin in whatever design you like. Once the tattoo is there, you can cast its spell, requiring no material components. The tattoo glows faintly while you cast the spell and for the spell's duration. Once the spell ends, the tattoo vanishes from your skin." ]
       , P [ T "The level of the spell in the tattoo determines the spell's saving throw DC, attack bonus, spellcasting ability modifier, and the tattoo's rarity, as shown in the Spellwrought Tattoo table." ]
       , TB [ T "Level", T "Rarity", T "Spellcasting Ability Modifier", T "Spell Save DC", T "Spell Attack Bonus" ]
-        [ TR [ T "Cantrip", T "Common",   T "+3", T "13", T "+5" ]
-        , TR [ T "1st",     T "Common",   T "+3", T "13", T "+5" ]
-        , TR [ T "2nd",     T "Uncommon", T "+3", T "13", T "+5" ]
-        , TR [ T "3rd",     T "Uncommon", T "+4", T "15", T "+7" ]
-        , TR [ T "4th",     T "Rare",     T "+4", T "15", T "+7" ]
-        , TR [ T "5th",     T "Rare",     T "+5", T "17", T "+9" ]
+        [ [ T "Cantrip", T "Common",   T "+3", T "13", T "+5" ]
+        , [ T "1st",     T "Common",   T "+3", T "13", T "+5" ]
+        , [ T "2nd",     T "Uncommon", T "+3", T "13", T "+5" ]
+        , [ T "3rd",     T "Uncommon", T "+4", T "15", T "+7" ]
+        , [ T "4th",     T "Rare",     T "+4", T "15", T "+7" ]
+        , [ T "5th",     T "Rare",     T "+5", T "17", T "+9" ]
         ]
       ]
     }
@@ -792,23 +792,23 @@ commonItems =
       [ P [ T "This clockwork device resembles a metal crab the size of a dinner plate. Every action used to wind up the device allows it to operate for 1 minute, to a maximum of 10 minutes. While operational, the item uses the accompanying vox seeker stat block. This automaton is under the DM's control. A vox seeker reduced to 0 hit points is destroyed." ]
       , P [ H5 "Vox Seeker - Tiny construct, unaligned" ]
       , TB [T "Stat",  T "STR", T "DEX", T "CON", T "INT", T "WIS", T "CHA"]
-        [ TR [ T "Score", T "2",   T "10",  T "12",  T "1",   T "10",  T "1" ]
-        , TR [ T "Bonus", T "-4",  T "+0",  T "+1",  T "-5",  T "+0",  T "-5" ]
+        [ [ T "Score", T "2",   T "10",  T "12",  T "1",   T "10",  T "1" ]
+        , [ T "Bonus", T "-4",  T "+0",  T "+1",  T "-5",  T "+0",  T "-5" ]
         ]
       , TB []
-        [ TR [ B "Armor Class:", T "14 (natural armor)",    B "Hit Points:",           T "7 (2d4 + 2)" ]
-        , TR [ B "Speed:",       T "20 ft., climb 20 ft.",  B "Damage Immunities:",    T "poison, psychic" ]
-        , TR [ B "Languages:",         T "—",               B "Condition Immunities:", T "blinded, charmed, deafened, exhaustion, frightened, paralyzed, petrified, poisoned" ]
-        , TR [ B "Challenge:", T "1/8 (25 XP)",             B "Senses:",               T "blindsight 60 ft. (blind beyond this radius), passive Perception 10" ]
+        [ [ B "Armor Class:", T "14 (natural armor)",    B "Hit Points:",           T "7 (2d4 + 2)" ]
+        , [ B "Speed:",       T "20 ft., climb 20 ft.",  B "Damage Immunities:",    T "poison, psychic" ]
+        , [ B "Languages:",         T "—",               B "Condition Immunities:", T "blinded, charmed, deafened, exhaustion, frightened, paralyzed, petrified, poisoned" ]
+        , [ B "Challenge:", T "1/8 (25 XP)",             B "Senses:",               T "blindsight 60 ft. (blind beyond this radius), passive Perception 10" ]
         ]
       , P [ B "Abilities" ]
       , TB []
-        [ TR [ B "Voice Lock.", T "The vox seeker must move toward and attack the source of the nearest voice within 60 feet of it, to the exclusion of all other targets, for as long as it remains operational." ]
-        , TR [ B "Spider Climb", T "The vox seeker can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check." ]
+        [ [ B "Voice Lock.", T "The vox seeker must move toward and attack the source of the nearest voice within 60 feet of it, to the exclusion of all other targets, for as long as it remains operational." ]
+        , [ B "Spider Climb", T "The vox seeker can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check." ]
         ]
       , P [ B "Actions" ]
       , TB []
-        [ TR [ B "Pincer", T "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) piercing damage plus 3 lightning damage." ]
+        [ [ B "Pincer", T "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) piercing damage plus 3 lightning damage." ]
         ]
       ]
     }
@@ -867,9 +867,9 @@ commonItems =
     , description: 
       [ P [ T "A wand sheath clamps onto your arm and imparts the following benefits:" ]
       , UL 
-        [ LI [ T "The wand sheath can't be removed from you while you're attuned to it." ]
-        , LI [ T "You can insert a wand into the sheath as an action. The sheath can hold only one wand at a time." ]
-        , LI [ T "You can retract or extend a wand from the sheath as a bonus action. While the wand is extended, you can use it as if you were holding it, but your hand remains free." ]
+        [ [ T "The wand sheath can't be removed from you while you're attuned to it." ]
+        , [ T "You can insert a wand into the sheath as an action. The sheath can hold only one wand at a time." ]
+        , [ T "You can retract or extend a wand from the sheath as a bonus action. While the wand is extended, you can use it as if you were holding it, but your hand remains free." ]
         ]
       , P [ T "If a sheathed wand requires attunement, you must attune to the wand before you can use it. However, the wand sheath and the attached wand count as a single magic item with regard to the number of magic items you can attune to. If you remove the wand from the sheath, your attunement to the wand ends." ]
       ]
@@ -896,16 +896,16 @@ uncommonItems =
       , P [ T "You can use an action and name one liquid from the table below to cause the jug to produce the chosen liquid. Afterward, you can uncork the jug as an action and pour that liquid out, up to 2 gallons per minute. The maximum amount of liquid the jug can produce depends on the liquid you named." ]
       , P [ T "Once the jug starts producing a liquid, it can't produce a different one, or more of one that has reached its maximum, until the next dawn." ]
       , TB [ T "Liquid", T "Amount" ]
-        [ TR [ T "Acid", T "8 ounces" ]
-        , TR [ T "Basic poison	1", T "2 ounce" ]
-        , TR [ T "Beer", T "4 gallons" ]
-        , TR [ T "Honey", T "1 gallon" ]
-        , TR [ T "Mayonnaise", T "2 gallons" ]
-        , TR [ T "Oil", T "1 quart" ]
-        , TR [ T "Vinegar", T "2 gallons" ]
-        , TR [ T "Water, fresh", T "8 gallons" ]
-        , TR [ T "Water, salt", T "12 gallons" ]
-        , TR [ T "Wine", T "1 gallon" ]
+        [ [ T "Acid", T "8 ounces" ]
+        , [ T "Basic poison	1", T "2 ounce" ]
+        , [ T "Beer", T "4 gallons" ]
+        , [ T "Honey", T "1 gallon" ]
+        , [ T "Mayonnaise", T "2 gallons" ]
+        , [ T "Oil", T "1 quart" ]
+        , [ T "Vinegar", T "2 gallons" ]
+        , [ T "Water, fresh", T "8 gallons" ]
+        , [ T "Water, salt", T "12 gallons" ]
+        , [ T "Wine", T "1 gallon" ]
         ]
       ]
     }
@@ -920,15 +920,15 @@ uncommonItems =
       , P [ T "You can use an action and name one liquid from the table below to cause the jug to produce the chosen liquid. Afterward, you can uncork the jug as an action and pour that liquid out, up to 2 gallons per minute. The maximum amount of liquid the jug can produce depends on the liquid you named." ]
       , P [ T "Once the jug starts producing a liquid, it can't produce a different one, or more of one that has reached its maximum, until the next dawn." ]
       , TB [ T "Liquid", T "Amount" ]
-        [ TR [ T "Boiling Hot Tea", T "1 quart" ]
-        , TR [ T "Beer", T "4 gallons" ]
-        , TR [ T "Honey", T "1 gallon" ]
-        , TR [ T "Mayonnaise", T "2 gallons" ]
-        , TR [ T "Oil", T "1 quart" ]
-        , TR [ T "Vinegar", T "2 gallons" ]
-        , TR [ T "Water, fresh", T "8 gallons" ]
-        , TR [ T "Water, salt", T "12 gallons" ]
-        , TR [ T "Wine", T "1 gallon" ]
+        [ [ T "Boiling Hot Tea", T "1 quart" ]
+        , [ T "Beer", T "4 gallons" ]
+        , [ T "Honey", T "1 gallon" ]
+        , [ T "Mayonnaise", T "2 gallons" ]
+        , [ T "Oil", T "1 quart" ]
+        , [ T "Vinegar", T "2 gallons" ]
+        , [ T "Water, fresh", T "8 gallons" ]
+        , [ T "Water, salt", T "12 gallons" ]
+        , [ T "Wine", T "1 gallon" ]
         ]
       ]
     }
@@ -943,15 +943,15 @@ uncommonItems =
       , P [ T "You can use an action and name one liquid from the table below to cause the jug to produce the chosen liquid. Afterward, you can uncork the jug as an action and pour that liquid out, up to 2 gallons per minute. The maximum amount of liquid the jug can produce depends on the liquid you named." ]
       , P [ T "Once the jug starts producing a liquid, it can't produce a different one, or more of one that has reached its maximum, until the next dawn." ]
       , TB [ T "Liquid", T "Amount" ]
-        [ TR [ T "Soy Sauce", T "1 gallon" ]
-        , TR [ T "Beer", T "4 gallons" ]
-        , TR [ T "Honey", T "1 gallon" ]
-        , TR [ T "Mayonnaise", T "2 gallons" ]
-        , TR [ T "Oil", T "1 quart" ]
-        , TR [ T "Vinegar", T "2 gallons" ]
-        , TR [ T "Water, fresh", T "8 gallons" ]
-        , TR [ T "Water, salt", T "12 gallons" ]
-        , TR [ T "Wine", T "1 gallon" ]
+        [ [ T "Soy Sauce", T "1 gallon" ]
+        , [ T "Beer", T "4 gallons" ]
+        , [ T "Honey", T "1 gallon" ]
+        , [ T "Mayonnaise", T "2 gallons" ]
+        , [ T "Oil", T "1 quart" ]
+        , [ T "Vinegar", T "2 gallons" ]
+        , [ T "Water, fresh", T "8 gallons" ]
+        , [ T "Water, salt", T "12 gallons" ]
+        , [ T "Wine", T "1 gallon" ]
         ]
       ]
     }
@@ -1047,11 +1047,11 @@ uncommonItems =
     , description: 
       [ P [ T "This is a sturdy leather sack with tiny Siberys shards embedded into the lining. If you have the Mark of Hospitality you can use an action to cast Create Food and Water, drawing a feast from within the bag. You shape this meal with your thoughts. You can create the standard bland fare without requiring any sort of check, but you can attempt to create finer food by making a Charisma check; if you're proficient with cook's utensils, add your bonus to this check. A failed check results in a sour and squalid meal." ]
       , TB [ T "Food Quality", T "Roll Needed" ]
-        [ TR [ T "Poor", T "No roll required" ]
-        , TR [ T "Modest", T "10" ]
-        , TR [ T "Comfortable", T "13" ]
-        , TR [ T "Wealthy", T "15" ]
-        , TR [ T "Aristocratic", T "18" ]
+        [ [ T "Poor", T "No roll required" ]
+        , [ T "Modest", T "10" ]
+        , [ T "Comfortable", T "13" ]
+        , [ T "Wealthy", T "15" ]
+        , [ T "Aristocratic", T "18" ]
         ]
       , P [ T "A bag of bounty can be used up to three times over the course of a day. After that, the bag can't be used again until the next dawn." ]
       ]
@@ -1079,36 +1079,36 @@ uncommonItems =
       , P [ T "Once three fuzzy objects have been pulled from the bag, the bag can't be used again until the next dawn." ]
       , P [ B "Grey Bag of Tricks:" ]
       , TB [ T "Roll (d8)", T "Creature" ]
-        [ TR [ T "1", T "Weasel" ]
-        , TR [ T "2", T "Giant rat" ]
-        , TR [ T "3", T "Badger" ]
-        , TR [ T "4", T "Boar" ]
-        , TR [ T "5", T "Panther" ]
-        , TR [ T "6", T "Giant badger" ]
-        , TR [ T "7", T "Dire wolf" ]
-        , TR [ T "8", T "Giant elk" ]
+        [ [ T "1", T "Weasel" ]
+        , [ T "2", T "Giant rat" ]
+        , [ T "3", T "Badger" ]
+        , [ T "4", T "Boar" ]
+        , [ T "5", T "Panther" ]
+        , [ T "6", T "Giant badger" ]
+        , [ T "7", T "Dire wolf" ]
+        , [ T "8", T "Giant elk" ]
         ]
       , P [ B "Rust Bag of Tricks:" ]
       , TB [ T "Roll (d8)", T "Creature" ]
-        [ TR [ T "1", T"Rat" ]
-        , TR [ T "2", T"Owl" ]
-        , TR [ T "3", T"Mastiff" ]
-        , TR [ T "4", T"Goat" ]
-        , TR [ T "5", T"Giant goat" ]
-        , TR [ T "6", T"Giant boar" ]
-        , TR [ T "7", T"Lion" ]
-        , TR [ T "8", T"Brown bear" ]
+        [ [ T "1", T"Rat" ]
+        , [ T "2", T"Owl" ]
+        , [ T "3", T"Mastiff" ]
+        , [ T "4", T"Goat" ]
+        , [ T "5", T"Giant goat" ]
+        , [ T "6", T"Giant boar" ]
+        , [ T "7", T"Lion" ]
+        , [ T "8", T"Brown bear" ]
         ]
       , P [ B "Tan Bag of Tricks:" ]
       , TB [ T "Roll (d8)", T "Creature" ]
-        [ TR [ T "1", T"Jackal" ]
-        , TR [ T "2", T"Ape" ]
-        , TR [ T "3", T"Baboon" ]
-        , TR [ T "4", T"Axe beak" ]
-        , TR [ T "5", T"Black bear" ]
-        , TR [ T "6", T"Giant weasel" ]
-        , TR [ T "7", T"Giant hyena" ]
-        , TR [ T "8", T"Tiger" ]
+        [ [ T "1", T"Jackal" ]
+        , [ T "2", T"Ape" ]
+        , [ T "3", T"Baboon" ]
+        , [ T "4", T"Axe beak" ]
+        , [ T "5", T"Black bear" ]
+        , [ T "6", T"Giant weasel" ]
+        , [ T "7", T"Giant hyena" ]
+        , [ T "8", T"Tiger" ]
         ]
       ]
     }
@@ -1140,9 +1140,9 @@ uncommonItems =
       , P [ T "If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space." ]
       , P [ T "Protection. While you aren't wearing armor, the tattoo grants you an Armor Class depending on the tattoo's rarity, as shown below. You can use a shield and still gain this benefit." ]
       , TB [ T "Rarity", T "Armor Class" ]
-        [ TR [ T "Uncommon", T "12 + your Dexterity modifier" ]
-        , TR [ T "Rare", T "15 + your Dexterity modifier (maximum of +2)" ]
-        , TR [ T "Very Rare", T "18" ]
+        [ [ T "Uncommon", T "12 + your Dexterity modifier" ]
+        , [ T "Rare", T "15 + your Dexterity modifier (maximum of +2)" ]
+        , [ T "Very Rare", T "18" ]
         ]
       ]
     }
@@ -1223,9 +1223,9 @@ uncommonItems =
     , source: [ SourceDMG ]
     , description: 
       [ P [ T "These furred boots are snug and feel quite warm. While you wear them, you gain the following benefits:" ]
-      , UL [ LI [ T "You have resistance to cold damage." ]
-           , LI [ T "You ignore difficult terrain created by ice or snow." ]
-           , LI [ T "You can tolerate temperatures as low as -50 degrees Fahrenheit without any additional protection. If you wear heavy clothes, you can tolerate temperatures as low as -100 degrees Fahrenheit."  ]
+      , UL [ [ T "You have resistance to cold damage." ]
+           , [ T "You ignore difficult terrain created by ice or snow." ]
+           , [ T "You can tolerate temperatures as low as -50 degrees Fahrenheit without any additional protection. If you wear heavy clothes, you can tolerate temperatures as low as -100 degrees Fahrenheit."  ]
            ]
       ]
     }
@@ -1363,9 +1363,9 @@ uncommonItems =
     , description: 
       [ P [ T "This stoppered flask sloshes when shaken, as if it contains water. The decanter weighs 2 pounds." ]
       , P [ T "You can use an action to remove the stopper and speak one of three command words, whereupon an amount of fresh water or salt water (your choice) pours out of the flask. The water stops pouring out at the start of your next turn. Choose from the following options:" ]
-      , UL [ LI [ B "Stream", T " produces 1 gallon of water." ]
-           , LI [ B "Fountain", T " produces 5 gallons of water." ]
-           , LI [ B "Geyser", T " produces 30 gallons of water that gushes forth in a geyser 30 feet long and 1 foot wide. As a bonus action while holding the decanter, you can aim the geyser at a creature you can see within 30 feet of you. The target must succeed on a DC 13 Strength saving throw or take 1d4 bludgeoning damage and fall prone. Instead of a creature, you can target an object that isn't being worn or carried and that weighs no more than 200 pounds. The object is either knocked over or pushed up to 15 feet away from you." ]
+      , UL [ [ B "Stream", T " produces 1 gallon of water." ]
+           , [ B "Fountain", T " produces 5 gallons of water." ]
+           , [ B "Geyser", T " produces 30 gallons of water that gushes forth in a geyser 30 feet long and 1 foot wide. As a bonus action while holding the decanter, you can aim the geyser at a creature you can see within 30 feet of you. The target must succeed on a DC 13 Strength saving throw or take 1d4 bludgeoning damage and fall prone. Instead of a creature, you can target an object that isn't being worn or carried and that weighs no more than 200 pounds. The object is either knocked over or pushed up to 15 feet away from you." ]
            ]
       ]
     }
@@ -1380,39 +1380,39 @@ uncommonItems =
       , P [ T "An illusion of one or more creatures forms over the thrown card and remains until dispelled. An illusory creature appears real, of the appropriate size, and behaves as if it were a real creature (as presented in the Monster Manual), except that it can do no harm. While you are within 120 feet of the illusory creature and can see it, you can use an action to move it magically anywhere within 30 feet of its card. Any physical interaction with the illusory creature reveals it to be an illusion, because objects pass through it. Someone who uses an action to visually inspect the creature identifies it as illusory with a successful DC 15 Intelligence (Investigation) check. The creature then appears translucent." ]
       , P [ T "The illusion lasts until its card is moved or the illusion is dispelled. When the illusion ends, the image on its card disappears, and that card can't be used again." ]
       , TB [ T "Card", T "Illusory creature" ]
-        [ TR [ T "Ace of hearts", T "Red dragon" ]
-        , TR [ T "King of hearts", T "Knight and four guards" ]
-        , TR [ T "Queen of hearts", T "Succubus or incubus" ]
-        , TR [ T "Jack of hearts", T "Druid" ]
-        , TR [ T "Ten of hearts", T "Cloud giant" ]
-        , TR [ T "Nine of hearts", T "Ettin" ]
-        , TR [ T "Eight of hearts", T "Bugbear" ]
-        , TR [ T "Two of hearts", T "Goblin" ]
-        , TR [ T "Ace of diamonds", T "Beholder" ]
-        , TR [ T "King of diamonds", T "Archmage and mage apprentice" ]
-        , TR [ T "Queen of diamonds", T "Night hag" ]
-        , TR [ T "Jack of diamonds", T "Assassin" ]
-        , TR [ T "Ten of diamonds", T "Fire giant" ]
-        , TR [ T "Nine of diamonds", T "Ogre mage" ]
-        , TR [ T "Eight of diamonds", T "Gnoll" ]
-        , TR [ T "Two of diamonds", T "Kobold" ]
-        , TR [ T "Ace of spades", T "Lich" ]
-        , TR [ T "King of spades", T "Priest and two acolytes" ]
-        , TR [ T "Queen of spades", T "Medusa" ]
-        , TR [ T "Jack of spades", T "Veteran" ]
-        , TR [ T "Ten of spades", T "Frost giant" ]
-        , TR [ T "Nine of spades", T "Troll" ]
-        , TR [ T "Eight of spades", T "Hobgoblin" ]
-        , TR [ T "Two of spades", T "Goblin" ]
-        , TR [ T "Ace of clubs", T "Iron golem" ]
-        , TR [ T "King of clubs", T "Bandit captain and three bandits" ]
-        , TR [ T "Queen of clubs", T "Erinyes" ]
-        , TR [ T "Jack of clubs", T "Berserker" ]
-        , TR [ T "Ten of clubs", T "Hill giant" ]
-        , TR [ T "Nine of clubs", T "Ogre" ]
-        , TR [ T "Eight of clubs", T "Orc" ]
-        , TR [ T "Two of clubs", T "Kobold" ]
-        , TR [ T "Jokers (2)", T "You (the deck's owner)" ]
+        [ [ T "Ace of hearts", T "Red dragon" ]
+        , [ T "King of hearts", T "Knight and four guards" ]
+        , [ T "Queen of hearts", T "Succubus or incubus" ]
+        , [ T "Jack of hearts", T "Druid" ]
+        , [ T "Ten of hearts", T "Cloud giant" ]
+        , [ T "Nine of hearts", T "Ettin" ]
+        , [ T "Eight of hearts", T "Bugbear" ]
+        , [ T "Two of hearts", T "Goblin" ]
+        , [ T "Ace of diamonds", T "Beholder" ]
+        , [ T "King of diamonds", T "Archmage and mage apprentice" ]
+        , [ T "Queen of diamonds", T "Night hag" ]
+        , [ T "Jack of diamonds", T "Assassin" ]
+        , [ T "Ten of diamonds", T "Fire giant" ]
+        , [ T "Nine of diamonds", T "Ogre mage" ]
+        , [ T "Eight of diamonds", T "Gnoll" ]
+        , [ T "Two of diamonds", T "Kobold" ]
+        , [ T "Ace of spades", T "Lich" ]
+        , [ T "King of spades", T "Priest and two acolytes" ]
+        , [ T "Queen of spades", T "Medusa" ]
+        , [ T "Jack of spades", T "Veteran" ]
+        , [ T "Ten of spades", T "Frost giant" ]
+        , [ T "Nine of spades", T "Troll" ]
+        , [ T "Eight of spades", T "Hobgoblin" ]
+        , [ T "Two of spades", T "Goblin" ]
+        , [ T "Ace of clubs", T "Iron golem" ]
+        , [ T "King of clubs", T "Bandit captain and three bandits" ]
+        , [ T "Queen of clubs", T "Erinyes" ]
+        , [ T "Jack of clubs", T "Berserker" ]
+        , [ T "Ten of clubs", T "Hill giant" ]
+        , [ T "Nine of clubs", T "Ogre" ]
+        , [ T "Eight of clubs", T "Orc" ]
+        , [ T "Two of clubs", T "Kobold" ]
+        , [ T "Jokers (2)", T "You (the deck's owner)" ]
         ]
       ]
     }
@@ -1425,38 +1425,38 @@ uncommonItems =
       [ P [ T "This wooden box contains a set of thirty-two parchment cards." ]
       , P [ T "The face of each card bears an illustration of a different item or set of items. As an action, you can draw a card of your choice from the deck and throw it to the ground in an unoccupied space within 5 feet of yourself. When the card hits the ground, the card permanently transforms into the item or set of items depicted on its face. An altered deck of real-world playing cards can simulate the deck, as shown on the Deck of Miscellany table." ]
       , TB [ T "Card", T "Item" ]
-        [ TR [ T "3 ♦️", T "Wooden abacus" ]
-        , TR [ T "4 ♦️", T "Four vials of perfume" ]
-        , TR [ T "5 ♦️", T "5 days' worth of rations" ]
-        , TR [ T "6 ♦️", T "Iron pot" ]
-        , TR [ T "7 ♦️", T "Disguise kit" ]
-        , TR [ T "8 ♦️", T "Window (up to 5 feet wide and 5 feet high), which you can place on a vertical surface up to 5 feet thick and which allows you to look through the surface" ]
-        , TR [ T "9 ♦️", T "Manacles" ]
-        , TR [ T "10 ♦️", T "Ten sheets of parchment" ]
-        , TR [ T "3 ♥️", T "Three daggers" ]
-        , TR [ T "4 ♥️", T "Four flasks of oil" ]
-        , TR [ T "5 ♥️", T "Five silk robes" ]
-        , TR [ T "6 ♥️", T "Forgery kit" ]
-        , TR [ T "7 ♥️", T "Quarterstaff" ]
-        , TR [ T "8 ♥️", T "Fishing tackle" ]
-        , TR [ T "9 ♥️", T "Leather pouch containing 18 gp" ]
-        , TR [ T "10 ♥️", T "10 crossbow bolts" ]
-        , TR [ T "3 ♣️", T "Three books, written in Common, about random historical events" ]
-        , TR [ T "4 ♣️", T "Canvas tent" ]
-        , TR [ T "5 ♣️", T "50 feet of coiled silk rope" ]
-        , TR [ T "6 ♣️", T "Two crowbars" ]
-        , TR [ T "7 ♣️", T "Healer's kit" ]
-        , TR [ T "8 ♣️", T "Eight gems worth 5 gp each" ]
-        , TR [ T "9 ♣️", T "Lamp" ]
-        , TR [ T "10 ♣️", T "10 feet of iron chain" ]
-        , TR [ T "3 ♠️", T "Three spears" ]
-        , TR [ T "4 ♠️", T "Steel mirror" ]
-        , TR [ T "5 ♠️", T "15-foot wooden pole" ]
-        , TR [ T "6 ♠️", T "Burlap sack" ]
-        , TR [ T "7 ♠️", T "Two sets of fine clothes" ]
-        , TR [ T "8 ♠️", T "Shovel" ]
-        , TR [ T "9 ♠️", T "Light hammer" ]
-        , TR [ T "10 ♠️", T "Ten arrows" ]
+        [ [ T "3 ♦️", T "Wooden abacus" ]
+        , [ T "4 ♦️", T "Four vials of perfume" ]
+        , [ T "5 ♦️", T "5 days' worth of rations" ]
+        , [ T "6 ♦️", T "Iron pot" ]
+        , [ T "7 ♦️", T "Disguise kit" ]
+        , [ T "8 ♦️", T "Window (up to 5 feet wide and 5 feet high), which you can place on a vertical surface up to 5 feet thick and which allows you to look through the surface" ]
+        , [ T "9 ♦️", T "Manacles" ]
+        , [ T "10 ♦️", T "Ten sheets of parchment" ]
+        , [ T "3 ♥️", T "Three daggers" ]
+        , [ T "4 ♥️", T "Four flasks of oil" ]
+        , [ T "5 ♥️", T "Five silk robes" ]
+        , [ T "6 ♥️", T "Forgery kit" ]
+        , [ T "7 ♥️", T "Quarterstaff" ]
+        , [ T "8 ♥️", T "Fishing tackle" ]
+        , [ T "9 ♥️", T "Leather pouch containing 18 gp" ]
+        , [ T "10 ♥️", T "10 crossbow bolts" ]
+        , [ T "3 ♣️", T "Three books, written in Common, about random historical events" ]
+        , [ T "4 ♣️", T "Canvas tent" ]
+        , [ T "5 ♣️", T "50 feet of coiled silk rope" ]
+        , [ T "6 ♣️", T "Two crowbars" ]
+        , [ T "7 ♣️", T "Healer's kit" ]
+        , [ T "8 ♣️", T "Eight gems worth 5 gp each" ]
+        , [ T "9 ♣️", T "Lamp" ]
+        , [ T "10 ♣️", T "10 feet of iron chain" ]
+        , [ T "3 ♠️", T "Three spears" ]
+        , [ T "4 ♠️", T "Steel mirror" ]
+        , [ T "5 ♠️", T "15-foot wooden pole" ]
+        , [ T "6 ♠️", T "Burlap sack" ]
+        , [ T "7 ♠️", T "Two sets of fine clothes" ]
+        , [ T "8 ♠️", T "Shovel" ]
+        , [ T "9 ♠️", T "Light hammer" ]
+        , [ T "10 ♠️", T "Ten arrows" ]
         ]
       ]
     }
@@ -1471,28 +1471,28 @@ uncommonItems =
       , P [ T "Unless it is the Mystery card, a drawn card immediately takes effect, fades from existence, and reappears in the deck, making it possible to draw the same card multiple times." ]
       , P [ T "You can use an altered deck of playing cards to simulate the deck, as shown in the Deck of Wonder table." ]
       , TB [   T "Card",              T "Image",       T "Effect" ]
-        [ TR [ T "A ♦",               T "Chancellor*", T "Within 8 hours of drawing this card, you can cast Augury once as an action, requiring no material components. Use your Intelligence, Wisdom, or Charisma as the spellcasting ability (your choice)." ]
-        , TR [ T "K ♦",               T "Day",         T "You gain a +1 bonus to saving throws. This benefit lasts until you finish a long rest." ]
-        , TR [ T "Q ♦",               T "Night",       T "You gain darkvision within a range of 300 feet. This darkvision lasts for 8 hours." ]
-        , TR [ T "J ♦",               T "Dawn",        T "This card invigorates you. For the next 8 hours, you can add your proficiency bonus to your initiative rolls." ]
-        , TR [ T "2 ♦",               T "Dusk*",       T "This card supernaturally saps your energy. You have disadvantage on initiative rolls. This effect lasts until you finish a long rest, but it can be ended early by a Remove Curse spell or similar magic." ]
-        , TR [ T "A ♥",               T "Destiny*",    T "This card protects you against an untimely demise. The first time after drawing this card that you would drop to 0 hit points from taking damage, you instead drop to 1 hit point." ]
-        , TR [ T "K ♥",               T "Crown",       T "You learn the Friends cantrip. Use your Intelligence, Wisdom, or Charisma as the spellcasting ability (your choice). If you already know this cantrip, the card has no effect." ]
-        , TR [ T "Q ♥",               T "Lock",        T "You gain the ability to cast Knock 1d3 times. Use your Intelligence, Wisdom, or Charisma as the spellcasting ability (your choice)." ]
-        , TR [ T "J ♥",               T "Champion",    T "You gain a +1 bonus to weapon attack and damage rolls. This bonus lasts for 8 hours." ]
-        , TR [ T "2 ♥",               T "Coin*",       T "Five pieces of jewelry, each worth 100 gp, or ten gemstones, each worth 50 gp, appear at your feet." ]
-        , TR [ T "A ♣",               T "Vulture*",    T "One nonmagical item or piece of equipment in your possession (chosen by the DM) disappears. The item remains nearby but concealed for a short time, so it can be found with a successful DC 15 Wisdom (Perception) check. If the item isn't recovered within 1 hour, it disappears forever." ]
-        , TR [ T "K ♣",               T "Chaos",       T "You gain resistance to one of the following damage types (chosen by the DM): acid, cold, fire, lightning, or thunder. This resistance lasts for 1d12 days." ]
-        , TR [ T "Q ♣",               T "Order",       T "You gain resistance to one of the following damage types (chosen by the DM): force, necrotic, poison, psychic, or radiant. This resistance lasts for 1d12 days." ]
-        , TR [ T "J ♣",               T "Beginning",   T "Your hit point maximum and current hit points increase by 2d10. Your hit point maximum remains increased in this way for the next 8 hours." ]
-        , TR [ T "2 ♣",               T "Mystery*",    T "You have disadvantage on Intelligence saving throws for 1 hour. Discard this card and draw from the deck again; together, the two draws count as one of your declared draws." ]
-        , TR [ T "A ♠",               T "Isolation*",  T "You disappear, along with anything you are wearing or carrying, and become trapped in a harmless extradimensional space for 1d4 minutes. You draw no more cards. You then reappear in the space you left or the nearest unoccupied space. When you reappear, you must succeed on a DC 11 Constitution saving throw or have the poisoned condition for 1 hour as your body reels from the extradimensional travel." ]
-        , TR [ T "K ♠",               T "End",         T "This card is an omen of death. You take 2d10 necrotic damage, and your hit point maximum is reduced by an amount equal to the damage taken. This effect can't reduce your hit point maximum below 10 hit points. This reduction lasts until you finish a long rest, but it can be ended early by a Remove Curse spell or similar magic." ]
-        , TR [ T "Q ♠",               T "Monster",     T "This card's monstrous visage curses you. While cursed in this way, whenever you make a saving throw, you must roll 1d4 and subtract the number rolled from the total. The curse lasts until you finish a long rest, but it can be ended early with a Remove Curse spell or similar magic." ]
-        , TR [ T "J ♠",               T "Knife",       T "An uncommon magic weapon you're proficient with appears in your hands. The DM chooses the weapon." ]
-        , TR [ T "2 ♠",               T "Justice*",    T "You momentarily gain the ability to balance the scales of fate. For the next 8 hours, whenever you or a creature within 60 feet of you is about to roll a d20 with advantage or disadvantage, you can use your reaction to prevent the roll from being affected by advantage or disadvantage." ]
-        , TR [ T "Joker (with ™)",    T "Student*",    T "You gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice)." ]
-        , TR [ T "Joker (without ™)", T "Mischief",    T "You receive an uncommon wondrous item (chosen by the DM), or you can draw two additional cards beyond your declared draws." ]
+        [ [ T "A ♦",               T "Chancellor*", T "Within 8 hours of drawing this card, you can cast Augury once as an action, requiring no material components. Use your Intelligence, Wisdom, or Charisma as the spellcasting ability (your choice)." ]
+        , [ T "K ♦",               T "Day",         T "You gain a +1 bonus to saving throws. This benefit lasts until you finish a long rest." ]
+        , [ T "Q ♦",               T "Night",       T "You gain darkvision within a range of 300 feet. This darkvision lasts for 8 hours." ]
+        , [ T "J ♦",               T "Dawn",        T "This card invigorates you. For the next 8 hours, you can add your proficiency bonus to your initiative rolls." ]
+        , [ T "2 ♦",               T "Dusk*",       T "This card supernaturally saps your energy. You have disadvantage on initiative rolls. This effect lasts until you finish a long rest, but it can be ended early by a Remove Curse spell or similar magic." ]
+        , [ T "A ♥",               T "Destiny*",    T "This card protects you against an untimely demise. The first time after drawing this card that you would drop to 0 hit points from taking damage, you instead drop to 1 hit point." ]
+        , [ T "K ♥",               T "Crown",       T "You learn the Friends cantrip. Use your Intelligence, Wisdom, or Charisma as the spellcasting ability (your choice). If you already know this cantrip, the card has no effect." ]
+        , [ T "Q ♥",               T "Lock",        T "You gain the ability to cast Knock 1d3 times. Use your Intelligence, Wisdom, or Charisma as the spellcasting ability (your choice)." ]
+        , [ T "J ♥",               T "Champion",    T "You gain a +1 bonus to weapon attack and damage rolls. This bonus lasts for 8 hours." ]
+        , [ T "2 ♥",               T "Coin*",       T "Five pieces of jewelry, each worth 100 gp, or ten gemstones, each worth 50 gp, appear at your feet." ]
+        , [ T "A ♣",               T "Vulture*",    T "One nonmagical item or piece of equipment in your possession (chosen by the DM) disappears. The item remains nearby but concealed for a short time, so it can be found with a successful DC 15 Wisdom (Perception) check. If the item isn't recovered within 1 hour, it disappears forever." ]
+        , [ T "K ♣",               T "Chaos",       T "You gain resistance to one of the following damage types (chosen by the DM): acid, cold, fire, lightning, or thunder. This resistance lasts for 1d12 days." ]
+        , [ T "Q ♣",               T "Order",       T "You gain resistance to one of the following damage types (chosen by the DM): force, necrotic, poison, psychic, or radiant. This resistance lasts for 1d12 days." ]
+        , [ T "J ♣",               T "Beginning",   T "Your hit point maximum and current hit points increase by 2d10. Your hit point maximum remains increased in this way for the next 8 hours." ]
+        , [ T "2 ♣",               T "Mystery*",    T "You have disadvantage on Intelligence saving throws for 1 hour. Discard this card and draw from the deck again; together, the two draws count as one of your declared draws." ]
+        , [ T "A ♠",               T "Isolation*",  T "You disappear, along with anything you are wearing or carrying, and become trapped in a harmless extradimensional space for 1d4 minutes. You draw no more cards. You then reappear in the space you left or the nearest unoccupied space. When you reappear, you must succeed on a DC 11 Constitution saving throw or have the poisoned condition for 1 hour as your body reels from the extradimensional travel." ]
+        , [ T "K ♠",               T "End",         T "This card is an omen of death. You take 2d10 necrotic damage, and your hit point maximum is reduced by an amount equal to the damage taken. This effect can't reduce your hit point maximum below 10 hit points. This reduction lasts until you finish a long rest, but it can be ended early by a Remove Curse spell or similar magic." ]
+        , [ T "Q ♠",               T "Monster",     T "This card's monstrous visage curses you. While cursed in this way, whenever you make a saving throw, you must roll 1d4 and subtract the number rolled from the total. The curse lasts until you finish a long rest, but it can be ended early with a Remove Curse spell or similar magic." ]
+        , [ T "J ♠",               T "Knife",       T "An uncommon magic weapon you're proficient with appears in your hands. The DM chooses the weapon." ]
+        , [ T "2 ♠",               T "Justice*",    T "You momentarily gain the ability to balance the scales of fate. For the next 8 hours, whenever you or a creature within 60 feet of you is about to roll a d20 with advantage or disadvantage, you can use your reaction to prevent the roll from being affected by advantage or disadvantage." ]
+        , [ T "Joker (with ™)",    T "Student*",    T "You gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice)." ]
+        , [ T "Joker (without ™)", T "Mischief",    T "You receive an uncommon wondrous item (chosen by the DM), or you can draw two additional cards beyond your declared draws." ]
         ]
       , P [ T "*Found only in a deck with twenty-two cards." ]
       ]
@@ -1545,15 +1545,15 @@ uncommonItems =
       , P [ B "Slumbering (Uncommon). ", T "You have advantage on initiative rolls. While you are holding the focus, it can function as a spellcasting focus for all your spells." ]
       , P [ B "Stirring (Rare). ", T "The Stirring focus has the Slumbering property, and it gains an additional property determined by the family of the dragon in whose hoard it became Stirring:" ]
       , TB [ T "Dragon Family", T "Property" ]
-        [ TR [ T "Chromatic.", T "Whenever you use a spell slot to cast a spell that deals acid, cold, fire, lightning, or poison damage, roll a d6, and you gain a bonus equal to the number rolled to one of the spell's damage rolls." ]
-        , TR [ T "Gem.", T "Whenever you use a spell slot to cast a spell, you can immediately teleport to an unoccupied space you can see within 15 feet of you." ]
-        , TR [ T "Metallic.", T "When a creature you can see within 30 feet of you makes a saving throw, you can use your reaction to give that creature advantage on the saving throw." ]
+        [ [ T "Chromatic.", T "Whenever you use a spell slot to cast a spell that deals acid, cold, fire, lightning, or poison damage, roll a d6, and you gain a bonus equal to the number rolled to one of the spell's damage rolls." ]
+        , [ T "Gem.", T "Whenever you use a spell slot to cast a spell, you can immediately teleport to an unoccupied space you can see within 15 feet of you." ]
+        , [ T "Metallic.", T "When a creature you can see within 30 feet of you makes a saving throw, you can use your reaction to give that creature advantage on the saving throw." ]
         ]
       , P [ B "Wakened (Very Rare). ", T "The Wakened focus has the Slumbering and Stirring properties, and while you are holding a Wakened focus, you can use it to cast certain spells. Once the item is used to cast a given spell, it can't be used to cast that spell again until the next dawn. The spells are determined by the family of the dragon in whose hoard it became Wakened." ]
       , TB [ T "Dragon Family", T "Property" ]
-        [ TR [ T "Chromatic.", T "Hold Monster, Rime's Binding Ice" ]
-        , TR [ T "Gem.", T "Rary's Telepathic Bond, Raulothim's Psychic Lance" ]
-        , TR [ T "Metallic.", T "Fizban's Platinum Shield, Legend Lore" ]
+        [ [ T "Chromatic.", T "Hold Monster, Rime's Binding Ice" ]
+        , [ T "Gem.", T "Rary's Telepathic Bond, Raulothim's Psychic Lance" ]
+        , [ T "Metallic.", T "Fizban's Platinum Shield, Legend Lore" ]
         ]
       , P [ B "Ascendant (Legendary). ", T "The Ascendant focus has the Slumbering, Stirring, and Wakened properties. In addition, when you cast a spell of 1st level or higher while holding this focus, you can treat the spell as if it were cast using a 9th-level spell slot. Once this property is used, it can't be used again until the next dawn." ]
       ]
@@ -1653,10 +1653,10 @@ uncommonItems =
     , description: 
       [ P [ T "This gem contains a mote of elemental energy. When you use an action to break the gem, an elemental is summoned as if you had cast the Conjure Elemental spell, and the gem's magic is lost. The type of gem determines the elemental summoned by the spell." ]
       , TB [ T "Gem Type", T "Elemental" ]
-        [ TR [ T "Blue sapphire", T "Air elemental" ]
-        , TR [ T "Yellow diamond", T "Earth elemental" ]
-        , TR [ T "Red corundum", T "Fire elemental" ]
-        , TR [ T "Emerald", T "Water elemental" ]
+        [ [ T "Blue sapphire", T "Air elemental" ]
+        , [ T "Yellow diamond", T "Earth elemental" ]
+        , [ T "Red corundum", T "Fire elemental" ]
+        , [ T "Emerald", T "Water elemental" ]
         ]
       ]
     }
@@ -1750,14 +1750,14 @@ uncommonItems =
       , P [ H5 "Giant Canary" ]
       , P [ I "Large beast, Unaligned" ]
       , TB   [ T "Stat",  T "STR", T "DEX", T "CON", T "INT", T "WIS", T "CHA" ]
-        [ TR [ T "Value", T "10",  T "14",  T "12",  T "2",   T "10",  T "6"   ]
-        , TR [ T "Bonus", T "+0",  T "+2",  T "+1",  T "-4",  T "+0",  T "-2"  ]
+        [ [ T "Value", T "10",  T "14",  T "12",  T "2",   T "10",  T "6"   ]
+        , [ T "Bonus", T "+0",  T "+2",  T "+1",  T "-4",  T "+0",  T "-2"  ]
         ]
       , TB []
-        [ TR [ B "Armor Class", T "12 (natural armor)", B "Hit Points", T "26 (4d10 + 4)" ]
-        , TR [ B "Speed", T "30 ft., fly 60ft.", B "Senses", T "passive Perception 10" ]
-        , TR [ B "Challenge", T "1/2 (100 XP)", B "Languages", T "-" ]
-        , TR [ B "Proficiency Bonus (PB)", T "+2" ]
+        [ [ B "Armor Class", T "12 (natural armor)", B "Hit Points", T "26 (4d10 + 4)" ]
+        , [ B "Speed", T "30 ft., fly 60ft.", B "Senses", T "passive Perception 10" ]
+        , [ B "Challenge", T "1/2 (100 XP)", B "Languages", T "-" ]
+        , [ B "Proficiency Bonus (PB)", T "+2" ]
         ]
       , P [ H6 "Actions" ]
       , P [ B "Peck. ", I "Melee Weapon Attack: ", T "+4 to hit, reach 5 ft., one target. Hit: 7 (1d10 + 2) piercing damage." ]
@@ -1770,8 +1770,8 @@ uncommonItems =
     , source: [ SourceEberronRisingFromTheLastWar ]
     , description: 
       [ P [ T "The lenses of these garish goggles are carved from Siberys dragonshards. While wearing these lenses, you gain the following benefits:" ]
-      , UL [ LI [ T "When you make a Wisdom (Insight) check, you can roll a d4 and add the number rolled to the check." ]
-           , LI [ T "As an action, you can use the goggles to examine an object to identify the aura of the last creature that touched it. Make a Wisdom (Insight) check against a DC of 13 + the number of days since the last contact occurred. On a success, you learn the creature's type and can immediately use the goggles to cast Locate Creature to find that creature. This property can't be used again until the next dawn." ]
+      , UL [ [ T "When you make a Wisdom (Insight) check, you can roll a d4 and add the number rolled to the check." ]
+           , [ T "As an action, you can use the goggles to examine an object to identify the aura of the last creature that touched it. Make a Wisdom (Insight) check against a DC of 13 + the number of days since the last contact occurred. On a success, you learn the creature's type and can immediately use the goggles to cast Locate Creature to find that creature. This property can't be used again until the next dawn." ]
            ]
       ]
     }
@@ -1789,9 +1789,9 @@ uncommonItems =
     , source: [ SourceDMG ]
     , description: 
       [ P [ T "This prism has 50 charges. While you are holding it, you can use an action to speak one of three command words to cause one of the following effects:" ]
-      , UL [ LI [ T "The first command word causes the gem to shed bright light in a 30-foot radius and dim light for an additional 30 feet. This effect doesn't expend a charge. It lasts until you use a bonus action to repeat the command word or until you use another function of the gem." ]
-           , LI [ T "The second command word expends 1 charge and causes the gem to fire a brilliant beam of light at one creature you can see within 60 feet of you. The creature must succeed on a DC 15 Constitution saving throw or become blinded for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success." ]
-           , LI [ T "The third command word expends 5 charges and causes the gem to flare with blinding light in a 30-foot cone originating from it. Each creature in the cone must make a saving throw as if struck by the beam created with the second command word." ]
+      , UL [ [ T "The first command word causes the gem to shed bright light in a 30-foot radius and dim light for an additional 30 feet. This effect doesn't expend a charge. It lasts until you use a bonus action to repeat the command word or until you use another function of the gem." ]
+           , [ T "The second command word expends 1 charge and causes the gem to fire a brilliant beam of light at one creature you can see within 60 feet of you. The creature must succeed on a DC 15 Constitution saving throw or become blinded for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success." ]
+           , [ T "The third command word expends 5 charges and causes the gem to flare with blinding light in a 30-foot cone originating from it. Each creature in the cone must make a saving throw as if struck by the beam created with the second command word." ]
            ]
       , P [ T "When all of the gem's charges are expended, the gem becomes a non magical jewel worth 50 gp." ]
       ]
@@ -1876,16 +1876,16 @@ uncommonItems =
       [ P [ T "This ring, adorned with the symbol of a guild, allows you to cast one spell closely associated with that guild, as shown in the Guild Signet Spells table. A guild signet is sometimes awarded to a guild member whose renown score in that guild is 5 or higher, as a reward for performing special services for the guild. Aside from its magical properties, the ring is also an indicator of the guild's recognition and favor." ]
       , P [ T "A signet has 3 charges, and it regains 1d3 expended charges daily at dawn. While wearing it, you can expend 1 charge to cast the associated spell (save DC 13)." ]
       , TB   [ T "Guild",    T "Spell" ]
-        [ TR [ T "Azorious", T "Ensnaring Strike" ]
-        , TR [ T "Boros",    T "Heroism" ]
-        , TR [ T "Dimir",    T "Disguise Self" ]
-        , TR [ T "Golgari",  T "Entangle" ]
-        , TR [ T "Gruul",    T "Compelled Duel" ]
-        , TR [ T "Izzet",    T "Chaos Bolt" ]
-        , TR [ T "Orzhov",   T "Command" ]
-        , TR [ T "Rakdos",   T "Hellish Rebuke" ]
-        , TR [ T "Selesnya", T "Charm Person" ]
-        , TR [ T "Simic",    T "Expeditious Retreat" ]
+        [ [ T "Azorious", T "Ensnaring Strike" ]
+        , [ T "Boros",    T "Heroism" ]
+        , [ T "Dimir",    T "Disguise Self" ]
+        , [ T "Golgari",  T "Entangle" ]
+        , [ T "Gruul",    T "Compelled Duel" ]
+        , [ T "Izzet",    T "Chaos Bolt" ]
+        , [ T "Orzhov",   T "Command" ]
+        , [ T "Rakdos",   T "Hellish Rebuke" ]
+        , [ T "Selesnya", T "Charm Person" ]
+        , [ T "Simic",    T "Expeditious Retreat" ]
         ]
       ]
     }
@@ -1983,8 +1983,8 @@ uncommonItems =
     , source: [ SourceWayfarersGuideToEberron ]
     , description: 
       [ P [ T "The lenses of these goggles are carved from Siberys dragonshards. While garish in appearance, these goggles are a boon to any Tharashk inquisitive. To attune to the goggles, you must possess the Mark of Finding. As long as this condition is met, you gain the following benefits." ]
-      , UL [ LI [ T "You can add your Intuition die from the Hunter's Intuition trait of the mark when you make Wisdom (Insight) checks." ]
-           , LI [ T "When you examine an object, you can make a Wisdom (Perception) check to identify the aura of the last living creature to touch the object. The DC is 13 + the number of days since the last contact occurred. If the check is successful, you learn the species of the creature and you can immediately use your Imprint Prey ability to target this creature." ]
+      , UL [ [ T "You can add your Intuition die from the Hunter's Intuition trait of the mark when you make Wisdom (Insight) checks." ]
+           , [ T "When you examine an object, you can make a Wisdom (Perception) check to identify the aura of the last living creature to touch the object. The DC is 13 + the number of days since the last contact occurred. If the check is successful, you learn the species of the creature and you can immediately use your Imprint Prey ability to target this creature." ]
            ]
       ]
     }
@@ -2052,11 +2052,11 @@ uncommonItems =
     , description: 
       [ P [ T "These symbiotic gloves — made of thin chitin and sinew — pulse with a life of their own. To attune to them, you must wear them for the entire attunement period, during which the gloves bond with your skin." ]
       , P [ T "While attuned to these gloves, you gain one of the following proficiencies (your choice when you attune to the gloves):" ]
-      , UL [ LI [ T "Sleight of Hand" ]
-           , LI [ T "Thieves' tools" ]
-           , LI [ T "One kind of artisan's tools of your choice" ]
-           , LI [ T "One kind of musical instrument of your choice" ]
-           , LI [ T "When you make an ability check using the chosen proficiency, you add double your proficiency bonus to the check, instead of your normal proficiency bonus." ]
+      , UL [ [ T "Sleight of Hand" ]
+           , [ T "Thieves' tools" ]
+           , [ T "One kind of artisan's tools of your choice" ]
+           , [ T "One kind of musical instrument of your choice" ]
+           , [ T "When you make an ability check using the chosen proficiency, you add double your proficiency bonus to the check, instead of your normal proficiency bonus." ]
            ]
       , P [ B "Symbiotic Nature. ", T "The gloves can't be removed from you while you're attuned to them, and you can't voluntarily end your attunement to them. If you're targeted by a spell that ends a curse, your attunement to the gloves ends, and they can be removed." ]
       ]
@@ -2119,44 +2119,44 @@ uncommonItems =
       , P [ T "If you try to cast a cantrip you don't know, the DC for the Intelligence (Arcana) check is 10, and on a failed check, there is no effect." ]
       , P [ B "1st-Level Spells" ]
       , TB [ T "Roll d6", T "Spell" ]
-        [ TR [ T "1", T "Burning Hands" ]
-        , TR [ T "2", T "Chaos Bolt" ]
-        , TR [ T "3", T "Color Spray" ]
-        , TR [ T "4", T "Faerie Fire" ]
-        , TR [ T "5", T "Fog Cloud" ]
-        , TR [ T "6", T "Thunderwave" ]
+        [ [ T "1", T "Burning Hands" ]
+        , [ T "2", T "Chaos Bolt" ]
+        , [ T "3", T "Color Spray" ]
+        , [ T "4", T "Faerie Fire" ]
+        , [ T "5", T "Fog Cloud" ]
+        , [ T "6", T "Thunderwave" ]
         ]
       , P [ B "2nd-Level Spells" ]
       , TB [ T "Roll d6", T "Spell" ]
-        [ TR [ T "1", T "Blur" ]
-        , TR [ T "2", T "Gust of Wind" ]
-        , TR [ T "3", T "Heat Metal" ]
-        , TR [ T "4", T "Melf's Acid Arrow" ]
-        , TR [ T "5", T "Scorching Ray" ]
-        , TR [ T "6", T "Shatter" ]
+        [ [ T "1", T "Blur" ]
+        , [ T "2", T "Gust of Wind" ]
+        , [ T "3", T "Heat Metal" ]
+        , [ T "4", T "Melf's Acid Arrow" ]
+        , [ T "5", T "Scorching Ray" ]
+        , [ T "6", T "Shatter" ]
         ]
       , P [ B "3rd-Level Spells" ]
       , TB [ T "Roll d6", T "Spell" ]
-        [ TR [ T "1", T "Fear	" ]
-        , TR [ T "2", T "Feign Death" ]
-        , TR [ T "3", T "Fireball" ]
-        , TR [ T "4", T "Gaseous Form" ]
-        , TR [ T "5", T "Sleet Storm" ]
-        , TR [ T "6", T "Stinking Cloud" ]
+        [ [ T "1", T "Fear	" ]
+        , [ T "2", T "Feign Death" ]
+        , [ T "3", T "Fireball" ]
+        , [ T "4", T "Gaseous Form" ]
+        , [ T "5", T "Sleet Storm" ]
+        , [ T "6", T "Stinking Cloud" ]
         ]
       , P [ B "4th-Level Spells" ]
       , TB [ T "Roll d4", T "Spell" ]
-        [ TR [ T "1", T "Confusion" ]
-        , TR [ T "2", T "Conjure Minor Elementals" ]
-        , TR [ T "3", T "Evard's Black Tentacles" ]
-        , TR [ T "4", T "Ice Storm" ]
+        [ [ T "1", T "Confusion" ]
+        , [ T "2", T "Conjure Minor Elementals" ]
+        , [ T "3", T "Evard's Black Tentacles" ]
+        , [ T "4", T "Ice Storm" ]
         ]
       , P [ B "5th-Level Spells" ]
       , TB [ T "Roll d4", T "Spell" ]
-        [ TR [ T "1", T "Animate Objects" ]
-        , TR [ T "2", T "Cloudkill" ]
-        , TR [ T "3", T "Cone of Cold" ]
-        , TR [ T "4", T "Flame Strike" ]
+        [ [ T "1", T "Animate Objects" ]
+        , [ T "2", T "Cloudkill" ]
+        , [ T "3", T "Cone of Cold" ]
+        , [ T "4", T "Flame Strike" ]
         ]
       ]
     }
@@ -2346,11 +2346,11 @@ uncommonItems =
       [ P [ T "When you drink this potion, your Strength score changes for 1 hour. The type of giant determines the score (see the table below). This potion has no effect on you if your Strength is equal to or greater than that score." ]
       , P [ T "This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. The potion of frost giant strength and the potion of stone giant strength have the same effect." ]
       , TB   [ T "Giant Type",        T "Rarity",    T "STR Score" ]
-        [ TR [ T "Hill Giant",        T "Uncommon",  T "21" ]
-        , TR [ T "Frost/Stone Giant", T "Rare",      T "23" ]
-        , TR [ T "Fire Giant",        T "Rare",      T "25" ]
-        , TR [ T "Cloud Giant",       T "Rare",      T "27" ]
-        , TR [ T "Storm Giant",       T "Legendary", T "29" ]
+        [ [ T "Hill Giant",        T "Uncommon",  T "21" ]
+        , [ T "Frost/Stone Giant", T "Rare",      T "23" ]
+        , [ T "Fire Giant",        T "Rare",      T "25" ]
+        , [ T "Cloud Giant",       T "Rare",      T "27" ]
+        , [ T "Storm Giant",       T "Legendary", T "29" ]
         ]
       ]
     }
@@ -2399,16 +2399,16 @@ uncommonItems =
     , description: 
       [ P [ T "When you drink this potion, you gain resistance to one type of damage for 1 hour. The DM chooses the type or determines it randomly (d10) from the options below." ]
       , TB   [ T "Roll (d10)", T "Damage Type" ]
-        [ TR [ T "1",          T "Acid" ]
-        , TR [ T "2",          T "Cold" ]
-        , TR [ T "3",          T "Fire" ]
-        , TR [ T "4",          T "Force" ]
-        , TR [ T "5",          T "Lightning" ]
-        , TR [ T "6",          T "Necrotic" ]
-        , TR [ T "7",          T "Poison" ]
-        , TR [ T "8",          T "Psychic" ]
-        , TR [ T "9",          T "Radiant" ]
-        , TR [ T "10",         T "Thunder" ]
+        [ [ T "1",          T "Acid" ]
+        , [ T "2",          T "Cold" ]
+        , [ T "3",          T "Fire" ]
+        , [ T "4",          T "Force" ]
+        , [ T "5",          T "Lightning" ]
+        , [ T "6",          T "Necrotic" ]
+        , [ T "7",          T "Poison" ]
+        , [ T "8",          T "Psychic" ]
+        , [ T "9",          T "Radiant" ]
+        , [ T "10",         T "Thunder" ]
         ]
       ]
     }
@@ -2462,10 +2462,10 @@ uncommonItems =
     , description: 
       [ P [ T "This crystal grants you telepathy for as long as you remain attuned to it. See the introduction of the Monster Manual for rules on how this telepathy works. The crystal also glows with a purplish inner light while you are attuned to it. The higher your intelligence, the greater the light's intensity and the greater the range of the telepathy (see the Psi Crystal Properties table)." ]
       , TB   [ T "Int Range", T "Range of Telepathy", T "Light Intensity" ]
-        [ TR [ T "3-7",       T "15 feet",            T "Dim light out to a range of 5 feet" ]
-        , TR [ T "8-11",      T "30 feet",            T "Bright light in a 5-foot radius and dim light for an additional 5 feet" ]
-        , TR [ T "12-15",     T "60 feet",            T "Bright light in a 10-foot radius and dim light for an additional 10 feet" ]
-        , TR [ T "16+",       T "120 feet",           T "Bright light in a 15-foot radius and dim light for an additional 15 feet" ]
+        [ [ T "3-7",       T "15 feet",            T "Dim light out to a range of 5 feet" ]
+        , [ T "8-11",      T "30 feet",            T "Bright light in a 5-foot radius and dim light for an additional 5 feet" ]
+        , [ T "12-15",     T "60 feet",            T "Bright light in a 10-foot radius and dim light for an additional 10 feet" ]
+        , [ T "16+",       T "120 feet",           T "Bright light in a 15-foot radius and dim light for an additional 15 feet" ]
         ]
       ]
     }
@@ -2622,28 +2622,28 @@ uncommonItems =
     , description: 
       [ P [ T "This robe has cloth patches of various shapes and colors covering it. While wearing the robe. you can use an action to detach one of the patches, causing it to become the object or creature it represents. Once the last patch is removed, the robe becomes an ordinary garment." ]
       , P [ T "The robe has two of each of the following patches:" ]
-      , UL [ LI [ T "Dagger" ]
-           , LI [ T "Bullseye lantern (filled and lit)" ]
-           , LI [ T "Steel mirror" ]
-           , LI [ T "10-foot pole" ]
-           , LI [ T "Hempen rope (50 feet, coiled)" ]
-           , LI [ T "Sack" ]
+      , UL [ [ T "Dagger" ]
+           , [ T "Bullseye lantern (filled and lit)" ]
+           , [ T "Steel mirror" ]
+           , [ T "10-foot pole" ]
+           , [ T "Hempen rope (50 feet, coiled)" ]
+           , [ T "Sack" ]
            ]
       , P [ T "In addition, the robe has 4d4 other patches. The DM chooses the patches or determines them randomly." ]
       , TB   [ T "d100",  T "Patch" ]
-        [ TR [ T "01-08", T "Bag of 100 gp" ]
-        , TR [ T "09-15", T "Silver coffer (1 foot long, 6 inches wide and deep) worth 500 gp" ]
-        , TR [ T "16-22", T "Iron door (up to 10 feet wide and 10 feet high , barred on one side of your choice), which you can place in an opening you can reach; it conforms to fit the opening, attaching and hinging itself" ]
-        , TR [ T "23-30", T "10 gems worth 100 gp each" ]
-        , TR [ T "31-44", T "Wooden ladder (24 feet long)" ]
-        , TR [ T "45-51", T "A riding horse with saddle bags (see the Monster Manual for statistics)" ]
-        , TR [ T "52-59", T "Pit (a cube 10 feet on a side), which you can place on the ground within 10 feet of you" ]
-        , TR [ T "60-68", T "4 potions of healing" ]
-        , TR [ T "69-75", T "Rowboat (12 feet long)" ]
-        , TR [ T "76-83", T "Spell scroll containing one spell of 1st to 3rd level" ]
-        , TR [ T "84-90", T "2 mastiffs (see the Monster Manual for statistics)" ]
-        , TR [ T "91-96", T "Window (2 feet by 4 feet, up to 2 feet deep), which you can place on a vertical surface you can reach" ]
-        , TR [ T "97-00", T "Portable ram" ]
+        [ [ T "01-08", T "Bag of 100 gp" ]
+        , [ T "09-15", T "Silver coffer (1 foot long, 6 inches wide and deep) worth 500 gp" ]
+        , [ T "16-22", T "Iron door (up to 10 feet wide and 10 feet high , barred on one side of your choice), which you can place in an opening you can reach; it conforms to fit the opening, attaching and hinging itself" ]
+        , [ T "23-30", T "10 gems worth 100 gp each" ]
+        , [ T "31-44", T "Wooden ladder (24 feet long)" ]
+        , [ T "45-51", T "A riding horse with saddle bags (see the Monster Manual for statistics)" ]
+        , [ T "52-59", T "Pit (a cube 10 feet on a side), which you can place on the ground within 10 feet of you" ]
+        , [ T "60-68", T "4 potions of healing" ]
+        , [ T "69-75", T "Rowboat (12 feet long)" ]
+        , [ T "76-83", T "Spell scroll containing one spell of 1st to 3rd level" ]
+        , [ T "84-90", T "2 mastiffs (see the Monster Manual for statistics)" ]
+        , [ T "91-96", T "Window (2 feet by 4 feet, up to 2 feet deep), which you can place on a vertical surface you can reach" ]
+        , [ T "97-00", T "Portable ram" ]
         ]
       ]
     }
@@ -2840,9 +2840,9 @@ uncommonItems =
       , P [ T "Carrying Soul Coins. To hold a soul coin is to feel the soul bound within it — overcome with rage or fraught with despair." ]
       , P [ T "An evil creature can carry as many soul coins as it wishes (up to its maximum weight allowance). A nonevil creature can carry a number of soul coins equal to or less than its Constitution modifier without penalty. A non-evil creature carrying a number of soul coins greater than its Constitution modifier has disadvantage on its attack rolls, ability checks, and saving throws." ]
       , P [ T "Using a Soul Coin. A soul coin has 3 charges. A creature carrying the coin can use its action to expend 1 charge from a soul coin and use it to do one of the following:" ]
-      , UL [ LI [ B "Drain Life. ", T "You siphon away some of the soul's essence and gain 1d10 temporary hit points." ]
-           , LI [ B "Query. ", T "You telepathically ask the soul a question and receive a brief telepathic response. which you can understand. The soul knows only what it knew in life, but it must answer you truthfully and to the best of its ability. The answer is no more than a sentence or two and might be cryptic." ]
-           , LI [ B "Freeing a Soul. ", T "Casting a spell that removes a curse on a soul coin frees the soul trapped within it, as does expending all of the coin's charges. The coin itself rusts from within and is destroyed once the soul is released. A freed soul travels to the realm of the god it served or the outer plane most closely tied to its alignment (DM's choice). The souls of lawful evil creatures released from soul coins typically emerge from the River Styx as lemure devils." ]
+      , UL [ [ B "Drain Life. ", T "You siphon away some of the soul's essence and gain 1d10 temporary hit points." ]
+           , [ B "Query. ", T "You telepathically ask the soul a question and receive a brief telepathic response. which you can understand. The soul knows only what it knew in life, but it must answer you truthfully and to the best of its ability. The answer is no more than a sentence or two and might be cryptic." ]
+           , [ B "Freeing a Soul. ", T "Casting a spell that removes a curse on a soul coin frees the soul trapped within it, as does expending all of the coin's charges. The coin itself rusts from within and is destroyed once the soul is released. A freed soul travels to the realm of the god it served or the outer plane most closely tied to its alignment (DM's choice). The souls of lawful evil creatures released from soul coins typically emerge from the River Styx as lemure devils." ]
            ]
       , P [ T "A soul can also be freed by destroying the coin that contains it. A soul coin has AC 19, 1 hit point for each charge it has remaining, and immunity to all damage except that which is dealt by a hellfire weapon (Baldur's Gate: Descent into Avernus, page 223) or an infernal war machine's furnace (Baldur's Gate: Descent into Avernus, page 217)." ]
       , P [ T "Freeing a soul from a soul coin is considered a good act, even if the soul belongs to an evil creature." ]
@@ -2863,16 +2863,16 @@ uncommonItems =
       , P [ T "Once imbued with a spell. the gem can't be imbued again until the next dawn." ]
       , P [ T "Deep gnomes created these magic gemstones and keep the creation process a secret." ]
       , TB   [ T "Max. Spell Level", T "Gemstone",     T "Rarity",    T "Save DC", T "Attack Bonus" ]
-        [ TR [ T "Cantrip",          T "Obsidian",     T "Uncommon",  T "13",      T "+5" ]
-        , TR [ T "1st",              T "Lapis lazuli", T "Uncommon",  T "13",      T "+5" ]
-        , TR [ T "2nd",              T "Quartz",       T "Rare",      T "13",      T "+5" ]
-        , TR [ T "3rd",              T "Bloodstone",   T "Rare",      T "15",      T "+7" ]
-        , TR [ T "4th",              T "Amber",        T "Very rare", T "15",      T "+9" ]
-        , TR [ T "5th",              T "Jade",         T "Very rare", T "17",      T "+9" ]
-        , TR [ T "6th",              T "Topaz",        T "Very rare", T "17",      T "+10" ]
-        , TR [ T "7th",              T "Star ruby",    T "Legendary", T "18",      T "+10" ]
-        , TR [ T "8th",              T "Ruby",         T "Legendary", T "18",      T "+10" ]
-        , TR [ T "9th",              T "Diamond",      T "Legendary", T "19",      T "+11" ]
+        [ [ T "Cantrip",          T "Obsidian",     T "Uncommon",  T "13",      T "+5" ]
+        , [ T "1st",              T "Lapis lazuli", T "Uncommon",  T "13",      T "+5" ]
+        , [ T "2nd",              T "Quartz",       T "Rare",      T "13",      T "+5" ]
+        , [ T "3rd",              T "Bloodstone",   T "Rare",      T "15",      T "+7" ]
+        , [ T "4th",              T "Amber",        T "Very rare", T "15",      T "+9" ]
+        , [ T "5th",              T "Jade",         T "Very rare", T "17",      T "+9" ]
+        , [ T "6th",              T "Topaz",        T "Very rare", T "17",      T "+10" ]
+        , [ T "7th",              T "Star ruby",    T "Legendary", T "18",      T "+10" ]
+        , [ T "8th",              T "Ruby",         T "Legendary", T "18",      T "+10" ]
+        , [ T "9th",              T "Diamond",      T "Legendary", T "19",      T "+11" ]
         ]
       ]
     }
@@ -3118,9 +3118,9 @@ uncommonItems =
     , description: 
       [ P [ T "While you're wearing these cloth wraps, your unarmed strikes are considered magical for the purpose of overcoming immunity and resistance to nonmagical attacks and damage, and you gain a bonus to the attack and damage rolls of your unarmed strikes, determined by the wraps' rarity." ]
       , TB   [ T "Rarity",    T "Bonus" ]
-        [ TR [ T "Uncommon",  T "+1" ]
-        , TR [ T "Rare",      T "+2" ]
-        , TR [ T "Very Rare", T "+3" ]
+        [ [ T "Uncommon",  T "+1" ]
+        , [ T "Rare",      T "+2" ]
+        , [ T "Very Rare", T "+3" ]
         ]
       ]
     }
@@ -3149,8 +3149,8 @@ rareItems =
       [ P [ T "Acrid odors cling to this stained, heavy volume. The book's metal fittings are copper, iron, lead, silver, and gold, some frozen mid-transition from one metal to another. When found, the book contains the following spells: Enlarge/Reduce, Feather Fall, Flesh to Stone, Gaseous Form, Magic Weapon, and Polymorph. It functions as a spellbook for you." ]
       , P [ T "While you are holding the book, you can use it as a spellcasting focus for your wizard spells." ]
       , P [ T "The book has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
-      , UL [ LI [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the transmutation school." ]
-           , LI [ T "As an action, you can touch a nonmagical object that isn't being worn or carried and spend a number of charges to transform the target into another object. For 1 charge, the object can be no larger than 1 foot on a side. You can spend additional charges to increase the maximum dimensions by 2 feet per charge. The new object must have a gold value equal to or less than the original." ]
+      , UL [ [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the transmutation school." ]
+           , [ T "As an action, you can touch a nonmagical object that isn't being worn or carried and spend a number of charges to transform the target into another object. For 1 charge, the object can be no larger than 1 foot on a side. You can spend additional charges to increase the maximum dimensions by 2 feet per charge. The new object must have a gold value equal to or less than the original." ]
            ]
       ]
     }
@@ -3191,16 +3191,16 @@ rareItems =
     , description: 
       [ P [ T "You have resistance to one type of damage while you wear this armor. The DM chooses the type or determines it randomly from the options below." ]
       , TB [ T "d10", T "Damage Type" ]
-        [ TR [ T "1", T "Acid" ]
-        , TR [ T "2", T "Cold" ]
-        , TR [ T "3", T "Fire" ]
-        , TR [ T "4", T "Force" ]
-        , TR [ T "5", T "Lightning" ]
-        , TR [ T "6", T "Necrotic" ]
-        , TR [ T "7", T "Poison" ]
-        , TR [ T "8", T "Psychic" ]
-        , TR [ T "9", T "Radiant" ]
-        , TR [ T "10", T "Thunder" ]
+        [ [ T "1", T "Acid" ]
+        , [ T "2", T "Cold" ]
+        , [ T "3", T "Fire" ]
+        , [ T "4", T "Force" ]
+        , [ T "5", T "Lightning" ]
+        , [ T "6", T "Necrotic" ]
+        , [ T "7", T "Poison" ]
+        , [ T "8", T "Psychic" ]
+        , [ T "9", T "Radiant" ]
+        , [ T "10", T "Thunder" ]
         ]
       ]
     }
@@ -3243,8 +3243,8 @@ rareItems =
       , P [ T "While you are holding the archive, you can use it as a spellcasting focus for your wizard spells." ]
       , P [ T "The archive has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
       , UL
-        [ LI [ T "If you spend 1 minute studying the archive, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the archive. The new spell must be of the divination school." ]
-        , LI [ T "When a creature you can see within 30 feet of you makes an attack roll, an ability check, or a saving throw, you can use your reaction to expend 1 charge and force the creature to roll a d4 and apply the number rolled as a bonus or penalty (your choice) to the original roll. You can do this after you see the roll but before its effects are applied." ]
+        [ [ T "If you spend 1 minute studying the archive, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the archive. The new spell must be of the divination school." ]
+        , [ T "When a creature you can see within 30 feet of you makes an attack roll, an ability check, or a saving throw, you can use your reaction to expend 1 charge and force the creature to roll a d4 and apply the number rolled as a bonus or penalty (your choice) to the original roll. You can do this after you see the roll but before its effects are applied." ]
         ]
       ]
     }
@@ -3258,8 +3258,8 @@ rareItems =
       , P [ T "While you are holding the book, you can use it as a spellcasting focus for your wizard spells." ]
       , P [ T "The book has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
       , UL
-        [ LI [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the conjuration school." ]
-        , LI [ T "When you are hit by an attack, you can use your reaction to expend 1 charge to teleport up to 10 feet to an unoccupied space you can see. If your new position is out of range of the attack, it misses you." ]
+        [ [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the conjuration school." ]
+        , [ T "When you are hit by an attack, you can use your reaction to expend 1 charge to teleport up to 10 feet to an unoccupied space you can see. If your new position is out of range of the attack, it misses you." ]
         ]
       ]
     }
@@ -3285,18 +3285,18 @@ rareItems =
       , P [ T "If you dump the bag's contents out on the ground, they explode in a 10-foot radius, extending from the beans. Each creature in the area, including you, must make a DC 15 Dexterity saving throw, taking 5d4 fire damage on a failed save, or half as much damage on a successful one. The fire ignites flammable objects in the area that aren't being worn or carried." ]
       , P [ T "If you remove a bean from the bag, plant it in the dirt or sand, and then water it, the bean produces an effect 1 minute later from the ground where it was planted. The DM can choose an effect from the following table, determine it randomly, or create an effect." ]
       , TB [ T "d100", T "Effect" ]
-        [ TR [ T "01", T "5d4 toadstools sprout. If a creature eats a toadstool, roll any die. On an odd roll, the eater must succeed on a DC 15 Constitution saving throw or take 5d6 poison damage and become poisoned for 1 hour. On an even roll, the eater gains 5d6 temporary hit points for 1 hour." ]
-        , TR [ T "02-10", T "A geyser erupts and sprouts water, beer, berry juice, tea, vinegar, wine, or oil (DM's choice) 30 feet into the air for 1d12 rounds." ]
-        , TR [ T "11-20", T "A treant sprouts (see the Monster Manual for statistics). There's a 50 percent chance that the treant is chaotic evil and attacks." ]
-        , TR [ T "21-30", T "An animate, immobile stone statue in your likeness rises. It makes verbal threats against you. If you leave it and others come near, it describes you as the most heinous of villains and directs the newcomers to find and attack you. If you are on the same plane of existence as the statue, it knows where you are. The statue becomes inanimate after 24 hours." ]
-        , TR [ T "31-40", T "A campfire with blue flames springs forth and burns for 24 hours (or until it is extinguished)." ]
-        , TR [ T "41-50", T "1d6 + 6 shriekers sprout (see the Monster Manual for statistics)." ]
-        , TR [ T "51-60", T "1d4 + 8 bright pink toads crawl forth. Whenever a toad is touched, it transforms into a Large or smaller monster of the DM's choice. The monster remains for 1 minute, then disappears in a puff of bright pink smoke." ]
-        , TR [ T "61-70", T "A hungry bulette (see the Monster Manual for statistics) burrows up and attacks." ]
-        , TR [ T "71-80", T "A fruit tree grows. It has 1d10 + 20 fruit, 1d8 of which act as randomly determined magic potions, while one acts as an ingested poison of the DM's choice. The tree vanishes after 1 hour. Picked fruit remains, retaining any magic for 30 days." ]
-        , TR [ T "81-90", T "A nest of 1d4 + 3 eggs springs up. Any creature that eats an egg must make a DC 20 Constitution saving throw. On a successful save, a creature permanently increases its lowest ability score by 1, randomly choosing among equally low scores. On a failed save, the creature takes 10d6 force damage from an internal magical explosion." ]
-        , TR [ T "91-99", T "A pyramid with a 60-foot-square base bursts upward. Inside is a sarcophagus containing a mummy lord (see the Monster Manual for statistics). The pyramid is treated as the mummy lord's lair, and its sarcophagus contains treasure of the DM 's choice." ]
-        , TR [ T "00", T "A giant beanstalk sprouts, growing to a height of the DM's choice. The top leads where the DM chooses, such as to a great view, a cloud giant's castle, or a different plane of existence." ]
+        [ [ T "01", T "5d4 toadstools sprout. If a creature eats a toadstool, roll any die. On an odd roll, the eater must succeed on a DC 15 Constitution saving throw or take 5d6 poison damage and become poisoned for 1 hour. On an even roll, the eater gains 5d6 temporary hit points for 1 hour." ]
+        , [ T "02-10", T "A geyser erupts and sprouts water, beer, berry juice, tea, vinegar, wine, or oil (DM's choice) 30 feet into the air for 1d12 rounds." ]
+        , [ T "11-20", T "A treant sprouts (see the Monster Manual for statistics). There's a 50 percent chance that the treant is chaotic evil and attacks." ]
+        , [ T "21-30", T "An animate, immobile stone statue in your likeness rises. It makes verbal threats against you. If you leave it and others come near, it describes you as the most heinous of villains and directs the newcomers to find and attack you. If you are on the same plane of existence as the statue, it knows where you are. The statue becomes inanimate after 24 hours." ]
+        , [ T "31-40", T "A campfire with blue flames springs forth and burns for 24 hours (or until it is extinguished)." ]
+        , [ T "41-50", T "1d6 + 6 shriekers sprout (see the Monster Manual for statistics)." ]
+        , [ T "51-60", T "1d4 + 8 bright pink toads crawl forth. Whenever a toad is touched, it transforms into a Large or smaller monster of the DM's choice. The monster remains for 1 minute, then disappears in a puff of bright pink smoke." ]
+        , [ T "61-70", T "A hungry bulette (see the Monster Manual for statistics) burrows up and attacks." ]
+        , [ T "71-80", T "A fruit tree grows. It has 1d10 + 20 fruit, 1d8 of which act as randomly determined magic potions, while one acts as an ingested poison of the DM's choice. The tree vanishes after 1 hour. Picked fruit remains, retaining any magic for 30 days." ]
+        , [ T "81-90", T "A nest of 1d4 + 3 eggs springs up. Any creature that eats an egg must make a DC 20 Constitution saving throw. On a successful save, a creature permanently increases its lowest ability score by 1, randomly choosing among equally low scores. On a failed save, the creature takes 10d6 force damage from an internal magical explosion." ]
+        , [ T "91-99", T "A pyramid with a 60-foot-square base bursts upward. Inside is a sarcophagus containing a mummy lord (see the Monster Manual for statistics). The pyramid is treated as the mummy lord's lair, and its sarcophagus contains treasure of the DM 's choice." ]
+        , [ T "00", T "A giant beanstalk sprouts, growing to a height of the DM's choice. The top leads where the DM chooses, such as to a great view, a cloud giant's castle, or a different plane of existence." ]
         ]
       ]
     }
@@ -3311,7 +3311,7 @@ rareItems =
       , P [ B "Sentinel Standard. ", T "You can see invisible creatures while they are within 20 feet of the unfurled banner and within your line of sight." ]
       , P [ B "Standard's Shield. ", T "As a bonus action, you can touch the unfurled banner and invoke this power. Any ranged attack roll that targets you or an ally of yours has disadvantage if the target is within 20 feet of the unfurled banner. This benefit lasts for 1 minute or until the banner is furled. Once you use this property, you can't use it again until you finish a short or long rest." ]
       , P [ B "Gift of Battle. ", T "You can transfer the banner's magic to a place by tracing the krig rune on the ground with your finger. The point where you trace it becomes the center of a spherical area of magic that has a 500-foot radius and that is fixed to the place. The transfer takes 8 hours of work that requires the banner to be within 5 feet of you and during which you choose creatures, creature types, or both that will benefit from the magic. At the end, the banner is destroyed, and the area gains the following property:" ]
-      , UL [ LI [ T "While in the 500-foot-radius sphere, the creatures you chose during the transfer process are immune to the frightened condition and gain a +1 bonus to attack rolls and AC." ] ]
+      , UL [ [ T "While in the 500-foot-radius sphere, the creatures you chose during the transfer process are immune to the frightened condition and gain a +1 bonus to attack rolls and AC." ] ]
       ]
     }
   , { title: "Battering Shield"
@@ -3344,8 +3344,8 @@ rareItems =
       [ P [ T "This silver implement is shaped like a tree branch and is strung with small golden bells. The branch is a spellcasting focus for your spells while you hold it." ]
       , P [ T "The branch has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
       , UL
-        [ LI [ T "As a bonus action, you can expend 1 charge to detect the presence of aberrations, celestials, constructs, elementals, fey, fiends, or undead within 60 feet of you. If such creatures are present and don't have total cover from you, the bells ring softly, their tone indicating the creature types present." ]
-        , LI [ T "As an action, you can expend 1 charge to cast Protection from Evil and Good." ]
+        [ [ T "As a bonus action, you can expend 1 charge to detect the presence of aberrations, celestials, constructs, elementals, fey, fiends, or undead within 60 feet of you. If such creatures are present and don't have total cover from you, the bells ring softly, their tone indicating the creature types present." ]
+        , [ T "As an action, you can expend 1 charge to cast Protection from Evil and Good." ]
         ]
       ]
     }
@@ -3357,15 +3357,15 @@ rareItems =
     , description: 
       [ P [ T "While wearing this belt, you gain the following benefits:" ]
       , UL
-        [ LI [ T "Your Constitution score increases by 2, to a maximum of 20." ]
-        , LI [ T "You have advantage on Charisma (Persuasion) checks made to interact with dwarves." ]
+        [ [ T "Your Constitution score increases by 2, to a maximum of 20." ]
+        , [ T "You have advantage on Charisma (Persuasion) checks made to interact with dwarves." ]
         ]
       , P [ T "In addition, while attuned to the belt, you have a 50 percent chance each day at dawn of growing a full beard if you're capable of growing one, or a visibly thicker beard if you already have one." ]
       , P [ T "If you aren't a dwarf, you gain the following additional benefits while wearing the belt:" ]
       , UL
-        [ LI [ T "You have advantage on saving throws against poison, and you have resistance against poison damage." ]
-        , LI [ T "You have darkvision out to a range of 60 feet." ]
-        , LI [ T "You can speak, read, and write Dwarvish." ]
+        [ [ T "You have advantage on saving throws against poison, and you have resistance against poison damage." ]
+        , [ T "You have darkvision out to a range of 60 feet." ]
+        , [ T "You can speak, read, and write Dwarvish." ]
         ]
       ]
     }
@@ -3378,11 +3378,11 @@ rareItems =
       [ P [ T "While wearing this belt, your Strength score changes to a score granted by the belt. If your Strength is already equal to or greater than the belt's score, the item has no effect on you." ]
       , P [ T "Six varieties of this belt exist, corresponding with and having rarity according to the six kinds of true giants. The ", I "Belt of Stone Giant Strength", T " and the ", I "Belt of Frost Giant Strength", T " look different, but they have the same effect." ]
       , TB   [ T "Type",              T "Strength", T "Rarity" ]
-        [ TR [ T "Hill Giant",        T "21",       T "Rare" ]
-        , TR [ T "Stone/Frost Giant", T "23",       T "Very Rare" ]
-        , TR [ T "Fire Giant",        T "25",       T "Very Rare" ]
-        , TR [ T "Cloud Giant",       T "27",       T "Legendary" ]
-        , TR [ T "Storm Giant",       T "29",       T "Legendary" ]
+        [ [ T "Hill Giant",        T "21",       T "Rare" ]
+        , [ T "Stone/Frost Giant", T "23",       T "Very Rare" ]
+        , [ T "Fire Giant",        T "25",       T "Very Rare" ]
+        , [ T "Cloud Giant",       T "27",       T "Legendary" ]
+        , [ T "Storm Giant",       T "29",       T "Legendary" ]
         ]
       ]
     }
@@ -3523,8 +3523,8 @@ rareItems =
     , description: 
       [ P [ T "This black leather apron is perpetually covered by blood, even after being washed off. You gain the following benefits while wearing the apron:" ]
       , UL
-        [ LI [ T "Once per turn when you roll damage for a melee attack with a weapon, you can reroll the weapon's damage dice. If you do so, you must use the second total." ]
-        , LI [ T "Your weapon attacks that deal slashing damage score a critical hit on a roll of 19 or 20 on the d20." ]
+        [ [ T "Once per turn when you roll damage for a melee attack with a weapon, you can reroll the weapon's damage dice. If you do so, you must use the second total." ]
+        , [ T "Your weapon attacks that deal slashing damage score a critical hit on a roll of 19 or 20 on the d20." ]
         ]
       ]
     }
@@ -3589,11 +3589,11 @@ rareItems =
       , P [ T "While holding the rose by its stem, you gain resistance to damage of the type associated with the rose's color. If you would take more than 10 damage of this type from a single source (after applying the resistance), the rose disintegrates, and you take no damage instead." ]
       , P [ T "As an action, you can blow the petals from the rose to produce a 20-foot cone of acid, lightning, poisonous gas, fire, or cold, as dictated by the rose's damage type. Each creature in the cone must make a DC 15 Constitution saving throw, taking 3d10 damage of the appropriate type on a failed save, or half as much damage on a successful one. Using this property destroys the rose." ]
       , TB   [ T "Color", T "Visual Effect",           T "Damage Type" ]
-        [ TR [ T "Black", T "Drips acid",              T "Acid" ]
-        , TR [ T "Blue",  T "Crackles with lightning", T "Lightning" ]
-        , TR [ T "Green", T "Issues green gas",        T "Poison" ]
-        , TR [ T "Red",   T "Wreathed in fire",        T "Fire" ]
-        , TR [ T "White", T "Covered with frost",      T "Cold" ]
+        [ [ T "Black", T "Drips acid",              T "Acid" ]
+        , [ T "Blue",  T "Crackles with lightning", T "Lightning" ]
+        , [ T "Green", T "Issues green gas",        T "Poison" ]
+        , [ T "Red",   T "Wreathed in fire",        T "Fire" ]
+        , [ T "White", T "Covered with frost",      T "Cold" ]
         ]
       ]
     }
@@ -3608,7 +3608,7 @@ rareItems =
       , P [ B "Wyrm Shield. ", T "While the claw is displayed on your person, you have resistance to the damage caused by any dragon's breath weapon." ]
       , P [ B "Wyrm Ward. ", T "You can transfer the claw's magic to a place by tracing the wyrm rune on the ground with your finger. The point where you trace it becomes the center of a spherical area of magic that has a 100-foot radius and that is fixed to the place. The transfer takes 8 hours of work that requires the claw to be within 5 feet of you. At the end, the claw is destroyed, and the area gains the following property:" ]
       , UL
-        [ LI [ T "While in the 100-foot-radius sphere, any dragon has disadvantage on saving throws and can have a flying speed no higher than 10 feet." ]
+        [ [ T "While in the 100-foot-radius sphere, any dragon has disadvantage on saving throws and can have a flying speed no higher than 10 feet." ]
         ]
       ]
     }
@@ -3685,20 +3685,20 @@ rareItems =
       , P [ T "If your movement causes the barrier to come into contact with a solid object that can't pass through the cube, you can't move any closer to that object as long as the barrier remains." ]
       , P [ B "Cube of Force Faces" ]
       , TB [ T "Face", T "Charges", T "Effect" ]
-        [ TR [ T "1", T "1", T "Gases, wind, and fog can't pass through the barrier." ]
-        , TR [ T "2", T "2", T "Nonliving matter can't pass through the barrier. Walls, floors, and ceilings can pass through at your discretion." ]
-        , TR [ T "3", T "3", T "Living matter can't pass through the barrier." ]
-        , TR [ T "4", T "4", T "Spell effects can't pass through the barrier." ]
-        , TR [ T "5", T "5", T "Nothing can pass through the barrier. Walls, floors, and ceilings can pass through at your discretion." ]
-        , TR [ T "6", T "0", T "The barrier deactivates." ]
+        [ [ T "1", T "1", T "Gases, wind, and fog can't pass through the barrier." ]
+        , [ T "2", T "2", T "Nonliving matter can't pass through the barrier. Walls, floors, and ceilings can pass through at your discretion." ]
+        , [ T "3", T "3", T "Living matter can't pass through the barrier." ]
+        , [ T "4", T "4", T "Spell effects can't pass through the barrier." ]
+        , [ T "5", T "5", T "Nothing can pass through the barrier. Walls, floors, and ceilings can pass through at your discretion." ]
+        , [ T "6", T "0", T "The barrier deactivates." ]
         ]
       , P [ T "The cube loses charges when the barrier is targeted by certain spells or comes into contact with certain spell or magic item effects, as shown in the table below." ]
       , TB [ T " Spell or Item", T "Charges Lost" ]
-        [ TR [ T "Disintegrate", T "1d12"]
-        , TR [ T "Horn of Blasting", T "1d10"]
-        , TR [ T "Passwall", T "1d6"]
-        , TR [ T "Prismatic Spray", T "1d20"]
-        , TR [ T "Wall of Fire", T "1d4"]
+        [ [ T "Disintegrate", T "1d12"]
+        , [ T "Horn of Blasting", T "1d10"]
+        , [ T "Passwall", T "1d6"]
+        , [ T "Prismatic Spray", T "1d20"]
+        , [ T "Wall of Fire", T "1d4"]
         ]
       ]
     }
@@ -3796,9 +3796,9 @@ rareItems =
       , P [ B "Life Support. ", T "Whenever you end your turn with 0 hit points, the docent can make a Wisdom (Medicine) check with a +6 bonus. If this check succeeds, the docent stabilizes you." ]
       , P [ B "Random Properties. ", T "A docent has the following properties:" ]
       , UL 
-        [ LI [ B "Languages. ", T "The docent knows Common, Giant, and 1d4 additional languages chosen by the DM. If a docent knows fewer than six languages, it can learn a new language after it hears or reads the language through your senses." ]
-        , LI [ B "Skills. ", T "The docent has a +7 bonus to one of the following skills (roll a d4): (1) Arcana, (2) History, (3) Investigation, or (4) Nature." ]
-        , LI [ B "Spells. ", T "The docent knows one of the following spells and can cast it at will, requiring no components (roll a d6): (1-2) Detect Evil and Good or (3-6) Detect Magic. The docent decides when to cast the spell." ]
+        [ [ B "Languages. ", T "The docent knows Common, Giant, and 1d4 additional languages chosen by the DM. If a docent knows fewer than six languages, it can learn a new language after it hears or reads the language through your senses." ]
+        , [ B "Skills. ", T "The docent has a +7 bonus to one of the following skills (roll a d4): (1) Arcana, (2) History, (3) Investigation, or (4) Nature." ]
+        , [ B "Spells. ", T "The docent knows one of the following spells and can cast it at will, requiring no components (roll a d6): (1-2) Detect Evil and Good or (3-6) Detect Magic. The docent decides when to cast the spell." ]
         ]
       , P [ B "Personality. ", T "A docent is designed to advise and assist the warforged it's attached to. One of the simple functions of a docent is to serve as a translator. The docent's properties are under its control, and if you have a bad relationship with your docent, it might refuse to assist you." ]
       ]
@@ -3812,12 +3812,12 @@ rareItems =
       [ P [ T "This twelve-sided metal die is 12 inches across and bears the numbers 1 through 12 engraved on its pentagonal sides. The dodecahedron contains arcane clockwork mechanisms that whir and click whenever the die is cast." ]
       , P [ T "The dodecahedron can be hurled up to 60 feet as an action: A random magical effect occurs when the die comes to a rest after rolling across the ground for at least 10 feet. If an effect requires a target and no eligible target is within range, nothing happens. Spells cast by the dodecahedron require no components. Roll a d12 and consult the following table to determine the effect:" ]
       , TB   [ T "d12",   T "Effect" ]
-        [ TR [ T "1-2",   T "The dodecahedron explodes and is destroyed. Each creature within 20 feet of the exploding die must make a DC 13 Dexterity saving throw, taking 40 (9d8) force damage on a failed save, or half as much damage on a successful one" ]
-        , TR [ T "3-4",   T "The dodecahedron casts light on itself. The effect lasts until a creature touches the die" ]
-        , TR [ T "5-6",   T "The dodecahedron casts Ray of Frost (+5 to hit) targeting a random creature within 60 feet that doesn't have total cover against the attack." ]
-        , TR [ T "7-8",   T "The dodecahedron casts Shocking Grasp (+5 to hit) on the next creature that touches it." ]
-        , TR [ T "9-10",  T "The dodecahedron casts Darkness on itself. The effect has a duration of 10 minutes." ]
-        , TR [ T "11-12", T "The next creature to touch the dodecahedron gains 1d10 temporary hit points that last for 1 hour." ]
+        [ [ T "1-2",   T "The dodecahedron explodes and is destroyed. Each creature within 20 feet of the exploding die must make a DC 13 Dexterity saving throw, taking 40 (9d8) force damage on a failed save, or half as much damage on a successful one" ]
+        , [ T "3-4",   T "The dodecahedron casts light on itself. The effect lasts until a creature touches the die" ]
+        , [ T "5-6",   T "The dodecahedron casts Ray of Frost (+5 to hit) targeting a random creature within 60 feet that doesn't have total cover against the attack." ]
+        , [ T "7-8",   T "The dodecahedron casts Shocking Grasp (+5 to hit) on the next creature that touches it." ]
+        , [ T "9-10",  T "The dodecahedron casts Darkness on itself. The effect has a duration of 10 minutes." ]
+        , [ T "11-12", T "The next creature to touch the dodecahedron gains 1d10 temporary hit points that last for 1 hour." ]
         ]
       ]
     }
@@ -3876,8 +3876,8 @@ rareItems =
       , P [ T "While you are holding the book, you can use it as a spellcasting focus for your wizard spells." ]
       , P [ T "The book has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
       , UL
-        [ LI [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the illusion school." ]
-        , LI [ T "When a creature you can see makes an Intelligence (Investigation) check to discern the true nature of an illusion spell you cast, or makes a saving throw against an illusion spell you cast, you can use your reaction and expend 1 charge to impose disadvantage on the roll." ]
+        [ [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the illusion school." ]
+        , [ T "When a creature you can see makes an Intelligence (Investigation) check to discern the true nature of an illusion spell you cast, or makes a saving throw against an illusion spell you cast, you can use your reaction and expend 1 charge to impose disadvantage on the roll." ]
         ]
       ]
     }
@@ -3900,10 +3900,10 @@ rareItems =
       , P [ T "Roll a d4 and consult the Elemental Essence Shards table to determine the shard's essence and property. When you use a Metamagic option on a spell while you are holding or wearing the shard, you can use that property." ]
       , P [ B "Elemental Essence Shards" ]
       , TB [ T "d4", T "Element", T "Property" ]
-        [ TR [ T "1", B "Air.", T "You can immediately fly up to 60 feet without provoking opportunity attacks." ]
-        , TR [ T "2", B "Earth", T " You gain resistance to a damage type of your choice until the start of your next turn." ]
-        , TR [ T "3", B "Fire", T " One target of the spell that you can see catches fire. The burning target takes 2d10 fire damage at the start of its next turn, and then the flames go out." ]
-        , TR [ T "4", B "Water", T " You create a wave of water that bursts out from you in a 10-foot radius. Each creature of your choice that you can see in that area takes 2d6 cold damage and must succeed on a Strength saving throw against your spell save DC or be pushed 10 feet away from you and fall prone." ]
+        [ [ T "1", B "Air.", T "You can immediately fly up to 60 feet without provoking opportunity attacks." ]
+        , [ T "2", B "Earth", T " You gain resistance to a damage type of your choice until the start of your next turn." ]
+        , [ T "3", B "Fire", T " One target of the spell that you can see catches fire. The burning target takes 2d10 fire damage at the start of its next turn, and then the flames go out." ]
+        , [ T "4", B "Water", T " You create a wave of water that bursts out from you in a 10-foot radius. Each creature of your choice that you can see in that area takes 2d6 cold damage and must succeed on a Strength saving throw against your spell save DC or be pushed 10 feet away from you and fall prone." ]
         ]
       ]
     }
@@ -3944,9 +3944,9 @@ rareItems =
       [ P [ T "The backs of these cards are inscribed with glyphs representing the Inner Planes, the Outer Planes, or the holy symbols of various deities. While holding this deck, you can use it as a spellcasting focus, and you gain a bonus to spell attack rolls and to your spell save DC. The bonus is determined by the deck's rarity." ]
       , P [ T "In addition, while you're holding the deck, you can draw a card as an action to expend and roll one of your Hit Dice and add the deck's bonus to the number rolled. One creature you can see within 30 feet of you either takes radiant damage or regains hit points (your choice) equal to the total." ]
       , TB [ T "Rarity", T "Bonus" ]
-        [ TR [ T "Rare", T "+1" ]
-        , TR [ T "Very Rare", T "+2" ]
-        , TR [ T "Legendary", T "+3" ]
+        [ [ T "Rare", T "+1" ]
+        , [ T "Very Rare", T "+2" ]
+        , [ T "Legendary", T "+3" ]
         ]
       ]
     }
@@ -4001,10 +4001,10 @@ rareItems =
       , P [ B "Chariots" ]
       , P [ T "Chariots and the creatures pulling them work like controlled mounts, as described in the mounted combat rules in the Player's Handbook, but with the following differences:" ]
       , UL
-        [ LI [ T "Mounting or dismounting a chariot costs you 5 feet of movement, rather than a number of feet equal to half your speed." ]
-        , LI [ T "Being mounted on a chariot grants you half cover." ]
-        , LI [ T "A chariot's speed is equal to the speed of the slowest creature pulling it." ]
-        , LI [ T "If multiple creatures are pulling the chariot, they all act on the same initiative, and they must take the same action on their turn." ]
+        [ [ T "Mounting or dismounting a chariot costs you 5 feet of movement, rather than a number of feet equal to half your speed." ]
+        , [ T "Being mounted on a chariot grants you half cover." ]
+        , [ T "A chariot's speed is equal to the speed of the slowest creature pulling it." ]
+        , [ T "If multiple creatures are pulling the chariot, they all act on the same initiative, and they must take the same action on their turn." ]
         ]
       ]
     }
@@ -4031,8 +4031,8 @@ rareItems =
       , P [ T "While you are holding the book, you can use it as a spellcasting focus for your wizard spells." ]
       , P [ T "The book has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
       , UL
-        [ LI [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the evocation school." ]
-        , LI [ T "When one creature you can see takes damage from an evocation spell you cast, you can use your reaction and expend 1 charge to deal an extra 2d6 force damage to the creature and knock the creature prone if it is Large or smaller." ]
+        [ [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the evocation school." ]
+        , [ T "When one creature you can see takes damage from an evocation spell you cast, you can use your reaction and expend 1 charge to deal an extra 2d6 force damage to the creature and knock the creature prone if it is Large or smaller." ]
         ]
       ]
     }
@@ -4044,9 +4044,9 @@ rareItems =
     , description: 
       [ P [ T "This finely carved pipe blows odorless bubbles instead of smoke when used. The pipe has 3 charges, and it regains all spent charges daily at dawn. While you hold the pipe, you can expend charges to gain access to the following properties:" ]
       , UL
-        [ LI [ T "You can cast Fog Cloud as an action (1 charge)." ]
-        , LI [ T "You can cast Misty Step as a bonus action (2 charges)." ]
-        , LI [ T "You can summon a steam mephit as an action (3 charges). The mephit is friendly to you, obeys your verbal commands, and acts on its own turn in the initiative order. It disappears in a harmless puff of steam after 1 minute or if it ends its turn more than 60 feet from the pipe." ]
+        [ [ T "You can cast Fog Cloud as an action (1 charge)." ]
+        , [ T "You can cast Misty Step as a bonus action (2 charges)." ]
+        , [ T "You can summon a steam mephit as an action (3 charges). The mephit is friendly to you, obeys your verbal commands, and acts on its own turn in the initiative order. It disappears in a harmless puff of steam after 1 minute or if it ends its turn more than 60 feet from the pipe." ]
         ]
       ]
     }
@@ -4080,7 +4080,7 @@ rareItems =
       , P [ B "Bond of Amity. ", T "As an action, you can use the gavel to strike a point on a hard surface. The first time in the next minute that a creature within 60 feet of that point deals damage to another creature with an attack that hits, the attacker takes psychic damage equal to half the damage it dealt to the target. Once you use this property, you can't use it again until you finish a long rest." ]
       , P [ B "Gift of Truth. ", T "You can transfer the gavel's magic to a place by tracing the venn rune on the ground with your finger. The point where you trace it becomes the center of a spherical area of magic that has a 30-foot radius and that is fixed to the place. The transfer takes 8 hours of work that requires the gavel to be within 5 feet of you. At the end, the gavel is destroyed, and the area gains the following property:" ]
       , UL
-        [ LI [ T "Whenever a creature utters a lie while within the 30-foot-radius sphere, that creature takes 5 psychic damage and flinches visibly." ] 
+        [ [ T "Whenever a creature utters a lie while within the 30-foot-radius sphere, that creature takes 5 psychic damage and flinches visibly." ] 
         ]
       ]
     }
@@ -4195,8 +4195,8 @@ rareItems =
       , P [ T "While you are holding the book, you can use it as a spellcasting focus for your wizard spells." ]
       , P [ T "The book has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
       , UL 
-        [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the enchantment school." 
-        , T "When you cast an enchantment spell, you can expend 1 charge to impose disadvantage on the first saving throw one target makes against the spell." 
+        [ [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the enchantment school." ]
+        , [ T "When you cast an enchantment spell, you can expend 1 charge to impose disadvantage on the first saving throw one target makes against the spell." ]
         ] 
       ]
     }
@@ -4231,21 +4231,21 @@ rareItems =
       , P [ T "The helm has 3 charges. To cast a spell from the helm, you must expend 1 charge, and the helm regains 1d3 charges daily at dawn." ]
       , P [ B "Helm of the Gods" ]
       , TB [ T "God", T "Spell" ]
-        [ TR [ T "Athreos", T "Protection from Evil and Good" ]
-        , TR [ T "Ephara", T "Sanctuary" ]
-        , TR [ T "Erebos", T "Inflict Wounds" ]
-        , TR [ T "Heliod", T "Guiding Bolt" ]
-        , TR [ T "Iroas", T "Heroism" ]
-        , TR [ T "Karametra", T "Goodberry" ]
-        , TR [ T "Keranos", T "Thunderous Smite" ]
-        , TR [ T "Klothys", T "Entangle" ]
-        , TR [ T "Kruphix", T "Dissonant Whispers" ]
-        , TR [ T "Mogis", T "Hellish Rebuke" ]
-        , TR [ T "Nylea", T "Faerie Fire" ]
-        , TR [ T "Pharika", T "Lesser Restoration" ]
-        , TR [ T "Phenax", T "Charm Person" ]
-        , TR [ T "Purphoros", T "Searing Smite" ]
-        , TR [ T "Thassa", T "Identify" ]
+        [ [ T "Athreos", T "Protection from Evil and Good" ]
+        , [ T "Ephara", T "Sanctuary" ]
+        , [ T "Erebos", T "Inflict Wounds" ]
+        , [ T "Heliod", T "Guiding Bolt" ]
+        , [ T "Iroas", T "Heroism" ]
+        , [ T "Karametra", T "Goodberry" ]
+        , [ T "Keranos", T "Thunderous Smite" ]
+        , [ T "Klothys", T "Entangle" ]
+        , [ T "Kruphix", T "Dissonant Whispers" ]
+        , [ T "Mogis", T "Hellish Rebuke" ]
+        , [ T "Nylea", T "Faerie Fire" ]
+        , [ T "Pharika", T "Lesser Restoration" ]
+        , [ T "Phenax", T "Charm Person" ]
+        , [ T "Purphoros", T "Searing Smite" ]
+        , [ T "Thassa", T "Identify" ]
         ]
       ]
     }
@@ -4270,10 +4270,10 @@ rareItems =
       [ P [ T "This tiny silver fishhook has a little gold feather attached to it. For it to function, the feathered hook must be tied to the end of a fishing line and immersed in enough water to fill at least a 10-foot cube. At the end of each uninterrupted hour of immersion, roll a d6. On a 6, a floppy, 6-inch-long magical fish appears on the end of the hook. The color and properties of the conjured fish are determined by rolling on the Hook of Fisher's Delight table. Once the hook conjures a fish, it can't do so again until the next dawn." ]
       , P [ B "Hook of Fisher's Delight" ]
       , TB [ T "d20", T "Fish Color", T"Magical Property" ]
-        [ TR [ T "1-10",   T "Green with copper bands",   T "This tasty fish provides a day's worth of nourishment to one creature that eats it. The fish loses this property and rots if it's not eaten within 24 hours of being caught." ]
-        , TR [ T "11-14",  T "Yellow with black stripes", T "Once removed from the hook, this awful-tasting fish can be thrown up to 120 feet, targeting a creature the thrower can see. The target must succeed on a DC 15 Strength saving throw or be knocked prone. The fish then disappears." ]
-        , TR [ T "15 -18", T "Blue with white bands",     T "When released from this hook, this fish squirms free, sprouts wings, follows you around, and signs a beautiful tune in Aquan. It disappears after 2d4 hours or when reduced to 0 hit points. The fish uses the quipper stat block, except that it can breathe air and has a flying speed of 30 feet." ]
-        , TR [ T "19-20",  T "Gold with silver stripes",  T "This tasty fish provides a day's worth of nourishment to one creature that eats it and grants 2d10 temporary hit points to that creature. The fish loses these properties and rots if it's not eaten within 24 hours of being caught." ]
+        [ [ T "1-10",   T "Green with copper bands",   T "This tasty fish provides a day's worth of nourishment to one creature that eats it. The fish loses this property and rots if it's not eaten within 24 hours of being caught." ]
+        , [ T "11-14",  T "Yellow with black stripes", T "Once removed from the hook, this awful-tasting fish can be thrown up to 120 feet, targeting a creature the thrower can see. The target must succeed on a DC 15 Strength saving throw or be knocked prone. The fish then disappears." ]
+        , [ T "15 -18", T "Blue with white bands",     T "When released from this hook, this fish squirms free, sprouts wings, follows you around, and signs a beautiful tune in Aquan. It disappears after 2d4 hours or when reduced to 0 hit points. The fish uses the quipper stat block, except that it can breathe air and has a flying speed of 30 feet." ]
+        , [ T "19-20",  T "Gold with silver stripes",  T "This tasty fish provides a day's worth of nourishment to one creature that eats it and grants 2d10 temporary hit points to that creature. The fish loses these properties and rots if it's not eaten within 24 hours of being caught." ]
         ]
       ]
     }
@@ -4306,10 +4306,10 @@ rareItems =
       [ P [ T "You can use an action to blow this horn. In response, warrior spirits from the plane of Ysgard appear within 60 feet of you. These spirits use the berserker statistics from the Monster Manual. They return to Ysgard after 1 hour or when they drop to 0 hit points. Once you use the horn, it can't be used again until 7 days have passed." ]
       , P [ T "Four types of horn of Valhalla are known to exist, each made of a different metal. The horn's type determines how many berserkers answer its summons, as well as the requirement for its use. The DM chooses the horn's type or determines it randomly." ]
       , TB [ T "d100", T "Horn Type", T "Berserkers Summoned", T "Requirement" ]
-        [ TR [T "01-40", T "Silver", T "2d4 + 2", T "None" ]
-        , TR [T "41-75", T "Brass", T "3d4 + 3", T "Proficiency with all simple weapons" ]
-        , TR [T "76-90", T "Bronze", T "4d4 + 4", T "Proficiency with all medium armor" ]
-        , TR [T "91-00", T "Iron", T "5d4 + 5", T "Proficiency with all martial weapons" ]
+        [ [T "01-40", T "Silver", T "2d4 + 2", T "None" ]
+        , [T "41-75", T "Brass", T "3d4 + 3", T "Proficiency with all simple weapons" ]
+        , [T "76-90", T "Bronze", T "4d4 + 4", T "Proficiency with all medium armor" ]
+        , [T "91-00", T "Iron", T "5d4 + 5", T "Proficiency with all martial weapons" ]
         ]
       , P [ T "If you blow the horn without meeting its requirement, the summoned berserkers attack you. If you meet the requirement, they are friendly to you and your companions and follow your commands." ]
       ]
@@ -4398,9 +4398,9 @@ rareItems =
     , description: 
       [ P [ T "While wearing this eye patch, you gain these benefits:" ]
       , UL
-        [ LI [ T "You have advantage on Wisdom (Perception) checks that rely on sight." ]
-        , LI [ T "If you have the Sunlight Sensitivity trait, you are unaffected by the trait." ]
-        , LI [ T "You are immune to magic that allows other creatures to read your thoughts or determine whether you are lying. Creatures can communicate telepathically with you only if you allow it." ]
+        [ [ T "You have advantage on Wisdom (Perception) checks that rely on sight." ]
+        , [ T "If you have the Sunlight Sensitivity trait, you are unaffected by the trait." ]
+        , [ T "You are immune to magic that allows other creatures to read your thoughts or determine whether you are lying. Creatures can communicate telepathically with you only if you allow it." ]
         ]
       ]
     }
@@ -4424,13 +4424,13 @@ rareItems =
     , description: 
       [ P [ T "Strange rituals have repurposed the body of a flesh golem into this partially sentient suit of leather armor. While wearing this armor, you gain a +1 bonus to AC and to saving throws against spells and other magical effects. In addition, you gain the following properties:" ]
       , UL 
-        [ LI [ B "Immutable Form. ", T "You are immune to any spell or effect that would alter your form." ]
-        , LI [ B "Lightning Absorption. ", T "You gain resistance to lightning damage. Whenever you take lightning damage, you gain 5 temporary hit points." ]
+        [ [ B "Immutable Form. ", T "You are immune to any spell or effect that would alter your form." ]
+        , [ B "Lightning Absorption. ", T "You gain resistance to lightning damage. Whenever you take lightning damage, you gain 5 temporary hit points." ]
         ]
       , P [ B "Curse. ", T "This armor is cursed, and becoming attuned to it extends the curse to you. Until the curse is broken with a Remove Curse spell or similar magic, you are unwilling to part with the armor. In addition, while you wear the cursed armor, you gain the following properties:" ]
       , UL
-        [ LI [ B "Aversion of Fire. ", T "If you take fire damage, you have disadvantage on attack rolls and ability checks until the end of your next turn." ]
-        , LI [ B "Berserk. ", T "Whenever a critical hit is made against you, roll a d6. On a 6, the armor causes you to go berserk. On each of your turns while berserk, you attack the nearest creature you can see. If no creature is near enough to move to and attack, you attack an object, with preference for an object smaller than yourself. Once the armor causes you to go berserk, it cannot be removed. You continue to attack until you are incapacitated or until another creature is able to calm you with appropriate magic (such as a calm emotions spell) or a successful DC 15 Charisma (Persuasion) check." ]
+        [ [ B "Aversion of Fire. ", T "If you take fire damage, you have disadvantage on attack rolls and ability checks until the end of your next turn." ]
+        , [ B "Berserk. ", T "Whenever a critical hit is made against you, roll a d6. On a 6, the armor causes you to go berserk. On each of your turns while berserk, you attack the nearest creature you can see. If no creature is near enough to move to and attack, you attack an object, with preference for an object smaller than yourself. Once the armor causes you to go berserk, it cannot be removed. You continue to attack until you are incapacitated or until another creature is able to calm you with appropriate magic (such as a calm emotions spell) or a successful DC 15 Charisma (Persuasion) check." ]
         ]
       ]
     }
@@ -4444,8 +4444,8 @@ rareItems =
       , P [ T "While you are holding the book, you can use it as a spellcasting focus for your wizard spells." ]
       , P [ T "The book has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
       , UL
-        [ LI [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the necromancy school." ]
-        , LI [ T "As an action, you can expend 1 charge to take on a semblance of undeath for 10 minutes. For the duration, you take on a deathly appearance, and undead creatures are indifferent to you, unless you have damaged them. You also appear undead to all outward inspection and to spells used to determine the target's status. The effect ends if you deal damage or force a creature to make a saving throw." ]
+        [ [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the necromancy school." ]
+        , [ T "As an action, you can expend 1 charge to take on a semblance of undeath for 10 minutes. For the duration, you take on a deathly appearance, and undead creatures are indifferent to you, unless you have damaged them. You also appear undead to all outward inspection and to spells used to determine the target's status. The effect ends if you deal damage or force a creature to make a saving throw." ]
         ]
       ]
     }
@@ -4609,12 +4609,12 @@ rareItems =
       [ P [ T "This necklace has 1d4 + 2 magic beads made from aquamarine, black pearl, or topaz. It also has many nonmagical beads made from stones such as amber, bloodstone, citrine, coral, jade, pearl, or quartz. If a magic bead is removed from the necklace, that bead loses its magic." ]
       , P [ T "Six types of magic beads exist. The DM decides the type of each bead on the necklace or determines it randomly. A necklace can have more than one bead of the same type. To use one, you must be wearing the necklace. Each bead contains a spell that you can cast from it as a bonus action (using your spell save DC if a save is necessary). Once a magic bead's spell is cast, that bead can't be used again until the next dawn." ]
       , TB [ T "d20", T" Bead of …", T "Spell" ]
-        [ TR [ T "1-6",   T "Blessing", T "Bless" ]
-        , TR [ T "7-12",  T "Curing", T "Cure Wounds (2nd level) or Lesser Restoration" ]
-        , TR [ T "13-16", T "Favor", T "Greater Restoration" ]
-        , TR [ T "17-18", T "Smiting", T "Branding Smite" ]
-        , TR [ T "19",    T "Summons", T "Planar Ally" ]
-        , TR [ T "20",    T "Wind Walking", T "Wind Walk" ]
+        [ [ T "1-6",   T "Blessing", T "Bless" ]
+        , [ T "7-12",  T "Curing", T "Cure Wounds (2nd level) or Lesser Restoration" ]
+        , [ T "13-16", T "Favor", T "Greater Restoration" ]
+        , [ T "17-18", T "Smiting", T "Branding Smite" ]
+        , [ T "19",    T "Summons", T "Planar Ally" ]
+        , [ T "20",    T "Wind Walking", T "Wind Walk" ]
         ]
       ]
     }
@@ -4649,8 +4649,8 @@ rareItems =
       , P [ B "Fire Tamer. ", T "As an action, you can extinguish any open flame within 10 feet of you. You choose how much fire to extinguish in that radius." ]
       , P [ B "Gift of Flame. ", T "You can transfer the opal's magic to a nonmagical item — a weapon or a suit of armor — by tracing the ild rune there with your finger. The transfer takes 8 hours of work that requires the two items to be within 5 feet of each other. At the end, the opal is destroyed, and the rune appears in red on the chosen item, which gains a benefit based on its form:" ]
       , UL 
-        [ LI [ B "Weapon. ", T "The weapon is now an uncommon magic weapon. It deals an extra 1d6 fire damage to any target it hits." ]
-        , LI [ B "Armor. ", T "The armor is now a rare magic item that requires attunement. You have resistance to cold damage while wearing the armor." ]
+        [ [ B "Weapon. ", T "The weapon is now an uncommon magic weapon. It deals an extra 1d6 fire damage to any target it hits." ]
+        , [ B "Armor. ", T "The armor is now a rare magic item that requires attunement. You have resistance to cold damage while wearing the armor." ]
         ]
       ]
     }
@@ -4666,8 +4666,8 @@ rareItems =
       , P [ B "Earthen Step. ", T "You can cast Meld into Stone as a bonus action. Once you use this property, you can't use it again until you finish a short or long rest." ]
       , P [ B "Gift of Stone. ", T "You can transfer the orb's magic to a nonmagical item — a shield or a pair of boots — by tracing the stein rune there with your finger. The transfer takes 8 hours of work that requires the two items to be within 5 feet of each other. At the end, the orb is destroyed, and the rune appears in silver on the chosen item, which gains a benefit based on its form:" ]
       , UL 
-        [ LI [ B "Shield. ", T "The shield is now a rare magic item that requires attunement. While you wield it, you have resistance to all damage dealt by ranged weapon attacks." ]
-        , LI [ B "Boots. ", T "The pair of boots is now an uncommon magic item that requires attunement. While you wear the boots, you have advantage on Strength saving throws, and you can use your reaction to avoid being knocked prone." ]
+        [ [ B "Shield. ", T "The shield is now a rare magic item that requires attunement. While you wield it, you have resistance to all damage dealt by ranged weapon attacks." ]
+        , [ B "Boots. ", T "The pair of boots is now an uncommon magic item that requires attunement. While you wear the boots, you have advantage on Strength saving throws, and you can use your reaction to avoid being knocked prone." ]
         ]
       ]
     }
@@ -4681,10 +4681,10 @@ rareItems =
       , P [ T "Roll a d4 and consult the Outer Essence Shards table to determine the shard's essence and property. When you use a Metamagic option on a spell while you are holding or wearing the shard, you can use that property." ]
       , P [ B "Outer Essence Shards" ]
       , TB [ T "d4", T "Property" ]
-        [ TR [ T "1", P [ B "Lawful. ", T "You can end one of the following conditions affecting yourself or one creature you can see within 30 feet of you: charmed, blinded, deafened, frightened, poisoned, or stunned." ] ]
-        , TR [ T "2", P [ B "Chaotic. ", T "Choose one creature who takes damage from the spell. That target has disadvantage on attack rolls and ability checks made before the start of your next turn." ] ]
-        , TR [ T "3", P [ B "Good. ", T "You or one creature of your choice that you can see within 30 feet of you gains 3d6 temporary hit points." ] ]
-        , TR [ T "4", P [ B "Evil. ", T "Choose one creature who takes damage from the spell. That target takes an extra 3d6 necrotic damage." ] ]
+        [ [ T "1", P [ B "Lawful. ", T "You can end one of the following conditions affecting yourself or one creature you can see within 30 feet of you: charmed, blinded, deafened, frightened, poisoned, or stunned." ] ]
+        , [ T "2", P [ B "Chaotic. ", T "Choose one creature who takes damage from the spell. That target has disadvantage on attack rolls and ability checks made before the start of your next turn." ] ]
+        , [ T "3", P [ B "Good. ", T "You or one creature of your choice that you can see within 30 feet of you gains 3d6 temporary hit points." ] ]
+        , [ T "4", P [ B "Evil. ", T "Choose one creature who takes damage from the spell. That target takes an extra 3d6 necrotic damage." ] ]
         ]
       ]
     }
@@ -4727,8 +4727,8 @@ rareItems =
       , P [ T "While you are holding the book, you can use it as a spellcasting focus for your wizard spells." ]
       , P [ T "The book has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
       , UL
-        [ LI [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the conjuration school." ]
-        , LI [ T "When you cast a conjuration spell that summons or creates one creature, you can expend 1 charge to grant that creature advantage on attack rolls for 1 minute." ]
+        [ [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the conjuration school." ]
+        , [ T "When you cast a conjuration spell that summons or creates one creature, you can expend 1 charge to grant that creature advantage on attack rolls for 1 minute." ]
         ]
       ]
     }
@@ -4822,9 +4822,9 @@ rareItems =
       [ P [ T "When you drink a Potion of Mind Control, you can cast a Dominate spell (save DC 15) on a specific creature if you do so before the end of your next turn. If you don't, the potion is wasted." ]
       , P [ T "A Potion of Mind Control produces the effect of a Dominate Beast, a Dominate Person (humanoid), or a Dominate Monster spell (see the table below). If the target's initial saving throw fails, the effect lasts for 1 hour, with no concentration required on your part. The charmed creature has disadvantage on new saving throws to break the effect during this time." ]
       , TB [ T "Potion of …", T "Rarity" ]
-        [ TR [ T "Mind control (beast)", T "Rare" ]
-        , TR [ T "Mind control (humanoid)", T "Rare" ]
-        , TR [ T "Mind control (monster)", T "Very rare" ]
+        [ [ T "Mind control (beast)", T "Rare" ]
+        , [ T "Mind control (humanoid)", T "Rare" ]
+        , [ T "Mind control (monster)", T "Very rare" ]
         ]
       ]
     }
@@ -4849,10 +4849,10 @@ rareItems =
       , P [ T "In addition to the knowledge it possesses, the orb can cast the Mage Hand cantrip at will. It uses the spell only to transport itself. Its spellcasting ability is Intelligence." ]
       , P [ B "Professor Skant. ", T "The professor orb owned by Vellynne Harpell and stolen by Nass Lantomir calls itself Professor Skant. It is lawful good, and it has a Wisdom of 11 and a Charisma of 9. It speaks and reads Common, Draconic, Elvish, and Loross (the dead language of the Empire of Netheril). Professor Skant is a chatterbox and assumes all humanoids are dunderheads. When elaborating on its areas of expertise, it adopts an unintentionally patronizing tone. It has the following four areas of expertise:" ]
       , UL 
-        [ LI [ T "The history of Netheril" ]
-        , LI [ T "Vampirism and the traits of vampires" ]
-        , LI [ T "Rituals surrounding the making, bottling, and drinking of Elverquisst (a rare, ruby-colored elven liquor distilled from sunshine and rare summer fruits)" ]
-        , LI [ T "The tarrasque (see the ", I "Monster Manual", T ")" ]
+        [ [ T "The history of Netheril" ]
+        , [ T "Vampirism and the traits of vampires" ]
+        , [ T "Rituals surrounding the making, bottling, and drinking of Elverquisst (a rare, ruby-colored elven liquor distilled from sunshine and rare summer fruits)" ]
+        , [ T "The tarrasque (see the ", I "Monster Manual", T ")" ]
         ]
       ]
     }
@@ -4866,8 +4866,8 @@ rareItems =
       , P [ T "While you are holding the book, you can use it as a spellcasting focus for your wizard spells." ]
       , P [ T "The book has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it:" ]
       , UL 
-        [ LI [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the abjuration school." ]
-        , LI [ T "When you cast an abjuration spell, you can expend 1 charge to grant a creature you can see within 30 feet of you 2d10 temporary hit points." ]
+        [ [ T "If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the abjuration school." ]
+        , [ T "When you cast an abjuration spell, you can expend 1 charge to grant a creature you can see within 30 feet of you 2d10 temporary hit points." ]
         ]
       ]
     }
@@ -4879,12 +4879,12 @@ rareItems =
     , description: 
       [ P [ T "This tiny object looks like a feather. Different types of feather tokens exist, each with a different single-use effect. The DM chooses the kind of token or determines it randomly." ]
       , TB [ T "d100", T "Feather Token" ]
-        [ TR [ T "01-20", T "Anchor" ]
-        , TR [ T "21-35", T "Bird" ]
-        , TR [ T "36-50", T "Fan" ]
-        , TR [ T "51-65", T "Swan boat" ]
-        , TR [ T "66-90", T "Tree" ]
-        , TR [ T "91-00", T "Whip" ]
+        [ [ T "01-20", T "Anchor" ]
+        , [ T "21-35", T "Bird" ]
+        , [ T "36-50", T "Fan" ]
+        , [ T "51-65", T "Swan boat" ]
+        , [ T "66-90", T "Tree" ]
+        , [ T "91-00", T "Whip" ]
         ]
       , P [ B "Anchor. ", T "You can use an action to touch the token to a boat or ship. For the next 24 hours, the vessel can't be moved by any means. Touching the token to the vessel again ends the effect. When the effect ends, the token disappears." ]
       , P [ B "Bird. ", T "You can use an action to toss the token 5 feet into the air. The token disappears and an enormous, multicolored bird takes its place. The bird has the statistics of a roc (see the Monster Manual), but it obeys your simple commands and can't attack. It can carry up to 500 pounds while flying at its maximum speed (16 miles an hour for a maximum of 144 miles per day, with a one-hour rest for every 3 hours of flying), or 1,000 pounds at half that speed. The bird disappears after flying its maximum distance for a day or if it drops to 0 hit points. You can dismiss the bird as an action." ]
@@ -4913,9 +4913,9 @@ rareItems =
     , description: 
       [ P [ T "This ring has 3 charges, and it regains 1d3 expended charges daily at dawn. While wearing the ring, you can use an action to expend 1 of its charges to cast one of the following spells:" ]
       , UL
-        [ TR [ T "Animal Friendship (save DC 13)" ]
-        , TR [ T "Fear (save DC 13), targeting only beasts that have an Intelligence of 3 or lower" ]
-        , TR [ T "Speak with Animals" ]
+        [ [ T "Animal Friendship (save DC 13)" ]
+        , [ T "Fear (save DC 13), targeting only beasts that have an Intelligence of 3 or lower" ]
+        , [ T "Speak with Animals" ]
         ]
       ]
     }
@@ -4963,16 +4963,16 @@ rareItems =
     , description: 
       [ P [ T "You have resistance to one damage type while wearing this ring. The gem in the ring indicates the type, which the DM chooses or determines randomly." ]
       , TB [ T "d10", T "Damage Type", T "Gem" ]
-        [ TR [ T "1", T "Acid", T "Pearl" ]
-        , TR [ T "2", T "Cold", T "Tourmaline" ]
-        , TR [ T "3", T "Fire", T "Garnet" ]
-        , TR [ T "4", T "Force", T "Sapphire" ]
-        , TR [ T "5", T "Lightning", T "Citrine" ]
-        , TR [ T "6", T "Necrotic", T "Jet" ]
-        , TR [ T "7", T "Poison", T "Amethyst" ]
-        , TR [ T "8", T "Psychic", T "Jade" ]
-        , TR [ T "9", T "Radiant", T "Topaz" ]
-        , TR [ T "10", T "Thunder", T "Spinel" ]
+        [ [ T "1", T "Acid", T "Pearl" ]
+        , [ T "2", T "Cold", T "Tourmaline" ]
+        , [ T "3", T "Fire", T "Garnet" ]
+        , [ T "4", T "Force", T "Sapphire" ]
+        , [ T "5", T "Lightning", T "Citrine" ]
+        , [ T "6", T "Necrotic", T "Jet" ]
+        , [ T "7", T "Poison", T "Amethyst" ]
+        , [ T "8", T "Psychic", T "Jade" ]
+        , [ T "9", T "Radiant", T "Topaz" ]
+        , [ T "10", T "Thunder", T "Spinel" ]
         ]
       ]
     }
@@ -5024,9 +5024,9 @@ rareItems =
     , description: 
       [ P [ T "This robe is adorned with eyelike patterns. While you wear the robe, you gain the following benefits:" ]
       , UL
-        [ LI [ T "The robe lets you see in all directions, and you have advantage on Wisdom (Perception) checks that rely on sight." ]
-        , LI [ T "You have darkvision out to a range of 120 feet." ]
-        , LI [ T "You can see invisible creatures and objects, as well as see into the Ethereal Plane, out to a range of 120 feet." ]
+        [ [ T "The robe lets you see in all directions, and you have advantage on Wisdom (Perception) checks that rely on sight." ]
+        , [ T "You have darkvision out to a range of 120 feet." ]
+        , [ T "You can see invisible creatures and objects, as well as see into the Ethereal Plane, out to a range of 120 feet." ]
         ]
       , P [ T "The eyes on the robe can't be closed or averted. Although you can close or avert your own eyes, you are never considered to be doing so while wearing this robe." ]
       , P [ T "A Light spell cast on the robe or a Dayight spell cast within 5 feet of the robe causes you to be blinded for 1 minute. At the end of each of your turns, you can make a Constitution saving throw (DC 11 for Light or DC 15 for Dayight), ending the blindness on a success." ]
@@ -5103,12 +5103,12 @@ rareItems =
       , P [ T "Six varieties of Sage's Signet rings exist, each with a different signet (see the table below). A ring's signet determines its rarity as well as the additional spells it can cast. While wearing a Sage's Signet, you can cast each of its additional spells once from the ring using your Intelligence as the spellcasting ability. Once you cast each of the additional spells from the ring, it can't cast the spell again until the next dawn." ]
       , P [ T "Sage's Signet" ]
       , TB   [ T "Signet",   T "Rarity",   T "Spells" ]
-        [ TR [ T "Bear",     T "Very Rare", T "Enlarge/Reduce, Polymorph" ]
-        , TR [ T "Hart",     T "Very Rare", T "Aura of Vitality, Mass Cure Wounds" ]
-        , TR [ T "Lion",     T "Very Rare", T "Destructive Wave, Fireball" ]
-        , TR [ T "Serpent",  T "Rare",      T "Fear, Hex" ]
-        , TR [ T "Songbird", T "Rare",      T "Charm Person, Hypnotic Pattern" ]
-        , TR [ T "Wolf",     T "Very Rare", T "Freedom of Movement, Pass Without Trace" ]
+        [ [ T "Bear",     T "Very Rare", T "Enlarge/Reduce, Polymorph" ]
+        , [ T "Hart",     T "Very Rare", T "Aura of Vitality, Mass Cure Wounds" ]
+        , [ T "Lion",     T "Very Rare", T "Destructive Wave, Fireball" ]
+        , [ T "Serpent",  T "Rare",      T "Fear, Hex" ]
+        , [ T "Songbird", T "Rare",      T "Charm Person, Hypnotic Pattern" ]
+        , [ T "Wolf",     T "Very Rare", T "Freedom of Movement, Pass Without Trace" ]
         ]
       ]
     }
@@ -5134,8 +5134,8 @@ rareItems =
       [ P [ T "As an action, you make a few snips with these iron shears and cause the shadow of a Humanoid creature you can see within 5 feet of you to detach from its source. If the creature is unwilling to give up its shadow, it can make a DC 15 Charisma saving throw, retaining its shadow on a success. Whether or not the shadow is snipped, this property of the scissors can't be used again until the next dawn." ]
       , P [ T "The detached shadow is rooted to the spot where it was snipped until you use a bonus action to cause it to behave in one of the following ways, either of which is possible only if you can see the shadow:" ]
       , UL
-        [ LI [T "You control the shadow's movements and can make the shadow move up to 30 feet across a solid or liquid surface, in any direction you choose (including along vertical surfaces), provided it remains within your sight at all times. The shadow is harmless and unable to be harmed, and it is invisible in darkness. It can't speak, and it doesn't require air, sleep, or nourishment." ]
-        , LI [T "You can relinquish control of the shadow, at which point it becomes autonomous and behaves as the DM wishes. It uses the shadow stat block in the Monster Manual, but its creature type is Fey instead of Undead. A creature whose Strength is reduced to 0 by this shadow's Strength Drain attack does not die but falls unconscious instead. The creature regains consciousness and all its Strength after finishing a short or long rest." ]
+        [ [T "You control the shadow's movements and can make the shadow move up to 30 feet across a solid or liquid surface, in any direction you choose (including along vertical surfaces), provided it remains within your sight at all times. The shadow is harmless and unable to be harmed, and it is invisible in darkness. It can't speak, and it doesn't require air, sleep, or nourishment." ]
+        , [T "You can relinquish control of the shadow, at which point it becomes autonomous and behaves as the DM wishes. It uses the shadow stat block in the Monster Manual, but its creature type is Fey instead of Undead. A creature whose Strength is reduced to 0 by this shadow's Strength Drain attack does not die but falls unconscious instead. The creature regains consciousness and all its Strength after finishing a short or long rest." ]
         ]
       , P [ T "A creature whose shadow has detached from it is cursed. If a shadowless creature is subjected to any spell that ends a curse, or if its detached shadow is reduced to 0 hit points, the detached shadow disappears, and the creature regains its normal shadow instantly." ]
       ]
@@ -5148,9 +5148,9 @@ rareItems =
     , description: 
       [ P [ T "This suit of plate armor is fashioned from giant scorpion chitin. While wearing this armor, you gain the following benefits:" ]
       , UL
-        [ LI [ T "The armor improves your combat readiness, granting you a +5 bonus to initiative as long as you aren't incapacitated." ]
-        , LI [ T "The armor doesn't impose disadvantage on your Dexterity (Stealth) checks." ]
-        , LI [ T "The armor doesn't impose disadvantage on saving throws made to resist the effects of extreme heat (see chapter 5 of the Dungeon Master's Guide)." ]
+        [ [ T "The armor improves your combat readiness, granting you a +5 bonus to initiative as long as you aren't incapacitated." ]
+        , [ T "The armor doesn't impose disadvantage on your Dexterity (Stealth) checks." ]
+        , [ T "The armor doesn't impose disadvantage on saving throws made to resist the effects of extreme heat (see chapter 5 of the Dungeon Master's Guide)." ]
         ]
       , P [ B "Curse. ", T "This armor is cursed. Whenever you don or doff it, you must make a DC 15 Constitution saving throw, taking 100 (10d10 + 45) poison damage on a failed save, or half as much damage on a successful one. Only a Wish spell can remove the armor's curse." ]
       ]
@@ -5163,14 +5163,14 @@ rareItems =
     , description: 
       [ P [ T "Each scroll of protection works against a specific type of creature chosen by the DM or determined randomly by rolling on the following table." ]
       , TB [ T "d100", T "Creature Type" ]
-        [ TR [ T "01-10", T "Aberrations" ]
-        , TR [ T "11-20", T "Beasts" ]
-        , TR [ T "21-30", T "Celestials" ]
-        , TR [ T "31-40", T "Elementals" ]
-        , TR [ T "41-50", T "Fey" ]
-        , TR [ T "51-60", T "Fiends" ]
-        , TR [ T "61-70", T "Plants" ]
-        , TR [ T "81-00", T "Undead" ]
+        [ [ T "01-10", T "Aberrations" ]
+        , [ T "11-20", T "Beasts" ]
+        , [ T "21-30", T "Celestials" ]
+        , [ T "31-40", T "Elementals" ]
+        , [ T "41-50", T "Fey" ]
+        , [ T "51-60", T "Fiends" ]
+        , [ T "61-70", T "Plants" ]
+        , [ T "81-00", T "Undead" ]
         ]
         , P [ T " Using an action to read the scroll encloses you in a invisible barrier that extends from you to form a 5-foot-radius, 10-foot-high cylinder. For 5 minutes, this barrier prevents creatures of the specified type from entering or affecting anything within the cylinder." ]
         , P [ T " The cylinder moves with you and remains centered on you. However, if you move in such a way that a creature of the specified type would be inside the cylinder, the effect ends." ]
@@ -5222,12 +5222,12 @@ rareItems =
       , P [ T "The shard's curse causes misfortune to befall you. When you roll a 1 on an attack roll, an ability check, or a saving throw, roll on the Shard Misfortunes table to determine the misfortune. For as long as this misfortune lasts, no other shard misfortunes befall you." ]
       , P [ B "Shard Misfortunes" ]
       , TB [ T "d6", T "Misfortune" ]
-        [ TR [ T "1", T "You accidentally cut yourself with the shard and are poisoned until the next dawn." ]
-        , TR [ T "2", T "You experience a vision of an ancient calamity—a beautiful city threatened by crumbling mountains and erupting volcanoes—and are stunned until the end of your next turn." ]
-        , TR [ T "3", T "For a few seconds, the ground shakes under you. You and each creature within 10 feet of you must succeed on a DC 16 Dexterity saving throw or be knocked prone." ]
-        , TR [ T "4", T "The shard releases three glowing darts of magical force that target one random creature within 30 feet of you. If no such target exists, you become the target. Each dart hits automatically and deals 3 (1d4 + 1) force damage to the target." ]
-        , TR [ T "5", T "Until the next dawn, Beasts with an Intelligence score of 3 or lower are hostile to you." ]
-        , TR [ T "6", T "Nothing seems to go your way. Until the next dawn, you have disadvantage on ability checks." ]
+        [ [ T "1", T "You accidentally cut yourself with the shard and are poisoned until the next dawn." ]
+        , [ T "2", T "You experience a vision of an ancient calamity—a beautiful city threatened by crumbling mountains and erupting volcanoes—and are stunned until the end of your next turn." ]
+        , [ T "3", T "For a few seconds, the ground shakes under you. You and each creature within 10 feet of you must succeed on a DC 16 Dexterity saving throw or be knocked prone." ]
+        , [ T "4", T "The shard releases three glowing darts of magical force that target one random creature within 30 feet of you. If no such target exists, you become the target. Each dart hits automatically and deals 3 (1d4 + 1) force damage to the target." ]
+        , [ T "5", T "Until the next dawn, Beasts with an Intelligence score of 3 or lower are hostile to you." ]
+        , [ T "6", T "Nothing seems to go your way. Until the next dawn, you have disadvantage on ability checks." ]
         ]
       ]
     }
@@ -5282,9 +5282,9 @@ rareItems =
       , P [ T "The sensation of being attuned to a spelljamming helm is akin to the pins-and-needles effect one experiences after one's arm or leg falls asleep, but not painful." ]
       , P [ T "While attuned to a spelljamming helm and sitting in it, you gain the following abilities for as long as you maintain concentration (as if concentrating on a spell):" ]
       , UL
-        [ LI [ T "You can use the spelljamming helm to move the ship through space, air, or water up to the ship's speed. If the ship is in space and no other objects weighing 1 ton or more are within 1 mile of it, you can use the spelljamming helm to move the vessel fast enough to travel 100 million miles in 24 hours." ]
-        , LI [ T "You can steer the vessel, albeit in a somewhat clumsy fashion, in much the way a rudder or oars can be used to maneuver a seafaring ship." ]
-        , LI [ T "At any time, you can see and hear what's happening on and around the vessel as though you were standing in a location of your choice aboard it." ]
+        [ [ T "You can use the spelljamming helm to move the ship through space, air, or water up to the ship's speed. If the ship is in space and no other objects weighing 1 ton or more are within 1 mile of it, you can use the spelljamming helm to move the vessel fast enough to travel 100 million miles in 24 hours." ]
+        , [ T "You can steer the vessel, albeit in a somewhat clumsy fashion, in much the way a rudder or oars can be used to maneuver a seafaring ship." ]
+        , [ T "At any time, you can see and hear what's happening on and around the vessel as though you were standing in a location of your choice aboard it." ]
         ]
       , P [ B "Transfer Attunement. ", T "You can use an action to touch a willing spellcaster. That creature attunes to the spelljamming helm immediately, and your attunement to it ends." ]
       ]
@@ -5644,28 +5644,28 @@ rareItems =
       , P [ T "If an effect covers an area, you must center the spell on and include the target. If an effect has multiple possible subjects, the DM randomly determines which ones are affected." ]
       , P [ T "The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into dust and is destroyed." ]
       , TB [ T "d100", T "Effect" ]
-        [ TR [ T "01-05", T "You cast Slow." ]
-        , TR [ T "06-10", T "You cast Faerie Fire." ]
-        , TR [ T "11-15", T "You are stunned until the start of your next turn, believing something awesome just happened." ]
-        , TR [ T "16-20", T "You cast Gust of Wind." ]
-        , TR [ T "21-25", T "You cast Detect Thoughts on the target you chose. If you didn't target a creature, you instead take 1d6 psychic damage." ]
-        , TR [ T "26-30", T "You cast Stinking Cloud." ]
-        , TR [ T "31-33", T "Heavy rain falls in a 60-foot radius centered on the target. The area becomes lightly obscured. The rain falls until the start of your next turn." ]
-        , TR [ T "34-36", T "An animal appears in the unoccupied space nearest the target. The animal isn't under your control and acts as it normally would. Roll a d100 to determine which animal appears. On a 01-25, a rhinoceros appears; on a 26-50, an elephant appears; and on a 51-100, a rat appears. See the Monster Manual for the animal's statistics." ]
-        , TR [ T "37-46", T "You cast Lightning Bolt." ]
-        , TR [ T "47-49", T "A cloud of 600 oversized butterflies fills a 30-foot radius centered on the target. The area becomes heavily obscured. The butterflies remain for 10 minutes." ]
-        , TR [ T "50-53", T "You enlarge the target as if you had cast Enlarge/Reduce. If the target can't be affected by that spell or if you didn't target a creature, you become the target." ]
-        , TR [ T "54-58", T "You cast Darkness." ]
-        , TR [ T "59-62", T "Grass grows on the ground in a 60-foot radius centered on the target. If grass is already there, it grows to ten times its normal size and remains overgrown for 1 minute." ]
-        , TR [ T "63-65", T "An object of the DM's choice disappears into the Ethereal Plane. The object must be neither worn nor carried, within 120 feet of the target, and no larger than 10 feet in any dimension." ]
-        , TR [ T "66-69", T "You shrink yourself as if you had cast Enlarge/Reduce on yourself." ]
-        , TR [ T "70-79", T "You cast Fireball." ]
-        , TR [ T "80-84", T "You cast Invisibility on yourself." ]
-        , TR [ T "85-87", T "Leaves grow from the target. If you chose a point in space as the target, leaves sprout from the creature nearest to that point. Unless they are picked off, the leaves turn brown and fall off after 24 hours." ]
-        , TR [ T "88-90", T "A stream of 1 d4 x 10 gems, each worth 1 gp, shoots from the wand 's tip in a line 30 feet long and 5 feet wide. Each gem deals 1 bludgeoning damage, and the total damage of the gems is divided equally among all creatures in the line ." ]
-        , TR [ T "91-95", T "A burst of colorful shimmering light extends from you in a 30-foot radius. You and each creature in the area that can see must succeed on a DC 15 Constitution saving throw or become blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success." ]
-        , TR [ T "96-97", T "The target's skin turns bright blue for 1d10 days. If you chose a point in space, the creature nearest to that point is affected ." ]
-        , TR [ T "98-00", T "If you targeted a creature, it must make a DC 15 Constitution saving throw. If you didn't target a creature, you become the target and must make the saving throw. If the saving throw fails by 5 or more, the target is instantly petrified. On any other failed save, the target is restrained and begins to turn to stone. While restrained in this way, the target must repeat the saving throw at the end of its next turn , becoming petrified on a failure or ending the effect on a success. The petrification lasts until the target is freed by the Greater Restoration spell or similar magic." ]
+        [ [ T "01-05", T "You cast Slow." ]
+        , [ T "06-10", T "You cast Faerie Fire." ]
+        , [ T "11-15", T "You are stunned until the start of your next turn, believing something awesome just happened." ]
+        , [ T "16-20", T "You cast Gust of Wind." ]
+        , [ T "21-25", T "You cast Detect Thoughts on the target you chose. If you didn't target a creature, you instead take 1d6 psychic damage." ]
+        , [ T "26-30", T "You cast Stinking Cloud." ]
+        , [ T "31-33", T "Heavy rain falls in a 60-foot radius centered on the target. The area becomes lightly obscured. The rain falls until the start of your next turn." ]
+        , [ T "34-36", T "An animal appears in the unoccupied space nearest the target. The animal isn't under your control and acts as it normally would. Roll a d100 to determine which animal appears. On a 01-25, a rhinoceros appears; on a 26-50, an elephant appears; and on a 51-100, a rat appears. See the Monster Manual for the animal's statistics." ]
+        , [ T "37-46", T "You cast Lightning Bolt." ]
+        , [ T "47-49", T "A cloud of 600 oversized butterflies fills a 30-foot radius centered on the target. The area becomes heavily obscured. The butterflies remain for 10 minutes." ]
+        , [ T "50-53", T "You enlarge the target as if you had cast Enlarge/Reduce. If the target can't be affected by that spell or if you didn't target a creature, you become the target." ]
+        , [ T "54-58", T "You cast Darkness." ]
+        , [ T "59-62", T "Grass grows on the ground in a 60-foot radius centered on the target. If grass is already there, it grows to ten times its normal size and remains overgrown for 1 minute." ]
+        , [ T "63-65", T "An object of the DM's choice disappears into the Ethereal Plane. The object must be neither worn nor carried, within 120 feet of the target, and no larger than 10 feet in any dimension." ]
+        , [ T "66-69", T "You shrink yourself as if you had cast Enlarge/Reduce on yourself." ]
+        , [ T "70-79", T "You cast Fireball." ]
+        , [ T "80-84", T "You cast Invisibility on yourself." ]
+        , [ T "85-87", T "Leaves grow from the target. If you chose a point in space as the target, leaves sprout from the creature nearest to that point. Unless they are picked off, the leaves turn brown and fall off after 24 hours." ]
+        , [ T "88-90", T "A stream of 1 d4 x 10 gems, each worth 1 gp, shoots from the wand 's tip in a line 30 feet long and 5 feet wide. Each gem deals 1 bludgeoning damage, and the total damage of the gems is divided equally among all creatures in the line ." ]
+        , [ T "91-95", T "A burst of colorful shimmering light extends from you in a 30-foot radius. You and each creature in the area that can see must succeed on a DC 15 Constitution saving throw or become blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success." ]
+        , [ T "96-97", T "The target's skin turns bright blue for 1d10 days. If you chose a point in space, the creature nearest to that point is affected ." ]
+        , [ T "98-00", T "If you targeted a creature, it must make a DC 15 Constitution saving throw. If you didn't target a creature, you become the target and must make the saving throw. If the saving throw fails by 5 or more, the target is instantly petrified. On any other failed save, the target is restrained and begins to turn to stone. While restrained in this way, the target must repeat the saving throw at the end of its next turn , becoming petrified on a failure or ending the effect on a success. The petrification lasts until the target is freed by the Greater Restoration spell or similar magic." ]
         ]
       ]
     }
@@ -5750,475 +5750,7 @@ rareItems =
     , description: 
       [ P [ T "This fine set of white-and-silver armor bears the wind rune upon its chest." ]
       , P [ T "While wearing this armor, you have advantage on Dexterity (Acrobatics) checks and Dexterity saving throws as your movements are bolstered by gentle currents of wind." ]
-      , P [ B "Invoking the Rune. ", T "As an action, you can invoke the armor’s rune to cast the Wind Wall spell (save DC 15) with it. Once the rune has been invoked, it can’t be invoked again until the next dawn." ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
-      ]
-    }
-  , { title: ""
-    , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
-    , description: 
-      [ P [ T "" ]
+      , P [ B "Invoking the Rune. ", T "As an action, you can invoke the armor's rune to cast the Wind Wall spell (save DC 15) with it. Once the rune has been invoked, it can't be invoked again until the next dawn." ]
       ]
     }
   ]
@@ -6235,6 +5767,1675 @@ veryRareItems =
       [ P [ T "An abracadabrus is an ornate, gemstone-studded wooden chest that weighs 25 pounds while empty. Its interior compartment is a cube measuring 1 1/2 feet on a side."  ]
       , P [ T "The chest has 20 charges. A creature can use an action to touch the closed lid of the chest and expend 1 of the chest's charges while naming one or more nonmagical objects (including raw materials, foodstuffs, and liquids) worth a total of 1 gp or less. The named objects magically appear in the chest, provided they can all fit inside it and the chest doesn't contain anything else. For example, the chest can conjure a plate of strawberries, a bowl of hot soup, a flagon of water, a stuffed animal, or a bag of twenty caltrops. Food and drink conjured by the chest are delicious, and they spoil if not consumed after 24 hours. Gems and precious metals created by the chest disappear after 1 minute." ]
       , P [ T "The chest regains 1d20 expended charges daily at dawn. If the item's last charge is expended, roll a d20. On a 1, the chest loses its magic (becoming an ordinary chest), and its gemstones turn to dust." ]
+      ]
+    }
+  , { title: "Absorbing Tattoo"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceTashasCauldronOfEverything ]
+    , description:
+      [ P [ T "Produced by a special needle, this magic tattoo features designs that emphasize one color." ]
+      , P [ B "Tattoo Attunement. ", T "To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin." ]
+      , P [ T "If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space." ]
+      , P [ B "Damage Resistance. ", T "While the tattoo is on your skin, you have resistance to a type of damage associated with that color, as shown on the table below. The DM chooses the color or determines it randomly." ]
+      , P [ B "Absorbing Tattoo"]
+      , TB [ T "d10", T "Damage Type", T "Color" ]
+        [ [ T "1", T "Acid", T "Green" ]
+        , [ T "2", T "Cold", T "Blue" ]
+        , [ T "3", T "Fire", T "Red" ]
+        , [ T "4", T "Force", T "White" ]
+        , [ T "5", T "Lightning", T "Yellow" ]
+        , [ T "6", T "Necrotic", T "Black" ]
+        , [ T "7", T "Poison", T "Violet" ]
+        , [ T "8", T "Psychic", T "Silver" ]
+        , [ T "9", T "Radiant", T "Gold" ]
+        , [ T "10", T "Thunder", T "Orange" ]
+        ]
+      , P [ B "Damage Absorption. ", T "When you take damage of the chosen type, you can use your reaction to gain immunity against that instance of the damage, and you regain a number of hit points equal to half the damage you would have taken. Once this reaction is used, it can't be used again until the next dawn." ]
+      ]
+    }
+  , { title: "Amethyst Lodestone"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: [ SourceFizbansTreasuryOfDragons ]
+    , description:
+      [ P [ T "This fist-sized chunk of amethyst is infused with an amethyst dragon's ability to bend gravitational forces. While you are carrying the lodestone, you have advantage on Strength saving throws." ]
+      , P [ T "The lodestone has 6 charges for the following properties, which you can use while you are holding the stone. The stone regains 1d6 expended charges daily at dawn." ]
+      , P [ B "Flight. ", T "As a bonus action, you can expend 1 charge to gain the power of flight for 10 minutes. For the duration, you gain a flying speed equal to your walking speed, and you can hover." ]
+      , P [ B "Gravitational Thrust. ", T "As an action, you can expend 1 charge to focus gravity around a creature you can see within 60 feet of you. The target must succeed on a DC 18 Strength saving throw or be pushed up to 20 feet in a direction of your choice." ]
+      , P [ B "Reverse Gravity. ", T "As an action, you can expend 3 charges to cast Reverse Gravity from the stone (save DC 18)." ]
+      ]
+    }
+  , { title: "Amulet of the Black Skull"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "This amulet is carved from obsidian and shaped like a screaming humanoid skull, with ruby eyes and emeralds for teeth. It hangs from an iron chain necklace." ]
+      , P [ T "The amulet has 6 charges and regains 1d6 charges daily at dawn. While wearing the amulet, you can use an action to expend 1 of its charges to transport yourself and anything you are wearing or carrying to a location within 100 feet of you. The destination you choose doesn't need to be in your line of sight, but it must be familiar to you (in other words, a place you have seen or visited), and it must be on the same plane of existence as you. This effect isn't subject to the magic restrictions placed on the Tomb of the Nine Gods; thus, the amulet can be used to enter and exit the tomb." ]
+      , P [ T "If you aren't undead, you must make a DC 16 Constitution saving throw each time you use the amulet to teleport. On a failed saving throw, the black skull cackles as you are transformed in transit. The transformation takes effect as soon as you arrive at the destination, and is determined randomly by rolling percentile dice and consulting the Black Skull Transformation table." ]
+      , P [ B "Black Skull Transformation" ]
+      , TB [ T "d100", T "Transformation" ]
+        [ [ T "01-20", T "The symbol of Acererak is burned into your flesh, a curse that can only be removed with a Remove Curse spell or similar magic. Until the curse ends, your hit points can't be restored by magic." ]
+        , [ T "21-35", T "You grow larger as if affected by an Enlarge/Reduce spell, except the effect lasts for 1 hour." ]
+        , [ T "36-50", T "You grow smaller as if affected by an Enlarge/Reduce spell, except the effect lasts for 1 hour." ]
+        , [ T "51-70", T "You arrive at the destination wearing nothing but the Amulet of the Black Skull. Everything else that you were wearing or carrying appears in a random unoccupied space within 100 feet of you." ]
+        , [ T "71-95", T "You are paralyzed for 1 minute or until this effect is ended with a Lesser Restoration spell or similar magic." ]
+        , [ T "96-00", T "You become petrified. This effect can be ended only with a Greater Restoration spell or similar magic." ]
+        ]
+      ]
+    }
+  , { title: "Amulet of the Planes"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "While wearing this amulet, you can use an action to name a location that you are familiar with on another plane of existence. Then make a DC 15 Intelligence check. On a successful check, you cast the Plane Shift spell. On a failure, you and each creature and object within 15 feet of you travel to a random destination. Roll a d100. On a 1-60, you travel to a random location on the plane you named. On a 61-100, you travel to a randomly determined plane of existence." ]
+      ]
+    }
+  , { title: "Animated Shield"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeArmor (Just "shield")
+    , attune: Attune Nothing
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "While holding this shield, you can speak its command word as a bonus action to cause it to animate. The shield leaps into the air and hovers in your space to protect you as if you were wielding it, leaving your hands free. The shield remains animated for 1 minute, until you use a bonus action to end this effect, or until you are incapacitated or die, at which point the shield falls to the ground or into your hand if you have one free." ]
+      ]
+    }
+  , { title: "Antimagic Armor"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeArmor (Just "light, medium, or heavy")
+    , attune: Attune Nothing
+    , source: [ SourceBookOfManyThings ]
+    , description:
+      [ P [ T "While wearing this armor, you can use your reaction to give yourself advantage on a saving throw you make against a spell. Once this property is used, it can't be used again until the next dawn." ]
+      , P [ T "In addition, while you wear this armor, you can use it to cast Antimagic Field, requiring no spell components. Once this property is used, it can't be used again until the next dawn." ]
+      ]
+    }
+  , { title: "Arcane Cannon"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceExplorersGuideToWildemount ]
+    , description:
+      [ P [ T "This Large cannon is imbued with magic. It requires no ammunition and doesn't need to be loaded. It takes one action to aim the cannon and one action to fire it. After the cannon has fired, it must recharge for 5 minutes before it can be fired again." ]
+      , P [ T "The creature firing the cannon chooses the effect from the following options:" ]
+      , P [ B "Acid Jet. ", T "The cannon discharges acid in a line 300 feet long and 5 feet wide. Each creature in that line must make a DC 15 Dexterity saving throw, taking 22 (4d10) acid damage on a failed save, or half as much damage on a successful one. In addition, a creature that fails its saving throw takes 11 (2d10) acid damage at the start of each of its turns; a creature can end this damage by using its action to wash off the acid with a pint or more of water." ]
+      , P [ B "Fire Jet. ", T "The cannon discharges fire in a line 300 feet long and 5 feet wide. Each creature in the area must make a DC 15 Dexterity saving throw, taking 33 (6d10) fire damage on a failed save, or half as much damage on a successful one. The fire ignites any flammable objects in the area that aren't being worn or carried." ]
+      , P [ B "Frost Shot. ", T "The cannon shoots a ball of frost to a point you can see within 1,200 feet of the cannon. The ball then expands to form a 30-foot-radius sphere centered on that point. Each creature in that area must make a DC 15 Constitution saving throw. On a failed save, a creature takes 22 (4d10) cold damage, and its speed is reduced by 10 feet for 1 minute. On a successful save, the creature takes half as much damage, and its speed isn't reduced. A creature whose speed is reduced by this effect can repeat the save at the end of each of its turns, ending the effect on itself on a success." ]
+      , P [ B "Lightning Shot. ", T "The cannon shoots a ball of lightning to a point you can see within 1,200 feet of the cannon. The lightning then expands to form a 20-foot-radius sphere centered on that point. Each creature in that area must make a DC 15 Dexterity saving throw, taking 33 (6dl0) lightning damage on a failed save, or half as much damage on a successful one. Creatures wearing metal armor have disadvantage on the save." ]
+      , P [ B "Poison Spray. ", T "The cannon expels poison gas in a 60-foot cone. Each creature in that area must make a DC 15 Constitution saving throw. On a failed save, the creature takes 22 (4d10) poison damage and is poisoned for 1 minute. On a successful save, the creature takes half as much damage and isn't poisoned. A creature poisoned in this way can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success." ]
+      ]
+    }
+  , { title: "Arcane Propulsion Arm"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: Attune (Just "creature missing a hand or an arm")
+    , source: [ SourceEberronRisingFromTheLastWar ]
+    , description:
+      [ P [ T "This prosthetic appendage was developed by artificers of House Cannith. To attune to this item, you must attach it to your arm at the wrist, elbow, or shoulder, at which point the prosthetic magically forms a copy of the appendage it's replacing." ]
+      , P [ T "While attached, the prosthetic provides these benefits:" ]
+      , UL
+        [ [ T "The prosthetic is a fully capable part of your body."]
+        , [ T "You can take an action to remove the prosthetic, and it removes itself if your attunement to it ends. It can't be removed against your will."]
+        , [ T "The prosthetic is a magic melee weapon with which you're proficient. It deals 1d8 force damage on a hit and has the thrown property, with a normal range of 20 feet and a long range of 60 feet. When thrown, the prosthetic detaches and flies at the target of the attack, then immediately returns to you and reattaches."]
+        ]
+      ]
+    }
+  , { title: "Armor of Safeguarding"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeArmor (Just "heavy")
+    , attune: Attune Nothing
+    , source: [ SourceBigbyPresentsGloryOfTheGiants ]
+    , description:
+      [ P [ T "Set in the center of this armor's chest is a citrine engraved with the shield rune." ]
+      , P [ T "While wearing this armor, your hit point maximum increases by an amount equal to 10 + your level." ]
+      , P [ B "Invoking the Rune. ", T "As an action, you can invoke the armor's rune to cast the Beacon of Hope spell with it; the spell has a duration of 1 minute and doesn't require concentration. Once the rune has been invoked, it can't be invoked again until the next dawn." ]
+      ]
+    }
+  , { title: "Arrow of Slaying"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeWeapon (Just "arrow")
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "An arrow of slaying is a magic weapon meant to slay a particular kind of creature. Some are more focused than others; for example, there are both arrows of dragon slaying and arrows of blue dragon slaying. If a creature belonging to the type, race, or group associated with an arrow of slaying takes damage from the arrow, the creature must make a DC 17 Constitution saving throw, taking an extra 6d10 piercing damage on a failed save, or half as much extra damage on a successful one." ]
+      , P [ T "Once an arrow of slaying deals its extra damage to a creature, it becomes a nonmagical arrow." ]
+      , P [ T "Other types of magic ammunition of this kind exist, such as bolts of slaying meant for a crossbow, though arrows are most common." ]
+      ]
+    }
+  , { title: "Bag of Devouring"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "This bag superficially resembles a bag of holding but is a feeding orifice for a gigantic extradimensional creature. Turning the bag inside out closes the orifice." ]
+      , P [ T "The extradimensional creature attached to the bag can sense whatever is placed inside the bag. Animal or vegetable matter placed wholly in the bag is devoured and lost forever. When part of a living creature is placed in the bag, as happens when someone reaches inside it, there is a 50 percent chance that the creature is pulled inside the bag. A creature inside the bag can use its action to try to escape with a successful DC 15 Strength check. Another creature can use its action to reach into the bag to pull a creature out, doing so with a successful DC 20 Strength check (provided it isn't pulled inside the bag first). Any creature that starts its turn inside the bag is devoured, its body destroyed." ]
+      , P [ T "Inanimate objects can be stored in the bag, which can hold a cubic foot of such material. However, once each day, the bag swallows any objects inside it and spits them out into another plane of existence. The DM determines the time and plane." ]
+      , P [ T "If the bag is pierced or torn, it is destroyed, and anything contained within it is transported to a random location on the Astral Plane." ]
+      ]
+    }
+  , { title: "Baleful Talon"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeWeapon (Just "dagger")
+    , attune: AttuneNone
+    , source: [ SourceBookOfManyThings ]
+    , description:
+      [ P [ T "You gain a +1 bonus to attack and damage rolls made with this hooked, obsidian dagger." ]
+      , P [ T "When you hit a creature with this magic weapon and roll a 19 or 20 on the attack roll, the creature must make a DC 15 Constitution saving throw as the dagger flares with sickly light. The creature takes 6d6 necrotic damage on a failed save, or half as much on a successful one. If this damage reduces the creature to 0 hit points, the creature disintegrates into dust." ]
+      ]
+    }
+  , { title: "Battle Standard of Infernal Power"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: [ SourceBaldursGateDescentIntoAvernus ]
+    , description:
+      [ P [ T "This hell-forged battle standard is made of infernal iron and fitted with a small, unopenable cage containing a quasit. The trapped quasit is incapacitated, and its cage has AC 19, 10 hit points, and immunity to all types of damage except force damage. If killed or somehow released, the quasit disappears in a cloud of smoke, and a new one appears in the cage, provided the cage is intact." ]
+      , P [ T "While you hold the banner, your weapon attacks and those of all allied creatures within 300 feet of you count as magical for the purposes of overcoming damage immunities and resistances." ]
+      ]
+    }
+  , { title: "Blade of the Medusa"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeWeapon (Just "any sword")
+    , attune: Attune Nothing
+    , source: [ SourceLostLaboratoryOfKwalish ]
+    , description:
+      [ P [ T "When you attack a creature with this magic weapon and roll a 20 on the attack roll, the creature must make a DC 15 Constitution saving throw in addition to suffering the attack's normal effects. On a failed save, the creature is restrained and must make another Constitution saving throw at the end of each of its turns. If it successfully saves against this effect three times, the effect ends. If it fails its saves three times, it is turned to stone and subjected to the petrified condition for 1 hour." ]
+      , P [ T "A creature is immune to this effect if it is immune to damage of the weapon's type, does not have a body made of flesh, or has legendary actions." ]
+      , P [ B "Curse. ", T "This weapon is cursed, and becoming attuned to it extends the curse to you. Until the curse is broken with a Remove Curse spell or similar magic, you are unwilling to part with the weapon. Whenever you attack a creature with this weapon and roll a 1 on the attack roll, you must succeed on a DC 15 Constitution saving throw or be restrained and forced to make additional saves against being petrified, as above." ]
+      ]
+    }
+  , { title: "Blast Scepter"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeRod
+    , attune: Attune Nothing
+    , source: [ SourceWaterdeepDungeonOfTheMadMage ]
+    , description:
+      [ P [ T "The Blast Scepter can be used as an arcane focus." ]
+      , P [ T "Whoever is attuned to the Blast Scepter gains resistance to fire and lightning damage and can, as an action, use it to cast Thunderwave as a 4th level spell (save DC 16) without expending a spell slot." ]
+      ]
+    }
+  , { title: "Bloodaxe"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeWeapon (Just "greataxe")
+    , attune: Attune Nothing
+    , source: [ SourceExplorersGuideToWildemount ]
+    , description:
+      [ P [ T "You gain a +2 bonus to attack and damage rolls made with this magic axe. The axe deals an extra 1d6 necrotic damage to creatures that aren't constructs or undead. If you reduce such a creature to 0 hit points with an attack using this axe, you gain 10 temporary hit points." ]
+      , P [ T "This axe is forged from a dark, rust-colored metal and once belonged to the goliath barbarian Grog Strongjaw of Vox Machina." ]
+      ]
+    }
+  , { title: "Bloodseeker Ammunition"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeWeapon (Just "any ammunition")
+    , attune: AttuneNone
+    , source: [ SourceBookOfManyThings ]
+    , description:
+      [ P [ T "Ranged attack rolls made with this ammunition have advantage against any creature doesn't have all its hit points." ]
+      ]
+    }
+  , { title: "Bloodshed Blade"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeWeapon (Just "any sword")
+    , attune: Attune Nothing
+    , source: [ SourceBigbyPresentsGloryOfTheGiants ]
+    , description:
+      [ P [ T "The hilt of this sword bears a carnelian engraved with the blood rune." ]
+      , P [ T "You can add your Constitution modifier (minimum of +1) to the damage rolls of attacks made with this weapon." ]
+      , P [ B "Invoking the Rune. ", T "When you target a creature with an attack using this weapon, you can invoke the sword's rune, causing it to flare with crimson light and infusing your attack with bloodthirsty precision. You then spend and roll one of your unspent Hit Dice and add the number rolled to the attack roll. You can choose to invoke the rune after rolling the d20." ]
+      , P [ T "If this attack hits, you can also spend and roll any number of your unspent Hit Dice and add the total rolled to the weapon's damage." ]
+      , P [ T "Once the rune has been invoked, it can't be invoked again until the next dawn." ]
+      ]
+    }
+  , { title: "Bobbing Lily Pad"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: [ SourceTheWildBeyondTheWitchlight ]
+    , description:
+      [ P [ T "This magic vehicle is a 10-foot-diameter leaf that floats on water. It has tendrils that propel it across land and across the water's surface (but not underwater), as well as through the air. It has a walking, flying, and swimming speed of 20 feet, and it can hover. It moves according to your spoken directions while you are riding it." ]
+      , P [ T "The lily pad can transport up to 300 pounds without hindrance. It can carry up to twice this weight, but it moves at half speed if it carries more than its normal capacity." ]
+      ]
+    }
+  , { title: "Bow Of Melodies"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeWeapon (Just "any bow")
+    , attune: Attune Nothing
+    , source: [ SourceBookOfManyThings ]
+    , description:
+      [ P [ T "This bow has multiple strings and resembles a lyre or small harp. By strumming the strings while setting an arrow to the bow, you imbue the arrow with magic." ]
+      , P [ T "You can play one of the following melodies when you use the bow to make a ranged weapon attack. You must choose to do so before you make the attack roll, and you can play only one melody per attack." ]
+      , P [ T "Melody of Precision. If you're proficient in Performance, you gain a +1 bonus to the attack roll. If you have expertise in Performance, you gain a +2 bonus instead." ]
+      , P [ T "Melody of Reverberation. The melody you strum echoes loudly. On a hit, the target takes extra thunder damage equal to your Charisma modifier." ]
+      ]
+    }
+  , { title: "Bracelet of Rock Magic"
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: [ SourceTalesFromTheYawningPortal ]
+    , description:
+      [ P [ T "While you wear this gold bracelet, it grants you immunity to being petrified, and it allows you to cast Flesh to Stone (save DC 15) as an action. Once the spell has been cast three times, the bracelet can no longer cast it. Thereafter, you can cast Stone Shape as an action. After you have done this thirteen times, the bracelet loses its magic and turns from gold to lead." ]
+      , P [ B "Curse. ", T "The bracelet's affinity with earth manifests as an unusual curse. Creatures of flesh that are strongly related to earth and stone, such as stone giants and dwarves, have advantage on the saving throw against Flesh to Stone cast from the bracelet. If such a creature's save is successful, the bracelet breaks your attunement to it and casts the spell on you. You make your saving throw with disadvantage, and on a failed save you are petrified instantly." ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
+      ]
+    }
+  , { title: ""
+    , rarity: [ RarityVeryRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceDMG ]
+    , description:
+      [ P [ T "" ]
       ]
     }
   , { title: ""
@@ -6260,25 +7461,25 @@ legendaryItems =
       [ P [ T "This item first appears to be a Large sealed iron barrel weighing 500 pounds. The barrel has a hidden catch, which can be found with a successful DC 20 Intelligence (Investigation) check. Releasing the catch unlocks a hatch at one end of the barrel, allowing two Medium or smaller creatures to crawl inside. Ten levers are set in a row at the far end, each in a neutral position, able to move either up or down. When certain levers are used, the apparatus transforms to resemble a giant lobster." ]
       , P [ T "The apparatus of Kwalish is a Large object with the following statistics:" ]
       , TB []
-        [ TR [ B "Armor Class: ", T "20" ]
-        , TR [ B "Hit Points: ", T "200" ]
-        , TR [ B "Speed: ", T "30 ft., swim 30 ft., (or 0ft, for both if the legs and tail aren't extended)" ]
+        [ [ B "Armor Class: ", T "20" ]
+        , [ B "Hit Points: ", T "200" ]
+        , [ B "Speed: ", T "30 ft., swim 30 ft., (or 0ft, for both if the legs and tail aren't extended)" ]
         ]
       , P [ T "To be used as a vehicle, the apparatus requires one pilot. While the apparatus's hatch is closed, the compartment is airtight and watertight. The compartment holds enough air for 10 hours of breathing, divided by the number of breathing creatures inside." ]
       , P [ T "The apparatus floats on water. It can also go underwater to a depth of 900 feet. Below that, the vehicle takes 2d6 bludgeoning damage per minute from pressure." ]
       , P [ T "A creature in the compartment can use an action to move as many as two of the apparatus's levers up or down. After each use, a lever goes back to its neutral position. Each lever, from left to right, functions as shown in the Apparatus of Kwalish Levers table." ]
       , P [ B "Apparatus of Kwalish Levers:" ]
       , TB   [ T "Level",    T "Up", T "Down" ]
-        [ TR [ T "Lever 1",  T "Legs and tail extend, allowing the apparatus to walk and swim.", T "Legs and tail retract, reducing the apparatus's speed to 0 and making it unable to benefit from bonuses to speed." ]
-        , TR [ T "Lever 2",  T "Forward window shutter opens.", T "Forward window shutter closes." ]
-        , TR [ T "Lever 3",  T "Side window shutters open (two per side).", T "Side window shutters close (two per side)." ]
-        , TR [ T "Lever 4",  T "Two claws extend from the front sides of the apparatus.", T "The claws retract." ]
-        , TR [ T "Lever 5",  T "Each extended claw makes the following melee weapon attack: +8 to hit, reach 5 ft., one target. Hit: 7 (2d6) bludgeoning damage.", T "Each extended claw makes the following melee weapon attack: +8 to hit, reach 5 ft., one target. Hit: The target is grappled (escape DC 15)." ]
-        , TR [ T "Lever 6",  T "The apparatus walks or swims forward.", T "The apparatus walks or swims backward." ]
-        , TR [ T "Lever 7",  T "The apparatus turns 90 degrees left.", T "The apparatus turns 90 degrees right." ]
-        , TR [ T "Lever 8",  T "Eyelike fixtures emit bright light in a 30-foot radius and dim light for an additional 30 feet.", T "The light turns off." ]
-        , TR [ T "Lever 9",  T "The apparatus sinks as much as 20 feet in liquid.", T "The apparatus rises up to 20 feet in liquid." ]
-        , TR [ T "Lever 10", T "The rear hatch unseals and opens." , T "The rear hatch closes and seals." ]
+        [ [ T "Lever 1",  T "Legs and tail extend, allowing the apparatus to walk and swim.", T "Legs and tail retract, reducing the apparatus's speed to 0 and making it unable to benefit from bonuses to speed." ]
+        , [ T "Lever 2",  T "Forward window shutter opens.", T "Forward window shutter closes." ]
+        , [ T "Lever 3",  T "Side window shutters open (two per side).", T "Side window shutters close (two per side)." ]
+        , [ T "Lever 4",  T "Two claws extend from the front sides of the apparatus.", T "The claws retract." ]
+        , [ T "Lever 5",  T "Each extended claw makes the following melee weapon attack: +8 to hit, reach 5 ft., one target. Hit: 7 (2d6) bludgeoning damage.", T "Each extended claw makes the following melee weapon attack: +8 to hit, reach 5 ft., one target. Hit: The target is grappled (escape DC 15)." ]
+        , [ T "Lever 6",  T "The apparatus walks or swims forward.", T "The apparatus walks or swims backward." ]
+        , [ T "Lever 7",  T "The apparatus turns 90 degrees left.", T "The apparatus turns 90 degrees right." ]
+        , [ T "Lever 8",  T "Eyelike fixtures emit bright light in a 30-foot radius and dim light for an additional 30 feet.", T "The light turns off." ]
+        , [ T "Lever 9",  T "The apparatus sinks as much as 20 feet in liquid.", T "The apparatus rises up to 20 feet in liquid." ]
+        , [ T "Lever 10", T "The rear hatch unseals and opens." , T "The rear hatch closes and seals." ]
         ]
       ]
     }
@@ -6304,9 +7505,9 @@ artifactItems =
     , description: 
       [ P [ T "This massive adze is said to have been wielded by All-Father Annam, not as a weapon but as the tool he used to shape the various worlds of the Material Plane eons ago." ]
       , P [ T "Random Properties. The adze has the following random properties, determined by rolling on the appropriate table in the Dungeon Master's Guide:" ]
-      , UL [ LI [ T "2 minor beneficial propties" ]
-           , LI [ T "1 major beneficial property" ]
-           , LI [ T "2 minor detrimental properties" ]
+      , UL [ [ T "2 minor beneficial propties" ]
+           , [ T "1 major beneficial property" ]
+           , [ T "2 minor detrimental properties" ]
            ]
       , P [ B "Magic Weapon. ", T "When a creature attunes to the adze, the artifact magically adjusts its size so that creature can wield it as a greataxe. The adze is a magic weapon that grants a +3 bonus to attack and damage rolls made with it. On a hit, the adze deals an additional 3d12 force damage. It also deals double damage to objects and structures." ]
       , P [ B "Divine Mattock. ", T "As an action, you can call upon the might of the All-Father and use the adze to cast Move Earth or Fabricate. Once this property is used, it can't be used again until the next dawn."  ]

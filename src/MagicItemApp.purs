@@ -61,7 +61,7 @@ view model =
 
 viewFilter :: Model -> Html Message
 viewFilter model =
-  HE.nav [ HA.class' "top white" ] 
+  HE.nav [ HA.class' "bottom white" ] 
   [ HE.div [ HA.class' "grid" ]
     [ HE.div [ HA.class' "s3" ] [ mkInput  "Item Name" ChangeTitle              model.fltTitle ]
     , HE.div [ HA.class' "s2" ] [ mkSelect "Rarity"    ChangeRarity allRarities model.fltRarity ]
@@ -136,7 +136,7 @@ viewItem item =
         , HE.div [ HA.class' "s3" ] [ HE.text (intercalate ", " (map show item.source)) ]
         ]
       ] 
-    , HE.article [ HA.class' "white" ]
+    , HE.article [ HA.id item.title, HA.class' "white" ]
       ( (HE.p [ HA.class' "item-description" ] [ HE.em_ (showCaption item) ]) : (map mkDescription item.description)
       )
       
@@ -158,10 +158,8 @@ mkDescription (P xs)   = HE.p_ (map mkDescription xs )
 mkDescription (T s)    = HE.text s
 mkDescription (B s)    = HE.strong_ [ HE.text s ]
 mkDescription (I s)    = HE.em_ [ HE.text s ]
-mkDescription (UL xs)  = HE.ul_ (map mkDescription xs)
-mkDescription (LI xs)  = HE.li_ (map mkDescription xs)
+mkDescription (UL xs)  = HE.ul_ (map mkListItem xs)
 mkDescription (TB h b) = HE.table [ HA.class' "stripes" ] [ mkTableHeader h, mkTableBody b ]
-mkDescription (TR xs)  = HE.tr_ (map (\x -> HE.td_ (mkDescription x)) xs)
 mkDescription (H5 s)   = HE.h5_ [ HE.text s ]
 mkDescription (H6 s)   = HE.h6_ [ HE.text s ]
 
@@ -169,9 +167,15 @@ mkTableHeader :: Array Description -> Html Message
 mkTableHeader [] = HE.thead_ ([] :: Array (Html Message))
 mkTableHeader hs = HE.thead_ [ HE.tr_ (map (\h -> HE.th_ (mkDescription h)) hs) ]
 
-mkTableBody :: Array Description -> Html Message
-mkTableBody [] = HE.thead_ ([] :: Array (Html Message))
-mkTableBody bs = HE.tbody_ (map mkDescription bs)
+mkTableBody :: Array (Array Description) -> Html Message
+mkTableBody [] = HE.tbody_ ([] :: Array (Html Message))
+mkTableBody bs = HE.tbody_ (map mkTableRow bs)
+
+mkTableRow :: Array Description -> Html Message
+mkTableRow rs = HE.tr_ (map (\td -> HE.td_ (mkDescription td)) rs)
+
+mkListItem :: Array Description -> Html Message
+mkListItem xs = HE.li_ (map mkDescription xs)
 
 showCaption :: MagicItem -> String
 showCaption item
