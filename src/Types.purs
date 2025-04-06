@@ -390,6 +390,6 @@ type MagicItem =
   , rarity :: Array Rarity
   , type :: ItemType
   , attune :: ItemAttunement
-  , source :: ItemSource
+  , source :: Array ItemSource
   , description :: Array Description
   }

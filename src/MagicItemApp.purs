@@ -9,7 +9,7 @@ module MagicItemApp
 
 import Prelude
 
-import Data.Array ((:), elem, filter, sortBy)
+import Data.Array ((:), elem, filter, intercalate, sortBy)
 import Data.Maybe (Maybe(..))
 import Data.String (Pattern(..), contains, toLower)
 import Data.Tuple (Tuple)
@@ -109,7 +109,7 @@ filterItem model item
   && filterMaybeIn model.fltRarity item.rarity
   && filterMaybe model.fltType item.type
   && filterMaybe model.fltAttunement item.attune
-  && filterMaybe model.fltSource item.source
+  && filterMaybeIn model.fltSource item.source
 
 filterTitle :: String -> String -> Boolean
 filterTitle "" _ = true
@@ -128,16 +128,16 @@ viewItem item =
   HE.article [ HA.class' (rarityColor item.rarity) ]
   [ HE.details_
     [ HE.summary_ 
-      [ HE.div [ HA.class' "grid" ]
+      [ HE.div [ HA.class' "grid tiny-line" ]
         [ HE.div [ HA.class' "s3" ] [ HE.strong_ [HE.text item.title] ]
         , HE.div [ HA.class' "s2" ] [ HE.text (showR item.rarity) ]
         , HE.div [ HA.class' "s2" ] [ HE.text (show item.type) ]
         , HE.div [ HA.class' "s2" ] [ HE.text (show item.attune) ]
-        , HE.div [ HA.class' "s3" ] [ HE.text (show item.source) ]
+        , HE.div [ HA.class' "s3" ] [ HE.text (intercalate ", " (map show item.source)) ]
         ]
       ] 
     , HE.article [ HA.class' "white" ]
-      ( (HE.p_ [ HE.em_ (showCaption item) ]) : (map mkDescription item.description)
+      ( (HE.p [ HA.class' "item-description" ] [ HE.em_ (showCaption item) ]) : (map mkDescription item.description)
       )
       
     ]
