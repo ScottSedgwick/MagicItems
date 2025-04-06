@@ -5454,7 +5454,7 @@ rareItems =
     , source: [ SourceBookOfManyThings ]
     , description: 
       [ P [ T "Veins of sunstone run through this wooden staff. This staff can be wielded as a magic quarterstaff that grants a +1 bonus to attack and damage rolls made with it. When you hit with an attack roll using this staff, the target takes an extra 1d8 fire damage." ]
-      , P [ B "Solar Focus. ", T "You can use the staff as a spellcasting focus. While holding the staff, you can reroll a number of damage dice up to your proficiency bonus when you use a spell slot to cast a spell that deals fire or radiant damage. You must use the new rolls. Once this property is used, it can’t be used again until the next dawn." ]
+      , P [ B "Solar Focus. ", T "You can use the staff as a spellcasting focus. While holding the staff, you can reroll a number of damage dice up to your proficiency bonus when you use a spell slot to cast a spell that deals fire or radiant damage. You must use the new rolls. Once this property is used, it can't be used again until the next dawn." ]
       , P [ B "Sunny Glow. ", T "As a bonus action, you can cause the staff to glow with sunlight. While glowing, the staff sheds bright light in a 15-foot radius and dim light for an additional 15 feet. The light lasts until you use another bonus action to extinguish it." ]
       ]
     }
@@ -5488,139 +5488,269 @@ rareItems =
       , P [ T "Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature's turns, it takes 1d4 necrotic damage for each time you've wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success." ]
       ]
     }
-  , { title: ""
+  , { title: "Teleportation Tablet"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
     , attune: AttuneNone
-    , source: [ SourceDMG ]
+    , source: [ SourceCriticalRoleCallOfNetherdeep ]
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This clay tablet is eight inches long, four inches wide, and half an inch thick. Inscribed on it is the sigil sequence for a permanent teleportation circle. A creature that studies the sequence for 10 minutes can make a DC 21 Intelligence (Arcana) check, learning the circle's destination on a success." ]
+      , P [ T "You can use an action to break the tablet in half, turning it to dust. If the tablet is broken while it is on the same plane of existence as the teleportation circle whose sigil sequence was engraved on it, a 10-foot-diameter teleportation circle of glowing blue light appears on the ground in an unoccupied space you choose within 30 feet of you. This teleportation circle has the characteristics of one created using the Teleportation Circle spell, except that it connects to the teleportation circle whose sigil sequence appears on the tablet." ]
+      , P [ T "The teleportation circle created by the tablet disappears at the end of your next turn." ]
       ]
     }
-  , { title: ""
+  , { title: "Tentacle Rod"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
+    , type: TypeRod
+    , attune: Attune Nothing
     , source: [ SourceDMG ]
     , description: 
-      [ P [ T "" ]
+      [ P [ T "Made by the drow, this rod is a magic weapon that ends in three rubbery tentacles. While holding the rod, you can use an action to direct each tentacle to attack a creature you can see within 15 feet of you. Each tentacle makes a melee attack roll with a +9 bonus. On a hit, the tentacle deals 1d6 bludgeoning damage. If you hit a target with all three tentacles, it must make a DC 15 Constitution saving throw. On a failure, the creature's speed is halved, it has disadvantage on Dexterity saving throws, and it can't use reactions for 1 minute. Moreover, on each of its turns, it can take either an action or a bonus action, but not both. At the end of each of its turns, it can repeat the saving throw, ending the effect on itself on a success." ]
       ]
     }
-  , { title: ""
+  , { title: "Two-Birds Sling"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
+    , type: TypeWeapon (Just "sling")
     , attune: AttuneNone
-    , source: [ SourceDMG ]
+    , source: [ SourceMythicOdysseysOfTheros ]
     , description: 
-      [ P [ T "" ]
+      [ P [ T "When you make a ranged attack with this sling and hit a target, you can cause the ammunition to ricochet toward a second target within 10 feet of the first, and then make a ranged attack against the second target." ]
       ]
     }
-  , { title: ""
+  , { title: "Ventilating Lungs"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
+    , attune: Attune Nothing
+    , source: [ SourceEberronRisingFromTheLastWar ]
     , description: 
-      [ P [ T "" ]
+      [ P [ T "These metallic nodules were created in response to the poisonous gases used on the battlefields of the Last War. When you attune to these lungs, they replace the lungs in your chest, which disappear. The lungs allow you to breathe normally, even in an antimagic field, and their breathing function can't be suppressed by magic." ]
+      , P [ T "Outside an antimagic field or any other effect that suppresses magic, these lungs allow you to breathe normally in any environment (including a vacuum), and you have advantage on saving throws against harmful gases such as those created by a Cloudkill spell, a Stinking Cloud spell, inhaled poisons, and gaseous breath weapons ." ]
+      , P [ T "As an action, you can use these lungs to exhale a gust of wind, as if you had cast the Gust of Wind spell (spell save DC 15) with no components. This property of the lungs can't be used again until the next dawn." ]
+      , P [ T "If your attunement to the lungs ends, your original lungs reappear." ]
       ]
     }
-  , { title: ""
+  , { title: "Vicious Weapon"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
+    , type: TypeWeapon (Just "any")
     , attune: AttuneNone
     , source: [ SourceDMG ]
     , description: 
-      [ P [ T "" ]
+      [ P [ T "When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon's type." ]
       ]
     }
-  , { title: ""
+  , { title: "Voidwalker Armor"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
+    , type: TypeArmor (Just "studded leather")
+    , attune: Attune Nothing
+    , source: [ SourceBookOfManyThings ]
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This black studded leather armor bears a red sheen. While wearing this armor, you can use a bonus action to summon a projection of yourself in an unoccupied space within 30 feet of yourself. The projection is a translucent copy of you that has immunity to all damage and conditions, and you can make attacks and cast spells with a range other than self as if standing in the projection's space. The projection disappears at the end of your turn. Once you use this bonus action, it can't be used again until the next dawn." ]
+      , P [ B "Curse. ", T "This armor is cursed, and attuning to it extends the curse to you. As long as you remain cursed, you're unwilling to part with the armor. Taking it off fails to end the curse. While cursed in this way, you feel disconnected from your body, continuously hearing whispers that call for you to join them. Whenever you finish a long rest while cursed, you must make a DC 11 Charisma saving throw. On a failed save, your soul is drawn from your body and trapped in an object on a different plane of existence. The object and location of this object are chosen by the DM (but might be the House of Cards; see chapter 18). While your soul is trapped in this way, your body is inert and doesn't age or require sustenance. Destroying the object frees your soul; otherwise, only a Wish spell can restore your soul to your body." ]
       ]
     }
-  , { title: ""
+  , { title: "Wand of Binding"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
+    , type: TypeWand
+    , attune: Attune (Just "spellcaster")
     , source: [ SourceDMG ]
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed." ]
+      , P [ B "Spells. ", T "While holding the wand, you can use an action to expend some of its charges to cast one of the following spells (save DC 17): Hold Monster (5 charges) or Hold Person (2 charges)." ]
+      , P [ B "Assisted Escape. ", T "While holding the wand, you can use your reaction to expend 1 charge and gain advantage on a saving throw you make to avoid being paralyzed or restrained, or you can expend 1 charge and gain advantage on any check you make to escape a grapple." ]
       ]
     }
-  , { title: ""
+  , { title: "Wand of Enemy Detection"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
+    , type: TypeWand
+    , attune: Attune Nothing
     , source: [ SourceDMG ]
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This wand has 7 charges. While holding it, you can use an action and expend 1 charge to speak its command word. For the next minute, you know the direction of the nearest creature hostile to you within 60 feet, but not its distance from you. The wand can sense the presence of hostile creatures that are ethereal, invisible, disguised, or hidden, as well as those in plain sight. The effect ends if you stop holding the wand." ]
+      , P [ T "The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed." ]
       ]
     }
-  , { title: ""
+  , { title: "Wand of Fear"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
+    , type: TypeWand
+    , attune: Attune Nothing
     , source: [ SourceDMG ]
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed." ]
+      , P [ B "Command. ", T "While holding the wand, you can use an action to expend 1 charge and command another creature to flee or grovel, as with the Command spell (save DC 15)." ]
+      , P [ B "Cone of Fear. ", T "While holding the wand, you can use an action to expend 2 charges, causing the wand's tip to emit a 60-foot cone of amber light. Each creature in the cone must succeed on a DC 15 Wisdom saving throw or become frightened of you for 1 minute. While it is frightened in this way, a creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If it has nowhere it can move, the creature can use the Dodge action. At the end of each of its turns, a creature can repeat the saving throw, ending the effect on itself on a success." ]
       ]
     }
-  , { title: ""
+  , { title: "Wand of Fireballs"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
+    , type: TypeWand
+    , attune: Attune (Just "spellcaster")
     , source: [ SourceDMG ]
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the Fireball spell (save DC 15) from it. For 1 charge, you cast the 3rd-level version of the spell. You can increase the spell slot level by one for each additional charge you expend." ]
+      , P [ T "The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed." ]
       ]
     }
-  , { title: ""
+  , { title: "Wand of Lightning Bolts"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
+    , type: TypeWand
+    , attune: Attune (Just "spellcaster")
     , source: [ SourceDMG ]
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the Lightning Bolt (save DC 15) from it. For 1 charge, you cast the 3rd-level version of the spell. You can increase the spell slot level by one for each additional charge you expend." ]
+      , P [ T "The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed." ]
       ]
     }
-  , { title: ""
+  , { title: "Wand of Paralysis"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
+    , type: TypeWand
+    , attune: Attune (Just "spellcaster")
     , source: [ SourceDMG ]
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cause a thin blue ray to streak from the tip toward a creature you can see within 60 feet of you. The target must succeed on a DC 15 Constitution saving throw or be paralyzed for 1 minute. At the end of each of the target's turns, it can repeat the saving throw, ending the effect on itself on a success." ]
+      , P [ T "The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed." ]
       ]
     }
-  , { title: ""
+  , { title: "Wand of Viscid Globs"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
+    , type: TypeWand
     , attune: AttuneNone
-    , source: [ SourceDMG ]
+    , source: [ SourceOutOfTheAbyss ]
     , description: 
-      [ P [ T "" ]
+      [ P [ T "Crafted by the drow, this slim black wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cause a small glob of viscous material to launch from the tip at one creature within 60 feet of you. Make a ranged attack roll against the target, with a bonus equal to your spellcasting modifier (or your Intelligence modifier, if you don't have a spellcasting ability) plus your proficiency bonus. On a hit, the glob expands and dries on the target, which is restrained for 1 hour. After that time, the viscous material cracks and falls away." ]
+      , P [ T "Applying a pint or more of alcohol to the restrained creature dissolves the glob instantly, as does the application of Oil of Etherealness or Universal Solvent. The glob also dissolves instantly if exposed to sunlight. No other nonmagical processes can remove the viscous material until it deteriorates on its own." ]
+      , P [ T "The wand regains 1d6 + 1 expended charges daily at midnight. If you expend the wand's last charge, roll a d20. On a 1, the wand melts into harmless slime and is destroyed." ]
+      , P [ T "A Wand of Viscid Globs is destroyed if exposed to sunlight for 1 hour without interruption." ]
       ]
     }
-  , { title: ""
+  , { title: "Wand of Winter"
     , rarity: [ RarityRare ]
-    , type: TypeItem Nothing
-    , attune: AttuneNone
-    , source: [ SourceDMG ]
+    , type: TypeWand
+    , attune: Attune Nothing
+    , source: [ SourceTyrannyOfDragons ]
     , description: 
-      [ P [ T "" ]
+      [ P [ T "This wand looks and feels like an icicle." ]
+      , P [ T "The wand has 7 charges, which are used to fuel the spells within it. With the wand in hand, you can use your action to cast one of the following spells from the wand, even if you are incapable of casting spells: Ray of Frost (no charges, or 1 charge to cast at 5th level; +5 to hit with ranged spell attack), Sleet Storm (3 charges; spell save DC 15), or Ice Storm (4 charges; spell save DC 15). No other components are required." ]
+      , P [ T "The wand regains 1d6 + 1 expended charges each day at dawn. If you expend the wand's last charge, roll a d20. On a 20, the wand melts away, forever destroyed." ]
       ]
     }
-  , { title: ""
+  , { title: "Wand of Wonder"
+    , rarity: [ RarityRare ]
+    , type: TypeWand
+    , attune: Attune (Just "spellcaster")
+    , source: [ SourceDMG ]
+    , description: 
+      [ P [ T "This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges and choose a target within 120 feet of you. The target can be a creature, an object, or a point in space. Roll d100 and consult the following table to discover what happens." ]
+      , P [ T "If the effect causes you to cast a spell from the wand, the spell's save DC is 15. If the spell normally has a range expressed in feet, its range becomes 120 feet if it isn't already." ]
+      , P [ T "If an effect covers an area, you must center the spell on and include the target. If an effect has multiple possible subjects, the DM randomly determines which ones are affected." ]
+      , P [ T "The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into dust and is destroyed." ]
+      , TB [ T "d100", T "Effect" ]
+        [ TR [ T "01-05", T "You cast Slow." ]
+        , TR [ T "06-10", T "You cast Faerie Fire." ]
+        , TR [ T "11-15", T "You are stunned until the start of your next turn, believing something awesome just happened." ]
+        , TR [ T "16-20", T "You cast Gust of Wind." ]
+        , TR [ T "21-25", T "You cast Detect Thoughts on the target you chose. If you didn't target a creature, you instead take 1d6 psychic damage." ]
+        , TR [ T "26-30", T "You cast Stinking Cloud." ]
+        , TR [ T "31-33", T "Heavy rain falls in a 60-foot radius centered on the target. The area becomes lightly obscured. The rain falls until the start of your next turn." ]
+        , TR [ T "34-36", T "An animal appears in the unoccupied space nearest the target. The animal isn't under your control and acts as it normally would. Roll a d100 to determine which animal appears. On a 01-25, a rhinoceros appears; on a 26-50, an elephant appears; and on a 51-100, a rat appears. See the Monster Manual for the animal's statistics." ]
+        , TR [ T "37-46", T "You cast Lightning Bolt." ]
+        , TR [ T "47-49", T "A cloud of 600 oversized butterflies fills a 30-foot radius centered on the target. The area becomes heavily obscured. The butterflies remain for 10 minutes." ]
+        , TR [ T "50-53", T "You enlarge the target as if you had cast Enlarge/Reduce. If the target can't be affected by that spell or if you didn't target a creature, you become the target." ]
+        , TR [ T "54-58", T "You cast Darkness." ]
+        , TR [ T "59-62", T "Grass grows on the ground in a 60-foot radius centered on the target. If grass is already there, it grows to ten times its normal size and remains overgrown for 1 minute." ]
+        , TR [ T "63-65", T "An object of the DM's choice disappears into the Ethereal Plane. The object must be neither worn nor carried, within 120 feet of the target, and no larger than 10 feet in any dimension." ]
+        , TR [ T "66-69", T "You shrink yourself as if you had cast Enlarge/Reduce on yourself." ]
+        , TR [ T "70-79", T "You cast Fireball." ]
+        , TR [ T "80-84", T "You cast Invisibility on yourself." ]
+        , TR [ T "85-87", T "Leaves grow from the target. If you chose a point in space as the target, leaves sprout from the creature nearest to that point. Unless they are picked off, the leaves turn brown and fall off after 24 hours." ]
+        , TR [ T "88-90", T "A stream of 1 d4 x 10 gems, each worth 1 gp, shoots from the wand 's tip in a line 30 feet long and 5 feet wide. Each gem deals 1 bludgeoning damage, and the total damage of the gems is divided equally among all creatures in the line ." ]
+        , TR [ T "91-95", T "A burst of colorful shimmering light extends from you in a 30-foot radius. You and each creature in the area that can see must succeed on a DC 15 Constitution saving throw or become blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success." ]
+        , TR [ T "96-97", T "The target's skin turns bright blue for 1d10 days. If you chose a point in space, the creature nearest to that point is affected ." ]
+        , TR [ T "98-00", T "If you targeted a creature, it must make a DC 15 Constitution saving throw. If you didn't target a creature, you become the target and must make the saving throw. If the saving throw fails by 5 or more, the target is instantly petrified. On any other failed save, the target is restrained and begins to turn to stone. While restrained in this way, the target must repeat the saving throw at the end of its next turn , becoming petrified on a failure or ending the effect on a success. The petrification lasts until the target is freed by the Greater Restoration spell or similar magic." ]
+        ]
+      ]
+    }
+  , { title: "War Horn of Valor"
     , rarity: [ RarityRare ]
     , type: TypeItem Nothing
     , attune: AttuneNone
+    , source: [ SourceBigbyPresentsGloryOfTheGiants ]
+    , description: 
+      [ P [ T "This brass war horn is engraved with the war rune, which glows purple when the horn is blown." ]
+      , P [ T "You can blow the horn as a bonus action. When you do, if you have the frightened condition, you immediately end that condition on yourself. You also have advantage on saving throws against being frightened until the start of your next turn." ]
+      , P [ B "Invoking the Rune. ", T "When you blow the horn, you can also invoke the rune, imbuing the horn's deep call with protective magic that affects creatures of your choice within 30 feet of yourself. You and all affected creatures gain a +1 bonus to AC until the start of your next turn." ]
+      , P [ T "Once the rune has been invoked, it can't be invoked again until the next dawn." ]
+      ]
+    }
+  , { title: "Warrior's Passkey"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: [ SourceBookOfManyThings ]
+    , description: 
+      [ P [ T "This silver skeleton key is warm to the touch. While holding the key in its key form, you can use an action to cast the Knock spell from the key." ]
+      , P [ B "Transforming the Key. ", T "While holding the key, you can use a bonus action to transform it into a magic longsword. You are considered proficient with the sword, and you have a +1 bonus to attack and damage rolls made with it. On a hit, the sword deals 1d10 force damage. The item remains in its sword form until it leaves your grasp or you use another bonus action to revert it to its key form." ]
+      , P [ T "If you end your attunement to the item while it's in its sword form, it automatically reverts to its key form." ]
+      ]
+    }
+  , { title: "Wayfarer's Boots"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: [ SourceBigbyPresentsGloryOfTheGiants ]
+    , description: 
+      [ P [ T "This pair of boots is made of durable cloth, with the journey rune stitched in golden thread above each heel. While you are wearing this item, your walking speed increases by 10 feet, and you have advantage on Wisdom (Survival) checks." ]
+      , P [ B "Invoking the Runes. ", T "As a bonus action, you can invoke the boots' runes to cast the Expeditious Retreat spell with them. Once the runes have been invoked, they can't be invoked again until the next dawn." ]
+      ]
+    }
+  , { title: "Weapon of Certain Death"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: AttuneNone
+    , source: [ SourceExplorersGuideToWildemount ]
+    , description: 
+      [ P [ T "When you damage a creature with an attack using this magic weapon, the target can't regain hit points until the start of your next turn." ]
+      ]
+    }
+  , { title: "Weird Tank"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
+    , source: [ SourcePrincesOfTheApocalypse ]
+    , description: 
+      [ P [ T "A Weird Tank is a ten-gallon tank of blown glass and sculpted bronze with a backpack-like carrying harness fashioned from tough leather. A water weird (see the Monster Manual for statistics) is contained within the tank. While wearing the tank, you can use an action to open it, allowing the water weird to emerge. The water weird acts immediately after you in the initiative order, and it is bound to the tank." ]
+      , P [ T "You can command the water weird telepathically (no action required) while you wear the tank. You can close the tank as an action only if you have first commanded the water weird to retract into it or if the water weird is dead." ]
+      , P [ T "If the water weird is killed, the tank loses its magical containment property until it spends at least 24 hours inside an elemental water node. When the tank is recharged, a new water weird forms inside it." ]
+      , P [ T "The tank has AC 15, 50 hit points, vulnerability to bludgeoning damage, and immunity to poison and psychic damage. Reducing the tank to 0 hit points destroys it and the water weird contained within it." ]
+      ]
+    }
+  , { title: "Wings of Flying"
+    , rarity: [ RarityRare ]
+    , type: TypeItem Nothing
+    , attune: Attune Nothing
     , source: [ SourceDMG ]
     , description: 
-      [ P [ T "" ]
+      [ P [ T "While wearing this cloak, you can use an action to speak its command word. This turns the cloak into a pair of bat wings or bird wings on your back for 1 hour or until you repeat the command word as an action. The wings give you a flying speed of 60 feet. When they disappear, you can't use them again for 1d12 hours." ]
+      ]
+    }
+  , { title: "Woodcutter's Axe"
+    , rarity: [ RarityRare ]
+    , type: TypeWeapon (Just "greataxe")
+    , attune: AttuneNone
+    , source: [ SourceTheWildBeyondTheWitchlight ]
+    , description: 
+      [ P [ T "You have a +1 bonus to attack and damage rolls made with this magic weapon." ]
+      , P [ T "When you use this axe to make an attack against a plant (an ordinary plant or a creature with the Plant type) or a wooden object that isn't being worn or carried, the attack deals an extra 2d6 slashing damage on a hit." ]
+      ]
+    }
+  , { title: "Zephyr Armor"
+    , rarity: [ RarityRare ]
+    , type: TypeArmor (Just "light")
+    , attune: Attune Nothing
+    , source: [ SourceBigbyPresentsGloryOfTheGiants ]
+    , description: 
+      [ P [ T "This fine set of white-and-silver armor bears the wind rune upon its chest." ]
+      , P [ T "While wearing this armor, you have advantage on Dexterity (Acrobatics) checks and Dexterity saving throws as your movements are bolstered by gentle currents of wind." ]
+      , P [ B "Invoking the Rune. ", T "As an action, you can invoke the armor’s rune to cast the Wind Wall spell (save DC 15) with it. Once the rune has been invoked, it can’t be invoked again until the next dawn." ]
       ]
     }
   , { title: ""

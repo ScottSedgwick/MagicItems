@@ -1,0 +1,19 @@
+article p {
+  line-height: 22px;
+  margin-top: 0px 0;
+  margin-bottom: 0px 0;
+}
+
+article ul {
+    line-height: 22px;
+    margin-top: 0px 0;
+    margin-bottom: 0px 0;
+}
+
+article table thead {
+    line-height: 20px;
+}
+
+article table tr {
+    line-height: 20px;
+}
