@@ -10,17 +10,17 @@ module MagicItemApp
 
 import Prelude
 
-import Data.Array (elem, filter, intercalate, sortBy)
+import Data.Array (elem, filter, head, intercalate, sortBy, tail)
 import Data.Maybe (Maybe(..))
-import Data.String (Pattern(..), contains, toLower)
-import Data.Tuple (Tuple)
+import Data.String (Pattern(..), Replacement(..), contains, drop, indexOf, replaceAll, toLower)
+import Data.Tuple (Tuple(..), fst, snd)
 import Effect.Aff (Aff)
 import Flame (Html, (:>))
 import Flame.Html.Attribute as HA
 import Flame.Html.Element as HE
 import Flame.Html.Event as HV
 import MagicItems (magicItems)
-import Types (Description(..), ItemAttunement, ItemSource, ItemType, MagicItem, Rarity(..), allAttunes, allRarities, allSources, allTypes, showFullAttune, showR, toAttune, unshow)
+import Types (Description(..), ItemAttunement, ItemSource, ItemType, MagicItem, Rarity(..), allAttunes, allRarities, allSources, allTypes, showR, toAttune, unshow)
 
 type Model =
   { fltTitle :: String
@@ -139,7 +139,7 @@ viewItem item =
       ] 
     , HE.article [ HA.class' "white" ]
       ( -- [ HE.p_ [ HE.em_ (showCaption item) ]
-        [ HE.div [ HA.id item.title, HA.class' "article-anchor" ] [ HE.text "" ]
+        [ HE.div [ HA.id (mkId item.title), HA.class' "article-anchor" ] [ HE.text "" ]
         ] <> (map mkDescription item.description)
       )
       
@@ -161,7 +161,7 @@ mkDescription (P xs)   = HE.p_ (map mkDescription xs )
 mkDescription (T s)    = HE.text s
 mkDescription (B s)    = HE.strong_ [ HE.text s ]
 mkDescription (I s)    = HE.em_ [ HE.text s ]
-mkDescription (A h s)  = HE.a [ HA.href h ] [ HE.text s ]
+mkDescription (A h s)  = HE.a [ HA.class' "inverse-link", HA.href (updateHref h) ] [ HE.text s ]
 mkDescription (UL xs)  = HE.ul_ (map mkListItem xs)
 mkDescription (TB h b) = HE.table [ HA.class' "stripes" ] [ mkTableHeader h, mkTableBody b ]
 mkDescription (H1 s)   = HE.h1_ [ HE.text s ]
@@ -184,6 +184,24 @@ mkTableRow rs = HE.tr_ (map (\td -> HE.td_ (mkDescription td)) rs)
 
 mkListItem :: Array Description -> Html Message
 mkListItem xs = HE.li_ (map mkDescription xs)
+
+updateHref :: String -> String
+updateHref xs =
+  case indexOf (Pattern "http://dnd5e.wikidot.com/wondrous-items:") xs of
+    Nothing -> xs
+    Just _  -> "index.html#" <> drop 40 xs
+
+mkId :: String -> String
+mkId xs = replaceAllOf (toLower xs) [Tuple " " "-", Tuple "(" "", Tuple ")" "", Tuple "," "", Tuple "'" ""]
+
+replaceAllOf :: String -> Array (Tuple String String) -> String
+replaceAllOf xs [] = xs
+replaceAllOf xs rs = 
+  case head rs of
+    Nothing -> xs
+    Just r -> case tail rs of
+                Nothing -> replaceAll (Pattern (fst r)) (Replacement (snd r)) xs
+                Just ts -> replaceAllOf (replaceAll (Pattern (fst r)) (Replacement (snd r)) xs) ts
 
 -- showCaption :: MagicItem -> String
 -- showCaption item

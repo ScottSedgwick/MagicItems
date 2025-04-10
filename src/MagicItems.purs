@@ -456,7 +456,7 @@ magicItems =
     }
   , { title: "Glamerweave"
     , url: "https://dnd5e.wikidot.com//wondrous-items:glamerweave"
-    , rarity: [RarityUncommon]
+    , rarity: [RarityCommon, RarityUncommon]
     , itemtype: TypeItem Nothing
     , attunement: AttuneNone
     , source: [SourceEberronRisingFromTheLastWar]
@@ -2225,7 +2225,7 @@ magicItems =
     }
   , { title: "All-Purpose Tool"
     , url: "https://dnd5e.wikidot.com//wondrous-items:all-purpose-tool"
-    , rarity: [RarityVeryRare]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare]
     , itemtype: TypeItem Nothing
     , attunement: AttuneNone
     , source: [SourceTashasCauldronOfEverything]
@@ -2245,7 +2245,7 @@ magicItems =
     }
   , { title: "Ammunition, +1, +2, or +3"
     , url: "https://dnd5e.wikidot.com//wondrous-items:ammunition"
-    , rarity: [RarityVeryRare]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare]
     , itemtype: TypeWeapon (Just "any ammunition")
     , attunement: AttuneNone
     , source: [SourceDMG]
@@ -2275,7 +2275,7 @@ magicItems =
     }
   , { title: "Amulet of the Devout"
     , url: "https://dnd5e.wikidot.com//wondrous-items:amulet-of-the-devout"
-    , rarity: [RarityVeryRare]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare]
     , itemtype: TypeItem Nothing
     , attunement: Attune (Just "cleric or paladin")
     , source: [SourceTashasCauldronOfEverything]
@@ -2303,24 +2303,6 @@ magicItems =
         ]
       , P
         [ T "This amulet smells of old, ale-stained wood. While wearing it, you can regain 4d4 + 4 hit points when you drink a pint of beer, ale, mead, or wine. Once the amulet has restored hit points, it can't do so again until the next dawn."
-        ]
-      ]
-    }
-  , { title: "Arcane Grimoire"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:arcane-grimoire"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeItem Nothing
-    , attunement: Attune (Just "wizard")
-    , source: [SourceTashasCauldronOfEverything]
-    , description:
-      [ P
-        [ I "Wondrous item, uncommon (+1), rare (+2), very rare (+3) (requires attunement by a wizard)"
-        ]
-      , P
-        [ T "While you are holding this leather-bound book, you can use it as a spellcasting focus for your wizard spells, and you gain a bonus to spell attack rolls and to the saving throw DCs of your wizard spells. The bonus is determined by the book's rarity."
-        ]
-      , P
-        [ T "You can use this book as a spellbook. In addition, when you use your Arcane Recovery feature, you can increase the number of spell slot levels you regain by 1."
         ]
       ]
     }
@@ -2749,7 +2731,7 @@ magicItems =
     }
   , { title: "Bloodwell Vial"
     , url: "https://dnd5e.wikidot.com//wondrous-items:bloodwell-vial"
-    , rarity: [RarityVeryRare]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare]
     , itemtype: TypeItem Nothing
     , attunement: Attune (Just "sorcerer")
     , source: [SourceTashasCauldronOfEverything]
@@ -3730,7 +3712,7 @@ magicItems =
     }
   , { title: "Dragonhide Belt"
     , url: "https://dnd5e.wikidot.com//wondrous-items:dragonhide-belt"
-    , rarity: [RarityVeryRare]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare]
     , itemtype: TypeItem Nothing
     , attunement: Attune (Just "monk")
     , source: [SourceFizbansTreasuryOfDragons]
@@ -4187,7 +4169,7 @@ magicItems =
     }
   , { title: "Figurine of Wondrous Power"
     , url: "https://dnd5e.wikidot.com//wondrous-items:figurine-of-wondrous-power"
-    , rarity: [RarityUnknown "wondrous item, rarity by figurine"]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare, RarityLegendary]
     , itemtype: TypeItem Nothing
     , attunement: AttuneNone
     , source: [SourceDMG, SourceFizbansTreasuryOfDragons]
@@ -4427,36 +4409,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Glamerweave"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:glamerweave"
-    , rarity: [RarityUncommon]
-    , itemtype: TypeItem Nothing
-    , attunement: AttuneNone
-    , source: [SourceEberronRisingFromTheLastWar]
-    , description:
-      [ P
-        [ I "Wondrous item, common or uncommon"
-        ]
-      , P
-        [ I "Glamerweave"
-        , T " is clothing imbued with harmless illusory magic. While wearing the common version of these clothes, you can use a bonus action to create a moving illusory pattern within the cloth."
-        ]
-      , P
-        [ T "Uncommon "
-        , I "glamerweave"
-        , T " can have the pattern rise from the cloth. For example, a "
-        , I "glamerweave"
-        , T " gown might be wreathed in harmless, illusory flames, while a "
-        , I "glamerweave"
-        , T " hat might have illusory butterflies fluttering around it."
-        ]
-      , P
-        [ T "When you make a Charisma (Performance) or Charisma (Persuasion) check while wearing the uncommon version of "
-        , I "glamerweave"
-        , T ", you can roll a d4 and add the number rolled to the check. Once you use this property, it can't be used again until the next dawn."
-        ]
-      ]
-    }
   , { title: "Gloves of Missile Snaring"
     , url: "https://dnd5e.wikidot.com//wondrous-items:gloves-of-missile-snaring"
     , rarity: [RarityUncommon]
@@ -4560,7 +4512,7 @@ magicItems =
     }
   , { title: "Guild Keyrune"
     , url: "https://dnd5e.wikidot.com//wondrous-items:guild-keyrune"
-    , rarity: [RarityUnknown "wondrous item, rarity by keyrune (requires attunement by a member of the relevant guild)"]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare]
     , itemtype: TypeItem Nothing
     , attunement: Attune (Just "member of the relevant guild")
     , source: [SourceGuildmastersGuideToRavnica]
@@ -5383,7 +5335,7 @@ magicItems =
     }
   , { title: "Moon Sickle"
     , url: "https://dnd5e.wikidot.com//wondrous-items:moon-sickle"
-    , rarity: [RarityVeryRare]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare]
     , itemtype: TypeWeapon (Just "sickle")
     , attunement: Attune (Just "druid or ranger")
     , source: [SourceTashasCauldronOfEverything]
@@ -5953,7 +5905,7 @@ magicItems =
     }
   , { title: "Prehistoric Figurines of Wondrous Power"
     , url: "https://dnd5e.wikidot.com//wondrous-items:prehistoric-figurines-of-wondrous-power"
-    , rarity: [RarityUnknown "wondrous item, varies"]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare, RarityLegendary]
     , itemtype: TypeItem Nothing
     , attunement: AttuneNone
     , source: [SourceBigbyPresentsGloryOfTheGiants]
@@ -6159,7 +6111,7 @@ magicItems =
     }
   , { title: "Rhythm Maker's Drum"
     , url: "https://dnd5e.wikidot.com//wondrous-items:rhythm-makers-drum"
-    , rarity: [RarityVeryRare]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare]
     , itemtype: TypeItem Nothing
     , attunement: Attune (Just "bard")
     , source: [SourceTashasCauldronOfEverything]
@@ -6480,7 +6432,7 @@ magicItems =
     }
   , { title: "Rod of the Pact Keeper, +1, +2, +3"
     , url: "https://dnd5e.wikidot.com//wondrous-items:rod-of-the-pact-keeper"
-    , rarity: [RarityVeryRare]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare]
     , itemtype: TypeRod
     , attunement: Attune (Just "warlock")
     , source: [SourceDMG]
@@ -6674,7 +6626,7 @@ magicItems =
     }
   , { title: "Shield, +1, +2, +3"
     , url: "https://dnd5e.wikidot.com//wondrous-items:shield-1-2-3"
-    , rarity: [RarityVeryRare]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare]
     , itemtype: TypeArmor Nothing
     , attunement: AttuneNone
     , source: [SourceDMG]
@@ -7249,7 +7201,7 @@ magicItems =
     }
   , { title: "Wand of the War Mage"
     , url: "https://dnd5e.wikidot.com//wondrous-items:wand-of-the-war-mage"
-    , rarity: [RarityVeryRare]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare]
     , itemtype: TypeWand
     , attunement: Attune (Just "spellcaster")
     , source: [SourceDMG]
@@ -7284,7 +7236,7 @@ magicItems =
     }
   , { title: "Weapon, +1, +2, or +3"
     , url: "https://dnd5e.wikidot.com//wondrous-items:weapon-1-2-3"
-    , rarity: [RarityVeryRare]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare]
     , itemtype: TypeWeapon (Just "any")
     , attunement: AttuneNone
     , source: [SourceDMG]
@@ -7443,7 +7395,7 @@ magicItems =
     }
   , { title: "Wraps Of Unarmed Prowess"
     , url: "https://dnd5e.wikidot.com//wondrous-items:wraps-of-unarmed-prowess"
-    , rarity: [RarityUnknown "wondrous item, varies"]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare]
     , itemtype: TypeItem Nothing
     , attunement: AttuneNone
     , source: [SourceBookOfManyThings]
@@ -7537,41 +7489,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "All-Purpose Tool"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:all-purpose-tool"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeItem Nothing
-    , attunement: AttuneNone
-    , source: [SourceTashasCauldronOfEverything]
-    , description:
-      [ P
-        [ I "Wondrous item, uncommon (+1), rare (+2), very rare (+3) (requires attunement by an artificer)"
-        ]
-      , P
-        [ T "This simple screwdriver can transform into a variety of tools; as an action, you can touch the item and transform it into any type of artisan's tool of your choice (see the \"Equipment\" chapter in the "
-        , I "Player's Handbook"
-        , T " for a list of artisan's tools). Whatever form the tool takes, you are proficient with it. While holding this tool, you gain a bonus to the spell attack rolls and the saving throw DCs of your artificer spells. The bonus is determined by the tool's rarity."
-        ]
-      , P
-        [ T "As an action, you can focus on the tool to channel your creative forces. Choose a cantrip that you don't know from any class list. For 8 hours, you can cast that cantrip, and it counts as an artificer cantrip for you. Once this property is used, it can't be used again until the next dawn."
-        ]
-      ]
-    }
-  , { title: "Ammunition, +1, +2, or +3"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:ammunition"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeWeapon (Just "any ammunition")
-    , attunement: AttuneNone
-    , source: [SourceDMG]
-    , description:
-      [ P
-        [ I "Weapon (any ammunition), uncommon (+1), rare (+2), or very rare (+3)"
-        ]
-      , P
-        [ T "You have a bonus to attack and damage rolls made with this piece of magic ammunition. The bonus is determined by the rarity of the ammunition. Once it hits a target, the ammunition is no longer magical."
-        ]
-      ]
-    }
   , { title: "Amulet of Health"
     , url: "https://dnd5e.wikidot.com//wondrous-items:amulet-of-health"
     , rarity: [RarityRare]
@@ -7608,45 +7525,9 @@ magicItems =
         ]
       ]
     }
-  , { title: "Amulet of the Devout"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:amulet-of-the-devout"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeItem Nothing
-    , attunement: Attune (Just "cleric or paladin")
-    , source: [SourceTashasCauldronOfEverything]
-    , description:
-      [ P
-        [ I "Wondrous item, uncommon (+1), rare (+2), very rare (+3) (requires attunement by a cleric or paladin)"
-        ]
-      , P
-        [ T "This amulet bears the symbol of a deity inlaid with precious stones or metals. While you wear the holy symbol, you gain a bonus to spell attack rolls and the saving throw DCs of your spells. The bonus is determined by the amulet's rarity."
-        ]
-      , P
-        [ T "While you wear this amulet, you can use your Channel Divinity feature without expending one of the feature's uses. Once this property is used, it can't be used again until the next dawn."
-        ]
-      ]
-    }
-  , { title: "Arcane Grimoire"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:arcane-grimoire"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeItem Nothing
-    , attunement: Attune (Just "wizard")
-    , source: [SourceTashasCauldronOfEverything]
-    , description:
-      [ P
-        [ I "Wondrous item, uncommon (+1), rare (+2), very rare (+3) (requires attunement by a wizard)"
-        ]
-      , P
-        [ T "While you are holding this leather-bound book, you can use it as a spellcasting focus for your wizard spells, and you gain a bonus to spell attack rolls and to the saving throw DCs of your wizard spells. The bonus is determined by the book's rarity."
-        ]
-      , P
-        [ T "You can use this book as a spellbook. In addition, when you use your Arcane Recovery feature, you can increase the number of spell slot levels you regain by 1."
-        ]
-      ]
-    }
   , { title: "Armor, +1, +2, or +3"
     , url: "https://dnd5e.wikidot.com//wondrous-items:armor-1-2-3"
-    , rarity: [RarityLegendary]
+    , rarity: [RarityRare, RarityVeryRare, RarityLegendary]
     , itemtype: TypeArmor Nothing
     , attunement: AttuneNone
     , source: [SourceDMG]
@@ -8202,24 +8083,6 @@ magicItems =
         [ T "This item is made from a large diamond worth at least 5,000 gp. When the blood of a creature is poured onto it during the creation process, the blood seeps into the heart of the gem. If the gem is destroyed, the blood evaporates and is gone forever. A vengeful being might use a "
         , I "Blod Stone"
         , T " to hunt down an entire bloodline. Such stones are sometimes given as gifts to siblings or handed down from parent to child."
-        ]
-      ]
-    }
-  , { title: "Bloodwell Vial"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:bloodwell-vial"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeItem Nothing
-    , attunement: Attune (Just "sorcerer")
-    , source: [SourceTashasCauldronOfEverything]
-    , description:
-      [ P
-        [ I "Wondrous item, uncommon (+1), rare (+2), very rare (+3) (requires attunement by a sorcerer)"
-        ]
-      , P
-        [ T "To attune to this vial, you must place a few drops of your blood into it. The vial can't be opened while your attunement to it lasts. If your attunement to the vial ends, the contained blood turns to ash. You can use the vial as a spellcasting focus for your spells while wearing or holding it, and you gain a bonus to spell attack rolls and to the saving throw DCs of your sorcerer spells. The bonus is determined by the vial's rarity."
-        ]
-      , P
-        [ T "In addition, when you roll any Hit Dice to recover hit points while you are carrying the vial, you can regain 5 sorcery points. This property of the vial can't be used again until the next dawn."
         ]
       ]
     }
@@ -9184,21 +9047,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Dragonhide Belt"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:dragonhide-belt"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeItem Nothing
-    , attunement: Attune (Just "monk")
-    , source: [SourceFizbansTreasuryOfDragons]
-    , description:
-      [ P
-        [ I "Wondrous Item, uncommon (+1), rare (+2), or very rare (+3) (Requires Attunement by a Monk)"
-        ]
-      , P
-        [ T "This finely detailed belt is made of dragonhide. While wearing it, you gain a bonus to the saving throw DCs of your ki features. The bonus is determined by the belt's rarity. In addition, you can use an action to regain ki points equal to a roll of your Martial Arts die. You can't use this action again until the next dawn."
-        ]
-      ]
-    }
   , { title: "Dragontooth Dagger"
     , url: "https://dnd5e.wikidot.com//wondrous-items:dragontooth-dagger"
     , rarity: [RarityRare]
@@ -9373,7 +9221,7 @@ magicItems =
     }
   , { title: "Fate Dealer's Deck"
     , url: "https://dnd5e.wikidot.com//wondrous-items:fate-dealers-deck"
-    , rarity: [RarityUnknown "wondrous item, varies (requires attunement by a cleric or paladin)"]
+    , rarity: [RarityRare, RarityVeryRare, RarityLegendary]
     , itemtype: TypeItem Nothing
     , attunement: Attune (Just "cleric or paladin")
     , source: [SourceBookOfManyThings]
@@ -9449,175 +9297,6 @@ magicItems =
         [ T "This armor has 3 charges. You can use an action to expend a charge to cast the "
         , A "http://dnd5e.wikidot.com/spell:compulsion" "Compulsion"
         , T " spell (save DC 15) from this armor. The armor regains 1d3 expended charges daily at dawn."
-        ]
-      ]
-    }
-  , { title: "Figurine of Wondrous Power"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:figurine-of-wondrous-power"
-    , rarity: [RarityUnknown "wondrous item, rarity by figurine"]
-    , itemtype: TypeItem Nothing
-    , attunement: AttuneNone
-    , source: [SourceDMG, SourceFizbansTreasuryOfDragons]
-    , description:
-      [ P
-        [ I "Wondrous item, rarity by figurine"
-        ]
-      , P
-        [ T "A "
-        , I "Figurine of Wondrous Power"
-        , T " is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature."
-        ]
-      , P
-        [ T "The creature is friendly to you and your companions. It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the "
-        , I "Monster Manuel"
-        , T " for the creature's statistics."
-        ]
-      , P
-        [ T "The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description."
-        ]
-      , P
-        [ B "Bronze Griffon (Rare)."
-        , T " This bronze statuette is of a griffon rampant. It can become a "
-        , B "griffon"
-        , T " for up to 6 hours. Once it has been used, it can't be used again until 5 days have passed."
-        ]
-      , P
-        [ B "Ebony Fly (Rare)."
-        , T " This ebony statuette is carved in the likeness of a horsefly. It can become a "
-        , B "giant fly"
-        , T " for up to 12 hours and can be ridden as a mount. Once it has been used, it can't be used again until 2 days have passed."
-        ]
-      , P
-        [ B "Golden Lions (Rare)."
-        , T " These gold statuettes of lions are always created in pairs. You can use one figurine or both simultaneously. Each can become a "
-        , B "lion"
-        , T " for up to 1 hour. Once a lion has been used, it can't be used again until 7 days have passed."
-        ]
-      , P
-        [ B "Ivory Goats (Rare)."
-        , T " These ivory statuettes of goats are always created in sets of three. Each goat looks unique and functions differently from the others. Their properties are as follows"
-        ]
-      , UL
-        [ 
-          [ T "The "
-          , I "goat of traveling"
-          , T " can become a "
-          , B "Large goat"
-          , T " with the same statistics as a "
-          , B "riding horse"
-          , T ". It has 24 charges, and each hour or portion thereof it spends in beast form costs 1 charge. While it has charges, you can use it as often as you wish. When it runs out of charges, it reverts to a figurine and can't be used again until 7 days have passed, when it regains all its charges."
-          ]
-        ]
-      , UL
-        [ 
-          [ T "The "
-          , I "goat of travail"
-          , T " becomes a "
-          , B "giant goat"
-          , T " for up to 3 hours. Once it has been used, it can't be used again until 30 days have passed."
-          ]
-        ]
-      , UL
-        [ 
-          [ T "The "
-          , I "goat of terror"
-          , T " becomes a "
-          , B "giant goat"
-          , T " for up to 3 hours. The goat can't attack, but you can remove its horns and use them as weapons. One horn becomes a "
-          , I "+1 lance"
-          , T ", and the other becomes a "
-          , I "+2 longsword"
-          , T ". Removing a horn requires an action, and the weapons disappear and the horns return when the goat reverts to figurine form. In addition, the goat radiates a 30-foot-radius aura of terror while you are riding it. Any creature hostile to you that starts its turn in the aura must succeed on a DC 15 Wisdom saving throw or be frightened of the goat for 1 minute, or until the goat reverts to figurine form. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once it successfully saves against the effect, a creature is immune to the goat's aura for the net 24 hours. Once the figurine has been used, it can't be used again until 15 days have passed."
-          ]
-        ]
-      , P
-        [ B "Marble Elephant (Rare)."
-        , T " This marble statuette is about 4 inches high and long. It can become an "
-        , B "elephant"
-        , T " for up to 24 hours. Once it has been used, it can't be used again until 7 days have passed."
-        ]
-      , P
-        [ B "Obsidian Steed (Very Rare)."
-        , T " This polished obsidian horse can become a "
-        , B "nightmare"
-        , T " for up to 24 hours. The nightmare fights only to defend itself. Once it has been used, it can't be used again until 5 days have passed."
-        ]
-      , P
-        [ T "If you have a good alignment, the figurine has a 10 percent chance each time you use it to ignore your orders, including a command to revert to figurine form. If you mount the nightmare while it is ignoring your orders, you and the nightmare are instantly transported to a random location on the plane of Hades, where the nightmare reverts to figurine form."
-        ]
-      , P
-        [ B "Onyx Dog (Rare)."
-        , T " This onyx statuette of a dog can become a "
-        , B "mastiff"
-        , T " for up to 6 hours. The mastiff has an Intelligence of 8 and can speak Common. It also has darkvision out to a range of 60 feet and can see invisible creatures and objects within that range. Once it has been used, it can't be used again until 7 days have passed."
-        ]
-      , P
-        [ B "Serpentine Owl (Rare)."
-        , T " This serpentine statuette of an owl can become a "
-        , B "giant owl"
-        , T " for up to 8 hours. Once it has been used, it can't be used again until 2 days have passed. The owl can telepathically communicate with you at any range if you and it are on the same plane of existence."
-        ]
-      , P
-        [ B "Silver Raven (Uncommon)."
-        , T " This silver statuette of a raven can become a "
-        , B "raven"
-        , T " for up to 12 hours. Once it has been used, it can't be used again until 2 days have passed. While in raven form, the figurine allows you to cast the "
-        , A "http://dnd5e.wikidot.com/spell:animal-messenger" "Animal Messenger"
-        , T " spell on it at will."
-        ]
-      , P
-        [ T "In addition, the following "
-        , I "Figurine of Wondrous Power"
-        , T " was added in "
-        , I "Fizban's Treasury of Dragons:"
-        ]
-      , P
-        [ B "Gold Canary (Legendary)"
-        , I "Giant Canary Form."
-        , T " The figurine becomes a giant canary (see the accompanying stat block) for up to 8 hours and can be ridden as a mount. Once the figurine has become a giant canary, it can't be used this way again until the next dawn."
-        , I "Gold Dragon Form."
-        , T " While you are missing half or more of your hit points, you can speak a different command word and the figurine becomes an adult gold dragon for up to 1 hour. The dragon can't use any legendary actions or lair actions. Once the figurine has become an adult gold dragon, it can't be used this way again until 1 year has passed."
-        ]
-      , TB
-        [ T "Giant Canary"
-        ]
-        [ 
-          [ T "Large beast, Unaligned"
-          ]
-        , 
-          [ T "Armor Class: 12 (natural armor)"
-          ]
-        , 
-          [ T "Hit Points: 26 (4d10 + 4)"
-          ]
-        , 
-          [ T "Speed: 30 ft., fly 60ft."
-          ]
-        ,           []
-        , 
-          [ T "10 (+0)"
-          , T "14 (+2)"
-          , T "12 (+1)"
-          , T "2 (-4)"
-          , T "10 (+0)"
-          , T "6 (-2)"
-          ]
-        , 
-          [ T "Senses: passive Perception 10"
-          ]
-        , 
-          [ T "Languages: -"
-          ]
-        , 
-          [ T "Challenge: 1/2 (100 XP)"
-          ]
-        , 
-          [ T "Proficiency Bonus (PB): +2"
-          ]
-        ,           []
-        , 
-          [ T "Peck. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d10 + 2 piercing damage."
-          ]
         ]
       ]
     }
@@ -10052,94 +9731,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Guild Keyrune"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:guild-keyrune"
-    , rarity: [RarityUnknown "wondrous item, rarity by keyrune (requires attunement by a member of the relevant guild)"]
-    , itemtype: TypeItem Nothing
-    , attunement: Attune (Just "member of the relevant guild")
-    , source: [SourceGuildmastersGuideToRavnica]
-    , description:
-      [ P
-        [ I "Wondrous item, rarity by keyrune (requires attunement by a member of the relevant guild)"
-        ]
-      , P
-        [ T "Associated with a particular guild, a "
-        , I "guild keyrune"
-        , T " is a ceremonial, stylized key, about 1 foot long, made from carved stone. Not a literal key, the item is a badge of authority that gives its bearer access to privileged places in its guild's headquarters and outposts. At the DM's discretion, a character might be given a keyrune upon attaining a renown score of 25 in their guild."
-        ]
-      , P
-        [ T "When you use an action to speak the item's command word and place the keyrune on the ground in an unoccupied space within 5 feet of you, the keyrune transforms into a creature. If there isn't enough space for the creature, the keyrune doesn't transform. See the "
-        , I "Monster Manual"
-        , T " for the creature's stat block - the name of which is given in bold in the keyrune's description - unless you're directed to chapter 6 of this book instead."
-        ]
-      , P
-        [ T "The creature is friendly to you, your companions, and other members of your guild (unless those guild members are hostile to you). It understands your languages and obeys your spoken commands. If you issue no commands, the creature takes the Dodge action and moves to avoid danger."
-        ]
-      , P
-        [ T "The creature exists for a duration specific to each keyrune. At the end of the duration, the creature reverts to its keyrune form. It reverts early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature reverts to its keyrune form, it can't transform again until 36 hours have passed."
-        ]
-      , P
-        [ B "Azorius Keyrune (Rare)."
-        , T " This keyrune is carved from white marble and lapis lazuli to resemble a noble bird of prey. It can become a "
-        , B "giant eagle"
-        , T " for up to 1 hour. While the transformed eagle is within l mile of you, you can communicate with it telepathically. As an action, you can see through the eagle's eyes and hear what it hears until the start of your next turn, and you gain the benefit of its keen sight. During this time, you are deaf and blind with regard to your own senses."
-        ]
-      , P
-        [ B "Boros Keyrune (Rare)."
-        , T " Carved from red sandstone with white granite elements to resemble a member of the Boros Legion, this keyrune can become a "
-        , B "veteran"
-        , T " (human) for up to 8 hours. In addition to fighting on your behalf, this veteran cheerfully offers tactical advice, which is usually sound. Anyone who talks with the transformed keyrune or examines it closely can easily recognize that it is an artificial human."
-        ]
-      , P
-        [ B "Dimir Keyrune (Very Rare)."
-        , T " This keyrune, carved from black stone accented with steel, resembles a stylized horror. On command, it transforms into an "
-        , B "intellect devourer"
-        , T " that resembles the Dimir guild symbol, with six bladelike legs. The creature exists for up to 24 hours. During that time, it pursues only a single mission you give it - usually an assignment to take over someone's body, either to impersonate that person for a brief time or to extract secrets from their mind. When the mission is complete, the creature returns to you, reports its success, and reverts to its keyrune form."
-        ]
-      , P
-        [ B "Golgari Keyrune (Very Rare)."
-        , T " Made from deep green jade with black veins, this keyrune has an insectile shape. It can transform into a "
-        , B "giant scorpion"
-        , T " for up to 6 hours. The scorpion has an Intelligence of 4 and can communicate with you telepathically while it is within 60 feet of you, though its messages are largely limited to describing the passage of potential prey."
-        ]
-      , P
-        [ B "Gruul Keyrune (Rare)."
-        , T " This crude keyrune is cobbled together from bits of rubble, broken glass, bone, and animal hair. One end resembles a horned beast. On command, the keyrune transforms into a ceratok, a horned creature much like a "
-        , B "rhinoceros"
-        , T " (and with the same statistics). It remains in its ceratok form for 1 hour."
-        ]
-      , P
-        [ B "Izzet Keyrune (Rare)."
-        , T " Formed of carved and polished red and blue stone, the keyrune includes bits of cable and wire. One end resembles a humanlike head, suggesting the jagged elemental form of the "
-        , B "galvanice weird"
-        , T " (see chapter 6 for the stat block) that it can become for a duration of 3 hours. In this form, it will serve you as a bodyguard, lift and carry things for you, act as a test subject for your experiments, or aid you in any other way that its capabilities allow."
-        ]
-      , P
-        [ B "Orzhov Keyrune (Rare)."
-        , T " This keyrune is carved from white marble with veins of black. The end is shaped like a thrull's head, with a gold faceplate affixed. On command, the keyrune transforms into a "
-        , B "winged thrull"
-        , T " (see chapter 6 for the stat block) for up to 2 hours. If you don't come from an Orzhov oligarch family, it serves you grudgingly, clownishly aping your movements and mannerisms while carrying out your orders."
-        ]
-      , P
-        [ B "Rakdos Keyrune (Uncommon)."
-        , T " This dark granite keyrune is marbled with scarlet veins and carved with the leering visage of a mischievous demon. When activated, it transforms into a "
-        , B "cackler"
-        , T " (see chapter 6 for the stat block) for up to 1 hour."
-        ]
-      , P
-        [ B "Selesnya Keyrune (Rare)."
-        , T " Carved from white and green marble in the shape of a wolf's head, this keyrune transforms into a "
-        , B "dire wolf"
-        , T ". The wolf persists for 8 hours. Its Intelligence is 6, and it understands Elvish and Sylvan but can't speak those languages. While it is within 1 mile of you. you can communicate with each other telepathically."
-        ]
-      , P
-        [ B "Simic Keyrune (Uncommon)."
-        , T " This keyrune is assembled from coral, mother-of pearl, and chrome and adorned with the spirals and curves characteristic of Simic ornamentation. The head resembles the shell of a sea creature. On command, the keyrune turns into a "
-        , B "category 1 krasis"
-        , T " (see chapter 6 for the stat block) that has the Grabber and Stabilizing Legs adaptations. The transformation lasts for up to 5 hours."
-        ]
-      ]
-    }
   , { title: "Gulthias Staff"
     , url: "https://dnd5e.wikidot.com//wondrous-items:gulthias-staff"
     , rarity: [RarityRare]
@@ -10452,7 +10043,7 @@ magicItems =
     }
   , { title: "Horn of Valhalla"
     , url: "https://dnd5e.wikidot.com//wondrous-items:horn-of-valhalla"
-    , rarity: [RarityLegendary]
+    , rarity: [RarityRare, RarityVeryRare, RarityLegendary]
     , itemtype: TypeItem Nothing
     , attunement: AttuneNone
     , source: [SourceDMG]
@@ -11123,24 +10714,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Moon Sickle"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:moon-sickle"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeWeapon (Just "sickle")
-    , attunement: Attune (Just "druid or ranger")
-    , source: [SourceTashasCauldronOfEverything]
-    , description:
-      [ P
-        [ I "Weapon (sickle), uncommon (+1), rare (+2), very rare (+3) (requires attunement by a druid or ranger)"
-        ]
-      , P
-        [ T "This silver-bladed sickle glimmers softly with moonlight. While holding this magic weapon, you gain a bonus to attack and damage rolls made with it, and you gain a bonus to spell attack rolls and the saving throw DCs of your druid and ranger spells. The bonus is determined by the weapon's rarity. In addition, you can use the sickle as a spellcasting focus for your druid and ranger spells."
-        ]
-      , P
-        [ T "When you cast a spell that restores hit points, you can roll a d4 and add the number rolled to the amount of hit points restored, provided you are holding the sickle."
-        ]
-      ]
-    }
   , { title: "Necklace of Fireballs"
     , url: "https://dnd5e.wikidot.com//wondrous-items:necklace-of-fireballs"
     , rarity: [RarityRare]
@@ -11707,56 +11280,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Prehistoric Figurines of Wondrous Power"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:prehistoric-figurines-of-wondrous-power"
-    , rarity: [RarityUnknown "wondrous item, varies"]
-    , itemtype: TypeItem Nothing
-    , attunement: AttuneNone
-    , source: [SourceBigbyPresentsGloryOfTheGiants]
-    , description:
-      [ P
-        [ I "Wondrous Item, Varies"
-        ]
-      , P
-        [ T "Larger and more roughly hewn than typical figurines of wondrous power, these statuettes depict dinosaurs and related creatures from the earliest days of the world."
-        ]
-      , P
-        [ T "As an action, you can throw a prehistoric figurine of wondrous power to a point on the ground within 60 feet of yourself while speaking a command word, whereupon the figurine magically transforms into a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature."
-        ]
-      , P
-        [ T "The creature is friendly to you and your companions. It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the "
-        , I "Monster Manual"
-        , T " for the creature's statistics."
-        ]
-      , P
-        [ T "The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its statuette form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description."
-        ]
-      , P
-        [ B "Carnelian Triceratops (Very Rare)."
-        , T " This figurine becomes a triceratops for up to 6 hours and can be ridden as a mount. Once it has been used, it can't be used again until 10 days have passed."
-        ]
-      , P
-        [ B "Jasper Tyrannosaurus Rex (Legendary)."
-        , T " This figurine, crafted from rare green jasper, becomes a tyrannosaurus rex for up to 1 hour. Once it has been used, it can't be used again until 14 days have passed."
-        ]
-      , P
-        [ T "Whenever you command the figurine while it's in tyrannosaurus rex form (including commanding it to revert to figurine form), you must roll a d20. On a 1, you lose control of the figurine, and it becomes hostile to you and your companions until it is reduced to 0 hit points, at which point it reverts to figurine form."
-        ]
-      , P
-        [ B "Kyanite Pteranodon (Rare)."
-        , T " This figurine becomes a pteranodon for up to 8 hours. If your size is Medium or smaller, you can ride the pteranodon as a mount. Once it has been used, it can't be used again until 7 days have passed."
-        ]
-      , P
-        [ B "Pyrite Plesiosaurus (Uncommon)."
-        , T " This figurine becomes a plesiosaurus for up to 12 hours and can be ridden as a mount. Once it has been used, it can't be used again until 4 days have passed."
-        ]
-      , P
-        [ T "While you are riding the plesiosaurus, you can use it to cast "
-        , A "http://dnd5e.wikidot.com/spell:water-breathing" "Water Breathing"
-        , T " at will."
-        ]
-      ]
-    }
   , { title: "Professor Orb"
     , url: "https://dnd5e.wikidot.com//wondrous-items:professor-orb"
     , rarity: [RarityRare]
@@ -11944,24 +11467,6 @@ magicItems =
         [ T "As an action, you can use the concertina to cast "
         , A "http://dnd5e.wikidot.com/spell:ottos-irresistible-dance" "Otto's Irresistible Dance"
         , T " from the item. This property of the concertina can't be used again until the next dawn."
-        ]
-      ]
-    }
-  , { title: "Rhythm Maker's Drum"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:rhythm-makers-drum"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeItem Nothing
-    , attunement: Attune (Just "bard")
-    , source: [SourceTashasCauldronOfEverything]
-    , description:
-      [ P
-        [ I "Wondrous item, uncommon (+1), rare (+2), very rare (+3) (requires attunement by a bard)"
-        ]
-      , P
-        [ T "While holding this drum, you gain a bonus to spell attack rolls and to the saving throw DCs of your bard spells. The bonus is determined by the drum's rarity."
-        ]
-      , P
-        [ T "As an action, you can play the drum to regain one use of your Bardic Inspiration feature. This property of the drum can't be used again until the next dawn."
         ]
       ]
     }
@@ -12270,24 +11775,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Rod of the Pact Keeper, +1, +2, +3"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:rod-of-the-pact-keeper"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeRod
-    , attunement: Attune (Just "warlock")
-    , source: [SourceDMG]
-    , description:
-      [ P
-        [ I "Rod, uncommon (+1), rare (+2), or very rare (+3) (requires attunement by a warlock)"
-        ]
-      , P
-        [ T "While holding this rod, you gain a bonus to spell attack rolls and to the saving throw DCs of your warlock spells. This bonus is determined by the rod's rarity."
-        ]
-      , P
-        [ T "In addition, you can regain one warlock spell slot as an action while holding the rod. You can't use this property again until you finish a long rest."
-        ]
-      ]
-    }
   , { title: "Rod of the Vonindod"
     , url: "https://dnd5e.wikidot.com//wondrous-items:rod-of-the-vonindod"
     , rarity: [RarityRare]
@@ -12378,7 +11865,7 @@ magicItems =
     }
   , { title: "Sage's Signet"
     , url: "https://dnd5e.wikidot.com//wondrous-items:sages-signet"
-    , rarity: [RarityUnknown "ring, varies (requires attunement by a spellcaster)"]
+    , rarity: [RarityRare, RarityVeryRare]
     , itemtype: TypeRing
     , attunement: Attune (Just "spellcaster")
     , source: [SourceBookOfManyThings]
@@ -12716,21 +12203,6 @@ magicItems =
           [ T "6"
           , T "Nothing seems to go your way. Until the next dawn, you have disadvantage on ability checks."
           ]
-        ]
-      ]
-    }
-  , { title: "Shield, +1, +2, +3"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:shield-1-2-3"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeArmor Nothing
-    , attunement: AttuneNone
-    , source: [SourceDMG]
-    , description:
-      [ P
-        [ I "Armor (shield), uncommon (+1), rare (+2), or very rare (+3)"
-        ]
-      , P
-        [ T "While holding this shield, you have a bonus to AC determined by the shield's rarity. This bonus is in addition to the shield's normal bonus to AC."
         ]
       ]
     }
@@ -13579,21 +13051,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Wand of the War Mage"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:wand-of-the-war-mage"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeWand
-    , attunement: Attune (Just "spellcaster")
-    , source: [SourceDMG]
-    , description:
-      [ P
-        [ I "Wand, uncommon (+1), rare (+2), or very rare (+3) (requires attunement by a spellcaster)"
-        ]
-      , P
-        [ T "While holding this wand, you gain a bonus to spell attack rolls determined by the wand's rarity. In addition, you ignore half cover when making a spell attack."
-        ]
-      ]
-    }
   , { title: "Wand of Viscid Globs"
     , url: "https://dnd5e.wikidot.com//wondrous-items:wand-of-viscid-globs"
     , rarity: [RarityRare]
@@ -13839,21 +13296,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Weapon, +1, +2, or +3"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:weapon-1-2-3"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeWeapon (Just "any")
-    , attunement: AttuneNone
-    , source: [SourceDMG]
-    , description:
-      [ P
-        [ I "Weapon (any), uncommon (+1), rare (+2), or very rare (+3)"
-        ]
-      , P
-        [ T "You have a bonus to attack and damage rolls made with this magic weapon. The bonus is determined by the weapon's rarity."
-        ]
-      ]
-    }
   , { title: "Weapon of Certain Death"
     , url: "https://dnd5e.wikidot.com//wondrous-items:weapon-of-certain-death"
     , rarity: [RarityRare]
@@ -13929,38 +13371,6 @@ magicItems =
         ]
       , P
         [ T "When you use this axe to make an attack against a plant (an ordinary plant or a creature with the Plant type) or a wooden object that isn't being worn or carried, the attack deals an extra 2d6 slashing damage on a hit."
-        ]
-      ]
-    }
-  , { title: "Wraps Of Unarmed Prowess"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:wraps-of-unarmed-prowess"
-    , rarity: [RarityUnknown "wondrous item, varies"]
-    , itemtype: TypeItem Nothing
-    , attunement: AttuneNone
-    , source: [SourceBookOfManyThings]
-    , description:
-      [ P
-        [ I "Wondrous Item, varies"
-        ]
-      , P
-        [ T "While you're wearing these cloth wraps, your unarmed strikes are considered magical for the purpose of overcoming immunity and resistance to nonmagical attacks and damage, and you gain a bonus to the attack and damage rolls of your unarmed strikes, determined by the wraps' rarity."
-        ]
-      , TB
-        [ T "Rarity"
-        , T "Bonus"
-        ]
-        [ 
-          [ T "Uncommon"
-          , T "+1"
-          ]
-        , 
-          [ T "Rare"
-          , T "+2"
-          ]
-        , 
-          [ T "Very Rare"
-          , T "+3"
-          ]
         ]
       ]
     }
@@ -14096,26 +13506,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "All-Purpose Tool"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:all-purpose-tool"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeItem Nothing
-    , attunement: AttuneNone
-    , source: [SourceTashasCauldronOfEverything]
-    , description:
-      [ P
-        [ I "Wondrous item, uncommon (+1), rare (+2), very rare (+3) (requires attunement by an artificer)"
-        ]
-      , P
-        [ T "This simple screwdriver can transform into a variety of tools; as an action, you can touch the item and transform it into any type of artisan's tool of your choice (see the \"Equipment\" chapter in the "
-        , I "Player's Handbook"
-        , T " for a list of artisan's tools). Whatever form the tool takes, you are proficient with it. While holding this tool, you gain a bonus to the spell attack rolls and the saving throw DCs of your artificer spells. The bonus is determined by the tool's rarity."
-        ]
-      , P
-        [ T "As an action, you can focus on the tool to channel your creative forces. Choose a cantrip that you don't know from any class list. For 8 hours, you can cast that cantrip, and it counts as an artificer cantrip for you. Once this property is used, it can't be used again until the next dawn."
-        ]
-      ]
-    }
   , { title: "Amethyst Lodestone"
     , url: "https://dnd5e.wikidot.com//wondrous-items:amethyst-lodestone"
     , rarity: [RarityVeryRare]
@@ -14145,21 +13535,6 @@ magicItems =
         , T " As an action, you can expend 3 charges to cast "
         , A "http://dnd5e.wikidot.com/spell:reverse-gravity" "Reverse Gravity"
         , T " from the stone (save DC 18)."
-        ]
-      ]
-    }
-  , { title: "Ammunition, +1, +2, or +3"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:ammunition"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeWeapon (Just "any ammunition")
-    , attunement: AttuneNone
-    , source: [SourceDMG]
-    , description:
-      [ P
-        [ I "Weapon (any ammunition), uncommon (+1), rare (+2), or very rare (+3)"
-        ]
-      , P
-        [ T "You have a bonus to attack and damage rolls made with this piece of magic ammunition. The bonus is determined by the rarity of the ammunition. Once it hits a target, the ammunition is no longer magical."
         ]
       ]
     }
@@ -14210,24 +13585,6 @@ magicItems =
           [ T "96-00"
           , T "You become petrified. This effect can be ended only with a Greater Restoration spell or similar magic."
           ]
-        ]
-      ]
-    }
-  , { title: "Amulet of the Devout"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:amulet-of-the-devout"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeItem Nothing
-    , attunement: Attune (Just "cleric or paladin")
-    , source: [SourceTashasCauldronOfEverything]
-    , description:
-      [ P
-        [ I "Wondrous item, uncommon (+1), rare (+2), very rare (+3) (requires attunement by a cleric or paladin)"
-        ]
-      , P
-        [ T "This amulet bears the symbol of a deity inlaid with precious stones or metals. While you wear the holy symbol, you gain a bonus to spell attack rolls and the saving throw DCs of your spells. The bonus is determined by the amulet's rarity."
-        ]
-      , P
-        [ T "While you wear this amulet, you can use your Channel Divinity feature without expending one of the feature's uses. Once this property is used, it can't be used again until the next dawn."
         ]
       ]
     }
@@ -14323,7 +13680,7 @@ magicItems =
     }
   , { title: "Arcane Grimoire"
     , url: "https://dnd5e.wikidot.com//wondrous-items:arcane-grimoire"
-    , rarity: [RarityVeryRare]
+    , rarity: [RarityUncommon, RarityRare, RarityVeryRare]
     , itemtype: TypeItem Nothing
     , attunement: Attune (Just "wizard")
     , source: [SourceTashasCauldronOfEverything]
@@ -14365,21 +13722,6 @@ magicItems =
         , 
           [ T "The prosthetic is a magic melee weapon with which you're proficient. It deals 1d8 force damage on a hit and has the thrown property, with a normal range of 20 feet and a long range of 60 feet. When thrown, the prosthetic detaches and flies at the target of the attack, then immediately returns to you and reattaches."
           ]
-        ]
-      ]
-    }
-  , { title: "Armor, +1, +2, or +3"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:armor-1-2-3"
-    , rarity: [RarityLegendary]
-    , itemtype: TypeArmor Nothing
-    , attunement: AttuneNone
-    , source: [SourceDMG]
-    , description:
-      [ P
-        [ I "Armor (light, medium, or heavy), rare (+1), very rare (+2), or legendary (+3)"
-        ]
-      , P
-        [ T "You have a bonus to AC while wearing this armor. The bonus is determined by its rarity."
         ]
       ]
     }
@@ -14606,24 +13948,6 @@ magicItems =
         ]
       , P
         [ T "Once the rune has been invoked, it can't be invoked again until the next dawn."
-        ]
-      ]
-    }
-  , { title: "Bloodwell Vial"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:bloodwell-vial"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeItem Nothing
-    , attunement: Attune (Just "sorcerer")
-    , source: [SourceTashasCauldronOfEverything]
-    , description:
-      [ P
-        [ I "Wondrous item, uncommon (+1), rare (+2), very rare (+3) (requires attunement by a sorcerer)"
-        ]
-      , P
-        [ T "To attune to this vial, you must place a few drops of your blood into it. The vial can't be opened while your attunement to it lasts. If your attunement to the vial ends, the contained blood turns to ash. You can use the vial as a spellcasting focus for your spells while wearing or holding it, and you gain a bonus to spell attack rolls and to the saving throw DCs of your sorcerer spells. The bonus is determined by the vial's rarity."
-        ]
-      , P
-        [ T "In addition, when you roll any Hit Dice to recover hit points while you are carrying the vial, you can regain 5 sorcery points. This property of the vial can't be used again until the next dawn."
         ]
       ]
     }
@@ -15092,7 +14416,7 @@ magicItems =
     }
   , { title: "Crystal Ball"
     , url: "https://dnd5e.wikidot.com//wondrous-items:crystal-ball"
-    , rarity: [RarityLegendary]
+    , rarity: [RarityVeryRare, RarityLegendary]
     , itemtype: TypeItem Nothing
     , attunement: Attune Nothing
     , source: [SourceDMG]
@@ -15480,21 +14804,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Dragonhide Belt"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:dragonhide-belt"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeItem Nothing
-    , attunement: Attune (Just "monk")
-    , source: [SourceFizbansTreasuryOfDragons]
-    , description:
-      [ P
-        [ I "Wondrous Item, uncommon (+1), rare (+2), or very rare (+3) (Requires Attunement by a Monk)"
-        ]
-      , P
-        [ T "This finely detailed belt is made of dragonhide. While wearing it, you gain a bonus to the saving throw DCs of your ki features. The bonus is determined by the belt's rarity. In addition, you can use an action to regain ki points equal to a roll of your Martial Arts die. You can't use this action again until the next dawn."
-        ]
-      ]
-    }
   , { title: "Duskcrusher"
     , url: "https://dnd5e.wikidot.com//wondrous-items:duskcrusher"
     , rarity: [RarityVeryRare]
@@ -15699,210 +15008,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Fate Dealer's Deck"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:fate-dealers-deck"
-    , rarity: [RarityUnknown "wondrous item, varies (requires attunement by a cleric or paladin)"]
-    , itemtype: TypeItem Nothing
-    , attunement: Attune (Just "cleric or paladin")
-    , source: [SourceBookOfManyThings]
-    , description:
-      [ P
-        [ I "Wondrous Item, varies (requires attunement by a Cleric or Paladin)"
-        ]
-      , P
-        [ T "The backs of these cards are inscribed with glyphs representing the Inner Planes, the Outer Planes, or the holy symbols of various deities. While holding this deck, you can use it as a spellcasting focus, and you gain a bonus to spell attack rolls and to your spell save DC. The bonus is determined by the deck's rarity."
-        ]
-      , P
-        [ T "In addition, while you're holding the deck, you can draw a card as an action to expend and roll one of your Hit Dice and add the deck's bonus to the number rolled. One creature you can see within 30 feet of you either takes radiant damage or regains hit points (your choice) equal to the total."
-        ]
-      , TB
-        [ T "Rarity"
-        , T "Bonus"
-        ]
-        [ 
-          [ T "Rare"
-          , T "+1"
-          ]
-        , 
-          [ T "Very Rare"
-          , T "+2"
-          ]
-        , 
-          [ T "Legendary"
-          , T "+3"
-          ]
-        ]
-      ]
-    }
-  , { title: "Figurine of Wondrous Power"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:figurine-of-wondrous-power"
-    , rarity: [RarityUnknown "wondrous item, rarity by figurine"]
-    , itemtype: TypeItem Nothing
-    , attunement: AttuneNone
-    , source: [SourceDMG, SourceFizbansTreasuryOfDragons]
-    , description:
-      [ P
-        [ I "Wondrous item, rarity by figurine"
-        ]
-      , P
-        [ T "A "
-        , I "Figurine of Wondrous Power"
-        , T " is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature."
-        ]
-      , P
-        [ T "The creature is friendly to you and your companions. It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the "
-        , I "Monster Manuel"
-        , T " for the creature's statistics."
-        ]
-      , P
-        [ T "The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description."
-        ]
-      , P
-        [ B "Bronze Griffon (Rare)."
-        , T " This bronze statuette is of a griffon rampant. It can become a "
-        , B "griffon"
-        , T " for up to 6 hours. Once it has been used, it can't be used again until 5 days have passed."
-        ]
-      , P
-        [ B "Ebony Fly (Rare)."
-        , T " This ebony statuette is carved in the likeness of a horsefly. It can become a "
-        , B "giant fly"
-        , T " for up to 12 hours and can be ridden as a mount. Once it has been used, it can't be used again until 2 days have passed."
-        ]
-      , P
-        [ B "Golden Lions (Rare)."
-        , T " These gold statuettes of lions are always created in pairs. You can use one figurine or both simultaneously. Each can become a "
-        , B "lion"
-        , T " for up to 1 hour. Once a lion has been used, it can't be used again until 7 days have passed."
-        ]
-      , P
-        [ B "Ivory Goats (Rare)."
-        , T " These ivory statuettes of goats are always created in sets of three. Each goat looks unique and functions differently from the others. Their properties are as follows"
-        ]
-      , UL
-        [ 
-          [ T "The "
-          , I "goat of traveling"
-          , T " can become a "
-          , B "Large goat"
-          , T " with the same statistics as a "
-          , B "riding horse"
-          , T ". It has 24 charges, and each hour or portion thereof it spends in beast form costs 1 charge. While it has charges, you can use it as often as you wish. When it runs out of charges, it reverts to a figurine and can't be used again until 7 days have passed, when it regains all its charges."
-          ]
-        ]
-      , UL
-        [ 
-          [ T "The "
-          , I "goat of travail"
-          , T " becomes a "
-          , B "giant goat"
-          , T " for up to 3 hours. Once it has been used, it can't be used again until 30 days have passed."
-          ]
-        ]
-      , UL
-        [ 
-          [ T "The "
-          , I "goat of terror"
-          , T " becomes a "
-          , B "giant goat"
-          , T " for up to 3 hours. The goat can't attack, but you can remove its horns and use them as weapons. One horn becomes a "
-          , I "+1 lance"
-          , T ", and the other becomes a "
-          , I "+2 longsword"
-          , T ". Removing a horn requires an action, and the weapons disappear and the horns return when the goat reverts to figurine form. In addition, the goat radiates a 30-foot-radius aura of terror while you are riding it. Any creature hostile to you that starts its turn in the aura must succeed on a DC 15 Wisdom saving throw or be frightened of the goat for 1 minute, or until the goat reverts to figurine form. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once it successfully saves against the effect, a creature is immune to the goat's aura for the net 24 hours. Once the figurine has been used, it can't be used again until 15 days have passed."
-          ]
-        ]
-      , P
-        [ B "Marble Elephant (Rare)."
-        , T " This marble statuette is about 4 inches high and long. It can become an "
-        , B "elephant"
-        , T " for up to 24 hours. Once it has been used, it can't be used again until 7 days have passed."
-        ]
-      , P
-        [ B "Obsidian Steed (Very Rare)."
-        , T " This polished obsidian horse can become a "
-        , B "nightmare"
-        , T " for up to 24 hours. The nightmare fights only to defend itself. Once it has been used, it can't be used again until 5 days have passed."
-        ]
-      , P
-        [ T "If you have a good alignment, the figurine has a 10 percent chance each time you use it to ignore your orders, including a command to revert to figurine form. If you mount the nightmare while it is ignoring your orders, you and the nightmare are instantly transported to a random location on the plane of Hades, where the nightmare reverts to figurine form."
-        ]
-      , P
-        [ B "Onyx Dog (Rare)."
-        , T " This onyx statuette of a dog can become a "
-        , B "mastiff"
-        , T " for up to 6 hours. The mastiff has an Intelligence of 8 and can speak Common. It also has darkvision out to a range of 60 feet and can see invisible creatures and objects within that range. Once it has been used, it can't be used again until 7 days have passed."
-        ]
-      , P
-        [ B "Serpentine Owl (Rare)."
-        , T " This serpentine statuette of an owl can become a "
-        , B "giant owl"
-        , T " for up to 8 hours. Once it has been used, it can't be used again until 2 days have passed. The owl can telepathically communicate with you at any range if you and it are on the same plane of existence."
-        ]
-      , P
-        [ B "Silver Raven (Uncommon)."
-        , T " This silver statuette of a raven can become a "
-        , B "raven"
-        , T " for up to 12 hours. Once it has been used, it can't be used again until 2 days have passed. While in raven form, the figurine allows you to cast the "
-        , A "http://dnd5e.wikidot.com/spell:animal-messenger" "Animal Messenger"
-        , T " spell on it at will."
-        ]
-      , P
-        [ T "In addition, the following "
-        , I "Figurine of Wondrous Power"
-        , T " was added in "
-        , I "Fizban's Treasury of Dragons:"
-        ]
-      , P
-        [ B "Gold Canary (Legendary)"
-        , I "Giant Canary Form."
-        , T " The figurine becomes a giant canary (see the accompanying stat block) for up to 8 hours and can be ridden as a mount. Once the figurine has become a giant canary, it can't be used this way again until the next dawn."
-        , I "Gold Dragon Form."
-        , T " While you are missing half or more of your hit points, you can speak a different command word and the figurine becomes an adult gold dragon for up to 1 hour. The dragon can't use any legendary actions or lair actions. Once the figurine has become an adult gold dragon, it can't be used this way again until 1 year has passed."
-        ]
-      , TB
-        [ T "Giant Canary"
-        ]
-        [ 
-          [ T "Large beast, Unaligned"
-          ]
-        , 
-          [ T "Armor Class: 12 (natural armor)"
-          ]
-        , 
-          [ T "Hit Points: 26 (4d10 + 4)"
-          ]
-        , 
-          [ T "Speed: 30 ft., fly 60ft."
-          ]
-        ,           []
-        , 
-          [ T "10 (+0)"
-          , T "14 (+2)"
-          , T "12 (+1)"
-          , T "2 (-4)"
-          , T "10 (+0)"
-          , T "6 (-2)"
-          ]
-        , 
-          [ T "Senses: passive Perception 10"
-          ]
-        , 
-          [ T "Languages: -"
-          ]
-        , 
-          [ T "Challenge: 1/2 (100 XP)"
-          ]
-        , 
-          [ T "Proficiency Bonus (PB): +2"
-          ]
-        ,           []
-        , 
-          [ T "Peck. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d10 + 2 piercing damage."
-          ]
-        ]
-      ]
-    }
   , { title: "Fish Suit"
     , url: "https://dnd5e.wikidot.com//wondrous-items:fish-suit"
     , rarity: [RarityVeryRare]
@@ -16085,94 +15190,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Guild Keyrune"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:guild-keyrune"
-    , rarity: [RarityUnknown "wondrous item, rarity by keyrune (requires attunement by a member of the relevant guild)"]
-    , itemtype: TypeItem Nothing
-    , attunement: Attune (Just "member of the relevant guild")
-    , source: [SourceGuildmastersGuideToRavnica]
-    , description:
-      [ P
-        [ I "Wondrous item, rarity by keyrune (requires attunement by a member of the relevant guild)"
-        ]
-      , P
-        [ T "Associated with a particular guild, a "
-        , I "guild keyrune"
-        , T " is a ceremonial, stylized key, about 1 foot long, made from carved stone. Not a literal key, the item is a badge of authority that gives its bearer access to privileged places in its guild's headquarters and outposts. At the DM's discretion, a character might be given a keyrune upon attaining a renown score of 25 in their guild."
-        ]
-      , P
-        [ T "When you use an action to speak the item's command word and place the keyrune on the ground in an unoccupied space within 5 feet of you, the keyrune transforms into a creature. If there isn't enough space for the creature, the keyrune doesn't transform. See the "
-        , I "Monster Manual"
-        , T " for the creature's stat block - the name of which is given in bold in the keyrune's description - unless you're directed to chapter 6 of this book instead."
-        ]
-      , P
-        [ T "The creature is friendly to you, your companions, and other members of your guild (unless those guild members are hostile to you). It understands your languages and obeys your spoken commands. If you issue no commands, the creature takes the Dodge action and moves to avoid danger."
-        ]
-      , P
-        [ T "The creature exists for a duration specific to each keyrune. At the end of the duration, the creature reverts to its keyrune form. It reverts early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature reverts to its keyrune form, it can't transform again until 36 hours have passed."
-        ]
-      , P
-        [ B "Azorius Keyrune (Rare)."
-        , T " This keyrune is carved from white marble and lapis lazuli to resemble a noble bird of prey. It can become a "
-        , B "giant eagle"
-        , T " for up to 1 hour. While the transformed eagle is within l mile of you, you can communicate with it telepathically. As an action, you can see through the eagle's eyes and hear what it hears until the start of your next turn, and you gain the benefit of its keen sight. During this time, you are deaf and blind with regard to your own senses."
-        ]
-      , P
-        [ B "Boros Keyrune (Rare)."
-        , T " Carved from red sandstone with white granite elements to resemble a member of the Boros Legion, this keyrune can become a "
-        , B "veteran"
-        , T " (human) for up to 8 hours. In addition to fighting on your behalf, this veteran cheerfully offers tactical advice, which is usually sound. Anyone who talks with the transformed keyrune or examines it closely can easily recognize that it is an artificial human."
-        ]
-      , P
-        [ B "Dimir Keyrune (Very Rare)."
-        , T " This keyrune, carved from black stone accented with steel, resembles a stylized horror. On command, it transforms into an "
-        , B "intellect devourer"
-        , T " that resembles the Dimir guild symbol, with six bladelike legs. The creature exists for up to 24 hours. During that time, it pursues only a single mission you give it - usually an assignment to take over someone's body, either to impersonate that person for a brief time or to extract secrets from their mind. When the mission is complete, the creature returns to you, reports its success, and reverts to its keyrune form."
-        ]
-      , P
-        [ B "Golgari Keyrune (Very Rare)."
-        , T " Made from deep green jade with black veins, this keyrune has an insectile shape. It can transform into a "
-        , B "giant scorpion"
-        , T " for up to 6 hours. The scorpion has an Intelligence of 4 and can communicate with you telepathically while it is within 60 feet of you, though its messages are largely limited to describing the passage of potential prey."
-        ]
-      , P
-        [ B "Gruul Keyrune (Rare)."
-        , T " This crude keyrune is cobbled together from bits of rubble, broken glass, bone, and animal hair. One end resembles a horned beast. On command, the keyrune transforms into a ceratok, a horned creature much like a "
-        , B "rhinoceros"
-        , T " (and with the same statistics). It remains in its ceratok form for 1 hour."
-        ]
-      , P
-        [ B "Izzet Keyrune (Rare)."
-        , T " Formed of carved and polished red and blue stone, the keyrune includes bits of cable and wire. One end resembles a humanlike head, suggesting the jagged elemental form of the "
-        , B "galvanice weird"
-        , T " (see chapter 6 for the stat block) that it can become for a duration of 3 hours. In this form, it will serve you as a bodyguard, lift and carry things for you, act as a test subject for your experiments, or aid you in any other way that its capabilities allow."
-        ]
-      , P
-        [ B "Orzhov Keyrune (Rare)."
-        , T " This keyrune is carved from white marble with veins of black. The end is shaped like a thrull's head, with a gold faceplate affixed. On command, the keyrune transforms into a "
-        , B "winged thrull"
-        , T " (see chapter 6 for the stat block) for up to 2 hours. If you don't come from an Orzhov oligarch family, it serves you grudgingly, clownishly aping your movements and mannerisms while carrying out your orders."
-        ]
-      , P
-        [ B "Rakdos Keyrune (Uncommon)."
-        , T " This dark granite keyrune is marbled with scarlet veins and carved with the leering visage of a mischievous demon. When activated, it transforms into a "
-        , B "cackler"
-        , T " (see chapter 6 for the stat block) for up to 1 hour."
-        ]
-      , P
-        [ B "Selesnya Keyrune (Rare)."
-        , T " Carved from white and green marble in the shape of a wolf's head, this keyrune transforms into a "
-        , B "dire wolf"
-        , T ". The wolf persists for 8 hours. Its Intelligence is 6, and it understands Elvish and Sylvan but can't speak those languages. While it is within 1 mile of you. you can communicate with each other telepathically."
-        ]
-      , P
-        [ B "Simic Keyrune (Uncommon)."
-        , T " This keyrune is assembled from coral, mother-of pearl, and chrome and adorned with the spirals and curves characteristic of Simic ornamentation. The head resembles the shell of a sea creature. On command, the keyrune turns into a "
-        , B "category 1 krasis"
-        , T " (see chapter 6 for the stat block) that has the Grabber and Stabilizing Legs adaptations. The transformation lasts for up to 5 hours."
-        ]
-      ]
-    }
   , { title: "Hammer of Runic Focus"
     , url: "https://dnd5e.wikidot.com//wondrous-items:hammer-of-runic-focus"
     , rarity: [RarityVeryRare]
@@ -16283,62 +15300,6 @@ magicItems =
         , T ", a "
         , A "http://dnd5e.wikidot.com/wondrous-items:hewards-handy-haversack" "Heward's Handy Haversack"
         , T ", or a similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate is sucked through it and deposited in a random location on the Astral Plane. The gate then closes. The gate is one-way only and can't be reopened."
-        ]
-      ]
-    }
-  , { title: "Horn of Valhalla"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:horn-of-valhalla"
-    , rarity: [RarityLegendary]
-    , itemtype: TypeItem Nothing
-    , attunement: AttuneNone
-    , source: [SourceDMG]
-    , description:
-      [ P
-        [ I "Wondrous item, rare (silver or brass), very rare (bronze), or legendary (iron)"
-        ]
-      , P
-        [ T "You can use an action to blow this horn. In response, warrior spirits from the plane of Ysgard appear within 60 feet of you. These spirits use the berserker statistics from the "
-        , I "Monster Manual"
-        , T ". They return to Ysgard after 1 hour or when they drop to 0 hit points. Once you use the horn, it can't be used again until 7 days have passed."
-        ]
-      , P
-        [ T "Four types of "
-        , I "horn of Valhalla"
-        , T " are known to exist, each made of a different metal. The horn's type determines how many berserkers answer its summons, as well as the requirement for its use. The DM chooses the horn's type or determines it randomly."
-        ]
-      , TB
-        [ T "d100"
-        , T "Horn Type"
-        , T "Berserkers Summoned"
-        , T "Requirement"
-        ]
-        [ 
-          [ T "01-40"
-          , T "Silver"
-          , T "2d4 + 2"
-          , T "None"
-          ]
-        , 
-          [ T "41-75"
-          , T "Brass"
-          , T "3d4 + 3"
-          , T "Proficiency with all simple weapons"
-          ]
-        , 
-          [ T "76-90"
-          , T "Bronze"
-          , T "4d4 + 4"
-          , T "Proficiency with all medium armor"
-          ]
-        , 
-          [ T "91-00"
-          , T "Iron"
-          , T "5d4 + 5"
-          , T "Proficiency with all martial weapons"
-          ]
-        ]
-      , P
-        [ T "If you blow the horn without meeting its requirement, the summoned berserkers attack you. If you meet the requirement, they are friendly to you and your companions and follow your commands."
         ]
       ]
     }
@@ -16830,24 +15791,6 @@ magicItems =
         ]
       , P
         [ T "Once the rune has been invoked, it can't be invoked again until the next dawn."
-        ]
-      ]
-    }
-  , { title: "Moon Sickle"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:moon-sickle"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeWeapon (Just "sickle")
-    , attunement: Attune (Just "druid or ranger")
-    , source: [SourceTashasCauldronOfEverything]
-    , description:
-      [ P
-        [ I "Weapon (sickle), uncommon (+1), rare (+2), very rare (+3) (requires attunement by a druid or ranger)"
-        ]
-      , P
-        [ T "This silver-bladed sickle glimmers softly with moonlight. While holding this magic weapon, you gain a bonus to attack and damage rolls made with it, and you gain a bonus to spell attack rolls and the saving throw DCs of your druid and ranger spells. The bonus is determined by the weapon's rarity. In addition, you can use the sickle as a spellcasting focus for your druid and ranger spells."
-        ]
-      , P
-        [ T "When you cast a spell that restores hit points, you can roll a d4 and add the number rolled to the amount of hit points restored, provided you are holding the sickle."
         ]
       ]
     }
@@ -17357,56 +16300,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Prehistoric Figurines of Wondrous Power"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:prehistoric-figurines-of-wondrous-power"
-    , rarity: [RarityUnknown "wondrous item, varies"]
-    , itemtype: TypeItem Nothing
-    , attunement: AttuneNone
-    , source: [SourceBigbyPresentsGloryOfTheGiants]
-    , description:
-      [ P
-        [ I "Wondrous Item, Varies"
-        ]
-      , P
-        [ T "Larger and more roughly hewn than typical figurines of wondrous power, these statuettes depict dinosaurs and related creatures from the earliest days of the world."
-        ]
-      , P
-        [ T "As an action, you can throw a prehistoric figurine of wondrous power to a point on the ground within 60 feet of yourself while speaking a command word, whereupon the figurine magically transforms into a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature."
-        ]
-      , P
-        [ T "The creature is friendly to you and your companions. It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the "
-        , I "Monster Manual"
-        , T " for the creature's statistics."
-        ]
-      , P
-        [ T "The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its statuette form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description."
-        ]
-      , P
-        [ B "Carnelian Triceratops (Very Rare)."
-        , T " This figurine becomes a triceratops for up to 6 hours and can be ridden as a mount. Once it has been used, it can't be used again until 10 days have passed."
-        ]
-      , P
-        [ B "Jasper Tyrannosaurus Rex (Legendary)."
-        , T " This figurine, crafted from rare green jasper, becomes a tyrannosaurus rex for up to 1 hour. Once it has been used, it can't be used again until 14 days have passed."
-        ]
-      , P
-        [ T "Whenever you command the figurine while it's in tyrannosaurus rex form (including commanding it to revert to figurine form), you must roll a d20. On a 1, you lose control of the figurine, and it becomes hostile to you and your companions until it is reduced to 0 hit points, at which point it reverts to figurine form."
-        ]
-      , P
-        [ B "Kyanite Pteranodon (Rare)."
-        , T " This figurine becomes a pteranodon for up to 8 hours. If your size is Medium or smaller, you can ride the pteranodon as a mount. Once it has been used, it can't be used again until 7 days have passed."
-        ]
-      , P
-        [ B "Pyrite Plesiosaurus (Uncommon)."
-        , T " This figurine becomes a plesiosaurus for up to 12 hours and can be ridden as a mount. Once it has been used, it can't be used again until 4 days have passed."
-        ]
-      , P
-        [ T "While you are riding the plesiosaurus, you can use it to cast "
-        , A "http://dnd5e.wikidot.com/spell:water-breathing" "Water Breathing"
-        , T " at will."
-        ]
-      ]
-    }
   , { title: "Reincarnation Dust"
     , url: "https://dnd5e.wikidot.com//wondrous-items:reincarnation-dust"
     , rarity: [RarityVeryRare]
@@ -17421,24 +16314,6 @@ magicItems =
         [ T "When this small pouch of purple dust is sprinkled on a dead humanoid or a piece of a dead humanoid, the dust is absorbed by the remains. If willing, the dead creature returns to life with a new body as if the "
         , A "http://dnd5e.wikidot.com/spell:reincarnate" "Reincarnate"
         , T " spell had been cast on the remains."
-        ]
-      ]
-    }
-  , { title: "Rhythm Maker's Drum"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:rhythm-makers-drum"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeItem Nothing
-    , attunement: Attune (Just "bard")
-    , source: [SourceTashasCauldronOfEverything]
-    , description:
-      [ P
-        [ I "Wondrous item, uncommon (+1), rare (+2), very rare (+3) (requires attunement by a bard)"
-        ]
-      , P
-        [ T "While holding this drum, you gain a bonus to spell attack rolls and to the saving throw DCs of your bard spells. The bonus is determined by the drum's rarity."
-        ]
-      , P
-        [ T "As an action, you can play the drum to regain one use of your Bardic Inspiration feature. This property of the drum can't be used again until the next dawn."
         ]
       ]
     }
@@ -17774,24 +16649,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Rod of the Pact Keeper, +1, +2, +3"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:rod-of-the-pact-keeper"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeRod
-    , attunement: Attune (Just "warlock")
-    , source: [SourceDMG]
-    , description:
-      [ P
-        [ I "Rod, uncommon (+1), rare (+2), or very rare (+3) (requires attunement by a warlock)"
-        ]
-      , P
-        [ T "While holding this rod, you gain a bonus to spell attack rolls and to the saving throw DCs of your warlock spells. This bonus is determined by the rod's rarity."
-        ]
-      , P
-        [ T "In addition, you can regain one warlock spell slot as an action while holding the rod. You can't use this property again until you finish a long rest."
-        ]
-      ]
-    }
   , { title: "Rotor of Return"
     , url: "https://dnd5e.wikidot.com//wondrous-items:rotor-of-return"
     , rarity: [RarityVeryRare]
@@ -17942,65 +16799,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Sage's Signet"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:sages-signet"
-    , rarity: [RarityUnknown "ring, varies (requires attunement by a spellcaster)"]
-    , itemtype: TypeRing
-    , attunement: Attune (Just "spellcaster")
-    , source: [SourceBookOfManyThings]
-    , description:
-      [ P
-        [ I "Ring, varies (requires attunement by a Spellcaster)"
-        ]
-      , P
-        [ T "This gilded ring bears a beautiful engraving and is imbued with powers of keen wisdom and foresight. While wearing this ring, you can use an action to cast the "
-        , A "http://dnd5e.wikidot.com/spell:augury" "Augury"
-        , T " spell from the ring. Once you use the ring to cast the spell, the ring can't cast the spell again until the next dawn."
-        ]
-      , P
-        [ T "Six varieties of Sage's Signet rings exist, each with a different signet (see the table below). A ring's signet determines its rarity as well as the additional spells it can cast. While wearing a Sage's Signet, you can cast each of its additional spells once from the ring using your Intelligence as the spellcasting ability. Once you cast each of the additional spells from the ring, it can't cast the spell again until the next dawn."
-        ]
-      , P
-        [ B "Sage's Signet"
-        ]
-      , TB
-        [ T "Signet"
-        , T "Rarity"
-        , T "Spells"
-        ]
-        [ 
-          [ T "Bear"
-          , T "Very Rare"
-          , T "Enlarge/Reduce, Polymorph"
-          ]
-        , 
-          [ T "Hart"
-          , T "Very Rare"
-          , T "Aura of Vitality, Mass Cure Wounds"
-          ]
-        , 
-          [ T "Lion"
-          , T "Very Rare"
-          , T "Destructive Wave, Fireball"
-          ]
-        , 
-          [ T "Serpent"
-          , T "Rare"
-          , T "Fear, Hex"
-          ]
-        , 
-          [ T "Songbird"
-          , T "Rare"
-          , T "Charm Person, Hypnotic Pattern"
-          ]
-        , 
-          [ T "Wolf"
-          , T "Very Rare"
-          , T "Freedom of Movement, Pass Without Trace"
-          ]
-        ]
-      ]
-    }
   , { title: "Sanctum Amulet"
     , url: "https://dnd5e.wikidot.com//wondrous-items:sanctum-amulet"
     , rarity: [RarityVeryRare]
@@ -18105,21 +16903,6 @@ magicItems =
           [ B "Boots."
           , T " The pair of boots is now a rare magic item that requires attunement. While wearing it, you ignore difficult terrain while walking, and you can walk on water."
           ]
-        ]
-      ]
-    }
-  , { title: "Shield, +1, +2, +3"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:shield-1-2-3"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeArmor Nothing
-    , attunement: AttuneNone
-    , source: [SourceDMG]
-    , description:
-      [ P
-        [ I "Armor (shield), uncommon (+1), rare (+2), or very rare (+3)"
-        ]
-      , P
-        [ T "While holding this shield, you have a bonus to AC determined by the shield's rarity. This bonus is in addition to the shield's normal bonus to AC."
         ]
       ]
     }
@@ -18802,21 +17585,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Wand of the War Mage"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:wand-of-the-war-mage"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeWand
-    , attunement: Attune (Just "spellcaster")
-    , source: [SourceDMG]
-    , description:
-      [ P
-        [ I "Wand, uncommon (+1), rare (+2), or very rare (+3) (requires attunement by a spellcaster)"
-        ]
-      , P
-        [ T "While holding this wand, you gain a bonus to spell attack rolls determined by the wand's rarity. In addition, you ignore half cover when making a spell attack."
-        ]
-      ]
-    }
   , { title: "Watchful Helm"
     , url: "https://dnd5e.wikidot.com//wondrous-items:watchful-helm"
     , rarity: [RarityVeryRare]
@@ -18834,21 +17602,6 @@ magicItems =
         [ T "As a bonus action, you can cast the "
         , A "http://dnd5e.wikidot.com/spell:see-invisibility" "See Invisibility"
         , T " spell from the helm. Once this property of the helm is used, it can't be used again until the next dawn."
-        ]
-      ]
-    }
-  , { title: "Weapon, +1, +2, or +3"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:weapon-1-2-3"
-    , rarity: [RarityVeryRare]
-    , itemtype: TypeWeapon (Just "any")
-    , attunement: AttuneNone
-    , source: [SourceDMG]
-    , description:
-      [ P
-        [ I "Weapon (any), uncommon (+1), rare (+2), or very rare (+3)"
-        ]
-      , P
-        [ T "You have a bonus to attack and damage rolls made with this magic weapon. The bonus is determined by the weapon's rarity."
         ]
       ]
     }
@@ -18923,38 +17676,6 @@ magicItems =
         , T " While this component is not installed in the "
         , I "Orrery of the Wanderer"
         , T ", its magic might function sporadically or with unpredictable side effects, as determined by the DM."
-        ]
-      ]
-    }
-  , { title: "Wraps Of Unarmed Prowess"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:wraps-of-unarmed-prowess"
-    , rarity: [RarityUnknown "wondrous item, varies"]
-    , itemtype: TypeItem Nothing
-    , attunement: AttuneNone
-    , source: [SourceBookOfManyThings]
-    , description:
-      [ P
-        [ I "Wondrous Item, varies"
-        ]
-      , P
-        [ T "While you're wearing these cloth wraps, your unarmed strikes are considered magical for the purpose of overcoming immunity and resistance to nonmagical attacks and damage, and you gain a bonus to the attack and damage rolls of your unarmed strikes, determined by the wraps' rarity."
-        ]
-      , TB
-        [ T "Rarity"
-        , T "Bonus"
-        ]
-        [ 
-          [ T "Uncommon"
-          , T "+1"
-          ]
-        , 
-          [ T "Rare"
-          , T "+2"
-          ]
-        , 
-          [ T "Very Rare"
-          , T "+3"
-          ]
         ]
       ]
     }
@@ -19078,21 +17799,6 @@ magicItems =
           , T "The rear hatch unseals and opens."
           , T "The rear hatch closes and seals."
           ]
-        ]
-      ]
-    }
-  , { title: "Armor, +1, +2, or +3"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:armor-1-2-3"
-    , rarity: [RarityLegendary]
-    , itemtype: TypeArmor Nothing
-    , attunement: AttuneNone
-    , source: [SourceDMG]
-    , description:
-      [ P
-        [ I "Armor (light, medium, or heavy), rare (+1), very rare (+2), or legendary (+3)"
-        ]
-      , P
-        [ T "You have a bonus to AC while wearing this armor. The bonus is determined by its rarity."
         ]
       ]
     }
@@ -19474,54 +18180,6 @@ magicItems =
         ]
       , P
         [ T "Deduct the time you are invisible, in increments of 1 minute, from the cloak's maximum duration of 2 hours. After 2 hours of use, the cloak ceases to function. For every uninterrupted period of 12 hours, the cloak goes unused, it regains 1 hour of duration."
-        ]
-      ]
-    }
-  , { title: "Crystal Ball"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:crystal-ball"
-    , rarity: [RarityLegendary]
-    , itemtype: TypeItem Nothing
-    , attunement: Attune Nothing
-    , source: [SourceDMG]
-    , description:
-      [ P
-        [ I "Wondrous item, very rare or legendary (requires attunement)"
-        ]
-      , P
-        [ T "The typical "
-        , I "crystal ball"
-        , T ", a very rare item, is about 6 inches in diameter. While touching it, you can cast the "
-        , A "http://dnd5e.wikidot.com/spell:scrying" "Scrying"
-        , T " spell (save DC 17) with it."
-        ]
-      , P
-        [ T "The following "
-        , I "crystal ball"
-        , T " variants are legendary items and have additional properties."
-        ]
-      , P
-        [ B "Crystal Ball of Mind Reading."
-        , T " You can use an action to cast the "
-        , A "http://dnd5e.wikidot.com/spell:detect-thoughts" "Detect Thoughts"
-        , T " spell (save DC 17) while you are scrying with the crystal ball, targeting creatures you can see within 30 feet of the spell's sensor. You don't need to concentrate on this "
-        , A "http://dnd5e.wikidot.com/spell:detect-thoughts" "Detect Thoughts"
-        , T " to maintain it during its duration, but it ends if scrying ends."
-        ]
-      , P
-        [ B "Crystal Ball of Telepathy."
-        , T " While scrying with the crystal ball, you can communicate telepathically with creatures you can see within 30 feet of the spell's sensor. You can also use an action to cast the "
-        , A "http://dnd5e.wikidot.com/spell:suggestion" "Suggestion"
-        , T " spell (save DC 17) through the sensor on one of those creatures. You don't need to concentrate on this "
-        , A "http://dnd5e.wikidot.com/spell:suggestion" "Suggestion"
-        , T " to maintain it during its duration, but it ends if scrying ends. Once used, the "
-        , A "http://dnd5e.wikidot.com/spell:suggestion" "Suggestion"
-        , T " power of the "
-        , I "crystal ball"
-        , T " can't be used again until the next dawn."
-        ]
-      , P
-        [ B "Crystal Ball of True Seeing."
-        , T " While scrying with the crystal ball, you have truesight with a radius of 120 feet centered on the spell's sensor."
         ]
       ]
     }
@@ -21073,210 +19731,6 @@ magicItems =
         ]
       ]
     }
-  , { title: "Fate Dealer's Deck"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:fate-dealers-deck"
-    , rarity: [RarityUnknown "wondrous item, varies (requires attunement by a cleric or paladin)"]
-    , itemtype: TypeItem Nothing
-    , attunement: Attune (Just "cleric or paladin")
-    , source: [SourceBookOfManyThings]
-    , description:
-      [ P
-        [ I "Wondrous Item, varies (requires attunement by a Cleric or Paladin)"
-        ]
-      , P
-        [ T "The backs of these cards are inscribed with glyphs representing the Inner Planes, the Outer Planes, or the holy symbols of various deities. While holding this deck, you can use it as a spellcasting focus, and you gain a bonus to spell attack rolls and to your spell save DC. The bonus is determined by the deck's rarity."
-        ]
-      , P
-        [ T "In addition, while you're holding the deck, you can draw a card as an action to expend and roll one of your Hit Dice and add the deck's bonus to the number rolled. One creature you can see within 30 feet of you either takes radiant damage or regains hit points (your choice) equal to the total."
-        ]
-      , TB
-        [ T "Rarity"
-        , T "Bonus"
-        ]
-        [ 
-          [ T "Rare"
-          , T "+1"
-          ]
-        , 
-          [ T "Very Rare"
-          , T "+2"
-          ]
-        , 
-          [ T "Legendary"
-          , T "+3"
-          ]
-        ]
-      ]
-    }
-  , { title: "Figurine of Wondrous Power"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:figurine-of-wondrous-power"
-    , rarity: [RarityUnknown "wondrous item, rarity by figurine"]
-    , itemtype: TypeItem Nothing
-    , attunement: AttuneNone
-    , source: [SourceDMG, SourceFizbansTreasuryOfDragons]
-    , description:
-      [ P
-        [ I "Wondrous item, rarity by figurine"
-        ]
-      , P
-        [ T "A "
-        , I "Figurine of Wondrous Power"
-        , T " is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature."
-        ]
-      , P
-        [ T "The creature is friendly to you and your companions. It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the "
-        , I "Monster Manuel"
-        , T " for the creature's statistics."
-        ]
-      , P
-        [ T "The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description."
-        ]
-      , P
-        [ B "Bronze Griffon (Rare)."
-        , T " This bronze statuette is of a griffon rampant. It can become a "
-        , B "griffon"
-        , T " for up to 6 hours. Once it has been used, it can't be used again until 5 days have passed."
-        ]
-      , P
-        [ B "Ebony Fly (Rare)."
-        , T " This ebony statuette is carved in the likeness of a horsefly. It can become a "
-        , B "giant fly"
-        , T " for up to 12 hours and can be ridden as a mount. Once it has been used, it can't be used again until 2 days have passed."
-        ]
-      , P
-        [ B "Golden Lions (Rare)."
-        , T " These gold statuettes of lions are always created in pairs. You can use one figurine or both simultaneously. Each can become a "
-        , B "lion"
-        , T " for up to 1 hour. Once a lion has been used, it can't be used again until 7 days have passed."
-        ]
-      , P
-        [ B "Ivory Goats (Rare)."
-        , T " These ivory statuettes of goats are always created in sets of three. Each goat looks unique and functions differently from the others. Their properties are as follows"
-        ]
-      , UL
-        [ 
-          [ T "The "
-          , I "goat of traveling"
-          , T " can become a "
-          , B "Large goat"
-          , T " with the same statistics as a "
-          , B "riding horse"
-          , T ". It has 24 charges, and each hour or portion thereof it spends in beast form costs 1 charge. While it has charges, you can use it as often as you wish. When it runs out of charges, it reverts to a figurine and can't be used again until 7 days have passed, when it regains all its charges."
-          ]
-        ]
-      , UL
-        [ 
-          [ T "The "
-          , I "goat of travail"
-          , T " becomes a "
-          , B "giant goat"
-          , T " for up to 3 hours. Once it has been used, it can't be used again until 30 days have passed."
-          ]
-        ]
-      , UL
-        [ 
-          [ T "The "
-          , I "goat of terror"
-          , T " becomes a "
-          , B "giant goat"
-          , T " for up to 3 hours. The goat can't attack, but you can remove its horns and use them as weapons. One horn becomes a "
-          , I "+1 lance"
-          , T ", and the other becomes a "
-          , I "+2 longsword"
-          , T ". Removing a horn requires an action, and the weapons disappear and the horns return when the goat reverts to figurine form. In addition, the goat radiates a 30-foot-radius aura of terror while you are riding it. Any creature hostile to you that starts its turn in the aura must succeed on a DC 15 Wisdom saving throw or be frightened of the goat for 1 minute, or until the goat reverts to figurine form. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once it successfully saves against the effect, a creature is immune to the goat's aura for the net 24 hours. Once the figurine has been used, it can't be used again until 15 days have passed."
-          ]
-        ]
-      , P
-        [ B "Marble Elephant (Rare)."
-        , T " This marble statuette is about 4 inches high and long. It can become an "
-        , B "elephant"
-        , T " for up to 24 hours. Once it has been used, it can't be used again until 7 days have passed."
-        ]
-      , P
-        [ B "Obsidian Steed (Very Rare)."
-        , T " This polished obsidian horse can become a "
-        , B "nightmare"
-        , T " for up to 24 hours. The nightmare fights only to defend itself. Once it has been used, it can't be used again until 5 days have passed."
-        ]
-      , P
-        [ T "If you have a good alignment, the figurine has a 10 percent chance each time you use it to ignore your orders, including a command to revert to figurine form. If you mount the nightmare while it is ignoring your orders, you and the nightmare are instantly transported to a random location on the plane of Hades, where the nightmare reverts to figurine form."
-        ]
-      , P
-        [ B "Onyx Dog (Rare)."
-        , T " This onyx statuette of a dog can become a "
-        , B "mastiff"
-        , T " for up to 6 hours. The mastiff has an Intelligence of 8 and can speak Common. It also has darkvision out to a range of 60 feet and can see invisible creatures and objects within that range. Once it has been used, it can't be used again until 7 days have passed."
-        ]
-      , P
-        [ B "Serpentine Owl (Rare)."
-        , T " This serpentine statuette of an owl can become a "
-        , B "giant owl"
-        , T " for up to 8 hours. Once it has been used, it can't be used again until 2 days have passed. The owl can telepathically communicate with you at any range if you and it are on the same plane of existence."
-        ]
-      , P
-        [ B "Silver Raven (Uncommon)."
-        , T " This silver statuette of a raven can become a "
-        , B "raven"
-        , T " for up to 12 hours. Once it has been used, it can't be used again until 2 days have passed. While in raven form, the figurine allows you to cast the "
-        , A "http://dnd5e.wikidot.com/spell:animal-messenger" "Animal Messenger"
-        , T " spell on it at will."
-        ]
-      , P
-        [ T "In addition, the following "
-        , I "Figurine of Wondrous Power"
-        , T " was added in "
-        , I "Fizban's Treasury of Dragons:"
-        ]
-      , P
-        [ B "Gold Canary (Legendary)"
-        , I "Giant Canary Form."
-        , T " The figurine becomes a giant canary (see the accompanying stat block) for up to 8 hours and can be ridden as a mount. Once the figurine has become a giant canary, it can't be used this way again until the next dawn."
-        , I "Gold Dragon Form."
-        , T " While you are missing half or more of your hit points, you can speak a different command word and the figurine becomes an adult gold dragon for up to 1 hour. The dragon can't use any legendary actions or lair actions. Once the figurine has become an adult gold dragon, it can't be used this way again until 1 year has passed."
-        ]
-      , TB
-        [ T "Giant Canary"
-        ]
-        [ 
-          [ T "Large beast, Unaligned"
-          ]
-        , 
-          [ T "Armor Class: 12 (natural armor)"
-          ]
-        , 
-          [ T "Hit Points: 26 (4d10 + 4)"
-          ]
-        , 
-          [ T "Speed: 30 ft., fly 60ft."
-          ]
-        ,           []
-        , 
-          [ T "10 (+0)"
-          , T "14 (+2)"
-          , T "12 (+1)"
-          , T "2 (-4)"
-          , T "10 (+0)"
-          , T "6 (-2)"
-          ]
-        , 
-          [ T "Senses: passive Perception 10"
-          ]
-        , 
-          [ T "Languages: -"
-          ]
-        , 
-          [ T "Challenge: 1/2 (100 XP)"
-          ]
-        , 
-          [ T "Proficiency Bonus (PB): +2"
-          ]
-        ,           []
-        , 
-          [ T "Peck. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d10 + 2 piercing damage."
-          ]
-        ]
-      ]
-    }
   , { title: "Flail of Tiamat"
     , url: "https://dnd5e.wikidot.com//wondrous-items:flail-of-tiamat"
     , rarity: [RarityLegendary]
@@ -21854,62 +20308,6 @@ magicItems =
         ]
       , P
         [ T "Once you use the horn's property, it can't be used again for 1 year."
-        ]
-      ]
-    }
-  , { title: "Horn of Valhalla"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:horn-of-valhalla"
-    , rarity: [RarityLegendary]
-    , itemtype: TypeItem Nothing
-    , attunement: AttuneNone
-    , source: [SourceDMG]
-    , description:
-      [ P
-        [ I "Wondrous item, rare (silver or brass), very rare (bronze), or legendary (iron)"
-        ]
-      , P
-        [ T "You can use an action to blow this horn. In response, warrior spirits from the plane of Ysgard appear within 60 feet of you. These spirits use the berserker statistics from the "
-        , I "Monster Manual"
-        , T ". They return to Ysgard after 1 hour or when they drop to 0 hit points. Once you use the horn, it can't be used again until 7 days have passed."
-        ]
-      , P
-        [ T "Four types of "
-        , I "horn of Valhalla"
-        , T " are known to exist, each made of a different metal. The horn's type determines how many berserkers answer its summons, as well as the requirement for its use. The DM chooses the horn's type or determines it randomly."
-        ]
-      , TB
-        [ T "d100"
-        , T "Horn Type"
-        , T "Berserkers Summoned"
-        , T "Requirement"
-        ]
-        [ 
-          [ T "01-40"
-          , T "Silver"
-          , T "2d4 + 2"
-          , T "None"
-          ]
-        , 
-          [ T "41-75"
-          , T "Brass"
-          , T "3d4 + 3"
-          , T "Proficiency with all simple weapons"
-          ]
-        , 
-          [ T "76-90"
-          , T "Bronze"
-          , T "4d4 + 4"
-          , T "Proficiency with all medium armor"
-          ]
-        , 
-          [ T "91-00"
-          , T "Iron"
-          , T "5d4 + 5"
-          , T "Proficiency with all martial weapons"
-          ]
-        ]
-      , P
-        [ T "If you blow the horn without meeting its requirement, the summoned berserkers attack you. If you meet the requirement, they are friendly to you and your companions and follow your commands."
         ]
       ]
     }
@@ -23142,56 +21540,6 @@ magicItems =
         [ B "Alternative Power."
         , I "Powered Armor"
         , T " originally required energy cells to fuel it, but was adapted by Kwalish to be fueled by the life energy of the creature wearing it. You might decide that the armor can also draw power from additional sources, or that energy cells can be recharged with the aid of a tinker, inventor, or artificer. It might also be possible for allies to connect to the armor through the use of magic that generates a conduit something like an astral silver cord. While so connected, a willing ally can give up hit points as a reaction to fuel the armor's abilities."
-        ]
-      ]
-    }
-  , { title: "Prehistoric Figurines of Wondrous Power"
-    , url: "https://dnd5e.wikidot.com//wondrous-items:prehistoric-figurines-of-wondrous-power"
-    , rarity: [RarityUnknown "wondrous item, varies"]
-    , itemtype: TypeItem Nothing
-    , attunement: AttuneNone
-    , source: [SourceBigbyPresentsGloryOfTheGiants]
-    , description:
-      [ P
-        [ I "Wondrous Item, Varies"
-        ]
-      , P
-        [ T "Larger and more roughly hewn than typical figurines of wondrous power, these statuettes depict dinosaurs and related creatures from the earliest days of the world."
-        ]
-      , P
-        [ T "As an action, you can throw a prehistoric figurine of wondrous power to a point on the ground within 60 feet of yourself while speaking a command word, whereupon the figurine magically transforms into a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature."
-        ]
-      , P
-        [ T "The creature is friendly to you and your companions. It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the "
-        , I "Monster Manual"
-        , T " for the creature's statistics."
-        ]
-      , P
-        [ T "The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its statuette form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description."
-        ]
-      , P
-        [ B "Carnelian Triceratops (Very Rare)."
-        , T " This figurine becomes a triceratops for up to 6 hours and can be ridden as a mount. Once it has been used, it can't be used again until 10 days have passed."
-        ]
-      , P
-        [ B "Jasper Tyrannosaurus Rex (Legendary)."
-        , T " This figurine, crafted from rare green jasper, becomes a tyrannosaurus rex for up to 1 hour. Once it has been used, it can't be used again until 14 days have passed."
-        ]
-      , P
-        [ T "Whenever you command the figurine while it's in tyrannosaurus rex form (including commanding it to revert to figurine form), you must roll a d20. On a 1, you lose control of the figurine, and it becomes hostile to you and your companions until it is reduced to 0 hit points, at which point it reverts to figurine form."
-        ]
-      , P
-        [ B "Kyanite Pteranodon (Rare)."
-        , T " This figurine becomes a pteranodon for up to 8 hours. If your size is Medium or smaller, you can ride the pteranodon as a mount. Once it has been used, it can't be used again until 7 days have passed."
-        ]
-      , P
-        [ B "Pyrite Plesiosaurus (Uncommon)."
-        , T " This figurine becomes a plesiosaurus for up to 12 hours and can be ridden as a mount. Once it has been used, it can't be used again until 4 days have passed."
-        ]
-      , P
-        [ T "While you are riding the plesiosaurus, you can use it to cast "
-        , A "http://dnd5e.wikidot.com/spell:water-breathing" "Water Breathing"
-        , T " at will."
         ]
       ]
     }
@@ -29771,7 +28119,7 @@ magicItems =
     }
   , { title: "Crusader's Shortsword"
     , url: "https://dnd5e.wikidot.com//wondrous-items:crusaders-shortsword"
-    , rarity: [RarityUnknown "weapon (shortsword), unknown rarity (requires attunement)"]
+    , rarity: [RarityUnknown "Unknown rarity"]
     , itemtype: TypeWeapon (Just "shortsword")
     , attunement: Attune Nothing
     , source: [SourceCurseOfStrahd]
