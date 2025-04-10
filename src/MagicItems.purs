@@ -16725,7 +16725,7 @@ magicItems =
   , { title: "Ruidium Shield"
     , url: "https://dnd5e.wikidot.com//wondrous-items:ruidium-shield"
     , rarity: [RarityVeryRare]
-    , itemtype: TypeUnknown "shield, very rare (requires attunement)"
+    , itemtype: TypeArmor (Just "shield")
     , attunement: Attune Nothing
     , source: [SourceCriticalRoleCallOfNetherdeep]
     , description:
@@ -28119,7 +28119,7 @@ magicItems =
     }
   , { title: "Crusader's Shortsword"
     , url: "https://dnd5e.wikidot.com//wondrous-items:crusaders-shortsword"
-    , rarity: [RarityUnknown "Unknown rarity"]
+    , rarity: [RarityUnknown "unknown rarity"]
     , itemtype: TypeWeapon (Just "shortsword")
     , attunement: Attune Nothing
     , source: [SourceCurseOfStrahd]
@@ -28144,7 +28144,7 @@ magicItems =
     }
   , { title: "Orcus Figurine"
     , url: "https://dnd5e.wikidot.com//wondrous-items:orcus-figurine"
-    , rarity: [RarityUnknown "wondrous item, ???"]
+    , rarity: [RarityUnknown "unknown rarity"]
     , itemtype: TypeItem Nothing
     , attunement: AttuneNone
     , source: [SourceCandlekeepMysteries]
@@ -28181,7 +28181,7 @@ magicItems =
     }
   , { title: "Radiance"
     , url: "https://dnd5e.wikidot.com//wondrous-items:radiance"
-    , rarity: [RarityUnknown "wand, ??? (requires attunement by a spellcaster)"]
+    , rarity: [RarityUnknown "unknown rarity"]
     , itemtype: TypeWand
     , attunement: Attune (Just "spellcaster")
     , source: [SourceCandlekeepMysteries]
@@ -28201,8 +28201,8 @@ magicItems =
     }
   , { title: "Shield of the Silver Dragon"
     , url: "https://dnd5e.wikidot.com//wondrous-items:shield-of-the-silver-dragon"
-    , rarity: [RarityUnknown "armor (shield), unknown rarity"]
-    , itemtype: TypeArmor Nothing
+    , rarity: [RarityUnknown "unknown rarity"]
+    , itemtype: TypeArmor (Just "shield")
     , attunement: AttuneNone
     , source: [SourceCurseOfStrahd]
     , description:
@@ -28219,7 +28219,7 @@ magicItems =
     }
   , { title: "Stonky's Ring"
     , url: "https://dnd5e.wikidot.com//wondrous-items:stonkys-ring"
-    , rarity: [RarityUnknown "ring, ??? (requires attunement)"]
+    , rarity: [RarityUnknown "unknown rarity"]
     , itemtype: TypeRing
     , attunement: Attune Nothing
     , source: [SourceCandlekeepMysteries]
@@ -28241,7 +28241,7 @@ magicItems =
     }
   , { title: "Tearulai"
     , url: "https://dnd5e.wikidot.com//wondrous-items:tearulai"
-    , rarity: [RarityUnknown "weapon (longsword), unknown rarity (requires attunement by a creature of non-evil alignment)"]
+    , rarity: [RarityUnknown "unknown rarity"]
     , itemtype: TypeWeapon (Just "longsword")
     , attunement: Attune (Just "creature of non-evil alignment")
     , source: [SourceWaterdeepDungeonOfTheMadMage]
@@ -28290,7 +28290,7 @@ magicItems =
     }
   , { title: "Yester Hill Axe"
     , url: "https://dnd5e.wikidot.com//wondrous-items:yester-hill-axe"
-    , rarity: [RarityUnknown "weapon (battleaxe), unknown rarity"]
+    , rarity: [RarityUnknown "unknown rarity"]
     , itemtype: TypeWeapon (Just "battleaxe")
     , attunement: AttuneNone
     , source: [SourceCurseOfStrahd]
