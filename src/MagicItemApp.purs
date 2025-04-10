@@ -185,8 +185,8 @@ mkTableRow rs = HE.tr_ (map (\td -> HE.td_ (mkDescription td)) rs)
 mkListItem :: Array Description -> Html Message
 mkListItem xs = HE.li_ (map mkDescription xs)
 
-showCaption :: MagicItem -> String
-showCaption item
-  =  show item.itemtype <> ", " 
-  <> showR item.rarity
-  <> showFullAttune item.attunement
+-- showCaption :: MagicItem -> String
+-- showCaption item
+--   =  show item.itemtype <> ", " 
+--   <> showR item.rarity
+--   <> showFullAttune item.attunement
