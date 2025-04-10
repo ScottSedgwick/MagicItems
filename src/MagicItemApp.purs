@@ -2,14 +2,15 @@ module MagicItemApp
   ( Message(..)
   , Model
   , init
-  , view
+  , mkListItem
   , update
+  , view
   )
   where
 
 import Prelude
 
-import Data.Array ((:), elem, filter, intercalate, sortBy)
+import Data.Array (elem, filter, intercalate, sortBy)
 import Data.Maybe (Maybe(..))
 import Data.String (Pattern(..), contains, toLower)
 import Data.Tuple (Tuple)
@@ -107,8 +108,8 @@ filterItem model item
   =  item.title /= ""
   && filterTitle model.fltTitle item.title
   && filterMaybeIn model.fltRarity item.rarity
-  && filterMaybe model.fltType item.type
-  && filterMaybe model.fltAttunement item.attune
+  && filterMaybe model.fltType item.itemtype
+  && filterMaybe model.fltAttunement item.attunement
   && filterMaybeIn model.fltSource item.source
 
 filterTitle :: String -> String -> Boolean
@@ -131,14 +132,14 @@ viewItem item =
       [ HE.div [ HA.class' "grid tiny-line" ]
         [ HE.div [ HA.class' "s3" ] [ HE.strong_ [HE.text item.title] ]
         , HE.div [ HA.class' "s2" ] [ HE.text (showR item.rarity) ]
-        , HE.div [ HA.class' "s2" ] [ HE.text (show item.type) ]
-        , HE.div [ HA.class' "s2" ] [ HE.text (show item.attune) ]
+        , HE.div [ HA.class' "s2" ] [ HE.text (show item.itemtype) ]
+        , HE.div [ HA.class' "s2" ] [ HE.text (show item.attunement) ]
         , HE.div [ HA.class' "s3" ] [ HE.text (intercalate ", " (map show item.source)) ]
         ]
       ] 
     , HE.article [ HA.class' "white" ]
-      ( [ HE.p_ [ HE.em_ (showCaption item) ]
-        , HE.div [ HA.id item.title, HA.class' "article-anchor" ] [ HE.text "" ]
+      ( -- [ HE.p_ [ HE.em_ (showCaption item) ]
+        [ HE.div [ HA.id item.title, HA.class' "article-anchor" ] [ HE.text "" ]
         ] <> (map mkDescription item.description)
       )
       
@@ -160,8 +161,13 @@ mkDescription (P xs)   = HE.p_ (map mkDescription xs )
 mkDescription (T s)    = HE.text s
 mkDescription (B s)    = HE.strong_ [ HE.text s ]
 mkDescription (I s)    = HE.em_ [ HE.text s ]
+mkDescription (A h s)  = HE.a [ HA.href h ] [ HE.text s ]
 mkDescription (UL xs)  = HE.ul_ (map mkListItem xs)
 mkDescription (TB h b) = HE.table [ HA.class' "stripes" ] [ mkTableHeader h, mkTableBody b ]
+mkDescription (H1 s)   = HE.h1_ [ HE.text s ]
+mkDescription (H2 s)   = HE.h2_ [ HE.text s ]
+mkDescription (H3 s)   = HE.h3_ [ HE.text s ]
+mkDescription (H4 s)   = HE.h4_ [ HE.text s ]
 mkDescription (H5 s)   = HE.h5_ [ HE.text s ]
 mkDescription (H6 s)   = HE.h6_ [ HE.text s ]
 
@@ -181,6 +187,6 @@ mkListItem xs = HE.li_ (map mkDescription xs)
 
 showCaption :: MagicItem -> String
 showCaption item
-  =  show item.type <> ", " 
+  =  show item.itemtype <> ", " 
   <> showR item.rarity
-  <> showFullAttune item.attune
+  <> showFullAttune item.attunement

@@ -12,7 +12,7 @@ data ItemSource
   | SourceBaldursGateDescentIntoAvernus
   | SourceBookOfManyThings
   | SourceBigbyPresentsGloryOfTheGiants
-  | SourceCandleDeepMysteries
+  | SourceCandlekeepMysteries
   | SourceCurseOfStrahd
   | SourceCriticalRoleCallOfNetherdeep
   | SourceDivineContention
@@ -39,7 +39,7 @@ data ItemSource
   | SourcePrincesOfTheApocalypse
   | SourceTheRiseOfTiamat
   | SourceSpelljammerAdventuresInSpace
-  | SourceStrixhaveCurriculumOfChaos
+  | SourceStrixhavenCurriculumOfChaos
   | SourceSleepingDragonsWake
   | SourceStormKingsThunder
   | SourceTashasCauldronOfEverything
@@ -54,13 +54,14 @@ data ItemSource
   | SourceWayfarersGuideToEberron
   | SourceTheWildBeyondTheWitchlight
   | SourceXanatharsGuideToEverything
+  | SourceUnknown String
 
 instance Show ItemSource where
   show SourceAcquisitionsIncorporated = "Acquisitions Incorporated"
   show SourceBaldursGateDescentIntoAvernus = "Baldur's Gate: Descent into Avernus"
   show SourceBookOfManyThings = "The Book of Many Things"
   show SourceBigbyPresentsGloryOfTheGiants = "Bigby Presents: Glory of the Giants"
-  show SourceCandleDeepMysteries = "Candlekeep Mysteries"
+  show SourceCandlekeepMysteries = "Candlekeep Mysteries"
   show SourceCurseOfStrahd = "Curse of Strahd"
   show SourceCriticalRoleCallOfNetherdeep = "Critical Role: Call of the Netherdeep"
   show SourceDivineContention = "Divine Contention"
@@ -87,7 +88,7 @@ instance Show ItemSource where
   show SourcePrincesOfTheApocalypse = "Princes of the Apocalypse"
   show SourceTheRiseOfTiamat = "The Rise of Tiamat"
   show SourceSpelljammerAdventuresInSpace = "Spelljammer: Adventures in Space"
-  show SourceStrixhaveCurriculumOfChaos = "Strixhaven: A Curriculum of Chaos"
+  show SourceStrixhavenCurriculumOfChaos = "Strixhaven: A Curriculum of Chaos"
   show SourceSleepingDragonsWake = "Sleeping Dragon's Wake"
   show SourceStormKingsThunder = "Storm King's Thunder"
   show SourceTashasCauldronOfEverything = "Tasha's Cauldron of Everything"
@@ -102,13 +103,14 @@ instance Show ItemSource where
   show SourceWayfarersGuideToEberron = "Wayfarer's Guide to Eberron"
   show SourceTheWildBeyondTheWitchlight = "The Wild Beyond the Witchlight"
   show SourceXanatharsGuideToEverything = "Xanathar's Guide to Everything"
+  show (SourceUnknown s) = "Unknown: " <> s
 
 instance Eq ItemSource where
   eq SourceAcquisitionsIncorporated SourceAcquisitionsIncorporated = true
   eq SourceBaldursGateDescentIntoAvernus SourceBaldursGateDescentIntoAvernus = true
   eq SourceBookOfManyThings SourceBookOfManyThings = true
   eq SourceBigbyPresentsGloryOfTheGiants SourceBigbyPresentsGloryOfTheGiants = true
-  eq SourceCandleDeepMysteries SourceCandleDeepMysteries = true
+  eq SourceCandlekeepMysteries SourceCandlekeepMysteries = true
   eq SourceCurseOfStrahd SourceCurseOfStrahd = true
   eq SourceCriticalRoleCallOfNetherdeep SourceCriticalRoleCallOfNetherdeep = true
   eq SourceDivineContention SourceDivineContention = true
@@ -135,7 +137,7 @@ instance Eq ItemSource where
   eq SourcePrincesOfTheApocalypse SourcePrincesOfTheApocalypse = true
   eq SourceTheRiseOfTiamat SourceTheRiseOfTiamat = true
   eq SourceSpelljammerAdventuresInSpace SourceSpelljammerAdventuresInSpace = true
-  eq SourceStrixhaveCurriculumOfChaos SourceStrixhaveCurriculumOfChaos = true
+  eq SourceStrixhavenCurriculumOfChaos SourceStrixhavenCurriculumOfChaos = true
   eq SourceSleepingDragonsWake SourceSleepingDragonsWake = true
   eq SourceStormKingsThunder SourceStormKingsThunder = true
   eq SourceTashasCauldronOfEverything SourceTashasCauldronOfEverything = true
@@ -158,7 +160,7 @@ allSources =
   , SourceBaldursGateDescentIntoAvernus
   , SourceBookOfManyThings
   , SourceBigbyPresentsGloryOfTheGiants
-  , SourceCandleDeepMysteries
+  , SourceCandlekeepMysteries
   , SourceCurseOfStrahd
   , SourceCriticalRoleCallOfNetherdeep
   , SourceDivineContention
@@ -185,7 +187,7 @@ allSources =
   , SourcePrincesOfTheApocalypse
   , SourceTheRiseOfTiamat
   , SourceSpelljammerAdventuresInSpace
-  , SourceStrixhaveCurriculumOfChaos
+  , SourceStrixhavenCurriculumOfChaos
   , SourceSleepingDragonsWake
   , SourceStormKingsThunder
   , SourceTashasCauldronOfEverything
@@ -207,7 +209,7 @@ instance Unshow ItemSource where
   unshow "Baldur's Gate: Descent into Avernus" = Just SourceBaldursGateDescentIntoAvernus
   unshow "The Book of Many Things" = Just SourceBookOfManyThings
   unshow "Bigby Presents: Glory of the Giants" = Just SourceBigbyPresentsGloryOfTheGiants
-  unshow "Candlekeep Mysteries" = Just SourceCandleDeepMysteries
+  unshow "Candlekeep Mysteries" = Just SourceCandlekeepMysteries
   unshow "Curse of Strahd" = Just SourceCurseOfStrahd
   unshow "Critical Role: Call of the Netherdeep" = Just SourceCriticalRoleCallOfNetherdeep
   unshow "Divine Contention" = Just SourceDivineContention
@@ -234,7 +236,7 @@ instance Unshow ItemSource where
   unshow "Princes of the Apocalypse" = Just SourcePrincesOfTheApocalypse
   unshow "The Rise of Tiamat" = Just SourceTheRiseOfTiamat
   unshow "Spelljammer: Adventures in Space" = Just SourceSpelljammerAdventuresInSpace
-  unshow "Strixhaven: A Curriculum of Chaos" = Just SourceStrixhaveCurriculumOfChaos
+  unshow "Strixhaven: A Curriculum of Chaos" = Just SourceStrixhavenCurriculumOfChaos
   unshow "Sleeping Dragon's Wake" = Just SourceSleepingDragonsWake
   unshow "Storm King's Thunder" = Just SourceStormKingsThunder
   unshow "Tasha's Cauldron of Everything" = Just SourceTashasCauldronOfEverything
@@ -261,6 +263,7 @@ data ItemType
   | TypeStaff
   | TypeWand
   | TypeWeapon (Maybe String)
+  | TypeUnknown String
 
 allTypes :: Array ItemType
 allTypes = [ TypeArmor Nothing, TypeItem Nothing, TypePotion, TypeRod, TypeRing, TypeScroll, TypeStaff, TypeWand, TypeWeapon Nothing ]
@@ -278,6 +281,7 @@ instance Show ItemType where
   show TypeWand              = "Wand"
   show (TypeWeapon Nothing)  = "Weapon"
   show (TypeWeapon (Just s)) = "Weapon (" <> s <> ")"
+  show (TypeUnknown s)       = "Unknown: " <> s
 
 instance Eq ItemType where
   eq (TypeArmor _)  (TypeArmor _)  = true
@@ -311,15 +315,19 @@ data Rarity
   | RarityLegendary
   | RarityArtifact
   | RarityUnique
+  | RarityVaries
+  | RarityUnknown String
 
 instance Show Rarity where
-  show RarityCommon    = "Common"
-  show RarityUncommon  = "Uncommon"
-  show RarityRare      = "Rare"
-  show RarityVeryRare  = "Very Rare"
-  show RarityLegendary = "Legendary"
-  show RarityArtifact  = "Artifact"
-  show RarityUnique    = "Unique"
+  show RarityCommon      = "Common"
+  show RarityUncommon    = "Uncommon"
+  show RarityRare        = "Rare"
+  show RarityVeryRare    = "Very Rare"
+  show RarityLegendary   = "Legendary"
+  show RarityArtifact    = "Artifact"
+  show RarityUnique      = "Unique"
+  show RarityVaries      = "Varies"
+  show (RarityUnknown s) = "Unknown: " <> s
 
 showR :: Array Rarity -> String
 showR xs = intercalate ", " (map show xs)
@@ -378,16 +386,22 @@ data Description
   | T String
   | B String
   | I String
+  | A String String
   | UL (Array (Array Description))
   | TB (Array Description) (Array (Array Description))
+  | H1 String
+  | H2 String
+  | H3 String
+  | H4 String
   | H5 String
   | H6 String
 
 type MagicItem =
   { title :: String
+  , url :: String
   , rarity :: Array Rarity
-  , type :: ItemType
-  , attune :: ItemAttunement
+  , itemtype :: ItemType
+  , attunement :: ItemAttunement
   , source :: Array ItemSource
   , description :: Array Description
   }
