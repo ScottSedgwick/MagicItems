@@ -189,7 +189,7 @@ updateHref :: String -> String
 updateHref xs =
   case indexOf (Pattern "http://dnd5e.wikidot.com/wondrous-items:") xs of
     Nothing -> xs
-    Just _  -> "index.html#" <> drop 40 xs
+    Just _  -> "magic-items.html#" <> drop 40 xs
 
 mkId :: String -> String
 mkId xs = replaceAllOf (toLower xs) [Tuple " " "-", Tuple "(" "", Tuple ")" "", Tuple "," "", Tuple "'" ""]

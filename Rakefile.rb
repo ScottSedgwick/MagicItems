@@ -5,14 +5,95 @@ require 'rake/clean'
 CLOBBER.include('output')
 CLOBBER.include('wwwroot/js/*')
 
-desc "Compile"
-task :compile do
-    sh('spago build')
+namespace "mi" do
+    desc "Compile"
+    task :compile do
+        Dir.chdir('magic-items') do
+            sh('spago build')
+        end
+    end
+
+    desc "Build"
+    task :build do
+        Dir.chdir('magic-items') do
+            sh('spago bundle-app -t index.js')
+            sh('terser index.js > ../wwwroot/js/magic-items.js')
+            sh('rm index.js')
+        end
+    end
 end
 
-desc "Build"
-task :build do
-    sh('spago bundle-app -t index.js')
-    sh('terser index.js > wwwroot/js/index.js')
-    sh('rm index.js')
+namespace "spells" do
+    desc "Compile"
+    task :compile do
+        Dir.chdir('spells') do
+            sh('spago build')
+        end
+    end
+
+    desc "Build"
+    task :build do
+        Dir.chdir('spells') do
+            sh('spago bundle-app -t index.js')
+            sh('terser index.js > ../wwwroot/js/spells.js')
+            sh('rm index.js')
+        end
+    end
 end
+
+namespace "lineages" do
+    desc "Compile"
+    task :compile do
+        Dir.chdir('lineages') do
+            sh('spago build')
+        end
+    end
+
+    desc "Build"
+    task :build do
+        Dir.chdir('lineages') do
+            sh('spago bundle-app -t index.js')
+            sh('terser index.js > ../wwwroot/js/lineages.js')
+            sh('rm index.js')
+        end
+    end
+end
+
+namespace "backgrounds" do
+    desc "Compile"
+    task :compile do
+        Dir.chdir('backgrounds') do
+            sh('spago build')
+        end
+    end
+
+    desc "Build"
+    task :build do
+        Dir.chdir('backgrounds') do
+            sh('spago bundle-app -t index.js')
+            sh('terser index.js > ../wwwroot/js/backgrounds.js')
+            sh('rm index.js')
+        end
+    end
+end
+
+namespace "feats" do
+    desc "Compile"
+    task :compile do
+        Dir.chdir('feats') do
+            sh('spago build')
+        end
+    end
+
+    desc "Build"
+    task :build do
+        Dir.chdir('feats') do
+            sh('spago bundle-app -t index.js')
+            sh('terser index.js > ../wwwroot/js/feats.js')
+            sh('rm index.js')
+        end
+    end
+end
+
+task :build => ['mi:build', 'spells:build', 'lineages:build', 'backgrounds:build', 'feats:build']
+task :default => [:build]
