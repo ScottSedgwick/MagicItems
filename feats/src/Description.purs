@@ -27,6 +27,22 @@ data Description
   | H5 String
   | H6 String
 
+instance Eq Description where
+  eq (P a) (P b) = a == b
+  eq (T a) (T b) = a == b
+  eq (B a) (B b) = a == b
+  eq (I a) (I b) = a == b
+  eq (A a b) (A c d) = a == c && b == d
+  eq (UL a) (UL b) = a == b
+  eq (TB a b) (TB c d) = a == c && b == d
+  eq (H1 a) (H1 b) = a == b
+  eq (H2 a) (H2 b) = a == b
+  eq (H3 a) (H3 b) = a == b
+  eq (H4 a) (H4 b) = a == b
+  eq (H5 a) (H5 b) = a == b
+  eq (H6 a) (H6 b) = a == b
+  eq _ _ = false
+
 mkDescription :: forall message . (String -> String) -> Description -> Html message
 mkDescription uh (P xs)   = HE.p_ (map (mkDescription uh) xs )
 mkDescription _  (T s)    = HE.text s

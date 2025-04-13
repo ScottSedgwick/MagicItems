@@ -1,6 +1,8 @@
 module Sources 
-  ( Source(..)
+  ( class Unshow
+  , Source(..)
   , allSources
+  , unshow
   ) where
 
 import Prelude
@@ -57,6 +59,8 @@ data Source
   | SourceTheWildBeyondTheWitchlight
   | SourceXanatharsGuideToEverything
   | SourcePlayersHandbook
+  | SourceHitPointPressHumblewoodCampaignSetting
+  | SourceTalDoreiCampaignSettingReborn
   | SourceUnknown String
 
 instance Show Source where
@@ -107,6 +111,8 @@ instance Show Source where
   show SourceTheWildBeyondTheWitchlight = "The Wild Beyond the Witchlight"
   show SourceXanatharsGuideToEverything = "Xanathar's Guide to Everything"
   show SourcePlayersHandbook = "Players Handbook"
+  show SourceHitPointPressHumblewoodCampaignSetting = "Hit Point Press: Humblewood Campaign Setting"
+  show SourceTalDoreiCampaignSettingReborn = "Tal'Dorei Campaign Setting Reborn"
   show (SourceUnknown s) = "Unknown: " <> s
 
 instance Eq Source where
@@ -157,7 +163,12 @@ instance Eq Source where
   eq SourceTheWildBeyondTheWitchlight SourceTheWildBeyondTheWitchlight = true
   eq SourceXanatharsGuideToEverything SourceXanatharsGuideToEverything = true
   eq SourcePlayersHandbook SourcePlayersHandbook = true
+  eq SourceHitPointPressHumblewoodCampaignSetting SourceHitPointPressHumblewoodCampaignSetting = true
+  eq SourceTalDoreiCampaignSettingReborn SourceTalDoreiCampaignSettingReborn = true
   eq _ _ = false
+
+instance Ord Source where
+  compare a b = compare (show a) (show b)
 
 allSources :: Array Source
 allSources =
@@ -208,6 +219,8 @@ allSources =
   , SourceTheWildBeyondTheWitchlight
   , SourceXanatharsGuideToEverything
   , SourcePlayersHandbook
+  , SourceHitPointPressHumblewoodCampaignSetting
+  , SourceTalDoreiCampaignSettingReborn
   ]
 
 instance Unshow Source where
@@ -258,4 +271,6 @@ instance Unshow Source where
   unshow "The Wild Beyond the Witchlight" = Just SourceTheWildBeyondTheWitchlight
   unshow "Xanathar's Guide to Everything" = Just SourceXanatharsGuideToEverything
   unshow "Players Handbook" = Just SourcePlayersHandbook
+  unshow "Hit Point Press: Humblewood Campaign Setting" = Just SourceHitPointPressHumblewoodCampaignSetting
+  unshow "Tal'Dorei Campaign Setting Reborn" = Just SourceTalDoreiCampaignSettingReborn
   unshow _ = Nothing
