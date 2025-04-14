@@ -1,7 +1,8 @@
 module MagicItems where
 
 import Data.Maybe (Maybe(..))
-import Types (Description(..), ItemAttunement(..), ItemSource(..), ItemType(..), MagicItem, Rarity(..))
+import Sources (Source(..))
+import Types (Description(..), ItemAttunement(..), ItemType(..), MagicItem, Rarity(..))
 
 magicItems :: Array MagicItem
 magicItems =

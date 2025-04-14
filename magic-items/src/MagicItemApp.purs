@@ -10,7 +10,7 @@ module MagicItemApp
 
 import Prelude
 
-import Data.Array (elem, filter, head, intercalate, sortBy, tail)
+import Data.Array (concatMap, elem, filter, head, intercalate, nub, sort, sortBy, tail)
 import Data.Maybe (Maybe(..))
 import Data.String (Pattern(..), Replacement(..), contains, drop, indexOf, replaceAll, toLower)
 import Data.Tuple (Tuple(..), fst, snd)
@@ -20,14 +20,16 @@ import Flame.Html.Attribute as HA
 import Flame.Html.Element as HE
 import Flame.Html.Event as HV
 import MagicItems (magicItems)
-import Types (Description(..), ItemAttunement, ItemSource, ItemType, MagicItem, Rarity(..), allAttunes, allRarities, allSources, allTypes, showR, toAttune, unshow)
+
+import Sources (Source, unshow)
+import Types (Description(..), ItemAttunement, ItemType, MagicItem, Rarity(..), allAttunes, allRarities, allTypes, showR, toAttune)
 
 type Model =
   { fltTitle :: String
   , fltRarity :: Maybe Rarity
   , fltType :: Maybe ItemType
   , fltAttunement :: Maybe ItemAttunement
-  , fltSource :: Maybe ItemSource
+  , fltSource :: Maybe Source
   }
 
 data Message 
@@ -62,15 +64,18 @@ view model =
 
 viewFilter :: Model -> Html Message
 viewFilter model =
-  HE.nav [ HA.class' "top white" ] 
-  [ HE.div [ HA.class' "grid" ]
-    [ HE.div [ HA.class' "s3" ] [ mkInput  "Item Name" ChangeTitle              model.fltTitle ]
-    , HE.div [ HA.class' "s2" ] [ mkSelect "Rarity"    ChangeRarity allRarities model.fltRarity ]
-    , HE.div [ HA.class' "s2" ] [ mkSelect "Type"      ChangeType   allTypes    model.fltType   ] 
-    , HE.div [ HA.class' "s2" ] [ mkSelect "Attune"    ChangeAttune allAttunes  model.fltAttunement ] 
-    , HE.div [ HA.class' "s3" ] [ mkSelect "Source"    ChangeSource allSources  model.fltSource ]
+  let
+    sources = sort (nub (concatMap (\i -> i.source) magicItems))
+  in
+    HE.nav [ HA.class' "top white" ] 
+    [ HE.div [ HA.class' "grid" ]
+      [ HE.div [ HA.class' "s3" ] [ mkInput  "Item Name" ChangeTitle              model.fltTitle ]
+      , HE.div [ HA.class' "s2" ] [ mkSelect "Rarity"    ChangeRarity allRarities model.fltRarity ]
+      , HE.div [ HA.class' "s2" ] [ mkSelect "Type"      ChangeType   allTypes    model.fltType   ] 
+      , HE.div [ HA.class' "s2" ] [ mkSelect "Attune"    ChangeAttune allAttunes  model.fltAttunement ] 
+      , HE.div [ HA.class' "s3" ] [ mkSelect "Source"    ChangeSource sources     model.fltSource ]
+      ]
     ]
-  ]
 
 mkInput :: String -> (String -> Message) -> String -> Html Message
 mkInput caption onInput value =
