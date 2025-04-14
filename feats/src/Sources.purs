@@ -61,6 +61,8 @@ data Source
   | SourcePlayersHandbook
   | SourceHitPointPressHumblewoodCampaignSetting
   | SourceTalDoreiCampaignSettingReborn
+  | SourceSigilAndTheOutlands
+  | SourceElementalEvilPlayersCompanion
   | SourceUnknown String
 
 instance Show Source where
@@ -113,6 +115,8 @@ instance Show Source where
   show SourcePlayersHandbook = "Players Handbook"
   show SourceHitPointPressHumblewoodCampaignSetting = "Hit Point Press: Humblewood Campaign Setting"
   show SourceTalDoreiCampaignSettingReborn = "Tal'Dorei Campaign Setting Reborn"
+  show SourceSigilAndTheOutlands = "Sigil and the Outlands"
+  show SourceElementalEvilPlayersCompanion = "Elemental Evil Player's Companion"
   show (SourceUnknown s) = "Unknown: " <> s
 
 instance Eq Source where
@@ -165,6 +169,8 @@ instance Eq Source where
   eq SourcePlayersHandbook SourcePlayersHandbook = true
   eq SourceHitPointPressHumblewoodCampaignSetting SourceHitPointPressHumblewoodCampaignSetting = true
   eq SourceTalDoreiCampaignSettingReborn SourceTalDoreiCampaignSettingReborn = true
+  eq SourceSigilAndTheOutlands SourceSigilAndTheOutlands = true
+  eq SourceElementalEvilPlayersCompanion SourceElementalEvilPlayersCompanion = true
   eq _ _ = false
 
 instance Ord Source where
@@ -221,6 +227,8 @@ allSources =
   , SourcePlayersHandbook
   , SourceHitPointPressHumblewoodCampaignSetting
   , SourceTalDoreiCampaignSettingReborn
+  , SourceSigilAndTheOutlands
+  , SourceElementalEvilPlayersCompanion
   ]
 
 instance Unshow Source where
@@ -273,4 +281,6 @@ instance Unshow Source where
   unshow "Players Handbook" = Just SourcePlayersHandbook
   unshow "Hit Point Press: Humblewood Campaign Setting" = Just SourceHitPointPressHumblewoodCampaignSetting
   unshow "Tal'Dorei Campaign Setting Reborn" = Just SourceTalDoreiCampaignSettingReborn
+  unshow "Sigil and the Outlands" = Just SourceSigilAndTheOutlands
+  unshow "Elemental Evil Player's Companion" = Just SourceElementalEvilPlayersCompanion
   unshow _ = Nothing
