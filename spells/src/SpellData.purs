@@ -782,7 +782,21 @@ spells =[
   , range: "120 feet"
   , components: "V, S"
   , duration: "Instantaneous"
-  , description: [P [T "You hurl an undulating, warbling mass of chaotic energy at one creature in range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 + 1d6 damage. Choose one of the d8s. The number rolled on that die determines the attack's damage type, as shown below."],TB [T "d8",T "Damage Type"] [[T "1",T "Acid"],[T "2",T "Cold"],[T "3",T "Fire"],[T "4",T "Force"],[T "5",T "Lightning"],[T "6",T "Poison"],[T "7",T "Psychic"],[T "8",T "Thunder"]],P [T "If you roll the same number on both d8s, the chaotic energy leaps from the target to a different creature of your choice within 30 feet of it. Make a new attack roll against the new target, and make a new damage roll, which could cause the chaotic energy to leap again."],P [T "A creature can be targeted only once by each casting of this spell."],P [B "At Higher Levels.",T " When you cast this spell using a spell slot of 2nd level or higher, each target takes 1d6 extra damage of the type rolled for each slot level above 1st."]]
+  , description: 
+    [P [T "You hurl an undulating, warbling mass of chaotic energy at one creature in range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 + 1d6 damage. Choose one of the d8s. The number rolled on that die determines the attack's damage type, as shown below."]
+    ,TB [T "d8",T "Damage Type"] 
+      [[T "1",T "Acid"]
+      ,[T "2",T "Cold"]
+      ,[T "3",T "Fire"]
+      ,[T "4",T "Force"]
+      ,[T "5",T "Lightning"]
+      ,[T "6",T "Poison"]
+      ,[T "7",T "Psychic"]
+      ,[T "8",T "Thunder"]
+      ]
+    ,P [T "If you roll the same number on both d8s, the chaotic energy leaps from the target to a different creature of your choice within 30 feet of it. Make a new attack roll against the new target, and make a new damage roll, which could cause the chaotic energy to leap again."]
+    ,P [T "A creature can be targeted only once by each casting of this spell."],P [B "At Higher Levels.",T " When you cast this spell using a spell slot of 2nd level or higher, each target takes 1d6 extra damage of the type rolled for each slot level above 1st."]
+    ]
   , lists: [Sorcerer]
   }
   ,
@@ -2450,7 +2464,16 @@ spells =[
   , range: "60ft"
   , components: "S, M (a piece of crust from an apple pie)"
   , duration: "Concentration, up to 1 minute"
-  , description: [P [T "You fill a 20-foot cube you can see within range with fey and draconic magic. Roll on the Mischievous Surge table to determine the magical effect produced, and roll again at the start of each of your turns until the spell ends. You can move the cube up to 10 feet before you roll."],TB [T "Mischievous Surge"] [[],[T "1",T "The smell of apple pie fills the air, and each creature in the cube must succeed on a Wisdom saving throw or become charmed by you until the start of your next turn."],[T "2",T "Bouquets of flowers appear all around, and each creature in the cube must succeed on a Dexterity saving throw or be blinded until the start of your next turn as the flowers spray water in their faces."],[T "3",T "Each creature in the cube must succeed on a Wisdom saving throw or begin giggling until the start of your next turn. A giggling creature is incapacitated and uses all its movement to move in a random direction."],[T "4",T "Drops of molasses appear and hover in the cube, turning it into difficult terrain until the start of your next turn."]]]
+  , description: 
+    [P [T "You fill a 20-foot cube you can see within range with fey and draconic magic. Roll on the Mischievous Surge table to determine the magical effect produced, and roll again at the start of each of your turns until the spell ends. You can move the cube up to 10 feet before you roll."]
+    ,P [B "Mischievous Surge"]
+    ,TB [T "d4", T "Effect"] 
+      [[T "1",T "The smell of apple pie fills the air, and each creature in the cube must succeed on a Wisdom saving throw or become charmed by you until the start of your next turn."]
+      ,[T "2",T "Bouquets of flowers appear all around, and each creature in the cube must succeed on a Dexterity saving throw or be blinded until the start of your next turn as the flowers spray water in their faces."]
+      ,[T "3",T "Each creature in the cube must succeed on a Wisdom saving throw or begin giggling until the start of your next turn. A giggling creature is incapacitated and uses all its movement to move in a random direction."]
+      ,[T "4",T "Drops of molasses appear and hover in the cube, turning it into difficult terrain until the start of your next turn."]
+      ]
+    ]
   , lists: [Bard,Sorcerer,Wizard]
   }
   ,
@@ -2462,7 +2485,16 @@ spells =[
   , range: "60 feet"
   , components: "S, M (a piece of crust from an apple pie)"
   , duration: "Concentration, up to 1 minute"
-  , description: [P [T "You fill a 20-foot cube centered on a point you choose within range with fey and draconic magic. Roll on the Mischievous Surge table to determine the magical effect produced. At the start of each of your turns, you can move the cube up to 10 feet and reroll on the table."],TB [T "Mischievous Surge"] [[],[T "1",T "The smell of apple pie fills the air, and each creature in the cube must succeed on a Wisdom saving throw or become charmed by you until the start of your next turn."],[T "2",T "Bouquets of flowers appear all around, and each creature in the cube must succeed on a Dexterity saving throw or be blinded until the start of your next turn as the flowers spray water in their faces."],[T "3",T "Each creature in the cube must succeed on a Wisdom saving throw or begin giggling until the start of your next turn. A giggling creature is incapacitated and uses all its movement to move in a random direction."],[T "4",T "Drops of molasses appear and hover in the cube, turning it into difficult terrain until the start of your next turn."]]]
+  , description: 
+    [P [T "You fill a 20-foot cube centered on a point you choose within range with fey and draconic magic. Roll on the Mischievous Surge table to determine the magical effect produced. At the start of each of your turns, you can move the cube up to 10 feet and reroll on the table."]
+    ,P [B "Mischievous Surge"]
+    ,TB [T "d4", T "Effect"] 
+      [[T "1",T "The smell of apple pie fills the air, and each creature in the cube must succeed on a Wisdom saving throw or become charmed by you until the start of your next turn."]
+      ,[T "2",T "Bouquets of flowers appear all around, and each creature in the cube must succeed on a Dexterity saving throw or be blinded until the start of your next turn as the flowers spray water in their faces."]
+      ,[T "3",T "Each creature in the cube must succeed on a Wisdom saving throw or begin giggling until the start of your next turn. A giggling creature is incapacitated and uses all its movement to move in a random direction."]
+      ,[T "4",T "Drops of molasses appear and hover in the cube, turning it into difficult terrain until the start of your next turn."]
+      ]
+    ]
   , lists: [Bard,Sorcerer,Wizard]
   }
   ,
@@ -3290,7 +3322,17 @@ spells =[
   , range: "90 feet"
   , components: "V, S"
   , duration: "Concentration, up to 1 minute"
-  , description: [P [T "This spell plays havoc with electronic devices, making the use of such devices all but impossible. Each electronic device in a 10-foot-radius sphere centered on a point you choose within range is subject to random behavior while it remains within the area. A device not held by a creature is automatically affected. If an electronic device is held by a creature, that creature must succeed on a Wisdom saving throw or have the device affected by the spell."],P [T "At the start of each of your turns, roll a d6 for each affected device to determine its behavior. Except where otherwise indicated, that behavior lasts until the start of your next turn while this spell is in effect."],TB [T "d6",T "Effect"] [[T "1",T "The device shuts down and must be restarted. Do not roll again for this device until it is restarted."],[T "2-4",T "The device does not function."],[T "5",T "The device experiences a power surge, causing an electric shock to the wielder (if any and one random creature within 5 feet of the device. Each affected creature must make a Dexterity saving throw against your spell save DC, taking 6d6 lightning damage on a failed save, or half as much damage on a successful one."],[T "6",T "The device is usable as normal."]],P [B "At Higher Levels.",T " When you cast this spell using a spell slot of 4th level or higher, the radius of the sphere affected by the spell increases by 5 feet for each slot level above 3rd."]]
+  , description: 
+    [P [T "This spell plays havoc with electronic devices, making the use of such devices all but impossible. Each electronic device in a 10-foot-radius sphere centered on a point you choose within range is subject to random behavior while it remains within the area. A device not held by a creature is automatically affected. If an electronic device is held by a creature, that creature must succeed on a Wisdom saving throw or have the device affected by the spell."]
+    ,P [T "At the start of each of your turns, roll a d6 for each affected device to determine its behavior. Except where otherwise indicated, that behavior lasts until the start of your next turn while this spell is in effect."]
+    ,TB [T "d6",T "Effect"] 
+      [[T "1",T "The device shuts down and must be restarted. Do not roll again for this device until it is restarted."]
+      ,[T "2-4",T "The device does not function."]
+      ,[T "5",T "The device experiences a power surge, causing an electric shock to the wielder (if any and one random creature within 5 feet of the device. Each affected creature must make a Dexterity saving throw against your spell save DC, taking 6d6 lightning damage on a failed save, or half as much damage on a successful one."]
+      ,[T "6",T "The device is usable as normal."]
+      ]
+    ,P [B "At Higher Levels.",T " When you cast this spell using a spell slot of 4th level or higher, the radius of the sphere affected by the spell increases by 5 feet for each slot level above 3rd."]
+    ]
   , lists: [Sorcerer,Warlock,Wizard]
   }
   ,
@@ -3698,7 +3740,18 @@ spells =[
   , range: "60 feet"
   , components: "V, S, M (a vial of blood from a humanoid killed within the past 24 hours)"
   , duration: "Concentration, up to 1 hour"
-  , description: [P [T "You utter foul words, summoning demons from the chaos of the Abyss. Roll on the following table to determine what appears."],TB [T "d6",T "Demons Summoned"] [[T "1-2",T "Two demons of challenge rating 1 or lower"],[T "3-4",T "Four demons of challenge rating 1/2 or lower"],[T "5-6",T "Eight demons of challenge rating 1/4 or lower"]],P [T "The DM chooses the demons, such as manes or dretches, and you choose the unoccupied spaces you can see within range where they appear. A summoned demon disappears when it drops to 0 hit points or when the spell ends."],P [T "The demons are hostile to all creatures, including you. Roll initiative for the summoned demons as a group, which has its own turns. The demons pursue and attack the nearest non-demons to the best of their ability."],P [T "As part of casting the spell, you can form a circle on the ground with the blood used as a material component. The circle is large enough to encompass your space. While the spell lasts, the summoned demons can't cross the circle or harm it, and they can't target anyone within it. Using the material component in this manner consumes it when the spell ends."],P [B "At Higher Levels.",T " When you cast this spell using a spell slot of 6th or 7th level, you summon twice as many demons. If you cast it using a spell slot of 8th or 9th level, you summon three times as many demons."]]
+  , description: 
+    [P [T "You utter foul words, summoning demons from the chaos of the Abyss. Roll on the following table to determine what appears."]
+    ,TB [T "d6",T "Demons Summoned"] 
+      [[T "1-2",T "Two demons of challenge rating 1 or lower"]
+      ,[T "3-4",T "Four demons of challenge rating 1/2 or lower"]
+      ,[T "5-6",T "Eight demons of challenge rating 1/4 or lower"]
+      ]
+    ,P [T "The DM chooses the demons, such as manes or dretches, and you choose the unoccupied spaces you can see within range where they appear. A summoned demon disappears when it drops to 0 hit points or when the spell ends."]
+    ,P [T "The demons are hostile to all creatures, including you. Roll initiative for the summoned demons as a group, which has its own turns. The demons pursue and attack the nearest non-demons to the best of their ability."]
+    ,P [T "As part of casting the spell, you can form a circle on the ground with the blood used as a material component. The circle is large enough to encompass your space. While the spell lasts, the summoned demons can't cross the circle or harm it, and they can't target anyone within it. Using the material component in this manner consumes it when the spell ends."]
+    ,P [B "At Higher Levels.",T " When you cast this spell using a spell slot of 6th or 7th level, you summon twice as many demons. If you cast it using a spell slot of 8th or 9th level, you summon three times as many demons."]
+    ]
   , lists: [Warlock,Wizard]
   }
   ,
@@ -3950,7 +4003,17 @@ spells =[
   , range: "90 feet"
   , components: "V, S, M (three nut shells)"
   , duration: "Concentration, up to 1 minute"
-  , description: [P [T "This spell assaults and twists creatures' minds, spawning delusions and provoking uncontrolled actions. Each creature in a 10-foot-radius sphere centered on a point you choose within range must succeed on a Wisdom saving throw when you cast this spell or be affected by it."],P [T "An affected target can't take reactions and must roll a d10 at the start of each of its turns to determine its behavior for that turn."],TB [T "d10",T "Behavior"] [[T "1",T "The creature uses all its movement to move in a random direction. To determine the direction, roll a d8 and assign a direction to each die face. The creature doesn't take an action this turn."],[T "2-6",T "The creature doesn't move or take actions this turn."],[T "7-8",T "The creature uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does nothing this turn."],[T "9-10",T "The creature can act and move normally."]],P [T "At the end of its turns, an affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target."],P [B "At Higher Levels.",T " When you cast this spell using a spell slot of 5th level or higher, the radius of the sphere increases by 5 feet for each slot level above 4th."]]
+  , description: 
+    [P [T "This spell assaults and twists creatures' minds, spawning delusions and provoking uncontrolled actions. Each creature in a 10-foot-radius sphere centered on a point you choose within range must succeed on a Wisdom saving throw when you cast this spell or be affected by it."],P [T "An affected target can't take reactions and must roll a d10 at the start of each of its turns to determine its behavior for that turn."]
+    ,TB [T "d10",T "Behavior"] 
+      [[T "1",T "The creature uses all its movement to move in a random direction. To determine the direction, roll a d8 and assign a direction to each die face. The creature doesn't take an action this turn."]
+      ,[T "2-6",T "The creature doesn't move or take actions this turn."]
+      ,[T "7-8",T "The creature uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does nothing this turn."]
+      ,[T "9-10",T "The creature can act and move normally."]
+      ]
+    ,P [T "At the end of its turns, an affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target."]
+    ,P [B "At Higher Levels.",T " When you cast this spell using a spell slot of 5th level or higher, the radius of the sphere increases by 5 feet for each slot level above 4th."]
+    ]
   , lists: [Bard,Druid,Sorcerer,Wizard]
   }
   ,
@@ -4622,7 +4685,21 @@ spells =[
   , range: "120 feet"
   , components: "V, S"
   , duration: "Concentration, up to 1 minute"
-  , description: [P [T "Objects come to life at your command. Choose up to ten nonmagical objects within range that are not being worn or carried. Medium targets count as two objects, Large targets count as four objects, Huge targets count as eight objects. You can't animate any object larger than Huge. Each target animates and becomes a creature under your control until the spell ends or until reduced to 0 hit points."],P [T "As a bonus action, you can mentally command any creature you made with this spell if the creature is within 500 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete."],TB [T "Animated Object Statistics"] [[],[T "Tiny",T "20",T "18",T "+8 to hit, 1d4 + 4 damage",T "Str: 4, Dex: 18"],[T "Small",T "25",T "16",T "+6 to hit, 1d8 + 2 damage",T "Str: 6, Dex: 14"],[T "Medium",T "40",T "13",T "+5 to hit, 2d6 + 1 damage",T "Str: 10, Dex: 12"],[T "Large",T "50",T "10",T "+6 to hit, 2d10 + 2 damage",T "Str: 14, Dex: 10"],[T "Huge",T "80",T "10",T "+8 to hit, 2d12 + 4 damage",T "Str: 18, Dex: 6"]],P [T "An animated object is a construct with AC, hit points, attacks, Strength, and Dexterity determined by its size. Its Constitution is 10 and its Intelligence and Wisdom are 3, and its Charisma is 1. Its speed is 30 feet; if the objects lack legs or other appendages it can use for locomotion, it instead has a flying speed of 30 feet and can hover. If the object is securely attached to a surface or larger object, such as a chain bolted to a wall, its speed is 0. It has blindsight with a radius of 30 feet and is blind beyond that distance. When the animated object drops to 0 hit points, it reverts to its original object form, and any remaining damage carries over to its original object form."],P [T "If you command an object to attack, it can make a single melee attack against a creature within 5 feet of it. It makes a slam attack with an attack bonus and bludgeoning damage determined by its size. The DM might rule that a specific object inflicts slashing or piercing damage based on its form."],P [B "At Higher Levels.",T " If you cast this spell using a spell slot of 6th level or higher, you can animate two additional objects for each slot level above 5th."]]
+  , description: 
+    [ P [ T "Objects come to life at your command. Choose up to ten nonmagical objects within range that are not being worn or carried. Medium targets count as two objects, Large targets count as four objects, Huge targets count as eight objects. You can't animate any object larger than Huge. Each target animates and becomes a creature under your control until the spell ends or until reduced to 0 hit points."]
+    , P [ T "As a bonus action, you can mentally command any creature you made with this spell if the creature is within 500 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete."]
+    , P [ B "Animated Object Statistics" ]
+    , TB[ T "Size",   T "HP", T "AC", T "Attack",                    T "Ability Scores" ] 
+      [ [ T "Tiny",   T "20", T "18", T "+8 to hit, 1d4 + 4 damage", T "Str: 4, Dex: 18"]
+      , [ T "Small",  T "25", T "16", T "+6 to hit, 1d8 + 2 damage", T "Str: 6, Dex: 14"]
+      , [ T "Medium", T "40", T "13", T "+5 to hit, 2d6 + 1 damage", T "Str: 10, Dex: 12"]
+      , [ T "Large",  T "50", T "10", T "+6 to hit, 2d10 + 2 damage",T "Str: 14, Dex: 10"]
+      , [ T "Huge",   T "80", T "10", T "+8 to hit, 2d12 + 4 damage",T "Str: 18, Dex: 6"]
+      ]
+    , P [T "An animated object is a construct with AC, hit points, attacks, Strength, and Dexterity determined by its size. Its Constitution is 10 and its Intelligence and Wisdom are 3, and its Charisma is 1. Its speed is 30 feet; if the objects lack legs or other appendages it can use for locomotion, it instead has a flying speed of 30 feet and can hover. If the object is securely attached to a surface or larger object, such as a chain bolted to a wall, its speed is 0. It has blindsight with a radius of 30 feet and is blind beyond that distance. When the animated object drops to 0 hit points, it reverts to its original object form, and any remaining damage carries over to its original object form."]
+    , P [T "If you command an object to attack, it can make a single melee attack against a creature within 5 feet of it. It makes a slam attack with an attack bonus and bludgeoning damage determined by its size. The DM might rule that a specific object inflicts slashing or piercing damage based on its form."]
+    , P [B "At Higher Levels.",T " If you cast this spell using a spell slot of 6th level or higher, you can animate two additional objects for each slot level above 5th."]
+    ]
   , lists: [Artificer,Bard,Sorcerer,Wizard]
   }
   ,
@@ -4838,7 +4915,18 @@ spells =[
   , range: "30 feet"
   , components: "V, S, M (a tiny piece of matter of the same type of the item you plan to create)"
   , duration: "Special"
-  , description: [P [T "You pull wisps of shadow material from the Shadowfell to create a nonliving object of vegetable matter within range: soft goods, rope, wood, or something similar. You can also use this spell to create mineral objects such as stone, crystal, or metal. The object created must be no larger than a 5-foot cube, and the object must be of a form and material that you have seen before."],P [T "The duration depends on the object's material. If the object is composed of multiple materials, use the shortest duration."],TB [T "Material",T "Duration"] [[T "Vegetable matter",T "1 day"],[T "Stone, crystal",T "12 hours"],[T "Precious metals",T "1 hour"],[T "Gems",T "10 minutes"],[T "Adamantine, Mithral",T "1 minute"]],P [T "Using any material created by this spell as another spell's material component causes that spell to fail."],P [B "At Higher Levels.",T " When you cast this spell using a spell slot of 6th level or higher, the cube increases by 5 feet for each slot level above 5th."]]
+  , description: 
+    [P [T "You pull wisps of shadow material from the Shadowfell to create a nonliving object of vegetable matter within range: soft goods, rope, wood, or something similar. You can also use this spell to create mineral objects such as stone, crystal, or metal. The object created must be no larger than a 5-foot cube, and the object must be of a form and material that you have seen before."]
+    ,P [T "The duration depends on the object's material. If the object is composed of multiple materials, use the shortest duration."]
+    ,TB [T "Material",T "Duration"] 
+      [[T "Vegetable matter",T "1 day"]
+      ,[T "Stone, crystal",T "12 hours"]
+      ,[T "Precious metals",T "1 hour"]
+      ,[T "Gems",T "10 minutes"]
+      ,[T "Adamantine, Mithral",T "1 minute"]
+      ]
+    ,P [T "Using any material created by this spell as another spell's material component causes that spell to fail."]
+    ,P [B "At Higher Levels.",T " When you cast this spell using a spell slot of 6th level or higher, the cube increases by 5 feet for each slot level above 5th."]]
   , lists: [Artificer,Sorcerer,Wizard]
   }
   ,
@@ -5186,7 +5274,27 @@ spells =[
   , range: "Touch"
   , components: "V, S, M (rare oils and unguents worth at least 1,000 gp, which the spell consumes)"
   , duration: "Instantaneous"
-  , description: [P [T "You touch a dead humanoid or a piece of a dead humanoid. Provided that the creature has been dead no longer than 10 days, the spell forms a new adult body for it and then calls the soul to enter that body. If the target's soul isn't free or willing to do so, the spell fails."],P [T "The magic fashions a new body for the creature to inhabit, which likely causes the creature's race to change. The DM rolls a d100 and consults the following table to determine what form the creature takes when restored to life, or the DM chooses a form."],TB [T "Reincarnation Table"] [[],[T "01-04",T "Dragonborn"],[T "05-13",T "Dwarf, hill"],[T "14-21",T "Dwarf, mountain"],[T "22-25",T "Elf, dark"],[T "26-34",T "Elf, high"],[T "35-42",T "Elf, wood"],[T "43-46",T "Gnome, forest"],[T "47-52",T "Gnome, rock"],[T "53-56",T "Half-elf"],[T "57-60",T "Half-orc"],[T "61-68",T "Halfling, lightfoot"],[T "69-76",T "Halfling, stout"],[T "77-96",T "Human"],[T "97-00",T "Tiefling"]],P [T "The reincarnated creature recalls its former life and experiences. It retains the capabilities it had in its original form, except it exchanges its original race for the new one and changes its racial traits accordingly."]]
+  , description: 
+    [P [T "You touch a dead humanoid or a piece of a dead humanoid. Provided that the creature has been dead no longer than 10 days, the spell forms a new adult body for it and then calls the soul to enter that body. If the target's soul isn't free or willing to do so, the spell fails."],P [T "The magic fashions a new body for the creature to inhabit, which likely causes the creature's race to change. The DM rolls a d100 and consults the following table to determine what form the creature takes when restored to life, or the DM chooses a form."]
+    ,P [B "Reincarnation Table"]
+    ,TB [T "d100", T "Race"] 
+      [[T "01-04",T "Dragonborn"]
+      ,[T "05-13",T "Dwarf, hill"]
+      ,[T "14-21",T "Dwarf, mountain"]
+      ,[T "22-25",T "Elf, dark"]
+      ,[T "26-34",T "Elf, high"]
+      ,[T "35-42",T "Elf, wood"]
+      ,[T "43-46",T "Gnome, forest"]
+      ,[T "47-52",T "Gnome, rock"]
+      ,[T "53-56",T "Half-elf"]
+      ,[T "57-60",T "Half-orc"]
+      ,[T "61-68",T "Halfling, lightfoot"]
+      ,[T "69-76",T "Halfling, stout"]
+      ,[T "77-96",T "Human"]
+      ,[T "97-00",T "Tiefling"]
+      ]
+    ,P [T "The reincarnated creature recalls its former life and experiences. It retains the capabilities it had in its original form, except it exchanges its original race for the new one and changes its racial traits accordingly."]
+    ]
   , lists: [Druid]
   }
   ,
@@ -5198,7 +5306,21 @@ spells =[
   , range: "Self"
   , components: "V, S, M (a focus worth at least 1,000 gp, such as a crystal ball, a silver mirror, or a font filled with holy water)"
   , duration: "Concentration, up to 10 minutes"
-  , description: [P [T "You can see and hear a particular creature you choose that is on the same plane of existence as you. The target must make a Wisdom saving throw, which is modified by how well you know the target and the sort of physical connection you have to it. If a target knows you're casting this spell, it can fail the saving throw voluntarily if it wants to be observed."],TB [T "Knowledge",T "Save Modifier"] [[T "Secondhand (you have heard of the target)",T "+5"],[T "Firsthand (you have met the target)",T "+0"],[T "Familiar (you know the target well)",T "-5"]],TB [T "Connection",T "Save Modifier"] [[T "Likeness or picture",T "-2"],[T "Possession or garment",T "-4"],[T "Body part, lock of hair, bit of nail, or the like",T "-10"]],P [T "On a successful save, the target isn't affected, and you can't use this spell against it again for 24 hours."],P [T "On a failed save, the spell creates an invisible sensor within 10 feet of the target. You can see and hear through the sensor as if you were there. The sensor moves with the target, remaining within 10 feet of it for the duration. A creature that can see invisible objects sees the sensor as a luminous orb about the size of your fist."],P [T "Instead of targeting a creature, you can choose a location you have seen before as the target of this spell. When you do, the sensor appears at that location and doesn't move."]]
+  , description: 
+    [P [T "You can see and hear a particular creature you choose that is on the same plane of existence as you. The target must make a Wisdom saving throw, which is modified by how well you know the target and the sort of physical connection you have to it. If a target knows you're casting this spell, it can fail the saving throw voluntarily if it wants to be observed."]
+    ,TB [T "Knowledge",T "Save Modifier"] 
+      [[T "Secondhand (you have heard of the target)",T "+5"]
+      ,[T "Firsthand (you have met the target)",T "+0"]
+      ,[T "Familiar (you know the target well)",T "-5"]
+      ]
+    ,TB [T "Connection",T "Save Modifier"] 
+      [[T "Likeness or picture",T "-2"]
+      ,[T "Possession or garment",T "-4"]
+      ,[T "Body part, lock of hair, bit of nail, or the like",T "-10"]
+      ]
+    ,P [T "On a successful save, the target isn't affected, and you can't use this spell against it again for 24 hours."]
+    ,P [T "On a failed save, the spell creates an invisible sensor within 10 feet of the target. You can see and hear through the sensor as if you were there. The sensor moves with the target, remaining within 10 feet of it for the duration. A creature that can see invisible objects sees the sensor as a luminous orb about the size of your fist."]
+    ,P [T "Instead of targeting a creature, you can choose a location you have seen before as the target of this spell. When you do, the sensor appears at that location and doesn't move."]]
   , lists: [Bard,Cleric,Druid,Warlock,Wizard]
   }
   ,
@@ -5270,7 +5392,29 @@ spells =[
   , range: "60ft"
   , components: "V, S, M (an object with the image of a dragon engraved on it, worth at least 500 gp)"
   , duration: "Concentration, up to 1 hour"
-  , description: [P [T "You call forth a draconic spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the Draconic Spirit stat block. When you cast this spell, choose a family of dragon: chromatic, gem, or metallic. The creature resembles a dragon of the chosen family, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends."],P [T "The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its move to avoid danger."],P [B "At Higher Levels.",T " When you cast this spell using a spell slot of 6th level or higher, use the higher level wherever the spell's level appears in the stat block."],TB [T "Draconic Spirit"] [[T "Large Dragon, Neutral"],[T "Armor Class 14 + the level of the spell (natural armor)"],[T "Hit Points 50 + 10 for each spell level above 5th (the dragon has a number of hit dice [d10s] equal to the level of the spell)"],[T "Speed 30 ft., fly 60 ft., swim 30 ft."],[],[T "19 (+4)",T "14 (+2)",T "17 (+3)",T "10 (+0)",T "14 (+2)",T "14 (+2)"],[T "Damage Resistances(Chromatic and Metallic Only) acid, cold, fire, lightning, poison"],[T "Damage Resistances(Gem Only) force, necrotic, psychic, radiant, thunder"],[T "Condition Immunities charmed, frightened, poisoned"],[T "Senses blindsight 30 ft., darkvision 60 ft., passive Perception 12"],[T "Languages Draconic, understands the languages you speak"],[T "Challenge - Proficiency Bonus (PB) equals your bonus"],[T "Shared Resistances. When you summon the dragon, choose one of its damage resistances. You have resistance to the chosen damage type until the spell ends"],[],[T "Multiattack. The dragon makes a number of Rend attacks equal to half the spell's level (rounded down), and it uses Breath Weapon."],[T "Rend. Melee Weapon Attack: your spell attack modifier to hit, reach 10 ft., one target. Hit: 1d6 plus 4 + the spell's level piercing damage."],[T "Breath Weapon. The dragon exhales destructive energy in a 30-foot cone. Each creature in that area must make a Dexterity saving throw against your spell save DC. A creature takes 2d6 damage of a type this dragon has resistance to (your choice) on a failed save, or half as much damage on a successful one."]]]
+  , description: 
+    [P [T "You call forth a draconic spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the Draconic Spirit stat block. When you cast this spell, choose a family of dragon: chromatic, gem, or metallic. The creature resembles a dragon of the chosen family, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends."]
+    ,P [T "The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its move to avoid danger."]
+    ,P [B "At Higher Levels.",T " When you cast this spell using a spell slot of 6th level or higher, use the higher level wherever the spell's level appears in the stat block."]
+    ,P [H4 "Draconic Spirit"]
+    ,P [I "Large Dragon, Neutral"]
+    ,P [B "Armor Class ", T "14 + the level of the spell (natural armor)"]
+    ,P [B "Hit Points ", T "50 + 10 for each spell level above 5th (the dragon has a number of hit dice [d10s] equal to the level of the spell)"]
+    ,P [B "Speed ", T "30 ft., fly 60 ft., swim 30 ft."]
+    ,TB [ T "STR", T "DEX", T "CON", T "INT", T "WIS", T "CHA"]
+      [[T "19 (+4)",T "14 (+2)",T "17 (+3)",T "10 (+0)",T "14 (+2)",T "14 (+2)"]]
+    ,P [B "Damage Resistances(Chromatic and Metallic Only) ",T "acid, cold, fire, lightning, poison"]
+    ,P [B "Damage Resistances(Gem Only) ",T "force, necrotic, psychic, radiant, thunder"]
+    ,P [B "Condition Immunities ",T "charmed, frightened, poisoned"]
+    ,P [B "Senses ",T "blindsight 30 ft., darkvision 60 ft., passive Perception 12"]
+    ,P [B "Languages ",T "Draconic, understands the languages you speak"]
+    ,P [B "Challenge - Proficiency Bonus (PB)",T " equals your bonus"]
+    ,P [B "Shared Resistances. ",T "When you summon the dragon, choose one of its damage resistances. You have resistance to the chosen damage type until the spell ends"]
+    ,P [ B "Actions"]
+    ,P [B "Multiattack. ",T "The dragon makes a number of Rend attacks equal to half the spell's level (rounded down), and it uses Breath Weapon."]
+    ,P [B "Rend. ",T "Melee Weapon Attack: your spell attack modifier to hit, reach 10 ft., one target. Hit: 1d6 plus 4 + the spell's level piercing damage."]
+    ,P [B "Breath Weapon. ",T "The dragon exhales destructive energy in a 30-foot cone. Each creature in that area must make a Dexterity saving throw against your spell save DC. A creature takes 2d6 damage of a type this dragon has resistance to (your choice) on a failed save, or half as much damage on a successful one."]
+    ]
   , lists: [Druid,Sorcerer,Wizard]
   }
   ,
@@ -6266,7 +6410,9 @@ spells =[
   , range: "Self (60-foot cone)"
   , components: "V, S"
   , duration: "Instantaneous"
-  , description: [P [T "Eight multicolored rays of light flash from your hand. Each ray is a different color and has a different power and purpose. Each creature in a 60-foot cone must make a Dexterity saving throw. For each target, roll a d8 to determine which color ray affects it."],TB [T "d8",T "Color",T "Ray Effect"] [[T "1",T "Red",T "The target takes 10d6 fire damage on a failed save, or half as much damage on a successful one."],[T "2",T "Orange",T "The target takes 10d6 acid damage on a failed save, or half as much damage on a successful one."],[T "3",T "Yellow",T "The target takes 10d6 lightning damage on a failed save, or half as much damage on a successful one."],[T "4",T "Green",T "The target takes 10d6 poison damage on a failed save, or half as much damage on a successful one."],[T "5",T "Blue",T "The target takes 10d6 cold damage on a failed save, or half as much damage on a successful one."],[T "6",T "Indigo",T "On a failed save, the target is restrained. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the petrified condition. The successes and failures don't need to be consecutive; keep track of both until the target collects three of a kind."],[T "7",T "Violet",T "On a failed save, the target is blinded. It must then make a Wisdom saving throw at the start of your next turn. A successful save ends the blindness. If it fails that save, the creature is transported to another plane of existence of the DM's choosing and is no longer blinded. (Typically, a creature that is on a plane that isn't its home plane is banished home, while other creatures are usually cast into the Astral or Ethereal planes.)"],[T "8",T "Special",T "The target is struck by two rays. Roll twice more, rerolling any 8."]]]
+  , description: 
+    [P [T "Eight multicolored rays of light flash from your hand. Each ray is a different color and has a different power and purpose. Each creature in a 60-foot cone must make a Dexterity saving throw. For each target, roll a d8 to determine which color ray affects it."]
+    ,TB [T "d8",T "Color",T "Ray Effect"] [[T "1",T "Red",T "The target takes 10d6 fire damage on a failed save, or half as much damage on a successful one."],[T "2",T "Orange",T "The target takes 10d6 acid damage on a failed save, or half as much damage on a successful one."],[T "3",T "Yellow",T "The target takes 10d6 lightning damage on a failed save, or half as much damage on a successful one."],[T "4",T "Green",T "The target takes 10d6 poison damage on a failed save, or half as much damage on a successful one."],[T "5",T "Blue",T "The target takes 10d6 cold damage on a failed save, or half as much damage on a successful one."],[T "6",T "Indigo",T "On a failed save, the target is restrained. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the petrified condition. The successes and failures don't need to be consecutive; keep track of both until the target collects three of a kind."],[T "7",T "Violet",T "On a failed save, the target is blinded. It must then make a Wisdom saving throw at the start of your next turn. A successful save ends the blindness. If it fails that save, the creature is transported to another plane of existence of the DM's choosing and is no longer blinded. (Typically, a creature that is on a plane that isn't its home plane is banished home, while other creatures are usually cast into the Astral or Ethereal planes.)"],[T "8",T "Special",T "The target is struck by two rays. Roll twice more, rerolling any 8."]]]
   , lists: [Bard,Sorcerer,Wizard]
   }
   ,
@@ -6362,7 +6508,8 @@ spells =[
   , range: "10 feet"
   , components: "V"
   , duration: "Instantaneous"
-  , description: [P [T "This spell instantly transports you and up to eight willing creatures of your choice that you can see within range, or a single object that you can see within range, to a destination you select. If you target an object, it must be able to fit entirely inside a 10-foot cube, and it can't be held or carried by an unwilling creature."],P [T "The destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The DM rolls d100 and consults the table."],TB [T "Familiarity",T "Mishap",T "Similar Area",T "Off Target",T "On Target"] [[T "Permanent circle",T "-",T "-",T "-",T "01-100"],[T "Associated object",T "-",T "-",T "-",T "01-100"],[T "Very familiar",T "01-05",T "06-13",T "14-24",T "25-100"],[T "Seen casually",T "01-33",T "34-43",T "44-53",T "54-100"],[T "Viewed once",T "01-43",T "44-53",T "54-73",T "74-100"],[T "Description",T "01-43",T "44-53",T "54-73",T "74-100"],[T "False destination",T "01-50",T "51-100",T "-",T "-"]],P [T "\"Permanent circle\" means a permanent ",A "http://dnd5e.wikidot.com/spell:teleportation-circle" "Teleportation Circle",T " whose sigil sequence you know."],P [T "\"Associated object\" means that you possess an object taken from the desired destination within the last six months, such as a book from a wizard's library, bed linen from a royal suite, or a chunk of marble from a lich's secret tomb."],P [T "\"Very familiar\" is a place you have been very often, a place you have carefully studied, or a place you can see when you cast the spell."],P [T "\"Seen casually\" is someplace you have seen more than once but with which you aren't very familiar."],P [T "\"Viewed once\" is a place you have seen once, possibly using magic."],P [T "\"Description\" is a place whose location and appearance you know through someone else's description, perhaps from a map."],P [T "\"False destination\" is a place that doesn't exist. Perhaps you tried to scry an enemy's sanctum but instead viewed an illusion, or you are attempting to teleport to a familiar location that no longer exists."],UL [[B "On Target.",T " You and your group (or the target object) appear where you want to."]],UL [[B "Off Target.",T " You and your group (or the target object) appear a random distance away from the destination in a random direction. Distance off target is 1d10 x 1d10 percent of the distance that was to be traveled. For example, if you tried to travel 120 miles, landed off target, and rolled a 5 and 3 on the two d10s, then you would be off target by 15 percent, or 18 miles. The DM determines the direction off target randomly by rolling a d8 and designating 1 as north, 2 as northeast, 3 as east, and so on around the points of the compass. If you were teleporting to a coastal city and wound up 18 miles out at sea, you could be in trouble."]],UL [[B "Similar Area.",T " You and your group (or the target object) wind up in a different area that's visually or thematically similar to the target area. If you are heading for your home laboratory, for example, you might wind up in another wizard's laboratory or in an alchemical supply shop that has many of the same tools and implements as your laboratory. Generally, you appear in the closest similar place, but since the spell has no range limit, you could conceivably wind up anywhere on the plane."]],UL [[B "Mishap.",T " The spell's unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes 3d10 force damage, and the DM rerolls on the table to see where you wind up (multiple mishaps can occur, dealing damage each time)."]]]
+  , description: [P [T "This spell instantly transports you and up to eight willing creatures of your choice that you can see within range, or a single object that you can see within range, to a destination you select. If you target an object, it must be able to fit entirely inside a 10-foot cube, and it can't be held or carried by an unwilling creature."],P [T "The destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The DM rolls d100 and consults the table."]
+    ,TB [T "Familiarity",T "Mishap",T "Similar Area",T "Off Target",T "On Target"] [[T "Permanent circle",T "-",T "-",T "-",T "01-100"],[T "Associated object",T "-",T "-",T "-",T "01-100"],[T "Very familiar",T "01-05",T "06-13",T "14-24",T "25-100"],[T "Seen casually",T "01-33",T "34-43",T "44-53",T "54-100"],[T "Viewed once",T "01-43",T "44-53",T "54-73",T "74-100"],[T "Description",T "01-43",T "44-53",T "54-73",T "74-100"],[T "False destination",T "01-50",T "51-100",T "-",T "-"]],P [T "\"Permanent circle\" means a permanent ",A "http://dnd5e.wikidot.com/spell:teleportation-circle" "Teleportation Circle",T " whose sigil sequence you know."],P [T "\"Associated object\" means that you possess an object taken from the desired destination within the last six months, such as a book from a wizard's library, bed linen from a royal suite, or a chunk of marble from a lich's secret tomb."],P [T "\"Very familiar\" is a place you have been very often, a place you have carefully studied, or a place you can see when you cast the spell."],P [T "\"Seen casually\" is someplace you have seen more than once but with which you aren't very familiar."],P [T "\"Viewed once\" is a place you have seen once, possibly using magic."],P [T "\"Description\" is a place whose location and appearance you know through someone else's description, perhaps from a map."],P [T "\"False destination\" is a place that doesn't exist. Perhaps you tried to scry an enemy's sanctum but instead viewed an illusion, or you are attempting to teleport to a familiar location that no longer exists."],UL [[B "On Target.",T " You and your group (or the target object) appear where you want to."]],UL [[B "Off Target.",T " You and your group (or the target object) appear a random distance away from the destination in a random direction. Distance off target is 1d10 x 1d10 percent of the distance that was to be traveled. For example, if you tried to travel 120 miles, landed off target, and rolled a 5 and 3 on the two d10s, then you would be off target by 15 percent, or 18 miles. The DM determines the direction off target randomly by rolling a d8 and designating 1 as north, 2 as northeast, 3 as east, and so on around the points of the compass. If you were teleporting to a coastal city and wound up 18 miles out at sea, you could be in trouble."]],UL [[B "Similar Area.",T " You and your group (or the target object) wind up in a different area that's visually or thematically similar to the target area. If you are heading for your home laboratory, for example, you might wind up in another wizard's laboratory or in an alchemical supply shop that has many of the same tools and implements as your laboratory. Generally, you appear in the closest similar place, but since the spell has no range limit, you could conceivably wind up anywhere on the plane."]],UL [[B "Mishap.",T " The spell's unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes 3d10 force damage, and the DM rerolls on the table to see where you wind up (multiple mishaps can occur, dealing damage each time)."]]]
   , lists: [Bard,Sorcerer,Wizard]
   }
   ,
@@ -6470,7 +6617,33 @@ spells =[
   , range: "Self (5-mile radius)"
   , components: "V, S, M (burning incense and bits of earth and wood mixed in water)"
   , duration: "Concentration, Up to 8 hours"
-  , description: [P [T "You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early."],P [T "When you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 x 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal."],P [T "When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction."],TB [T "Precipitation"] [[T "Stage 1",T "Clear"],[T "Stage 2",T "Light clouds"],[T "Stage 3",T "Overcast or ground fog"],[T "Stage 4",T "Rain, hail or snow"],[T "Stage 5",T "Torrential rain, driving hail or blizzard"]],TB [T "Temperature"] [[T "Stage 1",T "Unbearable heat"],[T "Stage 2",T "Hot"],[T "Stage 3",T "Warm"],[T "Stage 4",T "Cool"],[T "Stage 5",T "Cold"],[T "Stage 6",T "Arctic cold"]],TB [T "Wind"] [[T "Stage 1",T "Calm"],[T "Stage 2",T "Moderate wind"],[T "Stage 3",T "Strong wind"],[T "Stage 4",T "Gale"],[T "Stage 5",T "Storm"]]]
+  , description: 
+    [P [T "You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early."]
+    ,P [T "When you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 x 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal."]
+    ,P [T "When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction."]
+    ,TB [T "Precipitation"] 
+      [[T "Stage 1",T "Clear"]
+      ,[T "Stage 2",T "Light clouds"]
+      ,[T "Stage 3",T "Overcast or ground fog"]
+      ,[T "Stage 4",T "Rain, hail or snow"]
+      ,[T "Stage 5",T "Torrential rain, driving hail or blizzard"]
+      ]
+    ,TB [T "Temperature"] 
+      [[T "Stage 1",T "Unbearable heat"]
+      ,[T "Stage 2",T "Hot"]
+      ,[T "Stage 3",T "Warm"]
+      ,[T "Stage 4",T "Cool"]
+      ,[T "Stage 5",T "Cold"]
+      ,[T "Stage 6",T "Arctic cold"]
+      ]
+    ,TB [T "Wind"] 
+      [[T "Stage 1",T "Calm"]
+      ,[T "Stage 2",T "Moderate wind"]
+      ,[T "Stage 3",T "Strong wind"]
+      ,[T "Stage 4",T "Gale"]
+      ,[T "Stage 5",T "Storm"]
+      ]
+    ]
   , lists: [Cleric,Druid,Wizard]
   }
   ,
@@ -6650,7 +6823,17 @@ spells =[
   , range: "60 feet"
   , components: "V, S, M (a crystal prism)"
   , duration: "Concentration, up to 1 minute"
-  , description: [P [T "You shatter the barriers between realities and timelines, thrusting a creature into turmoil and madness. The target must succeed on a Wisdom saving throw, or it can't take reactions until the spell ends. The affected target must also roll a d10 at the start of each of its turns; the number rolled determines what happens to the target as shown on the Reality Break Effects table."],P [T "At the end of each of its turns, the affected target can repeat the Wisdom saving throw, ending the spell on itself on a success"],P [B "Reality Break Effects"],TB [T "d10",T "Effect"] [[T "1-2",T "Vision of the Far Realm. The target takes 6d12 psychic damage, and it is stunned until the end of the turn"],[T "3-5",T "Rending Rift. The target must make a Dexterity saving throw, taking 8d12 force damage on a failed save, or half as much damage on a successful save."],[T "6-8",T "Wormhole. The target is teleported, along with everything it is wearing and carrying, up to 30 feet to an unoccupied space of your choice that you can see. The target also takes 10d12 force damage and is knocked prone."],[T "9-10",T "Chill of the Dark Void. The target takes 10d12 cold damage, and it is blinded until the end of the turn."]]]
+  , description: 
+    [P [T "You shatter the barriers between realities and timelines, thrusting a creature into turmoil and madness. The target must succeed on a Wisdom saving throw, or it can't take reactions until the spell ends. The affected target must also roll a d10 at the start of each of its turns; the number rolled determines what happens to the target as shown on the Reality Break Effects table."]
+    ,P [T "At the end of each of its turns, the affected target can repeat the Wisdom saving throw, ending the spell on itself on a success"]
+    ,P [B "Reality Break Effects"]
+    ,TB [T "d10",T "Effect"] 
+      [[T "1-2",T "Vision of the Far Realm. The target takes 6d12 psychic damage, and it is stunned until the end of the turn"]
+      ,[T "3-5",T "Rending Rift. The target must make a Dexterity saving throw, taking 8d12 force damage on a failed save, or half as much damage on a successful save."]
+      ,[T "6-8",T "Wormhole. The target is teleported, along with everything it is wearing and carrying, up to 30 feet to an unoccupied space of your choice that you can see. The target also takes 10d12 force damage and is knocked prone."]
+      ,[T "9-10",T "Chill of the Dark Void. The target takes 10d12 cold damage, and it is blinded until the end of the turn."]
+      ]
+    ]
   , lists: [Wizard]
   }
   ,
@@ -6830,7 +7013,21 @@ spells =[
   , range: "60 feet"
   , components: "V, S"
   , duration: "10 minutes"
-  , description: [P [T "A shimmering, multicolored plane of light forms a vertical opaque wall - up to 90 feet long, 30 feet high, and 1 inch thick - centered on a point you can see within range. Alternatively, you can shape the wall into a sphere up to 30 feet in diameter centered on a point you choose within range. The wall remains in place for the duration. If you position the wall so that it passes through a space occupied by a creature, the spell fails, and your action and the spell slot are wasted."],P [T "The wall sheds bright light out to a range of 100 feet and dim light for an additional 100 feet. You and creatures you designate at the time you cast the spell can pass through and remain near the wall without harm. If another creature that can see the wall moves to within 20 feet of it or starts its turn there, the creature must succeed on a Constitution saving throw or become blinded for 1 minute."],P [T "The wall consists of seven layers, each with a different color. When a creature attempts to reach into or pass through the wall, it does so one layer at a time through all the wall's layers. As it passes or reaches through each layer, the creature must make a Dexterity saving throw or be affected by that layer's properties as described below."],P [T "The wall can be destroyed, also one layer at a time, in order from red to violet, by means specific to each layer. Once a layer is destroyed, it remains so for the duration of the spell. An ",A "http://dnd5e.wikidot.com/spell:antimagic-field" "Antimagic Field",T " has no effect on it."],TB [T "Color",T "Effect"] [[T "Red",T "The creature takes 10d6 fire damage on a failed save, or half as much damage on a successful one. While this layer is in place, nonmagical ranged attacks can't pass through the wall. The layer can be destroyed by dealing at least 25 cold damage to it."],[T "Orange",T "The creature takes 10d6 acid damage on a failed save, or half as much damage on a successful one. While this layer is in place, magical ranged attacks can't pass through the wall. The layer is destroyed by a strong wind."],[T "Yellow",T "The creature takes 10d6 lightning damage on a failed save, or half as much damage on a successful one. This layer can be destroyed by dealing at least 60 force damage to it."],[T "Green",T "The creature takes 10d6 poison damage on a failed save, or half as much damage on a successful one. A Passwall spell, or another spell of equal or greater level that can open a portal on a solid surface, destroys this layer."],[T "Blue",T "The creature takes 10d6 cold damage on a failed save, or half as much damage on a successful one. This layer can be destroyed by dealing at least 25 fire damage to it."],[T "Indigo",T "On a failed save, the creature is restrained. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the petrified condition. The successes and failures don't need to be consecutive; keep track of both until the creature collects three of a kind. While this layer is in place, spells can't be cast through the wall. The layer is destroyed by bright light shed by a Daylight spell or a similar spell of equal or higher level."],[T "Violet",T "On a failed save, the creature is blinded. It must then make a Wisdom saving throw at the start of your next turn. A successful save ends the blindness. If it fails that save, the creature is transported to another plane of the DM's choosing and is no longer blinded. (Typically, a creature that is on a plane that isn't its home plane is banished home, while other creatures are usually cast into the Astral or Ethereal planes.) This layer is destroyed by a Dispel Magic spell or similar spell of equal or higher level that can end spells and magical effects."]]]
+  , description: 
+    [P [T "A shimmering, multicolored plane of light forms a vertical opaque wall - up to 90 feet long, 30 feet high, and 1 inch thick - centered on a point you can see within range. Alternatively, you can shape the wall into a sphere up to 30 feet in diameter centered on a point you choose within range. The wall remains in place for the duration. If you position the wall so that it passes through a space occupied by a creature, the spell fails, and your action and the spell slot are wasted."]
+    ,P [T "The wall sheds bright light out to a range of 100 feet and dim light for an additional 100 feet. You and creatures you designate at the time you cast the spell can pass through and remain near the wall without harm. If another creature that can see the wall moves to within 20 feet of it or starts its turn there, the creature must succeed on a Constitution saving throw or become blinded for 1 minute."]
+    ,P [T "The wall consists of seven layers, each with a different color. When a creature attempts to reach into or pass through the wall, it does so one layer at a time through all the wall's layers. As it passes or reaches through each layer, the creature must make a Dexterity saving throw or be affected by that layer's properties as described below."]
+    ,P [T "The wall can be destroyed, also one layer at a time, in order from red to violet, by means specific to each layer. Once a layer is destroyed, it remains so for the duration of the spell. An ",A "http://dnd5e.wikidot.com/spell:antimagic-field" "Antimagic Field",T " has no effect on it."]
+    ,TB [T "Color",T "Effect"] 
+      [[T "Red",T "The creature takes 10d6 fire damage on a failed save, or half as much damage on a successful one. While this layer is in place, nonmagical ranged attacks can't pass through the wall. The layer can be destroyed by dealing at least 25 cold damage to it."]
+      ,[T "Orange",T "The creature takes 10d6 acid damage on a failed save, or half as much damage on a successful one. While this layer is in place, magical ranged attacks can't pass through the wall. The layer is destroyed by a strong wind."]
+      ,[T "Yellow",T "The creature takes 10d6 lightning damage on a failed save, or half as much damage on a successful one. This layer can be destroyed by dealing at least 60 force damage to it."]
+      ,[T "Green",T "The creature takes 10d6 poison damage on a failed save, or half as much damage on a successful one. A Passwall spell, or another spell of equal or greater level that can open a portal on a solid surface, destroys this layer."]
+      ,[T "Blue",T "The creature takes 10d6 cold damage on a failed save, or half as much damage on a successful one. This layer can be destroyed by dealing at least 25 fire damage to it."]
+      ,[T "Indigo",T "On a failed save, the creature is restrained. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the petrified condition. The successes and failures don't need to be consecutive; keep track of both until the creature collects three of a kind. While this layer is in place, spells can't be cast through the wall. The layer is destroyed by bright light shed by a Daylight spell or a similar spell of equal or higher level."]
+      ,[T "Violet",T "On a failed save, the creature is blinded. It must then make a Wisdom saving throw at the start of your next turn. A successful save ends the blindness. If it fails that save, the creature is transported to another plane of the DM's choosing and is no longer blinded. (Typically, a creature that is on a plane that isn't its home plane is banished home, while other creatures are usually cast into the Astral or Ethereal planes.) This layer is destroyed by a Dispel Magic spell or similar spell of equal or higher level that can end spells and magical effects."]
+      ]
+    ]
   , lists: [Bard,Wizard]
   }
   ,
@@ -6878,7 +7075,16 @@ spells =[
   , range: "Sight"
   , components: "V, S"
   , duration: "Concentration, up to 1 minute"
-  , description: [P [T "A churning storm cloud forms, centered on a point you can see and spreading to a radius of 360 feet. Lightning flashes in the area, thunder booms, and strong winds roar. Each creature under the cloud (no more than 5,000 feet beneath the cloud) when it appears must make a Constitution saving throw. On a failed save, a creature takes 2d6 thunder damage and becomes deafened for 5 minutes."],P [T "Each round you maintain concentration on this spell, the storm produces different effects on your turn."],P [B "Storm of Vengeance After Round 1"],TB [T "Round",T "Effect"] [[T "2",T "Acidic rain falls from the cloud. Each creature and object under the cloud takes 1d6 acid damage."],[T "3",T "You call six bolts of lightning from the cloud to strike six creatures or objects of your choice beneath the cloud. A given creature or object can't be struck by more than one bolt. A struck creature must make a Dexterity saving throw. The creature takes 10d6 lightning damage on a failed save, or half as much damage on a successful one."],[T "4",T "Hailstones rain down from the cloud. Each creature under the cloud takes 2d6 bludgeoning damage."],[T "5-10",T "Gusts and freezing rain assail the area under the cloud. The area becomes difficult terrain and is heavily obscured. Each creature there takes 1d6 cold damage. Ranged weapon attacks in the area are impossible. The wind and rain count as a severe distraction for the purposes of maintaining concentration on spells. Finally, gusts of strong wind (ranging from 20 to 50 miles per hour) automatically disperse fog, mists, and similar phenomena in the area whether mundane or magical."]]]
+  , description: 
+    [P [T "A churning storm cloud forms, centered on a point you can see and spreading to a radius of 360 feet. Lightning flashes in the area, thunder booms, and strong winds roar. Each creature under the cloud (no more than 5,000 feet beneath the cloud) when it appears must make a Constitution saving throw. On a failed save, a creature takes 2d6 thunder damage and becomes deafened for 5 minutes."],P [T "Each round you maintain concentration on this spell, the storm produces different effects on your turn."]
+    ,P [B "Storm of Vengeance After Round 1"]
+    ,TB [T "Round",T "Effect"] 
+      [[T "2",T "Acidic rain falls from the cloud. Each creature and object under the cloud takes 1d6 acid damage."]
+      ,[T "3",T "You call six bolts of lightning from the cloud to strike six creatures or objects of your choice beneath the cloud. A given creature or object can't be struck by more than one bolt. A struck creature must make a Dexterity saving throw. The creature takes 10d6 lightning damage on a failed save, or half as much damage on a successful one."]
+      ,[T "4",T "Hailstones rain down from the cloud. Each creature under the cloud takes 2d6 bludgeoning damage."]
+      ,[T "5-10",T "Gusts and freezing rain assail the area under the cloud. The area becomes difficult terrain and is heavily obscured. Each creature there takes 1d6 cold damage. Ranged weapon attacks in the area are impossible. The wind and rain count as a severe distraction for the purposes of maintaining concentration on spells. Finally, gusts of strong wind (ranging from 20 to 50 miles per hour) automatically disperse fog, mists, and similar phenomena in the area whether mundane or magical."]
+      ]
+    ]
   , lists: [Druid]
   }
   ,
