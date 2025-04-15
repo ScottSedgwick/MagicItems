@@ -13,5 +13,5 @@ to generate this file without the comments in this block.
 { name = "my-project"
 , dependencies = [ "aff", "effect", "flame", "maybe", "prelude", "tuples" ]
 , packages = ./packages.dhall
-, sources = [ "src/**/*.purs" ]
+, sources = [ "src/**/*.purs", "../common/src/**/*.purs" ]
 }

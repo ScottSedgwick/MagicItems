@@ -20,5 +20,5 @@ to generate this file without the comments in this block.
   , "tuples"
   ]
 , packages = ./packages.dhall
-, sources = [ "src/**/*.purs" ]
+, sources = [ "src/**/*.purs", "../common/src/**/*.purs" ]
 }

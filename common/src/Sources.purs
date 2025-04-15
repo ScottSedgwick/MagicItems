@@ -19,6 +19,7 @@ data Source
   | SourceCandlekeepMysteries
   | SourceCurseOfStrahd
   | SourceCriticalRoleCallOfNetherdeep
+  | SourceCriticalRoleTwitter
   | SourceDivineContention
   | SourceDMG
   | SourceDragonlanceShadowOfTheDragonQueen
@@ -46,6 +47,7 @@ data Source
   | SourceStrixhavenCurriculumOfChaos
   | SourceSleepingDragonsWake
   | SourceStormKingsThunder
+  | SourceSwordCoastAdventurersGuide
   | SourceTashasCauldronOfEverything
   | SourceTombOfAnnihilation
   | SourceTyrannyOfDragons
@@ -73,6 +75,7 @@ instance Show Source where
   show SourceCandlekeepMysteries = "Candlekeep Mysteries"
   show SourceCurseOfStrahd = "Curse of Strahd"
   show SourceCriticalRoleCallOfNetherdeep = "Critical Role: Call of the Netherdeep"
+  show SourceCriticalRoleTwitter = "Critical Role: Twitter"
   show SourceDivineContention = "Divine Contention"
   show SourceDMG = "Dungeon Master's Guide"
   show SourceDragonlanceShadowOfTheDragonQueen = "Dragonlance: Shadow of the Dragon Queen"
@@ -100,6 +103,7 @@ instance Show Source where
   show SourceStrixhavenCurriculumOfChaos = "Strixhaven: A Curriculum of Chaos"
   show SourceSleepingDragonsWake = "Sleeping Dragon's Wake"
   show SourceStormKingsThunder = "Storm King's Thunder"
+  show SourceSwordCoastAdventurersGuide = "Sword Coast Adventurers Guide"
   show SourceTashasCauldronOfEverything = "Tasha's Cauldron of Everything"
   show SourceTombOfAnnihilation = "Tomb of Annihilation"
   show SourceTyrannyOfDragons = "Tyranny of Dragons"
@@ -127,6 +131,7 @@ instance Eq Source where
   eq SourceCandlekeepMysteries SourceCandlekeepMysteries = true
   eq SourceCurseOfStrahd SourceCurseOfStrahd = true
   eq SourceCriticalRoleCallOfNetherdeep SourceCriticalRoleCallOfNetherdeep = true
+  eq SourceCriticalRoleTwitter SourceCriticalRoleTwitter = true
   eq SourceDivineContention SourceDivineContention = true
   eq SourceDMG SourceDMG = true
   eq SourceDragonlanceShadowOfTheDragonQueen SourceDragonlanceShadowOfTheDragonQueen = true
@@ -154,6 +159,7 @@ instance Eq Source where
   eq SourceStrixhavenCurriculumOfChaos SourceStrixhavenCurriculumOfChaos = true
   eq SourceSleepingDragonsWake SourceSleepingDragonsWake = true
   eq SourceStormKingsThunder SourceStormKingsThunder = true
+  eq SourceSwordCoastAdventurersGuide SourceSwordCoastAdventurersGuide = true
   eq SourceTashasCauldronOfEverything SourceTashasCauldronOfEverything = true
   eq SourceTombOfAnnihilation SourceTombOfAnnihilation = true
   eq SourceTyrannyOfDragons SourceTyrannyOfDragons = true
@@ -185,6 +191,7 @@ allSources =
   , SourceCandlekeepMysteries
   , SourceCurseOfStrahd
   , SourceCriticalRoleCallOfNetherdeep
+  , SourceCriticalRoleTwitter
   , SourceDivineContention
   , SourceDMG
   , SourceDragonlanceShadowOfTheDragonQueen
@@ -212,6 +219,7 @@ allSources =
   , SourceStrixhavenCurriculumOfChaos
   , SourceSleepingDragonsWake
   , SourceStormKingsThunder
+  , SourceSwordCoastAdventurersGuide
   , SourceTashasCauldronOfEverything
   , SourceTombOfAnnihilation
   , SourceTyrannyOfDragons
@@ -239,6 +247,7 @@ instance Unshow Source where
   unshow "Candlekeep Mysteries" = Just SourceCandlekeepMysteries
   unshow "Curse of Strahd" = Just SourceCurseOfStrahd
   unshow "Critical Role: Call of the Netherdeep" = Just SourceCriticalRoleCallOfNetherdeep
+  unshow "Critical Role: Twitter" = Just SourceCriticalRoleTwitter
   unshow "Divine Contention" = Just SourceDivineContention
   unshow "Dungeon Master's Guide" = Just SourceDMG
   unshow "Dragonlance: Shadow of the Dragon Queen" = Just SourceDragonlanceShadowOfTheDragonQueen
@@ -266,6 +275,7 @@ instance Unshow Source where
   unshow "Strixhaven: A Curriculum of Chaos" = Just SourceStrixhavenCurriculumOfChaos
   unshow "Sleeping Dragon's Wake" = Just SourceSleepingDragonsWake
   unshow "Storm King's Thunder" = Just SourceStormKingsThunder
+  unshow "Sword Coast Adventurers Guide" = Just SourceSwordCoastAdventurersGuide
   unshow "Tasha's Cauldron of Everything" = Just SourceTashasCauldronOfEverything
   unshow "Tomb of Annihilation" = Just SourceTombOfAnnihilation
   unshow "Tyranny of Dragons" = Just SourceTyrannyOfDragons

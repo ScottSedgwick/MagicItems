@@ -21,8 +21,9 @@ import Flame.Html.Element as HE
 import Flame.Html.Event as HV
 import MagicItems (magicItems)
 
+import Description(Description(..))
 import Sources (Source, unshow)
-import Types (Description(..), ItemAttunement, ItemType, MagicItem, Rarity(..), allAttunes, allRarities, allTypes, showR, toAttune)
+import Types (ItemAttunement, ItemType, MagicItem, Rarity(..), allAttunes, allRarities, allTypes, showR, toAttune)
 
 type Model =
   { fltTitle :: String
