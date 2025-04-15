@@ -1,15 +1,11 @@
 module Sources 
-  ( class Unshow
-  , Source(..)
+  ( Source(..)
   , allSources
-  , unshow
   ) where
 
 import Prelude
 import Data.Maybe (Maybe(..))
-
-class Unshow a where
-  unshow :: String -> Maybe a
+import Unshow(class Unshow)
 
 data Source
   = SourceAcquisitionsIncorporated
@@ -121,7 +117,7 @@ instance Show Source where
   show SourceTalDoreiCampaignSettingReborn = "Tal'Dorei Campaign Setting Reborn"
   show SourceSigilAndTheOutlands = "Sigil and the Outlands"
   show SourceElementalEvilPlayersCompanion = "Elemental Evil Player's Companion"
-  show (SourceUnknown s) = "Unknown: " <> s
+  show (SourceUnknown s) = s
 
 instance Eq Source where
   eq SourceAcquisitionsIncorporated SourceAcquisitionsIncorporated = true
@@ -177,6 +173,7 @@ instance Eq Source where
   eq SourceTalDoreiCampaignSettingReborn SourceTalDoreiCampaignSettingReborn = true
   eq SourceSigilAndTheOutlands SourceSigilAndTheOutlands = true
   eq SourceElementalEvilPlayersCompanion SourceElementalEvilPlayersCompanion = true
+  eq (SourceUnknown a) (SourceUnknown b) = a == b
   eq _ _ = false
 
 instance Ord Source where
@@ -293,4 +290,4 @@ instance Unshow Source where
   unshow "Tal'Dorei Campaign Setting Reborn" = Just SourceTalDoreiCampaignSettingReborn
   unshow "Sigil and the Outlands" = Just SourceSigilAndTheOutlands
   unshow "Elemental Evil Player's Companion" = Just SourceElementalEvilPlayersCompanion
-  unshow _ = Nothing
+  unshow s = Just (SourceUnknown s)

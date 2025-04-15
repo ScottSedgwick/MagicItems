@@ -148,7 +148,6 @@ viewItem item =
         [ HE.div [ HA.id (mkId item.title), HA.class' "article-anchor" ] [ HE.text "" ]
         ] <> (map mkDescription item.description)
       )
-      
     ]
   ]
 
