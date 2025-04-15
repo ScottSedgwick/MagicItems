@@ -98,8 +98,12 @@ viewItem item =
         ]
       ] 
     , HE.article [ HA.class' "white" ]
-      ( -- [ HE.p_ [ HE.em_ (showCaption item) ]
-        [ HE.div [ HA.id (mkId item.title), HA.class' "article-anchor" ] [ HE.text "" ]
+      ( [ HE.p_ [ HE.b_ [ HE.text "Casting Time: " ], HE.text item.castingTime, HE.br 
+                , HE.b_ [ HE.text "Range: " ]       , HE.text item.range      , HE.br
+                , HE.b_ [ HE.text "Duration: " ]    , HE.text item.duration   , HE.br
+                , HE.b_ [ HE.text "Components: " ]  , HE.text item.components , HE.br
+                ]
+        , HE.div [ HA.id (mkId item.title), HA.class' "article-anchor" ] [ HE.text "" ]
         ] <> (map mkDescription item.description)
       )
     ]
