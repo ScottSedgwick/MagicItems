@@ -31,10 +31,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " A holy symbol (a gift to you when you entered the priesthood), a prayer book or prayer wheel, 5 sticks of incense, "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 15gp"
+        , T " A holy symbol (a gift to you when you entered the priesthood), a prayer book or prayer wheel, 5 sticks of incense, vestments, a set of common clothes, and a pouch containing 15gp"
         ]
       , H1 "Features"
       , H2 "Shelter of the Faithful"
@@ -213,11 +210,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " A leather-bound diary, a "
-        , T ", an "
-        , T ", a set of "
-        , T ", one trinket of special significance, and a "
-        , T " containing 10gp"
+        , T " A leather-bound diary, a bottle of ink, an ink pen, a set of traveler's clothes, one trinket of special significance, and a pouch containing 10gp"
         ]
       , H1 "Features"
       , H2 "Cultural Chameleon"
@@ -389,14 +382,7 @@ backgrounds =
         , T " One of your choice"
         , BR
         , B "Equipment:"
-        , T " A wooden "
-        , T " containing a map to a ruin or dungeon, a "
-        , T ", a "
-        , T ", a set of "
-        , T ", a "
-        , T ", a "
-        , T ", a trinket recovered from a dig site, and a "
-        , T " containing 25gp"
+        , T " A wooden case containing a map to a ruin or dungeon, a bullseye lantern, a miner's pick, a set of traveller's clothes, a shovel, a two-person tent, a trinket recovered from a dig site, and a pouch containing 25gp"
         ]
       , H1 "Features"
       , H2 "Dust Digger"
@@ -826,14 +812,7 @@ backgrounds =
         , T " None"
         , BR
         , B "Equipment:"
-        , T " A set of "
-        , T ", a "
-        , T ", tools of the con of your choice (ten stoppered "
-        , T " filled with colored liquid, a set of weighted "
-        , T ", a deck of marked "
-        , T ", or a "
-        , T " of an imaginary duke), and a "
-        , T " containing 15gp"
+        , T " A set of fine clothes, a disguise kit, tools of the con of your choice (ten stoppered bottles filled with colored liquid, a set of weighted dice, a deck of marked cards, or a signet ring of an imaginary duke), and a pouch containing 15gp"
         ]
       , H1 "Features"
       , H2 "Favorite Schemes"
@@ -1051,10 +1030,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " A uniform in the style of your unit and indicative of your rank, a "
-        , T " with which to summon help, a set of "
-        , T ", and a "
-        , T " containing 10gp"
+        , T " A uniform in the style of your unit and indicative of your rank, a horn with which to summon help, a set of manacles, and a pouch containing 10gp"
         ]
       , H1 "Variants"
       , H2 "Investigator"
@@ -1101,9 +1077,7 @@ backgrounds =
         , T " Dwarvish or one other of your choice if you already speak Dwarvish"
         , BR
         , B "Equipment:"
-        , T " A set of artisan's tools with which you are proficient, a maker's mark chisel used to mark your handiwork with the symbol of the clan of crafters you learned your skill from, a set of "
-        , T ", and a "
-        , T " containing 5gp and a gem worth 10gp"
+        , T " A set of artisan's tools with which you are proficient, a maker's mark chisel used to mark your handiwork with the symbol of the clan of crafters you learned your skill from, a set of traveller's clothes, and a pouch containing 5gp and a gem worth 10gp"
         ]
       , H1 "Features"
       , H2 "Respect of the Stout Folk"
@@ -1148,15 +1122,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " The scholar's "
-        , T " of your cloister, a writing kit (small "
-        , T " with a "
-        , T ", a "
-        , T ", "
-        , T ", and a "
-        , T "), a borrowed "
-        , T " on the subject of your current study, and a "
-        , T " containing 10gp"
+        , T " The scholar's robes of your cloister, a writing kit (small pouch with a quill, a bottle of ink, folded parchment, and a small penknife), a borrowed book on the subject of your current study, and a pouch containing 10gp"
         ]
       , H1 "Features"
       , H2 "Library Access"
@@ -1207,9 +1173,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " A set of "
-        , T " and a "
-        , T " containing 5gp"
+        , T " A set of fine clothes and a pouch containing 5gp"
         ]
       , H1 "Features"
       , H2 "Court Functionary"
@@ -1248,10 +1212,7 @@ backgrounds =
         , T " None"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", a set of dark "
-        , T " including a hood, and a "
-        , T " containing 15gp"
+        , T " A crowbar, a set of dark common clothes including a hood, and a pouch containing 15gp"
         ]
       , H1 "Variants"
       , H2 "Spy"
@@ -1473,9 +1434,7 @@ backgrounds =
         , T " None"
         , BR
         , B "Equipment:"
-        , T " A musical instrument (one of your choice), the favor of an admirer (love letter, lock of hair, or trinket), a "
-        , T ", and a "
-        , T " containing 15gp"
+        , T " A musical instrument (one of your choice), the favor of an admirer (love letter, lock of hair, or trinket), a costume, and a pouch containing 15gp"
         ]
       , H1 "Variants"
       , H2 "Gladiator"
@@ -1708,10 +1667,7 @@ backgrounds =
         , T " One of your choice"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", a "
-        , T ", and a "
-        , T " containing 10gp"
+        , T " A disguise kit, a costume, and a pouch containing 10gp"
         ]
       , H1 "Features"
       , H2 "Faceless Persona"
@@ -1939,10 +1895,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " The "
-        , T " of your faction, a copy of a seminal faction text (or a code-book for a covert faction), a set of "
-        , T ", and a "
-        , T " containing 15gp"
+        , T " The badge or emblem of your faction, a copy of a seminal faction text (or a code-book for a covert faction), a set of common clothes, and a pouch containing 15gp"
         ]
       , H1 "Features"
       , H2 "Factions of the Sword Coast"
@@ -2014,9 +1967,7 @@ backgrounds =
         , T " Any one of your choice"
         , BR
         , B "Equipment:"
-        , T " One set of "
-        , T ", any one musical instrument or gaming set you are proficient with, poorly wrought maps from your homeland that depict where you are in Faerun, a small piece of jewelry worth 10gp in the style of your homeland's craftsmanship, and a "
-        , T " containing 5gp"
+        , T " One set of traveller's clothes, any one musical instrument or gaming set you are proficient with, poorly wrought maps from your homeland that depict where you are in Faerun, a small piece of jewelry worth 10gp in the style of your homeland's craftsmanship, and a pouch containing 5gp"
         ]
       , H1 "Features"
       , H2 "Why Are You Here?"
@@ -2273,11 +2224,9 @@ backgrounds =
         , T " One of your choice of Elvish, Gnomish, Goblin, or Sylvan."
         , BR
         , B "Equipment:"
-        , T " A musical instrument (one of your choice), a set of "
-        , T ", three trinkets (each determind by rolling on the "
+        , T " A musical instrument (one of your choice), a set of traveller's clothes, three trinkets (each determind by rolling on the "
         , A "http://dnd5e.wikidot.com/trinkets" "Feywild Trinkets"
-        , T " table), and a "
-        , T " containing 8gp"
+        , T " table), and a pouch containing 8gp"
         ]
       , H1 "Features"
       , H2 "Fey Mark"
@@ -2758,11 +2707,7 @@ backgrounds =
         , T " None"
         , BR
         , B "Equipment:"
-        , T " A set of artisan's tools (one of your choice), a "
-        , T ", an "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 10gp"
+        , T " A set of artisan's tools (one of your choice), a shovel, an iron pot, a set of common clothes, and a pouch containing 10gp"
         ]
       , H1 "Features"
       , H2 "Defining Event"
@@ -2967,112 +2912,6 @@ backgrounds =
       ]
     }
   , { title: "Giant Foundling"
-    , url: "http://dnd5e.wikidot.com/background:giant-foundling"
-    , source: SourceBigbyPresentsGloryOfTheGiants
-    , description: 
-      [ P
-        [ B "Though you aren't a Giant, you grew up among giants. Maybe you were an orphan taken in by a sympathetic family of stone giants who raised you as one of their own. Or perhaps you lived in a lost prehistoric pocket of the world, surrounded by giants and fearsome behemoths or hulking dinosaurs."
-        ]
-      , P
-        [ I "Something about your environment-perhaps the food or water that sustained you, elemental magic inherent in the site of your home, or some verdant blessing of growth placed on you-caused you to grow to a remarkable size for your kind. With the aid of this magic, you have learned how to embody the might of giants. You are used to moving through a world much bigger than you, and that is reflected in your skills, attitude, and perspective on life."
-        ]
-      , P
-        [ T "Source: Bigby Presents - Glory of the Giants"
-        ]
-      , P
-        [ B "Skill Proficiencies:"
-        , T " Intimidation, Survival"
-        , BR
-        , B "Languages:"
-        , T " Giant and one other language of your choice"
-        , BR
-        , B "Equipment:"
-        , T " A "
-        , T ", a set of "
-        , T ", a small stone or sprig that reminds you of home, and a "
-        , T " containing 10 gp."
-        ]
-      , H1 "Origin Stories"
-      , P
-        [ T "How you came to live among colossal creatures is up to you to determine, but the Foundling Origin table suggests a variety of possibilities."
-        ]
-      , TB
-        [ T "Foundling Origin"
-        ]
-        [           []
-        , 
-          [ T "1"
-          , T "You were found as a baby by a family of nomadic giants who raised you as one of their own."
-          ]
-        , 
-          [ T "2"
-          , T "A family of stone giants rescued you when you fell into a mountain chasm, and you have lived with them underground ever since."
-          ]
-        , 
-          [ T "3"
-          , T "You were lost or abandoned as a child in a jungle that teemed with ravenous dinosaurs. There, you found an equally lost frost giant; together, you survived."
-          ]
-        , 
-          [ T "4"
-          , T "Your farm was crushed and your family killed in a battle between warring groups of giants. Racked with guilt over the destruction, a sympathetic giant soldier promised to care for you."
-          ]
-        , 
-          [ T "5"
-          , T "After you had a series of strange dreams as a child, your superstitious parents sent you to study with a powerful but aloof storm giant oracle."
-          ]
-        , 
-          [ T "6"
-          , T "While playing hide-and-seek with your friends, you stumbled into the castle of a cloud giant, who immediately adopted you."
-          ]
-        ]
-      , H1 "Feature"
-      , H2 "Strike of the Giants"
-      , P
-        [ T "You gain the "
-        , A "http://dnd5e.wikidot.com/feat:strike-of-the-giants" "Strike of the Giants"
-        , T " feat."
-        ]
-      , H1 "Building a Giant Foundling Character"
-      , P
-        [ T "Your life among giants has given you a unique perspective. Though you are unusually large for your kind, you're no larger than a giant child, so you might be very mindful of your size."
-        ]
-      , P
-        [ B "Suggested Characteristics."
-        , T " The Giant Foundling Personality Traits table suggests a variety of traits you might adopt for your character."
-        ]
-      , H2 "Giant Foundling Personality Traits"
-      , TB
-        [ T "d6"
-        , T "Personality Trait"
-        ]
-        [ 
-          [ T "1"
-          , T "What I lack in stature, I make up for with sheer spite."
-          ]
-        , 
-          [ T "2"
-          , T "I insist on being taken seriously as a full-grown adult. Nobody talks down to me!"
-          ]
-        , 
-          [ T "3"
-          , T "Crowded spaces make me uncomfortable. I'd much rather be in a wide-open field than a bustling tavern."
-          ]
-        , 
-          [ T "4"
-          , T "I embrace my shorter stature. It helps me stay unnoticed-and underestimated."
-          ]
-        , 
-          [ T "5"
-          , T "Every avalanche begins as a single pebble."
-          ]
-        , 
-          [ T "6"
-          , T "The world always feels too big, and I'm afraid I'll never find my place in it."
-          ]
-        ]
-      ]
-    }
-  , { title: "Gladiator"
     , url: "http://dnd5e.wikidot.com/background:entertainer#toc1"
     , source: SourcePlayersHandbook
     , description: 
@@ -3305,290 +3144,6 @@ backgrounds =
       ]
     }
   , { title: "Guild Artisan"
-    , url: "http://dnd5e.wikidot.com/background:guild-artisan"
-    , source: SourcePlayersHandbook
-    , description: 
-      [ P
-        [ B "You are a member of an artisan's guild, skilled in a particular field and closely associated with other artisans. You are a well-established part of the mercantile world, freed by talent and wealth from the constraints of a feudal social order. You learned your skills as an apprentice to a master artisan, under the sponsorship of your guild, until you became a master in your own right."
-        ]
-      , P
-        [ T "Source: Player's Handbook"
-        ]
-      , P
-        [ B "Skill Proficiencies:"
-        , T " Insight, Persuasion"
-        , BR
-        , B "Tool Proficiencies:"
-        , T " One type of artisan's tools"
-        , BR
-        , B "Languages:"
-        , T " One of your choice"
-        , BR
-        , B "Equipment:"
-        , T " A set of artisan's tools (one of your choice), a letter of introduction from your guild, a set of "
-        , T ", and a "
-        , T " containing 15gp"
-        ]
-      , H1 "Variants"
-      , H2 "Guild Merchant"
-      , P
-        [ T "Instead of an artisans' guild, you might belong to a guild of traders, caravan masters, or shopkeepers. You don't craft items yourself but earn a living by buying and selling the works of others (or the raw materials artisans need to practice their craft). Your guild might be a large merchant consortium (or family) with interests across the region. Perhaps you transported goods from one place to another, by ship, wagon, or caravan, or bought them from traveling traders and sold them in your own little shop. In some ways, the traveling merchant's life lends itself to adventure far more than the life of an artisan."
-        ]
-      , P
-        [ T "Rather than proficiency with artisan's tools, you might be proficient with navigator's tools or an additional language. And instead of artisan's tools, you can start with a mule and a cart."
-        ]
-      , H1 "Guild Business"
-      , H2 "Guild Business"
-      , P
-        [ T "Guilds are generally found in cities large enough to support several artisans practicing the same trade. However, your guild might instead be a loose network of artisans who each work in a different village within a larger realm. Work with your DM to determine the nature of your guild. You can select your guild business from the Guild Business table or roll randomly."
-        ]
-      , TB
-        [ T "d20"
-        , T "Guild Business"
-        ]
-        [ 
-          [ T "1"
-          , T "Alchemists and apothecaries"
-          ]
-        , 
-          [ T "2"
-          , T "Armorers, locksmiths, and finesmiths"
-          ]
-        , 
-          [ T "3"
-          , T "Brewers, distillers, and vintners"
-          ]
-        , 
-          [ T "4"
-          , T "Calligraphers, scribes, and scriveners"
-          ]
-        , 
-          [ T "5"
-          , T "Carpenters, roofers, and plasterers"
-          ]
-        , 
-          [ T "6"
-          , T "Cartographers, surveyors, and chart-makers"
-          ]
-        , 
-          [ T "7"
-          , T "Cobblers and shoemakers"
-          ]
-        , 
-          [ T "8"
-          , T "Cooks and bakers"
-          ]
-        , 
-          [ T "9"
-          , T "Glassblowers and glaziers"
-          ]
-        , 
-          [ T "10"
-          , T "Jewelers and gemcutters"
-          ]
-        , 
-          [ T "11"
-          , T "Leatherworkers, skinners, and tanners"
-          ]
-        , 
-          [ T "12"
-          , T "Masons and stonecutters"
-          ]
-        , 
-          [ T "13"
-          , T "Painters, limners, and sign-makers"
-          ]
-        , 
-          [ T "14"
-          , T "Potters and tile-makers"
-          ]
-        , 
-          [ T "15"
-          , T "Shipwrights and sailmakers"
-          ]
-        , 
-          [ T "16"
-          , T "Smiths and metal-forgers"
-          ]
-        , 
-          [ T "17"
-          , T "Tinkers, pewterers, and casters"
-          ]
-        , 
-          [ T "18"
-          , T "Wagon-makers and wheelwrights"
-          ]
-        , 
-          [ T "19"
-          , T "Weavers and dyers"
-          ]
-        , 
-          [ T "20"
-          , T "Woodcarvers, coopers, and bowyers"
-          ]
-        ]
-      , P
-        [ T "As a member of your guild, you know the skills needed to create finished items from raw materials (reflected in your proficiency with a certain kind of artisan's tools), as well as the principles of trade and good business practices. The question now is whether you abandon your trade for adventure, or take on the extra effort to weave adventuring and trade together."
-        ]
-      , H2 "Guild Membership"
-      , P
-        [ T "As an established and respected member of a guild, you can rely on certain benefits that membership provides. Your fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings."
-        ]
-      , P
-        [ T "Guilds often wield tremendous political power. If you are accused of a crime, your guild will support you if a good case can be made for your innocence or the crime is justifiable. You can also gain access to powerful political figures through the guild, if you are a member in good standing. Such connections might require the donation of money or magic items to the guild's coffers."
-        ]
-      , P
-        [ T "You must pay dues of 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in the guild's good graces."
-        ]
-      , H1 "Suggested Characteristics"
-      , P
-        [ T "Guild artisans are among the most ordinary people in the world until they set down their tools and take up an adventuring career. They understand the value of hard work and the importance of community, but they're vulnerable to sins of greed and covetousness."
-        ]
-      , DV "feature" 
-        [ DV "grid" 
-          [ DV "s6" 
-            [ H2 "Personality Traits"
-            , TB
-              [ T "d8"
-              , T "Personality Trait"
-              ]
-              [ 
-                [ T "1"
-                , T "I believe that anything worth doing is worth doing right. I can't help it - I'm a perfectionist."
-                ]
-              , 
-                [ T "2"
-                , T "I'm a snob who looks down on those who can't appreciate fine art."
-                ]
-              , 
-                [ T "3"
-                , T "I always want to know how things work and what makes people tick."
-                ]
-              , 
-                [ T "4"
-                , T "I'm full of witty aphorisms and have a proverb for every occasion."
-                ]
-              , 
-                [ T "5"
-                , T "I'm rude to people who lack my commitment to hard work and fair play."
-                ]
-              , 
-                [ T "6"
-                , T "I like to talk at length about my profession."
-                ]
-              , 
-                [ T "7"
-                , T "I don't part with my money easily and will haggle tirelessly to get the best deal possible."
-                ]
-              , 
-                [ T "8"
-                , T "I'm well known for my work, and I want to make sure everyone appreciates it. I'm always taken aback when people haven't heard of me."
-                ]
-              ]
-            ]
-          , DV "s6" 
-            [ H2 "Ideals"
-            , TB
-              [ T "d6"
-              , T "Ideal"
-              ]
-              [ 
-                [ T "1"
-                , T "Community. It is the duty of all civilized people to strengthen the bonds of community and the security of civilization. (Lawful)"
-                ]
-              , 
-                [ T "2"
-                , T "Generosity. My talents were given to me so that I could use them to benefit the world. (Good)"
-                ]
-              , 
-                [ T "3"
-                , T "Freedom. Everyone should be free to pursue his or her own livelihood. (Chaotic)"
-                ]
-              , 
-                [ T "4"
-                , T "Greed. I'm only in it for the money. (Evil)"
-                ]
-              , 
-                [ T "5"
-                , T "People. I'm committed to the people I care about, not to ideals. (Neutral)"
-                ]
-              , 
-                [ T "6"
-                , T "Aspiration. I work hard to be the best there is at my craft. (Any)"
-                ]
-              ]
-            ]
-          ]
-        , DV "grid" 
-          [ DV "s6" 
-            [ H2 "Bonds"
-            , TB
-              [ T "d6"
-              , T "Bond"
-              ]
-              [ 
-                [ T "1"
-                , T "The workshop where I learned my trade is the most important place in the world to me."
-                ]
-              , 
-                [ T "2"
-                , T "I created a great work for someone, and then found them unworthy to receive it. I'm still looking for someone worthy."
-                ]
-              , 
-                [ T "3"
-                , T "I owe my guild a great debt for forging me into the person I am today."
-                ]
-              , 
-                [ T "4"
-                , T "I pursue wealth to secure someone's love."
-                ]
-              , 
-                [ T "5"
-                , T "One day I will return to my guild and prove that I am the greatest artisan of them all."
-                ]
-              , 
-                [ T "6"
-                , T "I will get revenge on the evil forces that destroyed my place of business and ruined my livelihood."
-                ]
-              ]
-            ]
-          , DV "s6" 
-            [ H2 "Flaws"
-            , TB
-              [ T "d6"
-              , T "Flaw"
-              ]
-              [ 
-                [ T "1"
-                , T "I'll do anything to get my hands on something rare or priceless."
-                ]
-              , 
-                [ T "2"
-                , T "I'm quick to assume that someone is trying to cheat me."
-                ]
-              , 
-                [ T "3"
-                , T "No one must ever learn that I once stole money from guild coffers."
-                ]
-              , 
-                [ T "4"
-                , T "I'm never satisfied with what I have - I always want more."
-                ]
-              , 
-                [ T "5"
-                , T "I would kill to acquire a noble title."
-                ]
-              , 
-                [ T "6"
-                , T "I'm horribly jealous of anyone who can outshine my handiwork. Everywhere I go, I'm surrounded by rivals."
-                ]
-              ]
-            ]
-          ]
-        ]
-      ]
-    }
-  , { title: "Guild Merchant"
     , url: "http://dnd5e.wikidot.com/background:guild-artisan#toc1"
     , source: SourcePlayersHandbook
     , description: 
@@ -3893,9 +3448,7 @@ backgrounds =
         , T " Choose two languages, one of which being an exotic language (Abyssal, Celestial, Deep Speech, Draconic, Infernal, Primordial, Sylvan, or Undercommon)"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", and one trinket of special significance (choose one or roll on the Gothic Trinkets table). Also gain a set of set of "
-        , T " and 1sp."
+        , T " A monster hunter's pack, and one trinket of special significance (choose one or roll on the Gothic Trinkets table). Also gain a set of set of common clothes and 1sp."
         ]
       , H1 "Features"
       , H2 "Harrowing Event"
@@ -4120,11 +3673,7 @@ backgrounds =
         , T " One of your choice"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T " stuffed full of notes from your studies or prayers, a "
-        , T ", a set of "
-        , T ", an "
-        , T ", and 5gp"
+        , T " A scroll case stuffed full of notes from your studies or prayers, a winter blanket, a set of common clothes, an herbalism kit, and 5gp"
         ]
       , H1 "Features"
       , H2 "Life of Seclusion"
@@ -4354,9 +3903,7 @@ backgrounds =
         , T " None"
         , BR
         , B "Equipment:"
-        , T " A set of "
-        , T ", the "
-        , T " of your house, identification papers, and a purse containing 20gp"
+        , T " A set of fine clothes, the signet ring of your house, identification papers, and a purse containing 20gp"
         ]
       , TB
         [ T "Your House"
@@ -4602,86 +4149,6 @@ backgrounds =
       ]
     }
   , { title: "Inheritor"
-    , url: "http://dnd5e.wikidot.com/background:inheritor"
-    , source: SourceSwordCoastAdventurersGuide
-    , description: 
-      [ P
-        [ B "You are the heir to something of great value - not mere coin or wealth, but an object that has been entrusted to you and you alone. Your inheritance might have come directly to you from a member of your family, by right of birth, or it could have been left to you by a friend, a mentor, a teacher, or someone else important in your life. The revelation of your inheritance changed your life, and might have set you on the path to adventure, but it could also come with many dangers, including those who covet your gift and want to take it from you - by force, if need be."
-        ]
-      , P
-        [ T "Source: Sword Coast Adventurer's Guide"
-        ]
-      , P
-        [ B "Skill Proficiencies:"
-        , T " Survival, plus one from among Arcana, History, and Religion"
-        , BR
-        , B "Tool Proficiencies:"
-        , T " Your choice of a gaming set or a musical instrument"
-        , BR
-        , B "Languages:"
-        , T " Any one of your choice"
-        , BR
-        , B "Equipment:"
-        , T " Your inheritance, a set of "
-        , T ", the tool you choose for this background's tool proficiency, and a "
-        , T " containing 15gp"
-        ]
-      , H1 "Features"
-      , H2 "Inheritance"
-      , P
-        [ T "Choose or randomly determine your inheritance from among the possibilities in the table below. Work with your DM to come up with details: Why is your inheritance so important, and what is its full story? You might prefer for the DM to invent these details as part of the game, allowing you to learn more about your inheritance as your character does."
-        ]
-      , P
-        [ T "The DM is free to use your inheritance as a story hook, sending you on quests to learn more about its history or true nature, or confronting you with foes who want to claim it for themselves or prevent you from learning what you seek. The DM also determines the properties of your inheritance and how they figure into the item's history and importance. For instance, the object might be a minor magic item, or one that begins with a modest ability and increases in potency with the passage of time. Or, the true nature of your inheritance might not be apparent at first and is revealed only when certain conditions are met."
-        ]
-      , P
-        [ T "When you begin your adventuring career, you can decide whether to tell your companions about your inheritance right away. Rather than attracting attention to yourself, you might want to keep your inheritance a secret until you learn more about what it means to you and what it can do for you."
-        ]
-      , TB
-        [ T "d8"
-        , T "Object or Item"
-        ]
-        [ 
-          [ T "1"
-          , T "A document such as a map, a letter, or a journal"
-          ]
-        , 
-          [ T "2-3"
-          , T "A trinket"
-          ]
-        , 
-          [ T "4"
-          , T "An article of clothing"
-          ]
-        , 
-          [ T "5"
-          , T "A piece of jewelry"
-          ]
-        , 
-          [ T "6"
-          , T "An arcane book or formulary"
-          ]
-        , 
-          [ T "7"
-          , T "A written story, song, poem, or secret"
-          ]
-        , 
-          [ T "8"
-          , T "A tattoo or other body marking"
-          ]
-        ]
-      , H1 "Suggested Characteristics"
-      , P
-        [ T "Use the tables for the "
-        , A "http://dnd5e.wikidot.com/background:folk-hero" "Folk Hero"
-        , T " background as the basis for your traits and motivations, modifying the entries when appropriate to suit your identity."
-        ]
-      , P
-        [ T "Your bond might be directly related to your inheritance, or to the person from whom you received it. Your ideal might be influenced by what you know about your inheritance, or by what you intend to do with your gift once you realize what it is capable of."
-        ]
-      ]
-    }
-  , { title: "Investigator (SCAG)"
     , url: "http://dnd5e.wikidot.com/background:city-watch#toc1"
     , source: SourceSwordCoastAdventurersGuide
     , description: 
@@ -4738,78 +4205,6 @@ backgrounds =
       ]
     }
   , { title: "Investigator (VRGR)"
-    , url: "http://dnd5e.wikidot.com/background:investigator"
-    , source: SourceVanRichtensGuideToRavenloft
-    , description: 
-      [ P
-        [ B "You relentlessly seek the truth. Perhaps you're motivated by belief in the law and a sense of universal justice, or maybe that very law has failed you and you seek to make things right. You could have witnessed something remarkable or terrible, and now you must know more about this hidden truth. Or maybe you're a detective for hire, uncovering secrets for well-paying clients. Whether the mysteries you're embroiled in are local crimes or realm-spanning conspiracies, you're driven by a personal need to hunt down even the most elusive clues and reveal what others would keep hidden in the shadows."
-        ]
-      , P
-        [ T "Source: Van Richten's Guide to Ravenloft"
-        ]
-      , P
-        [ B "Skill Proficiencies:"
-        , T " Choose two from among Insight, Investigation, or Perception"
-        , BR
-        , B "Tool Proficiencies:"
-        , T " Disguise kit, thieves' tools"
-        , BR
-        , B "Equipment:"
-        , T " A "
-        , T ", evidence from a past case (choose one or roll for a trinket from the "
-        , A "http://dnd5e.wikidot.com/trinkets" "Horror Trinkets table"
-        , T ") a set of "
-        , T ", and 10gp."
-        ]
-      , H1 "Path to Mystery"
-      , P
-        [ T "Your first case influenced the types of mysteries you're interested in. Why was this case so impactful, personal, or traumatic? Whom did it affect besides you? Why and how did you get involved? Was it solved? How did it set you on the path to investigating other mysteries? Roll on or choose details from the First Case table below to develop the mystery that started your career as an investigator."
-        ]
-      , TB
-        [ T "d8"
-        , T "Case"
-        ]
-        [ 
-          [ T "1"
-          , T "A friend was wrongfully accused of murder. You tracked down the actual killer, proving your friend's innocence and starting your career as a detective."
-          ]
-        , 
-          [ T "2"
-          , T "You're told you went missing for weeks. When you were found, you had no memory of being gone. Now you search to discover what happened to you."
-          ]
-        , 
-          [ T "3"
-          , T "You helped a spirit find peace by finding its missing corpse. Ever since, other spectral clients have sought you out to help them find rest."
-          ]
-        , 
-          [ T "4"
-          , T "You revealed that the monsters terrorizing your home were illusions created by a cruel mage. The magic-user escaped, but you've continued to uncover magical hoaxes."
-          ]
-        , 
-          [ T "5"
-          , T "You were wrongfully accused and convicted of a crime. You managed to escape and seek to help others avoid the experience you suffered, even while still being pursued by the law."
-          ]
-        , 
-          [ T "6"
-          , T "You survived the destructive use of a magic device that wiped out your home. Members of a secret organization found you. You now work with them, tracking down dangerous supernatural phenomena and preventing them from doing harm."
-          ]
-        , 
-          [ T "7"
-          , T "You found evidence of a conspiracy underpinning society. You tried to expose this mysterious cabal, but no one believed you. You're still trying to prove what you know is true."
-          ]
-        , 
-          [ T "8"
-          , T "You got a job with an agency that investigates crimes that local law enforcement can't solve. You often wonder which you value more, the truth or your pay."
-          ]
-        ]
-      , H1 "Features"
-      , H2 "Official Inquiry"
-      , P
-        [ T "You're experienced at gaining access to people and places to get the information you need. Through a combination of fast-talking, determination, and official-looking documentation, you can gain access to a place or an individual related to a crime you're investigating. Those who aren't involved in your investigation avoid impeding you or pass along your requests. Additionally, local law enforcement has firm opinions about you, viewing you as either a nuisance or one of their own."
-        ]
-      ]
-    }
-  , { title: "Knight"
     , url: "http://dnd5e.wikidot.com/background:noble#toc1"
     , source: SourcePlayersHandbook
     , description: 
@@ -5044,9 +4439,7 @@ backgrounds =
         , T " One of your choice"
         , BR
         , B "Equipment:"
-        , T " A set of "
-        , T ", a signet, banner, or seal representing your place or rank in the order, and a "
-        , T " containing 10gp"
+        , T " A set of traveller's clothes, a signet, banner, or seal representing your place or rank in the order, and a pouch containing 10gp"
         ]
       , H1 "Features"
       , H2 "Knightly Orders of Faerun"
@@ -5313,9 +4706,7 @@ backgrounds =
         , T " None"
         , BR
         , B "Equipment:"
-        , T " A uniform of your company ("
-        , T " in quality), an insignia of your rank, a gaming set of your choice, and a "
-        , T " containing the remainder of your last wages (10gp)"
+        , T " A uniform of your company (traveller's clothes in quality), an insignia of your rank, a gaming set of your choice, and a pouch containing the remainder of your last wages (10gp)"
         ]
       , H1 "Features"
       , H2 "Mercenaries of the North"
@@ -5385,9 +4776,7 @@ backgrounds =
         , T " One of your choice"
         , BR
         , B "Equipment:"
-        , T " A set of "
-        , T ", a "
-        , T ", a scroll of pedigree, and a purse containing 25gp"
+        , T " A set of fine clothes, a signet ring, a scroll of pedigree, and a purse containing 25gp"
         ]
       , H1 "Variants"
       , H2 "Noble: Knight"
@@ -5558,235 +4947,6 @@ backgrounds =
       ]
     }
   , { title: "Outlander"
-    , url: "http://dnd5e.wikidot.com/background:outlander"
-    , source: SourcePlayersHandbook
-    , description: 
-      [ P
-        [ B "You grew up in the wilds, far from civilization and the comforts of town and technology. You've witnessed the migration of herds larger than forests, survived weather more extreme than any city-dweller could comprehend, and enjoyed the solitude of being the only thinking creature for miles in any direction. The wilds are in your blood, whether you were a nomad, an explorer, a recluse, a hunter-gatherer, or even a marauder. Even in places where you don't know the specific features of the terrain, you know the ways of the wild."
-        ]
-      , P
-        [ T "Source: Player's Handbook"
-        ]
-      , P
-        [ B "Skill Proficiencies:"
-        , T " Athletics, Survival"
-        , BR
-        , B "Tool Proficiencies:"
-        , T " One type of musical instrument"
-        , BR
-        , B "Languages:"
-        , T " One of your choice"
-        , BR
-        , B "Equipment:"
-        , T " A "
-        , T ", a "
-        , T ", a trophy from an animal you killed, a set of "
-        , T ", and a "
-        , T " containing 10gp"
-        ]
-      , H1 "Features"
-      , H2 "Origin"
-      , P
-        [ T "You've been to strange places and seen things that others cannot begin to fathom. Consider some of the distant lands you have visited, and how they impacted you. You can roll on the following table to determine your occupation during your time in the wild, or choose one that best fits your character."
-        ]
-      , TB
-        [ T "d10"
-        , T "Origin"
-        ]
-        [ 
-          [ T "1"
-          , T "Forester"
-          ]
-        , 
-          [ T "2"
-          , T "Trapper"
-          ]
-        , 
-          [ T "3"
-          , T "Homesteader"
-          ]
-        , 
-          [ T "4"
-          , T "Guide"
-          ]
-        , 
-          [ T "5"
-          , T "Exile or outcast"
-          ]
-        , 
-          [ T "6"
-          , T "Bounty hunter"
-          ]
-        , 
-          [ T "7"
-          , T "Pilgrim"
-          ]
-        , 
-          [ T "8"
-          , T "Tribal nomad"
-          ]
-        , 
-          [ T "9"
-          , T "Hunter-gatherer"
-          ]
-        , 
-          [ T "10"
-          , T "Tribal marauder"
-          ]
-        ]
-      , H2 "Wanderer"
-      , P
-        [ T "You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, provided that the land offers berries, small game, water, and so forth."
-        ]
-      , H1 "Suggested Characteristics"
-      , P
-        [ T "Often considered rude and uncouth among civilized folk, outlanders have little respect for the niceties of life in the cities. The ties of tribe, clan, family, and the natural world of which they are a part are the most important bonds to most outlanders."
-        ]
-      , DV "feature" 
-        [ DV "grid" 
-          [ DV "s6" 
-            [ H2 "Personality Traits"
-            , TB
-              [ T "d8"
-              , T "Personality Trait"
-              ]
-              [ 
-                [ T "1"
-                , T "I'm driven by a wanderlust that led me away from home."
-                ]
-              , 
-                [ T "2"
-                , T "I watch over my friends as if they were a litter of newborn pups."
-                ]
-              , 
-                [ T "3"
-                , T "I once ran twenty-five miles without stopping to warn my clan of an approaching orc horde. I'd do it again if I had to."
-                ]
-              , 
-                [ T "4"
-                , T "I have a lesson for every situation, drawn from observing nature."
-                ]
-              , 
-                [ T "5"
-                , T "I place no stock in wealthy or well-mannered folk. Money and manners won't save you from a hungry owlbear."
-                ]
-              , 
-                [ T "6"
-                , T "I'm always picking things up, absently fiddling with them, and sometimes accidentally breaking them."
-                ]
-              , 
-                [ T "7"
-                , T "I feel far more comfortable around animals than people."
-                ]
-              , 
-                [ T "8"
-                , T "I was, in fact, raised by wolves."
-                ]
-              ]
-            ]
-          , DV "s6" 
-            [ H2 "Ideals"
-            , TB
-              [ T "d6"
-              , T "Ideal"
-              ]
-              [ 
-                [ T "1"
-                , T "Change. Life is like the seasons, in constant change, and we must change with it. (Chaotic)"
-                ]
-              , 
-                [ T "2"
-                , T "Greater Good. It is each person's responsibility to make the most happiness for the whole tribe. (Good)"
-                ]
-              , 
-                [ T "3"
-                , T "Honor. If I dishonor myself, I dishonor my whole clan. (Lawful)"
-                ]
-              , 
-                [ T "4"
-                , T "Might. The strongest are meant to rule. (Evil)"
-                ]
-              , 
-                [ T "5"
-                , T "Nature. The natural world is more important than all the constructs of civilization. (Neutral)"
-                ]
-              , 
-                [ T "6"
-                , T "Glory. I must earn glory in battle, for myself and my clan. (Any)"
-                ]
-              ]
-            ]
-          ]
-        , DV "grid" 
-          [ DV "s6" 
-            [ H2 "Bonds"
-            , TB
-              [ T "d6"
-              , T "Bond"
-              ]
-              [ 
-                [ T "1"
-                , T "My family, clan, or tribe is the most important thing in my life, even when they are far from me."
-                ]
-              , 
-                [ T "2"
-                , T "An injury to the unspoiled wilderness of my home is an injury to me."
-                ]
-              , 
-                [ T "3"
-                , T "I will bring terrible wrath down on the evildoers who destroyed my homeland."
-                ]
-              , 
-                [ T "4"
-                , T "I am the last of my tribe, and it is up to me to ensure their names enter legend."
-                ]
-              , 
-                [ T "5"
-                , T "I suffer awful visions of a coming disaster and will do anything to prevent it."
-                ]
-              , 
-                [ T "6"
-                , T "It is my duty to provide children to sustain my tribe."
-                ]
-              ]
-            ]
-          , DV "s6" 
-            [ H2 "Flaws"
-            , TB
-              [ T "d6"
-              , T "Flaw"
-              ]
-              [ 
-                [ T "1"
-                , T "I am too enamored of ale, wine, and other intoxicants."
-                ]
-              , 
-                [ T "2"
-                , T "There's no room for caution in a life lived to the fullest."
-                ]
-              , 
-                [ T "3"
-                , T "I remember every insult I've received and nurse a silent resentment toward anyone who's ever wronged me."
-                ]
-              , 
-                [ T "4"
-                , T "I am slow to trust members of other races, tribes, and societies."
-                ]
-              , 
-                [ T "5"
-                , T "Violence is my answer to almost any challenge."
-                ]
-              , 
-                [ T "6"
-                , T "Don't expect me to save those who can't save themselves. It is nature's way that the strong thrive and the weak perish."
-                ]
-              ]
-            ]
-          ]
-        ]
-      ]
-    }
-  , { title: "Pirate"
     , url: "http://dnd5e.wikidot.com/background:sailor#toc1"
     , source: SourcePlayersHandbook
     , description: 
@@ -6017,12 +5177,7 @@ backgrounds =
         ]
       , P
         [ B "Equipment:"
-        , T " A "
-        , T ", an "
-        , T ", five sheets of paper, a gaming set (matching your chosen proficiency), a "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 18 gp."
+        , T " A bottle of black ink, an ink pen, five sheets of paper, a gaming set (matching your chosen proficiency), a signet ring, a set of fine clothes, and a pouch containing 18 gp."
         ]
       , H1 "Feature:"
       , H2 "Fortune's Favor"
@@ -6263,10 +5418,7 @@ backgrounds =
         , B "Equipment:"
         , T " A set of "
         , A "http://dnd5e.wikidot.com/tools" "artisan's tools"
-        , T " (one of your choice), a small knife, a "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 10 gp."
+        , T " (one of your choice), a small knife, a whetstone, a set of common clothes, and a pouch containing 10 gp."
         ]
       , H1 "Rune Styles"
       , P
@@ -6369,12 +5521,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", a "
-        , T ", a "
-        , T ", a letter from a dead colleague posing a question you have not yet been able to answer, a set of "
-        , T ", and a "
-        , T " containing 10gp"
+        , T " A bottle of ink, a quill, a small knife, a letter from a dead colleague posing a question you have not yet been able to answer, a set of common clothes, and a pouch containing 10gp"
         ]
       , H1 "Features"
       , H2 "Specialty"
@@ -6597,11 +5744,7 @@ backgrounds =
         , T " None"
         , BR
         , B "Equipment:"
-        , T " A belaying pin ("
-        , T "), 50 feet of "
-        , T ", a lucky charm such as a rabbit foot or a small stone with a hole in the center (or you may roll for a random trinket on the Trinkets table in chapter 5), a set of "
-        , T ", and a "
-        , T " containing 10gp"
+        , T " A belaying pin (club), 50 feet of silk rope, a lucky charm such as a rabbit foot or a small stone with a hole in the center (or you may roll for a random trinket on the Trinkets table in chapter 5), a set of common clothes, and a pouch containing 10gp"
         ]
       , H1 "Variants"
       , H2 "Pirate"
@@ -7154,231 +6297,6 @@ backgrounds =
       ]
     }
   , { title: "Soldier"
-    , url: "http://dnd5e.wikidot.com/background:soldier"
-    , source: SourcePlayersHandbook
-    , description: 
-      [ P
-        [ B "War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war."
-        ]
-      , P
-        [ B "When you choose this background, work with your DM to determine which military organization you were a part of, how far through its ranks you progressed, and what kind of experiences you had during your military career. Was it a standing army, a town guard, or a village militia? Or it might have been a noble's or merchant's private army, or a mercenary company."
-        ]
-      , P
-        [ T "Source: Player's Handbook"
-        ]
-      , P
-        [ B "Skill Proficiencies:"
-        , T " Athletics, Intimidation"
-        , BR
-        , B "Tool Proficiencies:"
-        , T " One type of gaming set, vehicles (land)"
-        , BR
-        , B "Languages:"
-        , T " None"
-        , BR
-        , B "Equipment:"
-        , T " An insignia of rank, a trophy taken from a fallen enemy (a "
-        , T ", broken blade, or piece of a banner), a set of bone "
-        , T " or a deck of "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 10gp"
-        ]
-      , H1 "Features"
-      , H2 "Specialty"
-      , P
-        [ T "During your time as a soldier, you had a specific role to play in your unit or army. Roll a d8 or choose from the options in the table below to determine your role:"
-        ]
-      , TB
-        [ T "d8"
-        , T "Specialty"
-        ]
-        [ 
-          [ T "1"
-          , T "Officer"
-          ]
-        , 
-          [ T "2"
-          , T "Scout"
-          ]
-        , 
-          [ T "3"
-          , T "Infantry"
-          ]
-        , 
-          [ T "4"
-          , T "Cavalry"
-          ]
-        , 
-          [ T "5"
-          , T "Healer"
-          ]
-        , 
-          [ T "6"
-          , T "Quartermaster"
-          ]
-        , 
-          [ T "7"
-          , T "Standard bearer"
-          ]
-        , 
-          [ T "8"
-          , T "Support staff (cook, blacksmith, or the like)"
-          ]
-        ]
-      , H2 "Military Rank"
-      , P
-        [ T "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can invoke your rank to exert influence over other soldiers and requisition simple equipment or horses for temporary use. You can also usually gain access to friendly military encampments and fortresses where your rank is recognized."
-        ]
-      , H1 "Suggested Characteristics"
-      , P
-        [ T "The horrors of war combined with the rigid discipline of military service leave their mark on all soldiers, shaping their ideals, creating strong bonds, and often leaving them scarred and vulnerable to fear, shame, and hatred."
-        ]
-      , DV "feature" 
-        [ DV "grid" 
-          [ DV "s6" 
-            [ H2 "Personality Traits"
-            , TB
-              [ T "d8"
-              , T "Personality Trait"
-              ]
-              [ 
-                [ T "1"
-                , T "I'm always polite and respectful."
-                ]
-              , 
-                [ T "2"
-                , T "I'm haunted by memories of war. I can't get the images of violence out of my mind."
-                ]
-              , 
-                [ T "3"
-                , T "I've lost too many friends, and I'm slow to make new ones."
-                ]
-              , 
-                [ T "4"
-                , T "I'm full of inspiring and cautionary tales from my military experience relevant to almost every combat situation."
-                ]
-              , 
-                [ T "5"
-                , T "I can stare down a hell hound without flinching."
-                ]
-              , 
-                [ T "6"
-                , T "I enjoy being strong and like breaking things."
-                ]
-              , 
-                [ T "7"
-                , T "I have a crude sense of humor."
-                ]
-              , 
-                [ T "8"
-                , T "I face problems head-on. A simple, direct solution is the best path to success."
-                ]
-              ]
-            ]
-          , DV "s6" 
-            [ H2 "Ideals"
-            , TB
-              [ T "d6"
-              , T "Ideal"
-              ]
-              [ 
-                [ T "1"
-                , T "Greater Good. Our lot is to lay down our lives in defense of others. (Good)"
-                ]
-              , 
-                [ T "2"
-                , T "Responsibility. I do what I must and obey just authority. (Lawful)"
-                ]
-              , 
-                [ T "3"
-                , T "Independence. When people follow orders blindly, they embrace a kind of tyranny. (Chaotic)"
-                ]
-              , 
-                [ T "4"
-                , T "Might. In life as in war, the stronger force wins. (Evil)"
-                ]
-              , 
-                [ T "5"
-                , T "Live and Let Live. Ideals aren't worth killing over or going to war for. (Neutral)"
-                ]
-              , 
-                [ T "6"
-                , T "Nation. My city, nation, or people are all that matter. (Any)"
-                ]
-              ]
-            ]
-          ]
-        , DV "grid" 
-          [ DV "s6" 
-            [ H2 "Bonds"
-            , TB
-              [ T "d6"
-              , T "Bond"
-              ]
-              [ 
-                [ T "1"
-                , T "I would still lay down my life for the people I served with."
-                ]
-              , 
-                [ T "2"
-                , T "Someone saved my life on the battlefield. To this day, I will never leave a friend behind."
-                ]
-              , 
-                [ T "3"
-                , T "My honor is my life."
-                ]
-              , 
-                [ T "4"
-                , T "I'll never forget the crushing defeat my company suffered or the enemies who dealt it."
-                ]
-              , 
-                [ T "5"
-                , T "Those who fight beside me are those worth dying for."
-                ]
-              , 
-                [ T "6"
-                , T "I fight for those who cannot fight for themselves."
-                ]
-              ]
-            ]
-          , DV "s6" 
-            [ H2 "Flaws"
-            , TB
-              [ T "d6"
-              , T "Flaw"
-              ]
-              [ 
-                [ T "1"
-                , T "The monstrous enemy we faced in battle still leaves me quivering with fear."
-                ]
-              , 
-                [ T "2"
-                , T "I have little respect for anyone who is not a proven warrior."
-                ]
-              , 
-                [ T "3"
-                , T "I made a terrible mistake in battle that cost many lives - and I would do anything to keep that mistake secret."
-                ]
-              , 
-                [ T "4"
-                , T "My hatred of my enemies is blind and unreasoning."
-                ]
-              , 
-                [ T "5"
-                , T "I obey the law, even if the law causes misery."
-                ]
-              , 
-                [ T "6"
-                , T "I'd rather eat my armor than admit when I'm wrong."
-                ]
-              ]
-            ]
-          ]
-        ]
-      ]
-    }
-  , { title: "Spy"
     , url: "http://dnd5e.wikidot.com/background:criminal#toc1"
     , source: SourcePlayersHandbook
     , description: 
@@ -7630,8 +6548,7 @@ backgrounds =
         , T " None"
         , BR
         , B "Equipment:"
-        , T " A set of clothes appropriate to your duties and a "
-        , T " containing 20gp"
+        , T " A set of clothes appropriate to your duties and a pouch containing 20gp"
         ]
       , H1 "Features"
       , H2 "Ear to the Ground"
@@ -7673,10 +6590,7 @@ backgrounds =
         , T " None"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", a map of the city you grew up in, a pet mouse, a token to remember your parents by, a set of "
-        , T ", and a "
-        , T " containing 10gp"
+        , T " A small knife, a map of the city you grew up in, a pet mouse, a token to remember your parents by, a set of common clothes, and a pouch containing 10gp"
         ]
       , H1 "Features"
       , H2 "City Secrets"
@@ -7861,10 +6775,7 @@ backgrounds =
         , T " One of your choice"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", a totemic token or set of tattoos marking your loyalty to Uthgar and your tribal totem, a set of "
-        , T ", and a "
-        , T " containing 10gp"
+        , T " A hunting trap, a totemic token or set of tattoos marking your loyalty to Uthgar and your tribal totem, a set of traveller's clothes, and a pouch containing 10gp"
         ]
       , H1 "Features"
       , H2 "Barbarian Tribes of Faerun"
@@ -7972,10 +6883,7 @@ backgrounds =
         , T " One of your choice"
         , BR
         , B "Equipment:"
-        , T " A set of "
-        , T ", a "
-        , T " or brooch, a scroll of pedigree, a "
-        , T " of fine "
+        , T " A set of fine clothes, a signet ring or brooch, a scroll of pedigree, a skin of fine "
         , I "zzar"
         , T " or wine, and a purse containing 20gp"
         ]
@@ -8022,13 +6930,9 @@ backgrounds =
         , T " One of your choice"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T " or a musical instrument of your choice, a "
-        , T ", a carnival uniform or "
-        , T ", one trinket (determind by rolling on the "
+        , T " A disguise kit or a musical instrument of your choice, a deck of cards, a carnival uniform or costume, one trinket (determind by rolling on the "
         , A "http://dnd5e.wikidot.com/trinkets" "Feywild Trinkets"
-        , T " table), and a "
-        , T " containing 8gp"
+        , T " table), and a pouch containing 8gp"
         ]
       , H1 "Features"
       , H2 "Carnival Companion"
@@ -8278,10 +7182,7 @@ backgrounds =
         , B "Tool Proficiencies:"
         , T " Disguise Kit, and one type of artisan's tools or gaming set"
         , BR
-        , B "Equipment:"
-        , T ", "
-        , T ", a Tears of Virulence emblem, a writ of free agency signed by the Lord Regent, a set of artisan's tools or gaming set you are proficient with, and a "
-        , T " with 15gp (payment for services rendered)."
+        , B "Equipment: Disguise kit, common clothes, a Tears of Virulence emblem, a writ of free agency signed by the Lord Regent, a set of artisan's tools or gaming set you are proficient with, and a pouch with 15gp (payment for services rendered)."
         ]
       , H2 "Feature: Double Agent"
       , P
@@ -8447,9 +7348,7 @@ backgrounds =
         , T " Draconic"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", tattered rags, a loaf of moldy bread, a small cast-off scale belonging to Vorgansharax - the Maimed Virulence, and a "
-        , T " with 5gp of various coins (salvaged during your escape from Phlan)."
+        , T " A dagger tattered rags, a loaf of moldy bread, a small cast-off scale belonging to Vorgansharax - the Maimed Virulence, and a pouch with 5gp of various coins (salvaged during your escape from Phlan)."
         ]
       , H2 "Origin"
       , P
@@ -8692,11 +7591,7 @@ backgrounds =
         , T " One type of gaming set, vehicles (land)"
         , BR
         , B "Equipment:"
-        , T " A set of dark "
-        , T ", "
-        , T ", "
-        , T " and a "
-        , T " containing 5gp."
+        , T " A set of dark common clothes, pack saddle, burglar's pack and a pouch containing 5gp."
         ]
       , H2 "Feature: Black-Market Breeder"
       , P
@@ -8853,11 +7748,7 @@ backgrounds =
         , T " One type of artisan's tools, vehicles (land)"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", a small trinket that connects you to the life you once had before the occupation of Phlan, a "
-        , T ", a set of dark "
-        , T " that includes a cloak and hood, and a "
-        , T " containing 5gp"
+        , T " A bag of 20 caltrops, a small trinket that connects you to the life you once had before the occupation of Phlan, a healer's kit, a set of dark common clothes that includes a cloak and hood, and a pouch containing 5gp"
         ]
       , H2 "Origin"
       , P
@@ -9071,9 +7962,7 @@ backgrounds =
         , T " One type of gaming set, thieves' tools"
         , BR
         , B "Equipment:"
-        , T " A small knife, a set of "
-        , T ", a trinket from the life you stayed behind to defend, and a "
-        , T " with 10gp"
+        , T " A small knife, a set of common clothes, a trinket from the life you stayed behind to defend, and a pouch with 10gp"
         ]
       , H2 "Feature: Ex-Convict"
       , P
@@ -9233,10 +8122,7 @@ backgrounds =
         , T " Giant"
         , BR
         , B "Equipment:"
-        , T ", a small article of jewelry that is distinct to your tribe, a "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 5gp"
+        , T "Herbalism kit, a small article of jewelry that is distinct to your tribe, a hunting trap, a set of common clothes, and a pouch containing 5gp"
         ]
       , H2 "Feature: At Home in the Wild"
       , P
@@ -9394,13 +8280,7 @@ backgrounds =
         , T " Dwarven and Undercommon"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T " or a "
-        , T ", a "
-        , T ", a "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 5gp"
+        , T " A shovel or a miner's pick, a block and tackle, a climber's kit, a set of common clothes, and a pouch containing 5gp"
         ]
       , H2 "Feature: Deep Miner"
       , P
@@ -9554,13 +8434,7 @@ backgrounds =
         , T " One type of gaming set, vehicles (water)"
         , BR
         , B "Equipment:"
-        , T ", a "
-        , T ", "
-        , T ", or "
-        , T ", a set of "
-        , T ", a "
-        , T ", and a "
-        , T " containing 5gp"
+        , T "Fishing tackle, a dice set, playing card set, or Three Dragon Ante set, a set of common clothes, a rowboat, and a pouch containing 5gp"
         ]
       , H2 "Feature: Harborfolk"
       , P
@@ -9717,8 +8591,7 @@ backgrounds =
         , T " One type of artistic artisan's tools and one musical instrument"
         , BR
         , B "Equipment:"
-        , T " One set of artisan's tools or musical instrument, a set of "
-        , T ", and a purse containing 10gp"
+        , T " One set of artisan's tools or musical instrument, a set of fine clothes, and a purse containing 10gp"
         ]
       , H2 "Feature: Highborn"
       , P
@@ -9875,9 +8748,7 @@ backgrounds =
         , T " One of your choosing"
         , BR
         , B "Equipment:"
-        , T " A set of artisan's tools (one of your choice), a token of the life you once knew, a set of "
-        , T ", and a "
-        , T " containing 15gp"
+        , T " A set of artisan's tools (one of your choice), a token of the life you once knew, a set of traveller's clothes, and a pouch containing 15gp"
         ]
       , H3 "Feature: Phlan Survivor"
       , P
@@ -10034,11 +8905,7 @@ backgrounds =
         , T " One type of artisan's tools"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", artisan's tools, a "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 5gp"
+        , T " A two-person tent, artisan's tools, a holy symbol, a set of traveller's clothes, and a pouch containing 5gp"
         ]
       , H2 "Feature: Shelter of the Elven Clergy"
       , P
@@ -10192,10 +9059,7 @@ backgrounds =
         , T " Thieves' tools, one type of musical instrument"
         , BR
         , B "Equipment:"
-        , T " A battered "
-        , T ", a musical instrument, a cast-off military jacket, cap, or scarf, a set of "
-        , T ", and a "
-        , T " containing 10gp"
+        , T " A battered alms box, a musical instrument, a cast-off military jacket, cap, or scarf, a set of common clothes, and a pouch containing 10gp"
         ]
       , H2 "Feature: Red Plume and Mage Guild Contacts"
       , P
@@ -10346,9 +9210,7 @@ backgrounds =
         , T " Vehicles (land) and vehicles (water)"
         , BR
         , B "Equipment:"
-        , T " A set of "
-        , T ", a "
-        , T ", a letter of introduction from your family's trading house, and a purse containing 25gp"
+        , T " A set of fine clothes, a signet ring, a letter of introduction from your family's trading house, and a purse containing 25gp"
         ]
       , H2 "Feature: Factor"
       , P
@@ -10512,10 +9374,7 @@ backgrounds =
         , T " Forgery kit"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 5gp"
+        , T " A forgery kit, a set of common clothes, and a pouch containing 5gp"
         ]
       , H2 "Feature: Secret Passage"
       , P
@@ -10675,10 +9534,7 @@ backgrounds =
         , T " Disguise kit, forgery kit"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", a "
-        , T ", a set of "
-        , T ", a belt pouch, 5gp."
+        , T " A disguise kit, a forgery kit, a set of common clothes, a belt pouch, 5gp."
         , BR
         , B "Lifestyle:"
         , T " Modest"
@@ -10844,10 +9700,7 @@ backgrounds =
         , T " Netherese"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", a transparent cylinder of shadow that has no opening, a "
-        , T ", a set of "
-        , T ", and 15gp."
+        , T " A forgery kit, a transparent cylinder of shadow that has no opening, a signet ring, a set of fine clothes, and 15gp."
         , BR
         , B "Lifestyle:"
         , T " Modest"
@@ -11015,8 +9868,7 @@ backgrounds =
         , T " Elven"
         , BR
         , B "Equipment:"
-        , T ", a gray cloak, Sheriff's insignia (badge), a set of "
-        , T ", and 17gp."
+        , T "Thieves tools, a gray cloak, Sheriff's insignia (badge), a set of fine clothes, and 17gp."
         , BR
         , B "Lifestyle:"
         , T " Moderate"
@@ -11362,6 +10214,70 @@ backgrounds =
         ]
       ]
     }
+  , { title: "Caravan Specialist"
+    , url: "https://dnd5e.wikidot.com/background:caravan-specialist"
+    , source: SourceMulmasterBondsAndBackgrounds
+    , description:
+      [ P [ T "Source: Mulmaster Bonds and Backgrounds" ]
+      , P [ T "You are used to life on the road. You pride yourself at having traveled every major tradeway in the Moonsea region, including the best back roads and shortcuts. When traveling these roads, you know where the best inns, campsites, and water sources are located, as well as potential locations of danger such as ambush. Having worked the roads as long as you have, you have made many acquaintances and find it easy to pick up information and rumors floating from town to town. You are skilled with beasts of burden and handling and repairing wagons of all kinds." ]
+      , P 
+        [ B "Skill Proficiencies: ", T "Animal Handling, Survival", BR
+        , B "Tool Proficiencies: ", T "Land Vehicles", BR
+        , B "Languages: ", T "One of your choice", BR
+        , B "Equipment: ", T "A whip, a tent, a regional map, a set of traveler's clothes, and a pouch containing 10gp"
+        ]
+      , H2 "Feature: Wagonmaster"
+      , P [ T "You are used to being in charge of the operation and your reputation for reliability has you on a short list when the job is critical. Experience has taught you to rely on your gut. Others recognize this and look to you for direction when a situation gets serious. You are able to identify the most defensible locations for camping. If you are part of a caravan outfit, you are able to attract two additional workers who are loyal to you based on your reputation. You have an excellent memory for maps and geography and can always determine your cardinal directions while traveling." ]
+      , DV "grid"
+        [ DV "s6"
+          [ H4 "Caravan Specialist Personality Traits"
+          , TB [ T"d8", T "Personality Trait" ]
+            [ [ T "1", T "Any group is only as strong as its weakest link. Everyone has to pull their own weight." ]
+            , [ T "2", T "There's always someone out there trying to take what I've got. Always be vigilant." ]
+            , [ T "3", T "Anything can be learned if you have the right teacher. Most folks just need a chance." ]
+            , [ T "4", T "Early to bed and early to rise; this much at least is under my control." ]
+            , [ T "5", T "You can listen to me or don't and wish you had. Everyone ends up on one side of that fence." ]
+            , [ T "6", T "Eventually my hard work will be rewarded. Maybe that time has finally come." ]
+            , [ T "7", T "A strong ox or horse is more reliable than most people I've met." ]
+            , [ T "8", T "I never had time for books, but wish I had. I admire folks who have taken the time to learn." ]
+            ]
+          ]
+        , DV "s6"
+          [ H4 "Caravan Specialist Ideals"
+          , TB [ T "d6", T "Ideal" ]
+            [ [ T "1", T "Service. Using my talents to help others is the best way of helping myself. (Good)" ]
+            , [ T "2", T "Selfish. What people don't know WILL hurt them, but why is that my problem? (Evil)" ]
+            , [ T "3", T "Wanderer. I go where the road takes me. Sometimes that's a good thing… (Chaotic)" ]
+            , [ T "4", T "Fittest. On the open road, the law of nature wins. Victims are the unprepared. (Lawful)" ]
+            , [ T "5", T "Focused. I simply have a job to do, and I'm going to do it. (Neutral)" ]
+            , [ T "6", T "Motivated. There's a reason I'm good at what I do, I pay attention to the details. (Any)" ]
+            ]
+          ]
+        , DV "s6"
+          [ H4 "Caravan Specialist Bonds"
+          , TB [ T "d6", T "Bond" ]
+            [ [ T "1", T "My brother has a farm in Elmwood and I've helped him and his neighbors move their goods to Mulmaster and other surrounding towns. Those are good people." ]
+            , [ T "2", T "A caravan I led was attacked by bandits and many innocents died. I swear that I will avenge them by killing any bandits I encounter." ]
+            , [ T "3", T "The Soldiery are mostly good guys who understand the importance of protecting the roads. The City Watch is who you have to look out for. If they are inspecting your goods, get ready to pay a fine." ]
+            , [ T "4", T "The new commander of Southroad Tower, Capt. Holke, understands the importance of safe roads. He's hired me for several jobs and I'm grateful." ]
+            , [ T "5", T "There's always a road I haven't traveled before. I'm always looking for new places to explore." ]
+            , [ T "6", T "Wealth and power mean little without the freedom to go where and when you want." ]
+            ]
+          ]
+        , DV "s6"
+          [ H4 "Caravan Specialist Flaws"
+          , TB [ T "d6", T "Flaw" ]
+            [ [ T "1", T "I have trouble trusting people I've just met." ]
+            , [ T "2", T "I enjoy the open road. Underground and tight spaces make me very nervous." ]
+            , [ T "3", T "I expect others to heed my orders and have little respect or sympathy if they don't." ]
+            , [ T "4", T "I am very prideful and have trouble admitting when I'm wrong." ]
+            , [ T "5", T "Once I decide on a course of action, I do not waiver." ]
+            , [ T "6", T "I like to explore, and my curiosity will sometimes get me into trouble." ]
+            ]
+          ]
+        ]
+      ]
+    }
   , { title: "Celebrity Adventurer's Scion"
     , url: "http://dnd5e.wikidot.com/background:celebrity-adventurers-scion"
     , source: SourceAcquisitionsIncorporated
@@ -11393,9 +10309,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", a set of "
-        , T ", and a belt pouch containing 30 gp."
+        , T " A disguise kit, a set of fine clothes, and a belt pouch containing 30 gp."
         ]
       , H2 "Feature: Name Dropping"
       , P
@@ -11559,9 +10473,7 @@ backgrounds =
         , T " Any one of your choice"
         , BR
         , B "Equipment:"
-        , T " One set of artisan's tools, "
-        , T ", a set of "
-        , T ", and a belt pouch containing 10 gp."
+        , T " One set of artisan's tools, merchant's scale, a set of fine clothes, and a belt pouch containing 10 gp."
         ]
       , H2 "Feature: Supply Chain"
       , P
@@ -11722,8 +10634,7 @@ backgrounds =
         , T " Any one of your choice"
         , BR
         , B "Equipment:"
-        , T " One gaming set, a lucky charm, a set of "
-        , T ", and a belt pouch containing 15 gp."
+        , T " One gaming set, a lucky charm, a set of fine clothes, and a belt pouch containing 15 gp."
         ]
       , H2 "Feature: Never Tell Me the Odds"
       , P
@@ -11890,8 +10801,7 @@ backgrounds =
         , T " Any one of your choice"
         , BR
         , B "Equipment:"
-        , T " One set of artisan's tools, a set of "
-        , T ", and 20 gp."
+        , T " One set of artisan's tools, a set of fine clothes, and 20 gp."
         ]
       , H2 "Feature: Legalese"
       , P
@@ -12059,8 +10969,7 @@ backgrounds =
         , T " Any one of your choice"
         , BR
         , B "Equipment:"
-        , T " One set of artisan's tools, a ledger from your previous employer containing a small piece of useful information, a set of "
-        , T ", and a belt pouch containing 10 gp."
+        , T " One set of artisan's tools, a ledger from your previous employer containing a small piece of useful information, a set of fine clothes, and a belt pouch containing 10 gp."
         ]
       , H2 "Feature: Inside Informant"
       , P
@@ -12243,9 +11152,7 @@ backgrounds =
         , T " One type of gaming set, vehicles (land)"
         , BR
         , B "Equipment:"
-        , T " A simple puzzle box, a scroll containing the basic teachings of the five gods, a gaming set, a set of "
-        , T ", and a "
-        , T " containing 15gp. If you have completed any trials before the start of the campaign, you also have any cartouches you have earned."
+        , T " A simple puzzle box, a scroll containing the basic teachings of the five gods, a gaming set, a set of common clothes, and a pouch containing 15gp. If you have completed any trials before the start of the campaign, you also have any cartouches you have earned."
         ]
       , H1 "Features"
       , H2 "Trial of the Five Gods"
@@ -12421,9 +11328,7 @@ backgrounds =
         , T " One type of artisan's tools, one type of musical instrument"
         , BR
         , B "Equipment:"
-        , T " A set of artisan's tools or a musical instrument (one of your choice), a scroll of your god's teachings, a vizier's cartouche, a set of "
-        , T ", and a "
-        , T " containing 25gp"
+        , T " A set of artisan's tools or a musical instrument (one of your choice), a scroll of your god's teachings, a vizier's cartouche, a set of fine clothes, and a pouch containing 25gp"
         ]
       , H1 "Features"
       , H2 "Voice of Authority"
@@ -12607,10 +11512,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " An insignia of rank, a "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 10 gp."
+        , T " An insignia of rank, a deck of cards, a set of common clothes, and a pouch containing 10 gp."
         ]
       , H1 "Feature"
       , H2 "Squire of Solamnia"
@@ -12711,11 +11613,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", an "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 10 gp."
+        , T " A bottle of coloured ink, an ink pen, a set of common clothes, and a pouch containing 10 gp."
         ]
       , H1 "Feature"
       , H2 "Initiate of High Sorcery"
@@ -12795,9 +11693,7 @@ backgrounds =
         , T " Thieves' tools, one set of artisan's tools of your choice"
         , BR
         , B "Equipment:"
-        , T " A holy symbol, a set of "
-        , T ", and a "
-        , T " containing 15gp"
+        , T " A holy symbol, a set of traveller's clothes, and a pouch containing 15gp"
         ]
       , H1 "Features"
       , H2 "Legal Authority"
@@ -12974,12 +11870,7 @@ backgrounds =
         , T " Two of your choice (Abyssal, Celestial, or Infernal recommended)"
         , BR
         , B "Equipment:"
-        , T " A ring of keys to unknown locks, a "
-        , T ", an "
-        , T ", a "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 10 gp."
+        , T " A ring of keys to unknown locks, a blank book, an ink pen or quill, a bottle of black ink, a set of traveller's clothes, and a pouch containing 10 gp."
         ]
       , H1 "Feature"
       , H2 "Planar Infusion"
@@ -13087,9 +11978,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " A portal key (such as a bag of golden tea leaves or the tooth of a planar beast), a manifesto of your guiding philosophy, a set of "
-        , T " in your faction's style, and a "
-        , T " containing 10 gp worth of coins from different worlds and planes."
+        , T " A portal key (such as a bag of golden tea leaves or the tooth of a planar beast), a manifesto of your guiding philosophy, a set of common clothes in your faction's style, and a pouch containing 10 gp worth of coins from different worlds and planes."
         ]
       , P
         [ B "Sigil Faction Affinities"
@@ -13295,11 +12184,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " An Azorius insignia, a scroll containing the text of a law important to you, a "
-        , T ", an "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 10gp (Azorius-minted 1-zino coins)"
+        , T " An Azorius insignia, a scroll containing the text of a law important to you, a bottle of blue ink, an ink pen, a set of fine clothes, and a pouch containing 10gp (Azorius-minted 1-zino coins)"
         ]
       , H1 "Features"
       , H2 "Legal Authority"
@@ -13616,9 +12501,7 @@ backgrounds =
         , T " Choose one of Celestial, Draconic, Goblin, or Minotaur"
         , BR
         , B "Equipment:"
-        , T " A Boros insignia, a feather from an angel's wing, a tattered piece of a Boros banner (a souvenir from a famous battle), a set of "
-        , T ", and a "
-        , T " containing 2gp (Boros-minted 1-zino coins)"
+        , T " A Boros insignia, a feather from an angel's wing, a tattered piece of a Boros banner (a souvenir from a famous battle), a set of common clothes, and a pouch containing 2gp (Boros-minted 1-zino coins)"
         ]
       , H1 "Features"
       , H2 "Legion Station"
@@ -13936,9 +12819,7 @@ backgrounds =
         , T " One of your choice"
         , BR
         , B "Equipment:"
-        , T " A Dimir insignia, three "
-        , T ", a set of dark-colored "
-        , T ", and the starting equipment of the background described in this chapter for your secondary guild"
+        , T " A Dimir insignia, three small knives, a set of dark-colored common clothes, and the starting equipment of the background described in this chapter for your secondary guild"
         ]
       , H1 "Features"
       , H2 "False Identity"
@@ -14246,10 +13127,7 @@ backgrounds =
         , T " Choose one of Elvish, Giant, or Kraul"
         , BR
         , B "Equipment:"
-        , T " A Golgari insignia, "
-        , T ", a pet beetle or spider, a set of "
-        , T ", and a "
-        , T " containing 10gp worth of mixed coins."
+        , T " A Golgari insignia, a poisoner's kit, a pet beetle or spider, a set of common clothes, and a pouch containing 10gp worth of mixed coins."
         ]
       , H1 "Features"
       , H2 "Undercity Paths"
@@ -14564,11 +13442,7 @@ backgrounds =
         , T " Choose one of Draconic, Giant, Goblin, or Sylvan"
         , BR
         , B "Equipment:"
-        , T " A Gruul insignia, a "
-        , T ", an "
-        , T ", the skull of a boar, a beast-hide cloak, a set of "
-        , T ", and a "
-        , T " containing 10gp (Azorius 1-zino coins)"
+        , T " A Gruul insignia, a hunting trap, an herbalism kit, the skull of a boar, a beast-hide cloak, a set of traveller's clothes, and a pouch containing 10gp (Azorius 1-zino coins)"
         ]
       , H1 "Features"
       , H2 "Rubblebelt Refuge"
@@ -14883,11 +13757,7 @@ backgrounds =
         , T " Choose one of Draconic, Goblin, or Vedalken"
         , BR
         , B "Equipment:"
-        , T " An Izzet insignia, one set of artisan's tools, the charred and twisted remains of a failed experiment, a "
-        , T ", a "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 5gp (Azorius 1-zino coins)"
+        , T " An Izzet insignia, one set of artisan's tools, the charred and twisted remains of a failed experiment, a hammer, a block and tackle, a set of common clothes, and a pouch containing 5gp (Azorius 1-zino coins)"
         ]
       , H1 "Features"
       , H2 "Urban Infrastructure"
@@ -15215,10 +14085,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " An Orzhov insignia, a foot-long chain made of ten gold coins, "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 1pp (an Orzhov-minted 10-zino coin)"
+        , T " An Orzhov insignia, a foot-long chain made of ten gold coins, vestments, a set of fine clothes, and a pouch containing 1pp (an Orzhov-minted 10-zino coin)"
         ]
       , H1 "Features"
       , H2 "Leverage"
@@ -15536,13 +14403,7 @@ backgrounds =
         , T " Choose one of either Abyssal or Giant"
         , BR
         , B "Equipment:"
-        , T " A Rakdos insignia, a musical instrument (one of your choice), a "
-        , T ", a "
-        , T " made of wrought iron, a 10-foot length of chain with sharply spiked links, a "
-        , T ", 10 "
-        , T ", a set of "
-        , T ", a "
-        , T " containing 10gp (a mix of Azorius and Boros 1-zino coins), and a bottle of sweet, red juice"
+        , T " A Rakdos insignia, a musical instrument (one of your choice), a costume, a hooded lantern made of wrought iron, a 10-foot length of chain with sharply spiked links, a tinderbox, 10 torches, a set of common clothes, a pouch containing 10gp (a mix of Azorius and Boros 1-zino coins), and a bottle of sweet, red juice"
         ]
       , H1 "Features"
       , H2 "A Flair for the Dramatic"
@@ -15901,11 +14762,7 @@ backgrounds =
         , T " Choose one of Elvish, Loxodon, or Sylvan"
         , BR
         , B "Equipment:"
-        , T " A Selesnya insignia, a "
-        , T ", "
-        , T ", a set of "
-        , T ", and a "
-        , T " containing 5gp (Azorius 1-zino coins)"
+        , T " A Selesnya insignia, a healer's kit, robes, a set of common clothes, and a pouch containing 5gp (Azorius 1-zino coins)"
         ]
       , H1 "Features"
       , H2 "Conclave's Shelter"
@@ -16220,15 +15077,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " A Simic insignia, a set of "
-        , T ", a "
-        , T " of research notes, an "
-        , T ", a "
-        , T ", a "
-        , T " (made from blubber), a "
-        , T " (derived from digestive juices), a vial of fish scales, a vial of seaweed, a vial of jellyfish stingers, a "
-        , T " of unidentified slime, and a "
-        , T " containing 10gp (Azorius 1-zino coins)"
+        , T " A Simic insignia, a set of common clothes, a book of research notes, an ink pen, a bottle of squid ink, a flask of oil (made from blubber), a vial of acid (derived from digestive juices), a vial of fish scales, a vial of seaweed, a vial of jellyfish stingers, a glass bottle of unidentified slime, and a pouch containing 10gp (Azorius 1-zino coins)"
         ]
       , H1 "Features"
       , H2 "Clades and Projects"
@@ -16576,13 +15425,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T " an "
-        , T ", a "
-        , T ", a "
-        , T ", a "
-        , T ", a tome of history, a school uniform, and a "
-        , T " containing 15 gp."
+        , T " A bottle of black ink, an ink pen, a hammer, a hooded lantern, a tinderbox, a tome of history, a school uniform, and a pouch containing 15 gp."
         ]
       , H1 "Feature"
       , H2 "Lorehold Initiate"
@@ -16744,10 +15587,7 @@ backgrounds =
         , T " One of your choice"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T " an "
-        , T ", a set of artisan's tools or a musical instrumet (one of your choice), a school uniform, and a "
-        , T " containing 10 gp."
+        , T " A bottle of black ink, an ink pen, a set of artisan's tools or a musical instrumet (one of your choice), a school uniform, and a pouch containing 10 gp."
         ]
       , H1 "Feature"
       , H2 "Prismari Initiate"
@@ -16913,11 +15753,7 @@ backgrounds =
         , T " One of your choice"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", an "
-        , T ", an "
-        , T ", a book of arcane theory, a school uniform, and a "
-        , T " containing 15 gp."
+        , T " A bottle of black ink, an ink pen, an abacus, a book of arcane theory, a school uniform, and a pouch containing 15 gp."
         ]
       , H1 "Feature"
       , H2 "Quandrix Initiate"
@@ -17082,10 +15918,7 @@ backgrounds =
         , T " Two of your choice"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", an "
-        , T ", a book of poetry, a school uniform, and a "
-        , T " containing 15 gp."
+        , T " A bottle of black ink, an ink pen, a book of poetry, a school uniform, and a pouch containing 15 gp."
         ]
       , H1 "Feature"
       , H2 "Silverquill Initiate"
@@ -17247,12 +16080,7 @@ backgrounds =
         , T " One of your choice"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", an "
-        , T ", a book about plant identification, an "
-        , T ", a "
-        , T ", a school uniform, and a "
-        , T " containing 15 gp."
+        , T " A bottle of black ink, an ink pen, a book about plant identification, an iron pot, a herbalism kit, a school uniform, and a pouch containing 15 gp."
         ]
       , H1 "Feature"
       , H2 "Witherbloom Initiate"
@@ -17417,10 +16245,7 @@ backgrounds =
         , T " None"
         , BR
         , B "Equipment:"
-        , T " A set of "
-        , T ", a "
-        , T ", a musical instrument of your choice, a gold-plated ring depicting a smiling face, and a "
-        , T " containing 15gp."
+        , T " A set of fine clothes, a disguise kit, a musical instrument of your choice, a gold-plated ring depicting a smiling face, and a pouch containing 15gp."
         ]
       , H1 "Features"
       , H2 "Code-Songs"
@@ -17636,10 +16461,7 @@ backgrounds =
         , T " One of your choice"
         , BR
         , B "Equipment:"
-        , T " A set of "
-        , T ", a black cloak with a hood, a "
-        , T ", and a "
-        , T " containing 10gp"
+        , T " A set of common clothes, a black cloak with a hood, a poisoner's kit, and a pouch containing 10gp"
         ]
       , H1 "Features"
       , H2 "Tragedy"
@@ -17827,11 +16649,7 @@ backgrounds =
         , T " Two of your choice (Celestial or Gith recommended)"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", a diary, an "
-        , T ", a "
-        , T ", and a "
-        , T " containing 10gp"
+        , T " A set of traveler's clothes, a diary, an ink pen, a bottle of ink, and a pouch containing 10gp"
         ]
       , H1 "Features"
       , H2 "Longevity"
@@ -17918,12 +16736,7 @@ backgrounds =
         , T " Navigator's tools, vehicles (space)"
         , BR
         , B "Equipment:"
-        , T " A "
-        , T ", a "
-        , T ", a "
-        , T ", "
-        , T ", and a "
-        , T " containing 10gp"
+        , T " A belaying pin (club), a set of traveler's clothes, a grappling hook, 50 feet of hempen rope, and a pouch containing 10gp"
         ]
       , H1 "Features"
       , H2 "Close Encounter"
@@ -19196,7 +18009,7 @@ backgrounds =
         ]
       ]
     }
-  , { title: "Sword Coast (D&amp;D Beyond)"
+  , { title: "Sword Coast (D&D Beyond)"
     , url: "http://dnd5e.wikidot.com/background:sword-coast-heroic-chronicle"
     , source: SourceSwordCoastAdventurersGuide
     , description: 
