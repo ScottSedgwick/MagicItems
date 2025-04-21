@@ -21,7 +21,7 @@ import Flame.Html.Event as HV
 import Description(mkDescription)
 import Sources (Source)
 import Unshow(unshow)
-import SpellType (Spell, SpellLevel(..), SpellList, SpellSchool, allLevels, allLists, allSchools)
+import SpellType (Spell, SpellLevel, SpellList, SpellSchool, allLevels, allLists, allSchools)
 import SpellData (spells)
 
 type Model =
@@ -86,7 +86,7 @@ viewItems model =
 
 viewItem :: Spell -> Html Message
 viewItem item =
-  HE.article [ HA.class' (levelColor item.level) ]
+  HE.article [ HA.class' "grey3" ]
   [ HE.details_
     [ HE.summary_ 
       [ HE.div [ HA.class' "grid tiny-line" ]
@@ -108,18 +108,6 @@ viewItem item =
       )
     ]
   ]
-
-levelColor :: SpellLevel -> String
-levelColor Cantrip    = "grey3"
-levelColor LevelOne   = "grey1"
-levelColor LevelTwo   = "green3"
-levelColor LevelThree = "green1"
-levelColor LevelFour  = "blue3"
-levelColor LevelFive  = "blue1"
-levelColor LevelSix   = "purple1"
-levelColor LevelSeven = "yellow1"
-levelColor LevelEight = "orange1"
-levelColor LevelNine  = "indigo1"
 
 filterItem :: Model -> Spell -> Boolean
 filterItem model item 
