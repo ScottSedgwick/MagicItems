@@ -20,8 +20,9 @@ import Flame (Html, (:>))
 import Flame.Html.Attribute as HA
 import Flame.Html.Element as HE
 import Flame.Html.Event as HV
-import Sources (Source, unshow)
+import Sources (Source)
 import Types (Feat)
+import Unshow (unshow)
 
 type Model =
   { fltTitle :: String

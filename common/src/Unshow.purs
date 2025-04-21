@@ -3,7 +3,7 @@ module Unshow
   , unshow
   ) where
 
-import Data.Maybe (Maybe(..))
+import Data.Maybe (Maybe)
 
 class Unshow a where
   unshow :: String -> Maybe a

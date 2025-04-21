@@ -32,14 +32,18 @@ data Source
   | SourceLostLaboratoryOfKwalish
   | SourceLostMineOfPhandelver
   | SourceMonstrousCompendium2
+  | SourceMulmasterBondsAndBackgrounds
   | SourceMythicOdysseysOfTheros
   | SourceOutOfTheAbyss
   | SourcePhandelverAndBelowTheShatteredObelisk
   | SourcePlanescapeAdventuresInTheMultiverse
+  | SourcePlaneShiftAmonkhet
+  | SourcePlaneShiftInnistrad
   | SourceQuestsFromTheInfiniteStaircase
   | SourcePrincesOfTheApocalypse
   | SourceTheRiseOfTiamat
   | SourceSpelljammerAdventuresInSpace
+  | SourceStateOfHillsfar
   | SourceStrixhavenCurriculumOfChaos
   | SourceSleepingDragonsWake
   | SourceStormKingsThunder
@@ -88,16 +92,20 @@ instance Show Source where
   show SourceLostLaboratoryOfKwalish = "Lost Laboratory of Kwalish"
   show SourceLostMineOfPhandelver = "Lost Mine of Phandelver"
   show SourceMonstrousCompendium2 = "Monstrous Compendium Volume 2 - Dragonlance Creatures"
+  show SourceMulmasterBondsAndBackgrounds = "Mulmaster Bonds and Backgrounds"
   show SourceMythicOdysseysOfTheros = "Mythic Odysseys of Theros"
   show SourceOutOfTheAbyss = "Out of the Abyss"
   show SourcePhandelverAndBelowTheShatteredObelisk = "Phandelver and Below: The Shattered Obelisk"
   show SourcePlanescapeAdventuresInTheMultiverse = "Planescape: Adventures in the Multiverse"
+  show SourcePlaneShiftAmonkhet = "Plane Shift: Amonkhet"
+  show SourcePlaneShiftInnistrad = "Plane Shift: Innistrad"
   show SourceQuestsFromTheInfiniteStaircase = "Quests from the Infinite Staircase"
   show SourcePrincesOfTheApocalypse = "Princes of the Apocalypse"
   show SourceTheRiseOfTiamat = "The Rise of Tiamat"
   show SourceSpelljammerAdventuresInSpace = "Spelljammer: Adventures in Space"
   show SourceStrixhavenCurriculumOfChaos = "Strixhaven: A Curriculum of Chaos"
   show SourceSleepingDragonsWake = "Sleeping Dragon's Wake"
+  show SourceStateOfHillsfar = "State of Hillsfar"
   show SourceStormKingsThunder = "Storm King's Thunder"
   show SourceSwordCoastAdventurersGuide = "Sword Coast Adventurers Guide"
   show SourceTashasCauldronOfEverything = "Tasha's Cauldron of Everything"
@@ -144,14 +152,18 @@ instance Eq Source where
   eq SourceLostLaboratoryOfKwalish SourceLostLaboratoryOfKwalish = true
   eq SourceLostMineOfPhandelver SourceLostMineOfPhandelver = true
   eq SourceMonstrousCompendium2 SourceMonstrousCompendium2 = true
+  eq SourceMulmasterBondsAndBackgrounds SourceMulmasterBondsAndBackgrounds = true
   eq SourceMythicOdysseysOfTheros SourceMythicOdysseysOfTheros = true
   eq SourceOutOfTheAbyss SourceOutOfTheAbyss = true
   eq SourcePhandelverAndBelowTheShatteredObelisk SourcePhandelverAndBelowTheShatteredObelisk = true
   eq SourcePlanescapeAdventuresInTheMultiverse SourcePlanescapeAdventuresInTheMultiverse = true
+  eq SourcePlaneShiftAmonkhet SourcePlaneShiftAmonkhet = true
+  eq SourcePlaneShiftInnistrad SourcePlaneShiftInnistrad = true
   eq SourceQuestsFromTheInfiniteStaircase SourceQuestsFromTheInfiniteStaircase = true
   eq SourcePrincesOfTheApocalypse SourcePrincesOfTheApocalypse = true
   eq SourceTheRiseOfTiamat SourceTheRiseOfTiamat = true
   eq SourceSpelljammerAdventuresInSpace SourceSpelljammerAdventuresInSpace = true
+  eq SourceStateOfHillsfar SourceStateOfHillsfar = true
   eq SourceStrixhavenCurriculumOfChaos SourceStrixhavenCurriculumOfChaos = true
   eq SourceSleepingDragonsWake SourceSleepingDragonsWake = true
   eq SourceStormKingsThunder SourceStormKingsThunder = true
@@ -205,16 +217,21 @@ allSources =
   , SourceLostLaboratoryOfKwalish
   , SourceLostMineOfPhandelver
   , SourceMonstrousCompendium2
+  , SourceMulmasterBondsAndBackgrounds
   , SourceMythicOdysseysOfTheros
   , SourceOutOfTheAbyss
   , SourcePhandelverAndBelowTheShatteredObelisk
   , SourcePlanescapeAdventuresInTheMultiverse
+  , SourcePlaneShiftAmonkhet
+  , SourcePlaneShiftInnistrad
   , SourceQuestsFromTheInfiniteStaircase
   , SourcePrincesOfTheApocalypse
   , SourceTheRiseOfTiamat
   , SourceSpelljammerAdventuresInSpace
+  , SourceStateOfHillsfar
   , SourceStrixhavenCurriculumOfChaos
   , SourceSleepingDragonsWake
+  , SourceStateOfHillsfar
   , SourceStormKingsThunder
   , SourceSwordCoastAdventurersGuide
   , SourceTashasCauldronOfEverything
@@ -261,14 +278,18 @@ instance Unshow Source where
   unshow "Lost Laboratory of Kwalish" = Just SourceLostLaboratoryOfKwalish
   unshow "Lost Mine of Phandelver" = Just SourceLostMineOfPhandelver
   unshow "Monstrous Compendium Volume 2 - Dragonlance Creatures" = Just SourceMonstrousCompendium2
+  unshow "Mulmaster Bonds and Backgrounds" = Just SourceMulmasterBondsAndBackgrounds
   unshow "Mythic Odysseys of Theros" = Just SourceMythicOdysseysOfTheros
   unshow "Out of the Abyss" = Just SourceOutOfTheAbyss
   unshow "Phandelver and Below: The Shattered Obelisk" = Just SourcePhandelverAndBelowTheShatteredObelisk
   unshow "Planescape: Adventures in the Multiverse" = Just SourcePlanescapeAdventuresInTheMultiverse
+  unshow "Plane Shift: Amonkhet" = Just SourcePlaneShiftAmonkhet
+  unshow "Plane Shift: Innistrad" = Just SourcePlaneShiftInnistrad
   unshow "Quests from the Infinite Staircase" = Just SourceQuestsFromTheInfiniteStaircase
   unshow "Princes of the Apocalypse" = Just SourcePrincesOfTheApocalypse
   unshow "The Rise of Tiamat" = Just SourceTheRiseOfTiamat
   unshow "Spelljammer: Adventures in Space" = Just SourceSpelljammerAdventuresInSpace
+  unshow "State of Hillsfar" = Just SourceStateOfHillsfar
   unshow "Strixhaven: A Curriculum of Chaos" = Just SourceStrixhavenCurriculumOfChaos
   unshow "Sleeping Dragon's Wake" = Just SourceSleepingDragonsWake
   unshow "Storm King's Thunder" = Just SourceStormKingsThunder
@@ -290,4 +311,4 @@ instance Unshow Source where
   unshow "Tal'Dorei Campaign Setting Reborn" = Just SourceTalDoreiCampaignSettingReborn
   unshow "Sigil and the Outlands" = Just SourceSigilAndTheOutlands
   unshow "Elemental Evil Player's Companion" = Just SourceElementalEvilPlayersCompanion
-  unshow s = Just (SourceUnknown s)
+  unshow _ = Nothing

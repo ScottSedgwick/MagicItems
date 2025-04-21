@@ -18,7 +18,7 @@ import Flame.Html.Attribute as HA
 import Flame.Html.Element as HE
 import Flame.Html.Event as HV
 
-import Description(Description(..))
+import Description(mkDescription)
 import Sources (Source)
 import Unshow(unshow)
 import SpellType (Spell, SpellLevel(..), SpellList, SpellSchool, allLevels, allLists, allSchools)
@@ -104,7 +104,7 @@ viewItem item =
                 , HE.b_ [ HE.text "Components: " ]  , HE.text item.components , HE.br
                 ]
         , HE.div [ HA.id (mkId item.title), HA.class' "article-anchor" ] [ HE.text "" ]
-        ] <> (map mkDescription item.description)
+        ] <> (map (mkDescription updateHref) item.description)
       )
     ]
   ]
@@ -177,35 +177,6 @@ replaceAllOf xs rs =
     Just r -> case tail rs of
                 Nothing -> replaceAll (Pattern (fst r)) (Replacement (snd r)) xs
                 Just ts -> replaceAllOf (replaceAll (Pattern (fst r)) (Replacement (snd r)) xs) ts
-
-mkDescription :: Description -> Html Message
-mkDescription (P xs)   = HE.p_ (map mkDescription xs )
-mkDescription (T s)    = HE.text s
-mkDescription (B s)    = HE.strong_ [ HE.text s ]
-mkDescription (I s)    = HE.em_ [ HE.text s ]
-mkDescription (A h s)  = HE.a [ HA.class' "inverse-link", HA.href (updateHref h) ] [ HE.text s ]
-mkDescription (UL xs)  = HE.ul_ (map mkListItem xs)
-mkDescription (TB h b) = HE.table [ HA.class' "stripes" ] [ mkTableHeader h, mkTableBody b ]
-mkDescription (H1 s)   = HE.h1_ [ HE.text s ]
-mkDescription (H2 s)   = HE.h2_ [ HE.text s ]
-mkDescription (H3 s)   = HE.h3_ [ HE.text s ]
-mkDescription (H4 s)   = HE.h4_ [ HE.text s ]
-mkDescription (H5 s)   = HE.h5_ [ HE.text s ]
-mkDescription (H6 s)   = HE.h6_ [ HE.text s ]
-
-mkTableHeader :: Array Description -> Html Message
-mkTableHeader [] = HE.thead_ ([] :: Array (Html Message))
-mkTableHeader hs = HE.thead_ [ HE.tr_ (map (\h -> HE.th_ (mkDescription h)) hs) ]
-
-mkTableBody :: Array (Array Description) -> Html Message
-mkTableBody [] = HE.tbody_ ([] :: Array (Html Message))
-mkTableBody bs = HE.tbody_ (map mkTableRow bs)
-
-mkTableRow :: Array Description -> Html Message
-mkTableRow rs = HE.tr_ (map (\td -> HE.td_ (mkDescription td)) rs)
-
-mkListItem :: Array Description -> Html Message
-mkListItem xs = HE.li_ (map mkDescription xs)
 
 updateHref :: String -> String
 updateHref xs =

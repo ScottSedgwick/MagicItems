@@ -4,8 +4,9 @@ import Prelude(class Eq, class Show, map, show, (<>))
 import Data.Array (intercalate)
 import Data.Maybe (Maybe(..))
 
-import Sources (class Unshow, Source)
 import Description (Description)
+import Sources (Source)
+import Unshow (class Unshow)
 
 data ItemType
   = TypeArmor (Maybe String)
