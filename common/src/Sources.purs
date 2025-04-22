@@ -32,6 +32,7 @@ data Source
   | SourceLostLaboratoryOfKwalish
   | SourceLostMineOfPhandelver
   | SourceMonstrousCompendium2
+  | SourceMordenkainenPresentsMonstersOfTheMultiverse
   | SourceMulmasterBondsAndBackgrounds
   | SourceMythicOdysseysOfTheros
   | SourceOutOfTheAbyss
@@ -92,6 +93,7 @@ instance Show Source where
   show SourceLostLaboratoryOfKwalish = "Lost Laboratory of Kwalish"
   show SourceLostMineOfPhandelver = "Lost Mine of Phandelver"
   show SourceMonstrousCompendium2 = "Monstrous Compendium Volume 2 - Dragonlance Creatures"
+  show SourceMordenkainenPresentsMonstersOfTheMultiverse = "Mordenkainen Presents: Monsters of the Multiverse"
   show SourceMulmasterBondsAndBackgrounds = "Mulmaster Bonds and Backgrounds"
   show SourceMythicOdysseysOfTheros = "Mythic Odysseys of Theros"
   show SourceOutOfTheAbyss = "Out of the Abyss"
@@ -152,6 +154,7 @@ instance Eq Source where
   eq SourceLostLaboratoryOfKwalish SourceLostLaboratoryOfKwalish = true
   eq SourceLostMineOfPhandelver SourceLostMineOfPhandelver = true
   eq SourceMonstrousCompendium2 SourceMonstrousCompendium2 = true
+  eq SourceMordenkainenPresentsMonstersOfTheMultiverse SourceMordenkainenPresentsMonstersOfTheMultiverse = true
   eq SourceMulmasterBondsAndBackgrounds SourceMulmasterBondsAndBackgrounds = true
   eq SourceMythicOdysseysOfTheros SourceMythicOdysseysOfTheros = true
   eq SourceOutOfTheAbyss SourceOutOfTheAbyss = true
@@ -217,6 +220,7 @@ allSources =
   , SourceLostLaboratoryOfKwalish
   , SourceLostMineOfPhandelver
   , SourceMonstrousCompendium2
+  , SourceMordenkainenPresentsMonstersOfTheMultiverse
   , SourceMulmasterBondsAndBackgrounds
   , SourceMythicOdysseysOfTheros
   , SourceOutOfTheAbyss
@@ -278,6 +282,7 @@ instance Unshow Source where
   unshow "Lost Laboratory of Kwalish" = Just SourceLostLaboratoryOfKwalish
   unshow "Lost Mine of Phandelver" = Just SourceLostMineOfPhandelver
   unshow "Monstrous Compendium Volume 2 - Dragonlance Creatures" = Just SourceMonstrousCompendium2
+  unshow "Mordenkainen Presents: Monsters of the Multiverse" = Just SourceMordenkainenPresentsMonstersOfTheMultiverse
   unshow "Mulmaster Bonds and Backgrounds" = Just SourceMulmasterBondsAndBackgrounds
   unshow "Mythic Odysseys of Theros" = Just SourceMythicOdysseysOfTheros
   unshow "Out of the Abyss" = Just SourceOutOfTheAbyss
@@ -311,4 +316,5 @@ instance Unshow Source where
   unshow "Tal'Dorei Campaign Setting Reborn" = Just SourceTalDoreiCampaignSettingReborn
   unshow "Sigil and the Outlands" = Just SourceSigilAndTheOutlands
   unshow "Elemental Evil Player's Companion" = Just SourceElementalEvilPlayersCompanion
-  unshow _ = Nothing
+  unshow "All" = Nothing
+  unshow s = Just (SourceUnknown s)
