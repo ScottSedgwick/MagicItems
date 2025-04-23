@@ -44,7 +44,7 @@ update model (ChangeSource s) = model { fltSource = unshow s } :> []
 
 view :: Model -> Html Message
 view model =
-  HE.main "main"
+  HE.main_
   ( (viewFilter model ) 
   : (map viewFeat (filter (featsFilter model) feats))
   )
@@ -66,12 +66,14 @@ viewFilter model =
   let 
     sources = sort (nub (map (\f -> f.source) feats))
   in
-    HE.article_ 
-    [ HE.div [ HA.class' "grid" ]
-      [ HE.div [ HA.class' "s8" ]
-        [ mkInput  "Feat Name" ChangeTitle          model.fltTitle ]
-      , HE.div [ HA.class' "s4" ]
-        [ mkSelect "Source"    ChangeSource sources model.fltSource ]
+    HE.nav [ HA.class' "top white" ] 
+    [ HE.article [ HA.class' "container white" ]
+      [ HE.div [ HA.class' "grid" ]
+        [ HE.div [ HA.class' "s8" ]
+          [ mkInput  "Feat Name" ChangeTitle          model.fltTitle ]
+        , HE.div [ HA.class' "s4" ]
+          [ mkSelect "Source"    ChangeSource sources model.fltSource ]
+        ]
       ]
     ]
 

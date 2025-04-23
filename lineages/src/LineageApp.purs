@@ -45,11 +45,10 @@ update model (ChangeSource x) = model { fltSource = unshow x } :> []
 
 view :: Model -> Html Message
 view model =
-  HE.main "main"
-  [ viewFilter model
-  , HE.hr_ [ HE.text "" ]
-  , viewItems model
-  ]
+  HE.main_
+  ( viewFilter model
+  : viewItems model
+  )
 
 viewFilter :: Model -> Html Message
 viewFilter model =
@@ -57,18 +56,20 @@ viewFilter model =
     sources = sort (nub (map (\i -> i.source) lineages))
   in
     HE.nav [ HA.class' "top white" ] 
-    [ HE.div [ HA.class' "grid" ]
-      [ HE.div [ HA.class' "s6" ] [ mkInput  "Lineage" ChangeTitle          model.fltTitle  ]
-      , HE.div [ HA.class' "s6" ] [ mkSelect "Source"  ChangeSource sources model.fltSource ]
+    [ HE.article [ HA.class' "container white" ]
+      [ HE.div [ HA.class' "grid" ]
+        [ HE.div [ HA.class' "s6" ] [ mkInput  "Lineage" ChangeTitle          model.fltTitle  ]
+        , HE.div [ HA.class' "s6" ] [ mkSelect "Source"  ChangeSource sources model.fltSource ]
+        ]
       ]
     ]
 
-viewItems :: Model -> Html Message
+viewItems :: Model -> Array (Html Message)
 viewItems model =
   let 
     items = sortBy (\a b -> compare a.title b.title) (filter (filterItem model) lineages)
   in 
-    HE.div_ ( map viewItem items)
+    map viewItem items
 
 viewItem :: Lineage -> Html Message
 viewItem item =

@@ -95,5 +95,7 @@ namespace "feats" do
     end
 end
 
+desc "Build all (Default)"
 task :build => ['mi:build', 'spells:build', 'lineages:build', 'backgrounds:build', 'feats:build']
+
 task :default => [:build]

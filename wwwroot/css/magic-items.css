@@ -22,3 +22,7 @@ div.article-anchor {
     position: relative;
     top: -190px;
 }
+
+.container {
+    width: 100%;
+}

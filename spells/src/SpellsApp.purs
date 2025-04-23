@@ -57,10 +57,9 @@ update model (ChangeSource x) = model { fltSource = unshow x } :> []
 view :: Model -> Html Message
 view model =
   HE.main "main"
-  [ viewFilter model
-  , HE.hr_ [ HE.text "" ]
-  , viewItems model
-  ]
+  ( viewFilter model
+  : viewItems model
+  )
 
 viewFilter :: Model -> Html Message
 viewFilter model =
@@ -68,21 +67,23 @@ viewFilter model =
     sources = sort (nub (concatMap (\i -> i.source) spells))
   in
     HE.nav [ HA.class' "top white" ] 
-    [ HE.div [ HA.class' "grid" ]
-      [ HE.div [ HA.class' "s3" ] [ mkInput  "Spell Name" ChangeTitle             model.fltTitle  ]
-      , HE.div [ HA.class' "s2" ] [ mkSelect "Level"      ChangeLevel  allLevels  model.fltLevel  ] 
-      , HE.div [ HA.class' "s2" ] [ mkSelect "Class"      ChangeList   allLists   model.fltList   ]
-      , HE.div [ HA.class' "s2" ] [ mkSelect "School"     ChangeSchool allSchools model.fltSchool ] 
-      , HE.div [ HA.class' "s3" ] [ mkSelect "Source"     ChangeSource sources    model.fltSource ]
+    [ HE.article [ HA.class' "container white" ]
+      [ HE.div [ HA.class' "grid" ]
+        [ HE.div [ HA.class' "s3" ] [ mkInput  "Spell Name" ChangeTitle             model.fltTitle  ]
+        , HE.div [ HA.class' "s2" ] [ mkSelect "Level"      ChangeLevel  allLevels  model.fltLevel  ] 
+        , HE.div [ HA.class' "s2" ] [ mkSelect "Class"      ChangeList   allLists   model.fltList   ]
+        , HE.div [ HA.class' "s2" ] [ mkSelect "School"     ChangeSchool allSchools model.fltSchool ] 
+        , HE.div [ HA.class' "s3" ] [ mkSelect "Source"     ChangeSource sources    model.fltSource ]
+        ]
       ]
     ]
 
-viewItems :: Model -> Html Message
+viewItems :: Model -> Array (Html Message)
 viewItems model =
   let 
     items = sortBy (\a b -> compare a.title b.title) (filter (filterItem model) spells)
   in 
-    HE.div_ ( map viewItem items)
+    map viewItem items
 
 viewItem :: Spell -> Html Message
 viewItem item =

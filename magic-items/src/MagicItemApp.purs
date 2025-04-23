@@ -9,7 +9,7 @@ module MagicItemApp
 
 import Prelude
 
-import Data.Array (concatMap, elem, filter, head, intercalate, nub, sort, sortBy, tail)
+import Data.Array ((:), concatMap, elem, filter, head, intercalate, nub, sort, sortBy, tail)
 import Data.Maybe (Maybe(..))
 import Data.String (Pattern(..), Replacement(..), contains, drop, indexOf, replaceAll, toLower)
 import Data.Tuple (Tuple(..), fst, snd)
@@ -58,10 +58,9 @@ update model (ChangeSource x) = model { fltSource     = unshow x } :> []
 view :: Model -> Html Message
 view model =
   HE.main "main"
-  [ viewFilter model
-  , HE.hr_ [ HE.text "" ]
-  , viewItems model
-  ]
+  ( viewFilter model
+  : viewItems model
+  )
 
 viewFilter :: Model -> Html Message
 viewFilter model =
@@ -69,12 +68,14 @@ viewFilter model =
     sources = sort (nub (concatMap (\i -> i.source) magicItems))
   in
     HE.nav [ HA.class' "top white" ] 
-    [ HE.div [ HA.class' "grid" ]
-      [ HE.div [ HA.class' "s3" ] [ mkInput  "Item Name" ChangeTitle              model.fltTitle ]
-      , HE.div [ HA.class' "s2" ] [ mkSelect "Rarity"    ChangeRarity allRarities model.fltRarity ]
-      , HE.div [ HA.class' "s2" ] [ mkSelect "Type"      ChangeType   allTypes    model.fltType   ] 
-      , HE.div [ HA.class' "s2" ] [ mkSelect "Attune"    ChangeAttune allAttunes  model.fltAttunement ] 
-      , HE.div [ HA.class' "s3" ] [ mkSelect "Source"    ChangeSource sources     model.fltSource ]
+    [ HE.article [ HA.class' "container white" ]
+      [ HE.div [ HA.class' "grid" ]
+        [ HE.div [ HA.class' "s3" ] [ mkInput  "Item Name" ChangeTitle              model.fltTitle ]
+        , HE.div [ HA.class' "s2" ] [ mkSelect "Rarity"    ChangeRarity allRarities model.fltRarity ]
+        , HE.div [ HA.class' "s2" ] [ mkSelect "Type"      ChangeType   allTypes    model.fltType   ] 
+        , HE.div [ HA.class' "s2" ] [ mkSelect "Attune"    ChangeAttune allAttunes  model.fltAttunement ] 
+        , HE.div [ HA.class' "s3" ] [ mkSelect "Source"    ChangeSource sources     model.fltSource ]
+        ]
       ]
     ]
 
@@ -102,12 +103,12 @@ mkSelect caption msg opts value =
     , HE.label_ [ HE.text caption ]
     ]
 
-viewItems :: Model -> Html Message
+viewItems :: Model -> Array (Html Message)
 viewItems model =
   let 
     items = sortBy (\a b -> compare a.title b.title) (filter (filterItem model) magicItems)
   in 
-    HE.div_ ( map viewItem items)
+    map viewItem items
 
 filterItem :: Model -> MagicItem -> Boolean
 filterItem model item 
