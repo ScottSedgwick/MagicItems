@@ -1,8 +1,8 @@
 module ToolsApp
   ( AttackDice
   , DamageDice
-  , DamageType
-  , DiceType
+  -- , DamageType
+  -- , DiceType
   , Message(..)
   , Model
   , SaveDice
@@ -13,11 +13,9 @@ module ToolsApp
   )
   where
 
--- import Data.Array (find)
-
 import Prelude
-
 import Data.Array (delete, findIndex, snoc, updateAt)
+import Data.Either (Either(..))
 import Data.Int (fromString)
 import Data.Maybe (Maybe(..))
 import Data.Tuple (Tuple)
@@ -29,17 +27,17 @@ import Flame (Html, (:>))
 import Flame.Html.Attribute as HA
 import Flame.Html.Element as HE
 import Flame.Html.Event as HV
-
-data DiceType = D4 | D6 | D8 | D10 | D12 | D20
-
-data DamageType = Acid | Bludgeoning | Cold | Fire | Force | Lightning | Necrotic | Piercing | Poison | Psychic | Radiant | Slashing | Thunder
+import Simple.JSON as JSON
+import Web.HTML (window)
+import Web.HTML.Window (localStorage)
+import Web.Storage.Storage (getItem, removeItem, setItem)
 
 type DamageDice =
-  { diceType :: DiceType
+  { diceType :: Int
   , diceCount :: Int
   , damageBonus :: Int
-  , damageRoll :: Int
-  , damageType :: DamageType
+  , damageRoll :: Array Int
+  , damageType :: String
   }
 
 type AttackDice = 
@@ -47,10 +45,9 @@ type AttackDice =
   , advantage :: Boolean
   , disadvantage :: Boolean
   , damageDice :: Array DamageDice
-  , damageCount :: Int
   , description :: String
   , targetAC :: Int
-  , attackRoll :: Int
+  , attackRoll :: Array Int
   }
 
 type SaveDice =
@@ -59,7 +56,7 @@ type SaveDice =
   , disadvantage :: Boolean
   , saveBonus :: Int
   , saveRoll :: Array Int
-  , targetDC :: Int
+  , targetDC :: Maybe Int
   }
 
 initSave :: SaveDice
@@ -69,23 +66,18 @@ initSave =
   , disadvantage: false
   , saveBonus: 0
   , saveRoll: []
-  , targetDC: 0
+  , targetDC: Nothing
   }
 
 rollSave :: SaveDice -> Effect SaveDice
 rollSave save = do
-  a <- rollDice D20
-  b <- rollDice D20
+  a <- rollDice 20
+  b <- rollDice 20
   let roll = [a, b]
   pure (save { saveRoll = roll })
 
-rollDice :: DiceType -> Effect Int
-rollDice D4 = randomInt 1 4
-rollDice D6 = randomInt 1 6
-rollDice D8 = randomInt 1 8
-rollDice D10 = randomInt 1 10
-rollDice D12 = randomInt 1 12
-rollDice D20 = randomInt 1 20
+rollDice :: Int -> Effect Int
+rollDice n = randomInt 1 n
 
 type Model =
   { attackRolls :: Array AttackDice
@@ -104,41 +96,80 @@ data SaveMsg
   | Add
 
 updateSave :: Model -> SaveMsg → Tuple Model (Array (Aff (Maybe Message)))
-updateSave model (Update save newSave)    = model { savingThrows = updateArray model.savingThrows save newSave } :> []
+updateSave model (Update save newSave)    = model { savingThrows = updateArray model.savingThrows save newSave } :> [ pure $ Just SaveState ]
 updateSave model (Description save value) = model :> [ pure $ Just (Save (Update save (save { description = value }))) ]
 updateSave model (Bonus save bonus)       = model :> [ pure $ Just (Save (Update save (save { saveBonus = bonus   }))) ]
-updateSave model (DC save dc)             = model :> [ pure $ Just (Save (Update save (save { targetDC = dc       }))) ]
+updateSave model (DC save dc)             = model :> [ pure $ Just (Save (Update save (save { targetDC = Just dc  }))) ]
 updateSave model (Advantage save b)       = model :> [ pure $ Just (Save (Update save (save { advantage = b       }))) ]
 updateSave model (Disadvantage save b)    = model :> [ pure $ Just (Save (Update save (save { disadvantage = b    }))) ]
 updateSave model (Roll save)              = model :> [ Just <<< Save <$> (Update save <$> liftEffect (rollSave save) ) ]
-updateSave model (Remove save)            = model { savingThrows = delete save model.savingThrows   } :> []
-updateSave model Add                      = model { savingThrows = snoc model.savingThrows initSave } :> []
+updateSave model (Remove save)            = model { savingThrows = delete save model.savingThrows   } :> [ pure $ Just SaveState ]
+updateSave model Add                      = model { savingThrows = snoc model.savingThrows initSave } :> [ pure $ Just SaveState ]
 
 data Message 
   = AddAttackRoll
   | RemoveAttackRoll AttackDice
   | RollAttackRoll AttackDice
   | Save SaveMsg
+  | SaveState
+  | StateSaved Model
+  | LoadState 
+  | StateLoaded Model
+  | ClearState
 
 update :: Model → Message → Tuple Model (Array (Aff (Maybe Message)))
-update model (Save saveMsg) = updateSave model saveMsg
+update model (Save saveMsg)   = updateSave model saveMsg
+update model SaveState        = model :> [ Just <<< StateSaved <$> liftEffect (saveState model) ]
+update model LoadState        = model :> [ Just <<< StateLoaded <$> liftEffect (loadState model) ]
+update _     (StateLoaded m)  = m :> []
+update model ClearState       = model :> [ Just <<< StateLoaded <$> liftEffect clearState ]
 update model _ = model :> []
 
+saveState :: Model → Effect Model
+saveState model = do
+  w <- window
+  s <- localStorage w
+  let json = JSON.writeJSON model
+  setItem "magiitems-tools-diceroller" json s
+  pure model
+
+loadState :: Model -> Effect Model
+loadState model = do
+  w <- window
+  s <- localStorage w
+  item <- getItem "magiitems-tools-diceroller" s
+  case item of
+    Nothing -> pure model
+    Just json -> case JSON.readJSON json of
+      Left _ -> pure model
+      Right m -> pure (m :: Model)
+
+clearState :: Effect Model
+clearState = do
+  w <- window
+  s <- localStorage w
+  removeItem "magiitems-tools-diceroller" s
+  pure initModel
+
+initModel :: Model
+initModel =
+  { attackRolls: 
+    [ { attackBonus: 5, advantage: false, disadvantage: false, description: "Guantlet GFB", targetAC: 0, attackRoll: []
+      , damageDice: 
+        [ { diceType: 8, diceCount: 1, damageBonus: 7, damageRoll: [], damageType: "Thunder" }
+        , { diceType: 4, diceCount: 1, damageBonus: 0, damageRoll: [], damageType: "Acid" }
+        , { diceType: 8, diceCount: 2, damageBonus: 10, damageRoll: [], damageType: "Fire" }
+        ]
+      }
+    ]
+  , savingThrows: 
+    [ { advantage: false, disadvantage: false, saveBonus: 0, saveRoll: [], targetDC: Nothing, description: "STR Save" }
+    , { advantage: false, disadvantage: false, saveBonus: 10, saveRoll: [], targetDC: Nothing, description: "INT Save" } 
+    ]
+  }
+
 init ::  Tuple Model (Array (Aff (Maybe Message)))
-init = { attackRolls: 
-         [ { attackBonus: 5, advantage: false, disadvantage: false, damageCount: 0, description: "Guantlet GFB", targetAC: 10, attackRoll: 0
-           , damageDice: 
-             [ { diceType: D8, diceCount: 1, damageBonus: 7, damageRoll: 0, damageType: Thunder }
-             , { diceType: D4, diceCount: 1, damageBonus: 0, damageRoll: 0, damageType: Acid }
-             , { diceType: D8, diceCount: 2, damageBonus: 10, damageRoll: 0, damageType: Fire }
-             ]
-           }
-         ]
-       , savingThrows: 
-         [ { advantage: false, disadvantage: false, saveBonus: 0, saveRoll: [], targetDC: 0, description: "STR Save" }
-         , { advantage: false, disadvantage: false, saveBonus: 10, saveRoll: [], targetDC: 0, description: "INT Save" } 
-         ]
-       } :> []
+init = initModel :> [ pure $ Just LoadState ]
 
 updateArray :: forall a. Eq a => Array a -> a -> a -> Array a
 updateArray arr item newItem =
@@ -156,7 +187,7 @@ view model =
       [ HE.nav_
         [ HE.h6 [HA.class' "max left-align"] [HE.text "Attack Rolls"]
         , HE.div [HA.class' "max" ] [ HE.text "" ]
-        , HE.button [HA.class' "square round extra", HV.onClick AddAttackRoll] [ HE.i_ [HE.text "add"]]
+        , mkButton AddAttackRoll "add" "Add Attack Roll"
         ]
       ]
     , HE.div_ [ map viewAttackRoll model.attackRolls ]
@@ -165,11 +196,19 @@ view model =
       [ HE.nav_
         [ HE.h6 [HA.class' "max left-align"] [HE.text "Saving Throws"]
         , HE.div [HA.class' "max" ] [ HE.text "" ]
-        , HE.button [HA.class' "square round extra", HV.onClick (Save Add)] [ HE.i_ [HE.text "add"]]
+        , mkButton (Save Add) "add" "Add Saving Throw"
         ]
       ]
     , HE.div_ [ map viewSavingThrow model.savingThrows ]
     ]
+    , HE.br
+    , HE.header [ HA.class' "fill" ]
+      [ HE.nav_
+        [ HE.h6 [ HA.class' "max left-align" ] [ HE.text "Clear saved state" ] 
+        , HE.div [ HA.class' "max" ] [ HE.text "" ]
+        , mkButton ClearState "delete" "Clear saved state"
+        ]
+      ]
   ]
 
 viewAttackRoll :: AttackDice -> Html Message
@@ -178,7 +217,7 @@ viewAttackRoll attack =
   [ HE.nav_ 
     [ HE.text "Attack Roll:" 
     , HE.div [HA.class' "max"] [HE.text ""]
-    , HE.button [HA.class' "square round extra", HV.onClick (RemoveAttackRoll attack)] [HE.i_ [HE.text "delete"]]
+    , mkButton (RemoveAttackRoll attack) "delete" "Remove Attack Roll"
     ]
   ]
 
@@ -187,14 +226,14 @@ viewSavingThrow save =
   HE.article_ 
   [ HE.nav [ HA.class' "grid" ]
     [ HE.div [HA.class' "s2"]  [ mkText "Description" (\s -> Save (Description save s)) save.description ]
-    , HE.div [HA.class' "s2"]  [ mkNumber "Save Bonus" (\b -> Save (Bonus save b)) save.saveBonus ]
+    , HE.div [HA.class' "s2"]  [ mkNumber "Save Bonus" (\b -> Save (Bonus save b)) (Just save.saveBonus) ]
     , HE.div [HA.class' "s1"]  [ mkCheckbox "Advantage" "arrow_upward" (\b -> Save (Advantage save b)) save.advantage 
                                , mkCheckbox "Disadvantage" "arrow_downward" (\b -> Save (Disadvantage save b)) save.disadvantage 
                                ]
     , HE.div [HA.class' "s2"]  [ mkNumber "Target DC" (\d -> Save (DC save d)) save.targetDC ]
-    , HE.div [HA.class' "s1"]  [ mkButton (Save (Roll save)) "Casino" ]
+    , HE.div [HA.class' "s1"]  [ mkButton (Save (Roll save)) "Casino" "Roll The Dice!" ]
     , HE.div [HA.class' "s3"]  [ showSaveResult save ]
-    , HE.div [HA.class' "s1"]  [ mkButton (Save (Remove save)) "delete" ]
+    , HE.div [HA.class' "s1"]  [ mkButton (Save (Remove save)) "delete" "Remove Saving Throw" ]
     ]
   ]
 
@@ -218,12 +257,15 @@ saveLine1 save =
 
 saveLine2 :: SaveDice -> Maybe (Html Message)
 saveLine2 save =
-  if save.targetDC == 0
-  then Nothing
-  else 
-    if saveRoll save + save.saveBonus >= save.targetDC
-    then Just (HE.div [ HA.class' "primary" ] [ HE.text ("Target DC: " <> show save.targetDC <> ", " <> "Success!") ])
-    else Just (HE.div [ HA.class' "error"   ] [ HE.text ("Target DC: " <> show save.targetDC <> ", " <> "Failure!") ])
+  case save.saveRoll of
+    [] -> Nothing
+    _ ->
+      case save.targetDC of
+        Nothing -> Nothing
+        Just dc ->  
+          if saveRoll save + save.saveBonus >= dc
+          then Just (HE.div [ HA.class' "primary" ] [ HE.text ("Target DC: " <> show dc <> ", " <> "Success!") ])
+          else Just (HE.div [ HA.class' "error"   ] [ HE.text ("Target DC: " <> show dc <> ", " <> "Failure!") ])
     
 saveRoll :: SaveDice -> Int
 saveRoll save = 
@@ -242,10 +284,15 @@ mkText caption msg value =
   , HE.span [ HA.class' "helper" ] [ HE.text caption ]
   ]
 
-mkNumber :: forall a. String -> (Int -> a) -> Int -> Html a
-mkNumber caption msg value = 
+mkNumber :: forall a. String -> (Int -> a) -> Maybe Int -> Html a
+mkNumber caption msg (Just value) = 
   HE.div [ HA.class' "field border" ]
   [ HE.input [HA.type' "number", HA.value (show value), HV.onInput (\x -> msg (fromStr x)) ]
+  , HE.span [ HA.class' "helper" ] [ HE.text caption ]
+  ]
+mkNumber caption msg Nothing = 
+  HE.div [ HA.class' "field border" ]
+  [ HE.input [HA.type' "number", HV.onInput (\x -> msg (fromStr x)) ]
   , HE.span [ HA.class' "helper" ] [ HE.text caption ]
   ]
 
@@ -255,8 +302,12 @@ fromStr s =
     Nothing -> 0
     Just i  -> i
 
-mkButton :: forall a. a -> String -> Html a
-mkButton msg icon = HE.button [HA.class' "square round extra", HV.onClick msg] [HE.i_ [HE.text icon]]
+mkButton :: forall a. a -> String -> String -> Html a
+mkButton msg icon tooltip = 
+  HE.button [ HA.class' "square round extra", HV.onClick msg ] 
+  [ HE.i_ [HE.text icon]
+  , HE.div [ HA.class' "tooltip" ] [ HE.text tooltip ]
+  ]
 
 mkCheckbox :: forall a. String -> String -> (Boolean -> a) -> Boolean -> Html a
 mkCheckbox caption icon msg value = 

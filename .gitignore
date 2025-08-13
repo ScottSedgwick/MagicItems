@@ -23,3 +23,6 @@
 /spells/output/
 /spells/.spago
 /spells/.purs-repl
+/tools/.spago
+/tools/.purs-repl
+/tools/output/

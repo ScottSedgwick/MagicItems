@@ -15,13 +15,17 @@ to generate this file without the comments in this block.
   [ "aff"
   , "arrays"
   , "effect"
+  , "either"
   , "flame"
   , "integers"
   , "maybe"
   , "prelude"
   , "random"
+  , "simple-json"
   , "strings"
   , "tuples"
+  , "web-html"
+  , "web-storage"
   ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "../common/src/**/*.purs" ]
