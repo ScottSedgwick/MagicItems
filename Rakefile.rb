@@ -95,7 +95,32 @@ namespace "feats" do
     end
 end
 
-desc "Build all (Default)"
-task :build => ['mi:build', 'spells:build', 'lineages:build', 'backgrounds:build', 'feats:build']
+namespace "tools" do
+    desc "Compile"
+    task :compile do
+        Dir.chdir('tools') do
+            sh('spago build')
+        end
+    end
 
+    desc "Build"
+    task :build do
+        Dir.chdir('tools') do
+            sh('spago bundle-app -t index.js')
+            sh('terser index.js > ../wwwroot/js/tools.js')
+            sh('rm index.js')
+        end
+    end
+end
+
+desc "Build all (Default)"
+task :build => ['mi:build', 'spells:build', 'lineages:build', 'backgrounds:build', 'feats:build', 'tools:build']
+
+desc "Serve the application.  Make sure you build it first."
+task :serve => ['tools:build'] do
+    require 'webrick'
+    server = WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => 'wwwroot')
+    trap('INT') { server.shutdown }
+    server.start
+end
 task :default => [:build]

@@ -8378,6 +8378,31 @@ magicItems =
         ]
       ]
     }
+  , { title: "Cerebral Circlet"
+    , url: ""
+    , rarity: [RarityRare]
+    , itemtype: TypeItem Nothing
+    , attunement: AttuneNone
+    , source: [SourceDMG]
+    , description:
+      [ P
+        [ I "Wondrous item, rare"
+        ]
+      , P
+        [ I "A thin. metallic circlet adorned with pulsing veins of violet light. When worn, it seems to hum faintly in tune with the wearers thoughts."]
+      , P
+        [ I "Psionic Amplification: "
+        , T "While wearing the Cerebral Circlet, you can use your action to amplify your psionic or mental abilities. Once per long rest, you can target a creature within 60 feet that you can see. That creature must make an Intelligence saving throw (DC 15). On a failed sae, the creature takes 4d8 psychic damage and is stunned until the end of your next turn. On a successful save, the creature takes half damage and is not stunned."
+        ]
+      , P
+        [ T "If the wearer has Psionic powers without the circlet, the psychic damage is doubled to 8d8."
+        ]
+      , P
+        [ I "Additional Effect: "
+        , T "The circlet grants advantage on Intelligence (Arcana) checks related to psionics or psychic phenomena."
+        ]
+      ]
+    }
   , { title: "Charm of Plant Command"
     , url: "https://dnd5e.wikidot.com//wondrous-items:charm-of-plant-command"
     , rarity: [RarityRare]
