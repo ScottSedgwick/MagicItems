@@ -28,16 +28,16 @@ updateSave model Add                      = model { savingThrows = snoc model.sa
 viewSavingThrow :: SaveDice -> Html Message
 viewSavingThrow save =
   HE.article_ 
-  [ HE.nav [ HA.class' "grid" ]
-    [ HE.div [HA.class' "s2"]  [ mkText "Description" (\s -> Save (Description save s)) save.description ]
-    , HE.div [HA.class' "s2"]  [ mkNumber "Save Bonus" (\b -> Save (Bonus save b)) (Just save.saveBonus) ]
-    , HE.div [HA.class' "s1"]  [ mkCheckbox "Advantage" "arrow_upward" (\b -> Save (Advantage save b)) save.advantage 
-                               , mkCheckbox "Disadvantage" "arrow_downward" (\b -> Save (Disadvantage save b)) save.disadvantage 
-                               ]
-    , HE.div [HA.class' "s2"]  [ mkNumber "Target DC" (\d -> Save (DC save d)) save.targetDC ]
-    , HE.div [HA.class' "s1"]  [ mkButton (Save (Roll save)) "Casino" "Roll The Dice!" ]
-    , HE.div [HA.class' "s3"]  [ showSaveResult save ]
-    , HE.div [HA.class' "s1"]  [ mkButton (Save (Remove save)) "delete" "Remove Saving Throw" ]
+  [ HE.nav [ HA.class' "small grid" ]
+    [ HE.div [HA.class' "small s2"]  [ mkText "Description" (\s -> Save (Description save s)) save.description ]
+    , HE.div [HA.class' "small s2"]  [ mkNumber "Save Bonus" (\b -> Save (Bonus save b)) (Just save.saveBonus) ]
+    , HE.div [HA.class' "small s1"]  [ mkCheckbox "Advantage" "arrow_upward" "top" (\b -> Save (Advantage save b)) save.advantage 
+                                     , mkCheckbox "Disadvantage" "arrow_downward" "bottom" (\b -> Save (Disadvantage save b)) save.disadvantage 
+                                     ]
+    , HE.div [HA.class' "small s2"]  [ mkNumber "Target DC" (\d -> Save (DC save d)) save.targetDC ]
+    , HE.div [HA.class' "small s1"]  [ mkButton (Save (Roll save)) "Casino" "Roll The Dice!" ]
+    , HE.div [HA.class' "small s3"]  [ showSaveResult save ]
+    , HE.div [HA.class' "small s1"]  [ mkButton (Save (Remove save)) "delete" "Remove Saving Throw" ]
     ]
   ]
 
@@ -68,8 +68,8 @@ saveLine2 save =
         Nothing -> Nothing
         Just dc ->  
           if saveRoll save + save.saveBonus >= dc
-          then Just (HE.div [ HA.class' "primary" ] [ HE.text ("Target DC: " <> show dc <> ", " <> "Success!") ])
-          else Just (HE.div [ HA.class' "error"   ] [ HE.text ("Target DC: " <> show dc <> ", " <> "Failure!") ])
+          then Just (HE.div [ HA.class' "small primary" ] [ HE.text ("Target DC: " <> show dc <> ", " <> "Success!") ])
+          else Just (HE.div [ HA.class' "small error"   ] [ HE.text ("Target DC: " <> show dc <> ", " <> "Failure!") ])
     
 saveRoll :: SaveDice -> Int
 saveRoll save = 

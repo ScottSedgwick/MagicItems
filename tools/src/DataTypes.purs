@@ -3,24 +3,34 @@ module DataTypes where
 import Data.Maybe (Maybe(..))
 
 type Model =
-  { attackRolls :: Array AttackDice
+  { profile :: String
+  , profiles :: Array String
+  , currentTab :: String
+  , attackRolls :: Array AttackDice
   , savingThrows :: Array SaveDice
   }
 
 initModel :: Model
 initModel =
-  { attackRolls: 
-    [ { attackBonus: 5, advantage: false, disadvantage: false, description: "Guantlet GFB", targetAC: 0, attackRoll: []
+  { profile: "Rusty"
+  , profiles: []
+  , currentTab: "Attack"
+  , attackRolls: 
+    [ { attackBonus: 12, advantage: false, disadvantage: false, description: "Wrecking Ball (Green Flame Blade)", targetAC: 0, attackRoll: []
       , damageDice: 
-        [ { diceType: 8, diceCount: 1, damageBonus: 7, damageRoll: [], damageType: "Thunder" }
+        [ { diceType: 10, diceCount: 1, damageBonus: 7, damageRoll: [], damageType: "Bludgeoning" }
         , { diceType: 4, diceCount: 1, damageBonus: 0, damageRoll: [], damageType: "Acid" }
         , { diceType: 8, diceCount: 2, damageBonus: 10, damageRoll: [], damageType: "Fire" }
         ]
       }
     ]
   , savingThrows: 
-    [ { advantage: false, disadvantage: false, saveBonus: 0, saveRoll: [], targetDC: Nothing, description: "STR Save" }
+    [ { advantage: false, disadvantage: false, saveBonus: 4, saveRoll: [], targetDC: Nothing, description: "STR Save" }
+    , { advantage: false, disadvantage: false, saveBonus: 1, saveRoll: [], targetDC: Nothing, description: "DEX Save" } 
+    , { advantage: false, disadvantage: false, saveBonus: 8, saveRoll: [], targetDC: Nothing, description: "CON Save" } 
     , { advantage: false, disadvantage: false, saveBonus: 10, saveRoll: [], targetDC: Nothing, description: "INT Save" } 
+    , { advantage: false, disadvantage: false, saveBonus: 3, saveRoll: [], targetDC: Nothing, description: "WIS Save" } 
+    , { advantage: false, disadvantage: false, saveBonus: 9, saveRoll: [], targetDC: Nothing, description: "CHA Save" } 
     ]
   }
 
@@ -109,3 +119,4 @@ data Message
   | State StateSaveMsg
   | StateSaved Model
   | StateLoaded Model
+  | ChangeTab String

@@ -45,21 +45,21 @@ updateArray arr item newItem =
 
 mkText :: forall a. String -> (String -> a) -> String -> Html a
 mkText caption msg value =
-  HE.div [ HA.class' "field border" ] 
-  [ HE.input [HA.type' "text", HA.value value,  HV.onInput msg] 
-  , HE.span [ HA.class' "helper" ] [ HE.text caption ]
+  HE.div [ HA.class' "small field border" ] 
+  [ HE.input [HA.type' "small text", HA.value value,  HV.onInput msg] 
+  , HE.span [ HA.class' "small helper" ] [ HE.text caption ]
   ]
 
 mkNumber :: forall a. String -> (Int -> a) -> Maybe Int -> Html a
 mkNumber caption msg (Just value) = 
-  HE.div [ HA.class' "field border" ]
-  [ HE.input [HA.type' "number", HA.value (show value), HV.onInput (\x -> msg (fromStr x)) ]
-  , HE.span [ HA.class' "helper" ] [ HE.text caption ]
+  HE.div [ HA.class' "small field border" ]
+  [ HE.input [HA.type' "small number", HA.value (show value), HV.onInput (\x -> msg (fromStr x)) ]
+  , HE.span [ HA.class' "small helper" ] [ HE.text caption ]
   ]
 mkNumber caption msg Nothing = 
-  HE.div [ HA.class' "field border" ]
-  [ HE.input [HA.type' "number", HV.onInput (\x -> msg (fromStr x)) ]
-  , HE.span [ HA.class' "helper" ] [ HE.text caption ]
+  HE.div [ HA.class' "small field border" ]
+  [ HE.input [HA.type' "small number", HV.onInput (\x -> msg (fromStr x)) ]
+  , HE.span [ HA.class' "small helper" ] [ HE.text caption ]
   ]
 
 fromStr :: String -> Int
@@ -70,15 +70,15 @@ fromStr s =
 
 mkButton :: forall a. a -> String -> String -> Html a
 mkButton msg icon tooltip = 
-  HE.button [ HA.class' "square round extra", HV.onClick msg ] 
-  [ HE.i_ [HE.text icon]
-  , HE.div [ HA.class' "tooltip" ] [ HE.text tooltip ]
+  HE.button [ HA.class' "small square round extra", HV.onClick msg ] 
+  [ HE.i [ HA.class' "small" ] [HE.text icon]
+  , HE.div [ HA.class' "small tooltip left" ] [ HE.text tooltip ]
   ]
 
-mkCheckbox :: forall a. String -> String -> (Boolean -> a) -> Boolean -> Html a
-mkCheckbox caption icon msg value = 
-  HE.label [ HA.class' "switch icon" ]
-  [ HE.input [ HA.type' "checkbox", HA.checked value, HV.onCheck msg ]
-  , HE.span_ [ HE.i_ [ HE.text icon ] ]
-  , HE.div [ HA.class' "tooltip" ] [ HE.text caption ]
+mkCheckbox :: forall a. String -> String -> String -> (Boolean -> a) -> Boolean -> Html a
+mkCheckbox caption icon dirn msg value = 
+  HE.label [ HA.class' "small switch icon" ]
+  [ HE.input [ HA.class' "small", HA.type' "checkbox", HA.checked value, HV.onCheck msg ]
+  , HE.span [ HA.class' "small" ] [ HE.i [ HA.class' "small" ] [ HE.text icon ] ]
+  , HE.div [ HA.class' ("small tooltip " <> dirn) ] [ HE.text caption ]
   ]
