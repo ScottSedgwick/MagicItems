@@ -1,7 +1,7 @@
 module SavingThrows where
 
 import Prelude (bind, max, min, pure, show, ($), (+), (<$>), (<<<), (<>), (==), (>=))
-import DataTypes (Message(..), Model, SaveDice, SaveMsg(..), StateSaveMsg(..), initSave)
+import DataTypes (Message(..), Model, SaveDice, SaveMsg(..), StateSaveMsg(..), initSave, prtSave)
 import Utils
 
 import Data.Array (delete, snoc)
@@ -15,15 +15,22 @@ import Flame.Html.Attribute as HA
 import Flame.Html.Element as HE
 
 updateSave :: Model -> SaveMsg → Tuple Model (Array (Aff (Maybe Message)))
-updateSave model (Update save newSave)    = model { savingThrows = updateArray model.savingThrows save newSave } :> [ pure $ Just (State SSave) ]
-updateSave model (Description save value) = model :> [ pure $ Just (Save (Update save (save { description = value }))) ]
-updateSave model (Bonus save bonus)       = model :> [ pure $ Just (Save (Update save (save { saveBonus = bonus   }))) ]
-updateSave model (DC save dc)             = model :> [ pure $ Just (Save (Update save (save { targetDC = Just dc  }))) ]
-updateSave model (Advantage save b)       = model :> [ pure $ Just (Save (Update save (save { advantage = b       }))) ]
-updateSave model (Disadvantage save b)    = model :> [ pure $ Just (Save (Update save (save { disadvantage = b    }))) ]
-updateSave model (Roll save)              = model :> [ Just <<< Save <$> (Update save <$> liftEffect (rollSave save) ) ]
-updateSave model (Remove save)            = model { savingThrows = delete save model.savingThrows   } :> [ pure $ Just (State SSave) ]
-updateSave model Add                      = model { savingThrows = snoc model.savingThrows initSave } :> [ pure $ Just (State SSave) ]
+updateSave model (Update log save newSave) = model { savingThrows = updateArray model.savingThrows save newSave } 
+                                           :> if log then [ Just <<< LogMsg <$> liftEffect (logSave newSave)
+                                                          , pure $ Just (State SSave)
+                                                          ] 
+                                              else [ pure $ Just (State SSave) ]
+updateSave model (Description save value)  = model :> [ pure $ Just (Save (Update false save (save { description = value }))) ]
+updateSave model (Bonus save bonus)        = model :> [ pure $ Just (Save (Update false save (save { saveBonus = bonus   }))) ]
+updateSave model (DC save dc)              = model :> [ pure $ Just (Save (Update false save (save { targetDC = Just dc  }))) ]
+updateSave model (Advantage save b)        = model :> [ pure $ Just (Save (Update false save (save { advantage = b       }))) ]
+updateSave model (Disadvantage save b)     = model :> [ pure $ Just (Save (Update false save (save { disadvantage = b    }))) ]
+updateSave model (Roll save)               = model :> [ Just <<< Save <$> (Update true  save <$> liftEffect (rollSave save) ) ]
+updateSave model (Remove save)             = model { savingThrows = delete save model.savingThrows   } :> [ pure $ Just (State SSave) ]
+updateSave model Add                       = model { savingThrows = snoc model.savingThrows initSave } :> [ pure $ Just (State SSave) ]
+
+logSave :: SaveDice -> Effect String
+logSave save = formatLogMsg $ "SAVE: " <> prtSave save
 
 viewSavingThrow :: SaveDice -> Html Message
 viewSavingThrow save =

@@ -27,9 +27,11 @@ update model (Save saveMsg)    = updateSave model saveMsg
 update model (Attack attMsg)   = updateAttack model attMsg
 update model (State ssMsg)     = updateState model ssMsg
 update model (StateSaved _)    = model :> []
-update model (ChangeTab tab)   = model { currentTab = tab } :> [ pure $ Just (State SSave) ]
-update model (ChangeProfile p) = model { profile    = p   } :> [ pure $ Just (State SLoad) ]
+update model (ChangeTab tab)   = model { currentTab = tab }     :> [ pure $ Just (State SSave) ]
+update model (ChangeProfile p) = model { profile    = p   }     :> [ pure $ Just (State SLoad) ]
 update _     (StateLoaded m)   = m :> []
+update model (LogMsg s)        = model { log = model.log <> s } :> [ pure $ Just (State SSave) ]
+update model ClearLog          = model { log = "" }             :> [ pure $ Just (State SSave) ]
 
 view :: Model -> Html Message
 view model =
@@ -47,6 +49,7 @@ view model =
       [ HE.div [ HA.class' "tabs" ]
         [ HE.a [ HA.class' (tabClass model "Attack"), HV.onClick (ChangeTab "Attack") ] [ HE.text "Attack Rolls" ]
         , HE.a [ HA.class' (tabClass model "Save")  , HV.onClick (ChangeTab "Save"  ) ] [ HE.text "Saving Throws" ]
+        , HE.a [ HA.class' (tabClass model "Log")   , HV.onClick (ChangeTab "Log"   ) ] [ HE.text "Log" ]
         ]
       , HE.div [ HA.class' ("page padding " <> tabClass model "Attack") ]
         [ HE.div [ HA.class' "small s6" ] 
@@ -72,6 +75,21 @@ view model =
               ]
             ]
           , HE.div [ HA.class' "small" ] [ map viewSavingThrow model.savingThrows ]
+          ]
+        ]
+      , HE.div [ HA.class' ("page padding " <> tabClass model "Log") ]
+        [ HE.div [ HA.class' "small s6" ] 
+          [ HE.header [HA.class' "fill small round bottom-shadow top-shadow" ]
+            [ HE.nav [ HA.class' "small" ]
+              [ HE.div [HA.class' "max small" ] [ HE.h6 [HA.class' "max white-text left-align small"] [HE.text "Log of Rolls"] ] 
+              , HE.div [ HA.class' "max small middle-align" ] [ HE.text "" ]
+              , mkButton ClearLog "delete" "Clear log"
+              ]
+            ]
+          , HE.div [ HA.class' "field textarea border large-height" ] 
+            [ HE.textarea [ HA.readOnly true, HA.styleAttr "font-family: 'Lucida Console', 'Courier New', monospace; font-size: 12px;" ] 
+              [ HE.text model.log ] 
+            ]
           ]
         ]
       ]

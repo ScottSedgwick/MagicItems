@@ -2,14 +2,18 @@ module Utils where
 
 import Prelude
 import Data.Array ((:), findIndex, foldr, uncons, updateAt)
+import Data.Either (Either(..))
+import Data.Formatter.DateTime (formatDateTime)
 import Data.Int (fromString)
 import Data.Maybe (Maybe(..))
 import Effect (Effect)
+import Effect.Now (nowDateTime)
 import Effect.Random (randomInt)
 import Flame (Html)
 import Flame.Html.Attribute as HA
 import Flame.Html.Element as HE
 import Flame.Html.Event as HV
+-- import Partial.Unsafe (unsafePartial)
 
 mapM :: forall b a. (a -> Effect b) -> Array a -> Effect (Array b)
 mapM f xs = do
@@ -29,18 +33,6 @@ fjust (Just x) xs = x : xs
 
 rollDice :: Int -> Effect Int
 rollDice n = randomInt 1 n
-
-resolveAdvantage :: Boolean -> Boolean -> Array Int -> Int
-resolveAdvantage adv dis rolls =
-  case rolls of
-    [a,b] -> if adv && dis then a
-             else if adv then max a b
-             else if dis then min a b
-             else a
-    _ -> 0
-
-sum :: Array Int -> Int
-sum arr = foldr (+) 0 arr
 
 updateArray :: forall a. Eq a => Array a -> a -> a -> Array a
 updateArray arr item newItem =
@@ -101,32 +93,9 @@ mkCheckbox caption icon dirn msg value =
   , HE.div [ HA.class' ("small tooltip " <> dirn) ] [ HE.text caption ]
   ]
 
-
--- <div class="field label suffix border small">
---   <select>
---     <option>Item 1</option>
---     <option>Item 2</option>
---     <option>Item 3</option>
---   </select>
---   <label>Label</label>
---   <i>arrow_drop_down</i>
--- </div>
-
--- <nav class="toolbar primary-container small-elevate">
---   <a>
---     <i>videocam_off</i>
---     <div>Video</div>
---   </a>
---   <a>
---     <i>mic</i>
---     <div>Speech</div>
---   </a>
---   <a class="active">
---     <i>front_hand</i>
---     <div>Attention</div>
---   </a>
---   <a>
---     <i>more_vert</i>
---     <div>More</div>
---   </a>
--- </nav>
+formatLogMsg :: String -> Effect String
+formatLogMsg msg = do
+  dt <- nowDateTime
+  case formatDateTime "[DD-MM-YYYY hh:mm:ss] " dt of
+    Left _  -> pure $ "[??-??-???? ??:??:??] " <> msg <> "\n"
+    Right d -> pure $ d <> msg <> "\n"
