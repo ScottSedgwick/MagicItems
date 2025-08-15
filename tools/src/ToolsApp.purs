@@ -17,28 +17,29 @@ import Flame.Html.Event as HV
 import Prelude (map, pure, ($), (==), (<>))
 import SavingThrows (updateSave, viewSavingThrow)
 import StateManagement (updateState)
-import Utils (mkButton)
+import Utils (mkButton, mkProfileButton, mkProfileText)
 
 init ::  Tuple Model (Array (Aff (Maybe Message)))
-init = initModel :> [ pure $ Just (State SLoad) ]
+init = initModel :> [ pure $ Just (State SLoadAll) ]
 
 update :: Model → Message → Tuple Model (Array (Aff (Maybe Message)))
-update model (Save saveMsg)  = updateSave model saveMsg
-update model (Attack attMsg) = updateAttack model attMsg
-update model (State ssMsg)   = updateState model ssMsg
-update model (StateSaved _)  = model :> []
-update model (ChangeTab tab) = model { currentTab = tab } :> [ pure $ Just (State SSave) ]
-update _     (StateLoaded m) = m :> []
+update model (Save saveMsg)    = updateSave model saveMsg
+update model (Attack attMsg)   = updateAttack model attMsg
+update model (State ssMsg)     = updateState model ssMsg
+update model (StateSaved _)    = model :> []
+update model (ChangeTab tab)   = model { currentTab = tab } :> [ pure $ Just (State SSave) ]
+update model (ChangeProfile p) = model { profile    = p   } :> [ pure $ Just (State SLoad) ]
+update _     (StateLoaded m)   = m :> []
 
 view :: Model -> Html Message
 view model =
   HE.main [HA.class' "responsive small" ]
-  [ HE.div [HA.class' "grid" ]
-    [ HE.header [ HA.class' "fill small round bottom-shadow top-shadow s12" ]
-      [ HE.nav [ HA.class' "small" ]
-        [ HE.div [ HA.class' "max small" ] 
-          [ HE.h6 [ HA.class' "max white-text left-align small" ] [ HE.text "Clear saved state" ] 
-          ]
+  [ HE.div [HA.class' "grid middle-align" ]
+    [ HE.header [ HA.class' "fill small round bottom-shadow top-shadow s12 middle-align" ]
+      [ HE.nav [ HA.class' "small middle-align" ]
+        [ HE.div [ HA.class' "small middle-align" ] [ mkProfileText ChangeProfile model.profile ]
+        , HE.div [ HA.class' "small middle-align" ] ( map (\s -> mkProfileButton s (ChangeProfile s)) model.profiles )
+        , HE.div [ HA.class' "max small middle-align" ] [ HE.text "" ]
         , mkButton (State SClear) "delete" "Clear saved state"
         ]
       ]

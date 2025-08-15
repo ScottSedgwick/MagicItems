@@ -1,18 +1,18 @@
 module AttackRolls where
 
-import DataTypes (AttackDice, AttackMsg(..), DamageDice, Message(..), Model, StateSaveMsg(..), initAttack, initDamageDice)
-import Utils (mapM, mkButton, mkCheckbox, mkNumber, mkText, resolveAdvantage, rollDice, sum, updateArray)
-
 import Prelude
+
 import Data.Array (delete, range, snoc)
 import Data.Maybe (Maybe(..))
 import Data.Tuple (Tuple)
+import DataTypes (AttackDice, AttackMsg(..), DamageDice, Message(..), Model, StateSaveMsg(..), initAttack, initDamageDice)
 import Effect (Effect)
 import Effect.Aff (Aff)
 import Effect.Class (liftEffect)
 import Flame (Html, (:>))
 import Flame.Html.Attribute as HA
 import Flame.Html.Element as HE
+import Utils (mapM, mkButton, mkCheckbox, mkNumber, mkText, resolveAdvantage, rollDice, sum, updateArray)
 
 updateAttack :: Model -> AttackMsg → Tuple Model (Array (Aff (Maybe Message)))
 updateAttack model AAdd              = model { attackRolls = snoc model.attackRolls initAttack     } :> [ pure $ Just (State SSave) ]
@@ -48,15 +48,39 @@ viewAttackRoll attack =
       ]
     , HE.div [ HA.class' "small s1" ] [ mkButton (Attack (ARoll attack)) "Casino" "Roll The Dice!" ]
     , HE.div [ HA.class' "small s11 grid" ] (map (viewDice attack) attack.damageDice)
-    , HE.div [ HA.class' "small s11" ] [ HE.text ("Attack Roll: " 
-                                   <> show (resolveAdvantage attack.advantage attack.disadvantage attack.attackRoll + attack.attackBonus) 
-                                   <> ". Target AC: " 
-                                   <> show attack.targetAC 
-                                   <> ". Damage: " 
-                                   <> show (attackDamage attack) 
-                                   <> ".") ]
+    , viewAttackResult attack
     ]
   ]
+
+viewAttackResult :: AttackDice -> Html Message
+viewAttackResult attack =
+  let 
+    roll = resolveAdvantage attack.advantage attack.disadvantage attack.attackRoll + attack.attackBonus
+  in
+    if (attack.attackRoll == []) then
+      HE.div [ HA.class' "grid small s11" ] [ HE.text "" ]
+    else if (attack.targetAC == 0) then
+      HE.div [ HA.class' "grid small s11" ] 
+        [ HE.div [ HA.class' "s2" ] [ HE.text "Rolls: ", HE.text (show attack.attackRoll) ]
+        , HE.div [ HA.class' "s4" ] [ HE.text "Attack Roll: ", HE.text (show (resolveAdvantage attack.advantage attack.disadvantage attack.attackRoll + attack.attackBonus) ) ]
+        , HE.div [ HA.class' "s2" ] [ HE.text "Damage: ", HE.text (show (attackDamage attack) ) ] 
+        ]
+    else if (roll >= attack.targetAC) then
+      HE.div [ HA.class' "grid small s11" ] 
+        [ HE.div [ HA.class' "s2" ] [ HE.text "Rolls: ", HE.text (show attack.attackRoll) ]
+        , HE.div [ HA.class' "s2" ] [ HE.text "Attack Roll: ", HE.text (show (resolveAdvantage attack.advantage attack.disadvantage attack.attackRoll + attack.attackBonus) ) ]
+        , HE.div [ HA.class' "s2" ] [ HE.text "Target AC: ", HE.text (show attack.targetAC ) ]
+        , HE.div [ HA.class' "s2" ] [ HE.text "Damage: ", HE.text (show (attackDamage attack) ) ] 
+        , HE.div [ HA.class' "s2 primary center-align" ] [ HE.text "Hit!" ] 
+        ]
+    else
+      HE.div [ HA.class' "grid small s11" ] 
+        [ HE.div [ HA.class' "s2" ] [ HE.text "Rolls: ", HE.text (show attack.attackRoll) ]
+        , HE.div [ HA.class' "s2" ] [ HE.text "Attack Roll: ", HE.text (show (resolveAdvantage attack.advantage attack.disadvantage attack.attackRoll + attack.attackBonus) ) ]
+        , HE.div [ HA.class' "s2" ] [ HE.text "Target AC: ", HE.text (show attack.targetAC ) ]
+        , HE.div [ HA.class' "s2" ] [ HE.text "Damage: ", HE.text (show (attackDamage attack) ) ] 
+        , HE.div [ HA.class' "s2 error center-align" ] [ HE.text "Miss!" ] 
+        ]
 
 viewDice :: AttackDice -> DamageDice -> Html Message
 viewDice attack damage =

@@ -12,25 +12,17 @@ type Model =
 
 initModel :: Model
 initModel =
-  { profile: "Rusty"
+  { profile: ""
   , profiles: []
   , currentTab: "Attack"
-  , attackRolls: 
-    [ { attackBonus: 12, advantage: false, disadvantage: false, description: "Wrecking Ball (Green Flame Blade)", targetAC: 0, attackRoll: []
-      , damageDice: 
-        [ { diceType: 10, diceCount: 1, damageBonus: 7, damageRoll: [], damageType: "Bludgeoning" }
-        , { diceType: 4, diceCount: 1, damageBonus: 0, damageRoll: [], damageType: "Acid" }
-        , { diceType: 8, diceCount: 2, damageBonus: 10, damageRoll: [], damageType: "Fire" }
-        ]
-      }
-    ]
+  , attackRolls: []
   , savingThrows: 
-    [ { advantage: false, disadvantage: false, saveBonus: 4, saveRoll: [], targetDC: Nothing, description: "STR Save" }
-    , { advantage: false, disadvantage: false, saveBonus: 1, saveRoll: [], targetDC: Nothing, description: "DEX Save" } 
-    , { advantage: false, disadvantage: false, saveBonus: 8, saveRoll: [], targetDC: Nothing, description: "CON Save" } 
-    , { advantage: false, disadvantage: false, saveBonus: 10, saveRoll: [], targetDC: Nothing, description: "INT Save" } 
-    , { advantage: false, disadvantage: false, saveBonus: 3, saveRoll: [], targetDC: Nothing, description: "WIS Save" } 
-    , { advantage: false, disadvantage: false, saveBonus: 9, saveRoll: [], targetDC: Nothing, description: "CHA Save" } 
+    [ { advantage: false, disadvantage: false, saveBonus: 0, saveRoll: [], targetDC: Nothing, description: "STR Save" }
+    , { advantage: false, disadvantage: false, saveBonus: 0, saveRoll: [], targetDC: Nothing, description: "DEX Save" } 
+    , { advantage: false, disadvantage: false, saveBonus: 0, saveRoll: [], targetDC: Nothing, description: "CON Save" } 
+    , { advantage: false, disadvantage: false, saveBonus: 0, saveRoll: [], targetDC: Nothing, description: "INT Save" } 
+    , { advantage: false, disadvantage: false, saveBonus: 0, saveRoll: [], targetDC: Nothing, description: "WIS Save" } 
+    , { advantage: false, disadvantage: false, saveBonus: 0, saveRoll: [], targetDC: Nothing, description: "CHA Save" } 
     ]
   }
 
@@ -112,6 +104,7 @@ data StateSaveMsg
   = SSave
   | SLoad
   | SClear
+  | SLoadAll
 
 data Message 
   = Attack AttackMsg
@@ -120,3 +113,4 @@ data Message
   | StateSaved Model
   | StateLoaded Model
   | ChangeTab String
+  | ChangeProfile String

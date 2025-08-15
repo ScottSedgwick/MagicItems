@@ -20,6 +20,13 @@ mapM f xs = do
       zs <- mapM f ys.tail
       pure ( z : zs )
 
+justs :: forall a. Array (Maybe a) -> Array a
+justs xs = foldr fjust [] xs
+
+fjust :: forall a. Maybe a -> Array a -> Array a
+fjust Nothing xs = xs
+fjust (Just x) xs = x : xs
+
 rollDice :: Int -> Effect Int
 rollDice n = randomInt 1 n
 
@@ -49,6 +56,17 @@ mkText caption msg value =
   [ HE.input [HA.type' "small text", HA.value value,  HV.onInput msg] 
   , HE.span [ HA.class' "small helper" ] [ HE.text caption ]
   ]
+
+mkProfileText :: forall a. (String -> a) -> String -> Html a
+mkProfileText msg value =
+  HE.div [ HA.class' "small field border middle-align margin-top" ] 
+  [ HE.input [HA.type' "text", HA.class' "white", HA.value value,  HV.onInput msg] 
+  ]
+
+-- mkProfileButton :: forall a. a -> String -> Html a
+mkProfileButton :: forall a. String -> a -> Html a
+mkProfileButton caption msg = HE.button [ HA.class' "small-round", HV.onClick msg ] [HE.text caption]
+  
 
 mkNumber :: forall a. String -> (Int -> a) -> Maybe Int -> Html a
 mkNumber caption msg (Just value) = 
@@ -82,3 +100,33 @@ mkCheckbox caption icon dirn msg value =
   , HE.span [ HA.class' "small" ] [ HE.i [ HA.class' "small" ] [ HE.text icon ] ]
   , HE.div [ HA.class' ("small tooltip " <> dirn) ] [ HE.text caption ]
   ]
+
+
+-- <div class="field label suffix border small">
+--   <select>
+--     <option>Item 1</option>
+--     <option>Item 2</option>
+--     <option>Item 3</option>
+--   </select>
+--   <label>Label</label>
+--   <i>arrow_drop_down</i>
+-- </div>
+
+-- <nav class="toolbar primary-container small-elevate">
+--   <a>
+--     <i>videocam_off</i>
+--     <div>Video</div>
+--   </a>
+--   <a>
+--     <i>mic</i>
+--     <div>Speech</div>
+--   </a>
+--   <a class="active">
+--     <i>front_hand</i>
+--     <div>Attention</div>
+--   </a>
+--   <a>
+--     <i>more_vert</i>
+--     <div>More</div>
+--   </a>
+-- </nav>
