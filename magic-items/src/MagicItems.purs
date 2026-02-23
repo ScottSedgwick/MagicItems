@@ -1,7 +1,7 @@
 module MagicItems where
 
 import Data.Maybe (Maybe(..))
-import Description(Description(..))
+import Description (Description(..))
 import Sources (Source(..))
 import Types (ItemAttunement(..), ItemType(..), MagicItem, Rarity(..))
 
@@ -87,6 +87,27 @@ magicItems =
       , P
         [ T "This spongy, flavorless, gelatinous bead dissolves in liquid, transforming up to a pint of the liquid into fresh, cold drinking water. The bead has no effect on magical liquids or harmful substances such as poison."
         ]
+      ]
+    }
+  , { title: "Blade of First Blood"
+    , url: ""
+    , rarity: [RarityLegendary]
+    , itemtype: TypeItem Nothing
+    , attunement: Attune Nothing
+    , source: [SourceUnknown "Ethan Homebrew"]
+    , description:
+      [ P
+        [ I "Weapon (dagger), legendary (requires attunement)"
+        ]
+      , P [ B "Damage: ", T "1d4 + 2 piercing damage" ]
+      , P [ B "Properties: ", T "Finesse, light, thrown (range 20/60)" ]
+      , P [ B "Magical Properties" ]
+      , P [ B "Enhanced Critical.", T "Your critical hit range with this weapon is increased by 1 (you score a critical hit on a roll of 19-20). This bonus stacks with other features that increase your critical range." ]
+      , P [ B "Exploit Weakness.", T "When you hit a creature with this weapon while wielding it in your main hand, that creature gains vulnerability to piercing damage until the start of your next turn. If the creature already has resistance to piercing damage, it loses that resistance instead. If it has immunity, it becomes resistant instead." ]
+      , P [ B "Bhaal's Retribution.", T "While wielding this weapon in your off-hand, when a creature misses you with a melee attack, you can use your reaction to make a melee weapon attack against that creature with advantage." ]
+      , P [ B "Necrotic Essence. ", T "This weapon deals an additional 1d4 necrotic damage on a hit." ]
+      , P [ B "Description" ]
+      , P [ T "Forged from the dried blood that fell when Bhaal, Lord of Murder, first spilled blood in a Baldurian back-alley, this dagger hardened and sharpened when the god ascended to divinity. The blade thirsts for violence and whispers promises of power to those who wield it in the name of murder." ]
       ]
     }
   , { title: "Boots of False Tracks"
@@ -298,6 +319,27 @@ magicItems =
         ]
       ]
     }
+  , { title: "Crimson Mischief"
+    , url: ""
+    , rarity: [RarityLegendary]
+    , itemtype: TypeItem Nothing
+    , attunement: Attune Nothing
+    , source: [SourceUnknown "Ethan Homebrew"]
+    , description:
+      [ P
+        [ I "Wondrous item (shortsword), legendary (requires attunement)"
+        ]
+      , P [ B "Properties: ", T "Finesse, light" ]
+      , P [ B "Damage: ", T "1d6 + 2 piercing" ]
+      , P [ B "Attunement: ", T "You gain +2 to attack and damage rolls made with this magic weapon." ]
+      , P [ B "Special Abilities" ]
+      , P [ B "Redvein Savagery.", T "When you make an attack with advantage using this weapon, you deal an additional 2d6 piercing damage on a hit." ]
+      , P [ B "Prey Upon the Weak.", T "When you hit a creature that has half its hit points or fewer remaining, you deal an additional 1d4 piercing damage." ]
+      , P [ B "Crimson Weapon.", T "When you wield this weapon in your off-hand while dual wielding, you can add your ability modifier to the damage of attacks made with this weapon (this normally isn't allowed for off-hand attacks under two-weapon fighting rules)." ]
+      , P [ B "Description" ]
+      , P [ T "This crimson-bladed shortsword bears the distinctive marks of Bhaal's chosen. The blade seems to hunger for bloodshed, its edge never dulling even after countless kills. Once wielded by Orin the Red, it carries the dark blessing of the Lord of Murder." ]
+      ]
+    }
   , { title: "Cuddly Strixhaven Mascot"
     , url: "https://dnd5e.wikidot.com//wondrous-items:cuddly-strixhaven-mascot"
     , rarity: [RarityCommon]
@@ -486,6 +528,23 @@ magicItems =
         ]
       ]
     }
+  , { title: "Gram the Sword of Grief"
+    , url: ""
+    , rarity: [RarityLegendary]
+    , itemtype: TypeItem Nothing
+    , attunement: Attune Nothing
+    , source: [SourceUnknown "Ethan Homebrew"]
+    , description:
+      [ P [ T "Forged in a bygone era, Gram is a weapon of legends, said to have been crafted in the heart of a dying star. Its blade is a shimmering silver, etched with ancient runes that glow faintly with an otherworldly light. The hilt is wrapped in the hide of a dragon, and the crossguard is shaped like a pair of dragon wings, symbolizing the sword's purpose and power. This greatsword is unerringly balanced, almost as if it yearns to be wielded in battle against formidable foes." ]
+      , P [ I "Weapon (greatsword), legendary (requires attunement by a creature with a Strength score of 17 or higher)" ]
+      , P [ B "Magic Weapon.", T "Gram is a magical weapon that grants a +3 bonus to attack and damage rolls made with it." ]
+      , P [ B "Dragon Slayer.", T "When you hit a dragon with Gram, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, 'dragon' refers to any creature with the dragon type, including dragon turtles and wyverns." ]
+      , P [ B "Siege Monster.", T "Gram deals double damage to objects and structures." ]
+      , P [ B "Magic Resistance.", T "While attuned to and wielding Gram, you gain a +1 bonus to saving throws against spells and other magical effects." ]
+      , P [ B "Poisonous Strike.", T "Once per turn when you hit with Gram, you can force the target to make a DC 17 Constitution saving throw, taking an extra 2d6 poison damage on a failed save, or half as much damage on a successful one." ]
+      , P [ B "Life Draining.", T "When you score a critical hit against a creature with Gram, the target suffers a level of exhaustion. Additionally you gain back the damage dealt in health." ]
+      ]
+    }
   , { title: "Hat of Vermin"
     , url: "https://dnd5e.wikidot.com//wondrous-items:hat-of-vermin"
     , rarity: [RarityCommon]
@@ -528,6 +587,36 @@ magicItems =
           [ T "You can try to cast a cantrip that you don't know. The cantrip must be on the "
           , A "http://dnd5e.wikidot.com/spells:wizard" "Wizard"
           , T " spell list, and you must make a DC 10 Intelligence (Arcana) check. If the check succeeds, you cast the spell. If the check fails, so does the spell, and the action used to cast the spell is wasted. In either case, you can't use this property again until you finish a long rest."
+          ]
+        ]
+      ]
+    }
+  , { title: "Helmet of Demonic Protection"
+    , url: ""
+    , rarity: [RarityVeryRare]
+    , itemtype: TypeItem Nothing
+    , attunement: Attune Nothing
+    , source: [SourceUnknown "Ethan Homebrew"]
+    , description:
+      [ P
+        [ I "Wondrous item, very rare (requires attunement)"
+        ]
+      , P
+        [ T "While you are wearing this helm, you gain the following benefits:"
+        ]
+      , UL
+        [ 
+          [ T "Resistance to bludgeoning, piercing and slashing damage from non-magic weapons."
+          ]
+        ]
+      , UL
+        [ 
+          [ T "Resistance to cold, fire and lightning damage."
+          ]
+        ]
+      , UL
+        [ 
+          [ T "Immunity to poison and the poisoned condition"
           ]
         ]
       ]
@@ -1196,6 +1285,16 @@ magicItems =
         ]
       ]
     }
+  , { title: "Plate Armour of Bhaal"
+    , url: ""
+    , rarity: [RarityLegendary]
+    , itemtype: TypeItem Nothing
+    , attunement: Attune Nothing
+    , source: [SourceUnknown "Ethan Homebrew"]
+    , description:
+      [ P [ T "This +3 Ademantine plate armor allows you to cast Pass Without Trace and Seeming 3/Day." ]
+      ]
+    }
   , { title: "Pole of Angling"
     , url: "https://dnd5e.wikidot.com//wondrous-items:pole-of-angling"
     , rarity: [RarityCommon]
@@ -1722,6 +1821,24 @@ magicItems =
         ]
       , P
         [ T "This magic pennant bears the symbol of Strixhaven or one of its colleges: Lorehold, Prismari, Quandrix, Silverquill, or Witherbloom. While you wave the pennant, the symbol on it glitters, and the pennant sheds bright light in a 10-foot radius and dim light for an additional 10 feet."
+        ]
+      ]
+    }
+  , { title: "Sword of Chaos"
+    , url: ""
+    , rarity: [RarityRare]
+    , itemtype: TypeItem Nothing
+    , attunement: Attune Nothing
+    , source: [SourceUnknown "Ethan Homebrew"]
+    , description:
+      [ P
+        [ I "Wondrous Item"
+        ]
+      , P
+        [ T "When you attack a creature with this +2 sword and roll a 20, the target takes an extra 10 necrotic damage if it isn't a construct or an undead.  You also gain 10 temporary hit points."
+        ]
+      , P
+        [ T "When a target is hit by this weapon, it must succeed on a DC 18 Constitution saving throw or be cursed by Bhaal. The cursed target cannot regain hit points, and the curse lasts until removed by the Remove Curse speel or similar magic."
         ]
       ]
     }

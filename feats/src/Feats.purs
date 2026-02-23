@@ -1218,6 +1218,60 @@ racialFeats =
         ]
       ]
     }
+  , { name: "Dragon Mark"
+    , source: SourceWayfarersGuideToEberron
+    , prerequisite: Nothing
+    , description: 
+      [ P [ T "You have a magical mark that indicates you are a member of one of the dragonmarked houses. Select one of the options from the Dragonmarks table." ]
+      , P [ T "You gain the ability to innately cast spells and cantrips, as summarized in the Dragonmark benefits table, using the spellcasting ability listed under the ability column. You cast each spell at its lowest level. Once you cast a given spell in this way, you must finish a long rest before you can cast it innately again. You must still expend any matrial components. Your dragonmark confers the following benefits:" ]
+      , UL
+        [ [ T "When you take this feat, you gain the ", B "least dragonmark", T ". You learn the spells listed under the Least column." ]
+        , [ T "At 5th level and higher, your mark becomes more potent, improving to a ", B "lesser dragonmark", T ". You also learn the spell listed under the Lesser column." ]
+        , [ T "At 9th level and higher, your mark's power increases again, becoming a ", B "greater dragonmark", T ". You also larn the spell listed under the Greater column." ]
+        ]
+      , TB
+        [ T "Mark", T "Ability", T "Least", T "Lesser", T "Greater" ]
+        [ [ T "Detection", T "Wisdom", T "Detect magic, Mage hand", T "Detect Thoughts", T "Clairvoyance" ]
+        , [ T "Finding", T "Wisdom", T "Detect magic, Mage hand", T "Locate object", T "Clairvoyance" ]
+        , [ T "Handling", T "Wisdom", T "Druidcraft, Speak with Animals", T "Beast sense", T "Conjure animals" ]
+        , [ T "Healing", T "Wisdom", T "Cure wounds, Spare the dying", T "Lesser Restoration", T "Revivify" ]
+        , [ T "Hospitality", T "Charisma", T "Friends, Unseen servant", T "Rope trick", T "Leomunds tiny hut" ]
+        , [ T "Making", T "Intelligence", T "Identify, Mending", T "Magic weapon", T "Fabricate" ]
+        , [ T "Passage", T "Intelligence", T "Expeditious retreat, Light", T "Misty Step", T "Teleportation circle" ]
+        , [ T "Scribing", T "Intelligence", T "Comprehend languages, Message", T "Sending", T "Tongues" ]
+        , [ T "Sentinel", T "Wisdom", T "Blade Ward, Compelled Duel", T "Blur", T "Protection from Energy" ]
+        , [ T "Shadow", T "Charisma", T "Dancing lights, Disguise self", T "Darkness", T "Nondetection" ]
+        , [ T "Storm", T "Intelligence", T "Fog cloud, Shocking grasp", T "Gust of Wind", T "Sleet Storm" ]
+        , [ T "Warding", T "Intelligence", T "Alarm, Resistance", T "Arcane Lock", T "Magic circle"]
+        ]
+      ]
+    }
+  , { name: "Dragon Mark (Greater)"
+    , source: SourceWayfarersGuideToEberron
+    , prerequisite: Just "8th level, Dragon Mark"
+    , description: 
+      [ P [ T "Your dragonmark has grown in size and power. This enhances the existing dragonmark, and the benefits are based on the mark that you already posess. A greater dragonmark provides the following benefits:" ]
+      , UL
+        [ [ T "The die type of your dragonmark intuition die increases by one (for example, from a d4 to a d6)" ]
+        , [ T "Increase one ability score by 1, to a maximum of 20. The abilities available to you are based on your mark, as shown in the Greater Dragonmark Benefits table." ]
+        , [ T "You learn a set of spells, each of which you can cast once without expending a spell slot or using a material component. The list of spells, the spellcasting ability for them, and the type of rest you must complete to regain the use of these spells are shown on the Greater Dragonmark Benefits table." ]
+        ]
+      , TB [ T "Dragonmark", T "Ability", T "Spells", T "Spellcasting Ability", T "Rest Required" ]
+        [ [ T " Detection", T "Charisma or Intelligence", T "See Invisibility, True Seeing", T "Intelligence", T "Long" ]
+        , [ T "Finding", T "Dexterity, Strength or Wisdom", T "Locate Creature, Find the Path", T "Wisdom", T "Long" ]
+        , [ T "Handling", T "Dexterity or Wisdom", T "Beast Sense, Dominate Beast", T "Wisdom", T "Long" ]
+        , [ T "Healing", T "Dexterity or Wisdom", T "Mass Healing Word, Greater Restoration", T "Wisdom", T "Long" ]
+        , [ T "Hospitality", T "Dexterity or Charisma", T "Sanctuary, Mordenkainens Magnificent Mansion", T "Charisma", T "Long" ]
+        , [ T "Making", T "Dexterity or Intelligence", T "Fabricate, Creation", T "Intelligence", T "Long" ]
+        , [ T "Passage", T "Dexterity or Constitution", T "Blink, Teleportation Circle", T "Constitution", T "Long" ]
+        , [ T "Scribing", T "Intelligence or Charisma", T "Sending, Tongues", T "Intelligence", T "Long" ]
+        , [ T "Sentinel", T "Strength or Wisdom", T "Compelled Duel, Warding Bond", T "Wisdom", T "Long" ]
+        , [ T "Shadow", T "Dexterity or Charisma", T "Nondetection, Mislead", T "Charisma", T "Long" ]
+        , [ T "Storm", T "Dexterity or Charisma", T "Control Water, Control Winds", T "Charisma", T "Long" ]
+        , [ T "Warding", T "Dexterity or Intelligence", T "Knock, Glyph of Warding, Leomunds Secret Chest", T "Intelligence", T "Long" ]
+        ]
+      ]
+    }
   , { name: "Dragon Hide"
     , source: SourceXanatharsGuideToEverything
     , prerequisite: Just "Dragonborn"
