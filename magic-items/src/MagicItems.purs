@@ -1292,7 +1292,8 @@ magicItems =
     , attunement: Attune Nothing
     , source: [SourceUnknown "Ethan Homebrew"]
     , description:
-      [ P [ T "This +3 Ademantine plate armor allows you to cast Pass Without Trace and Seeming 3/Day." ]
+      [ P [ I "Requires attunement by a worshipper of Bhaal" ]
+      , P [ T "This +3 Adamantine plate armor allows you to cast Pass Without Trace and Seeming 3/Day." ]
       ]
     }
   , { title: "Pole of Angling"
